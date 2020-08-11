@@ -1,0 +1,6 @@
+framework module Pods_Camps_AndamanTests {
+  umbrella header "Pods-Camps.AndamanTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

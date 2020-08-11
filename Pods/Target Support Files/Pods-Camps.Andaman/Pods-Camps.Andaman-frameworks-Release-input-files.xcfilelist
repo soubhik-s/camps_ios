@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman/Pods-Camps.Andaman-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
+${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
+${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
+${PODS_ROOT}/razorpay-pod/Pod/Razorpay.framework

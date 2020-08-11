@@ -1,0 +1,1132 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EA1526856DDF7EE645E7BA3 /* Pods_Camps_Andaman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE10CECBB6DDC4850F0EF0C /* Pods_Camps_Andaman.framework */; };
+		9D3DAD55E5A11E278B59A1DF /* Pods_Camps_AndamanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7614A52449C53685F129E15 /* Pods_Camps_AndamanTests.framework */; };
+		D6075CD024616CB30075E90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075CCF24616CB30075E90F /* AppDelegate.swift */; };
+		D6075CD224616CB30075E90F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075CD124616CB30075E90F /* SceneDelegate.swift */; };
+		D6075CD424616CB30075E90F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075CD324616CB30075E90F /* ViewController.swift */; };
+		D6075CD724616CB30075E90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6075CD524616CB30075E90F /* Main.storyboard */; };
+		D6075CDA24616CB30075E90F /* Camps_Andaman.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6075CD824616CB30075E90F /* Camps_Andaman.xcdatamodeld */; };
+		D6075CDC24616CB50075E90F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6075CDB24616CB50075E90F /* Assets.xcassets */; };
+		D6075CDF24616CB50075E90F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6075CDD24616CB50075E90F /* LaunchScreen.storyboard */; };
+		D6075CEA24616CB50075E90F /* Camps_AndamanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075CE924616CB50075E90F /* Camps_AndamanTests.swift */; };
+		D6075CF524616CB60075E90F /* Camps_AndamanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075CF424616CB60075E90F /* Camps_AndamanUITests.swift */; };
+		D6075D03246182270075E90F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D02246182270075E90F /* SignUpVC.swift */; };
+		D6075D0524618A3C0075E90F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D0424618A3C0075E90F /* MainViewController.swift */; };
+		D6075D0724618A4E0075E90F /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D0624618A4E0075E90F /* SideMenuVC.swift */; };
+		D6075D17246192820075E90F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D0D246192810075E90F /* Toast.swift */; };
+		D6075D18246192820075E90F /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D0E246192810075E90F /* Color+Ext.swift */; };
+		D6075D19246192820075E90F /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D0F246192810075E90F /* ButtonExtensions.swift */; };
+		D6075D1A246192820075E90F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D10246192820075E90F /* String+Ext.swift */; };
+		D6075D1B246192820075E90F /* AlertCntrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D11246192820075E90F /* AlertCntrl.swift */; };
+		D6075D1C246192820075E90F /* Image+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D12246192820075E90F /* Image+Ext.swift */; };
+		D6075D1D246192820075E90F /* ViewCntrl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D13246192820075E90F /* ViewCntrl+Ext.swift */; };
+		D6075D1E246192820075E90F /* TextfieldEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D14246192820075E90F /* TextfieldEXT.swift */; };
+		D6075D1F246192820075E90F /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D15246192820075E90F /* View+Ext.swift */; };
+		D6075D20246192820075E90F /* Elevation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D16246192820075E90F /* Elevation+Ext.swift */; };
+		D608A05C24822E5A0089FC1B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D608A05B24822E5A0089FC1B /* WebVC.swift */; };
+		D6116A202494B9040089B995 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */; };
+		D62C206F24B2F1310093F2F8 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C206E24B2F1310093F2F8 /* VerificationVC.swift */; };
+		D62C207124B2F9360093F2F8 /* VerifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C207024B2F9360093F2F8 /* VerifyService.swift */; };
+		D62C207324B2FA720093F2F8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62C207224B2FA720093F2F8 /* Config.plist */; };
+		D64056562488FA5600133DE2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64056552488FA5600133DE2 /* DetailsViewController.swift */; };
+		D64056582488FA7800133DE2 /* ItineraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64056572488FA7800133DE2 /* ItineraryVC.swift */; };
+		D642B391247517C100012180 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642B390247517C100012180 /* APIService.swift */; };
+		D642B3932475184900012180 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642B3922475184900012180 /* Response.swift */; };
+		D644499C248CCC4900EBA299 /* PartnersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644499B248CCC4900EBA299 /* PartnersTVC.swift */; };
+		D644499E248CCC6E00EBA299 /* PartnersCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644499D248CCC6E00EBA299 /* PartnersCVC.swift */; };
+		D644BB5A24976D7900AAFC18 /* DashBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB5924976D7900AAFC18 /* DashBoardVC.swift */; };
+		D644BB5C24976D9B00AAFC18 /* ActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB5B24976D9B00AAFC18 /* ActivitiesVC.swift */; };
+		D644BB602497757300AAFC18 /* BookingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB5F2497757300AAFC18 /* BookingInfoVC.swift */; };
+		D644BB63249783EE00AAFC18 /* BoardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB62249783EE00AAFC18 /* BoardTVC.swift */; };
+		D644BB652497841C00AAFC18 /* BookingInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB642497841C00AAFC18 /* BookingInfoTVC.swift */; };
+		D644BB69249A131200AAFC18 /* PolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D644BB68249A131200AAFC18 /* PolicyVC.swift */; };
+		D64884E6247E24F700B8A6A1 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64884E5247E24F700B8A6A1 /* FAQViewController.swift */; };
+		D648E6B3246E7D6400A2E521 /* ChildCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648E6B2246E7D6400A2E521 /* ChildCVC.swift */; };
+		D648E6B5246E7D8A00A2E521 /* ActivitiesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648E6B4246E7D8A00A2E521 /* ActivitiesCVC.swift */; };
+		D648E6B7246E7DA300A2E521 /* GestureCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648E6B6246E7DA300A2E521 /* GestureCVC.swift */; };
+		D64F19B62462E15200C169FC /* HomeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19B52462E15200C169FC /* HomeCVC.swift */; };
+		D64F19BB246936F700C169FC /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19BA246936F700C169FC /* AboutVC.swift */; };
+		D64F19BF24696C3500C169FC /* ApplicatonFormVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19BE24696C3500C169FC /* ApplicatonFormVC1.swift */; };
+		D64F19C124696C5100C169FC /* ApplicationFormVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19C024696C5100C169FC /* ApplicationFormVC2.swift */; };
+		D64F19C324696C7000C169FC /* ApplicationFormVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19C224696C7000C169FC /* ApplicationFormVC3.swift */; };
+		D64F19C5246A883900C169FC /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19C4246A883900C169FC /* SettingsVC.swift */; };
+		D64F19C7246AD8BB00C169FC /* SlidesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19C6246AD8BB00C169FC /* SlidesVC.swift */; };
+		D64F19CB246BF13900C169FC /* PackageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19CA246BF13900C169FC /* PackageDetailsVC.swift */; };
+		D64F19D0246C176A00C169FC /* HotelsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19CF246C176A00C169FC /* HotelsCVC.swift */; };
+		D64FC86F247E30D900923CA8 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FC86E247E30D900923CA8 /* FAQCell.swift */; };
+		D652340124AEF3510076E05D /* SelfDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652340024AEF3510076E05D /* SelfDetailsVC.swift */; };
+		D6554593246EAF6600E974C3 /* GestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554592246EAF6600E974C3 /* GestureVC.swift */; };
+		D6554595246EAF8500E974C3 /* HotelDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */; };
+		D6554597246EAFB800E974C3 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554596246EAFB800E974C3 /* InfoVC.swift */; };
+		D655459A246EB49500E974C3 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554599246EB49500E974C3 /* GlobalVariables.swift */; };
+		D655459E246EBBB100E974C3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D655459D246EBBB100E974C3 /* Protocols.swift */; };
+		D65545A224726AEE00E974C3 /* AboutCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65545A124726AEE00E974C3 /* AboutCVC.swift */; };
+		D657CF9724A4C352009B2C85 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D657CF9624A4C352009B2C85 /* PDFViewController.swift */; };
+		D65CD29824AB562B00BFB6D7 /* ActivitiesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */; };
+		D65CD29A24AB568100BFB6D7 /* ActitvityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65CD29924AB568100BFB6D7 /* ActitvityViewController.swift */; };
+		D65E85D5248E614B003BD530 /* HotelDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E85D4248E614B003BD530 /* HotelDetailsTVC.swift */; };
+		D66E857824AC58CF00B7127C /* OffersCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E857724AC58CF00B7127C /* OffersCVCell.swift */; };
+		D672536D2473AD8100B3B190 /* PackageDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */; };
+		D672536F2474027F00B3B190 /* AboutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672536E2474027F00B3B190 /* AboutTVC.swift */; };
+		D673BCEC249DE590005ADAA2 /* Camps2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D673BCEB249DE58F005ADAA2 /* Camps2.gif */; };
+		D68944F9248677D500409079 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68944F8248677D500409079 /* ForgotVC.swift */; };
+		D68944FB24876FC000409079 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68944FA24876FC000409079 /* SupportVC.swift */; };
+		D68E04C82477E00100985F09 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E04C72477E00100985F09 /* HomeViewController.swift */; };
+		D68E04CB247CECBA00985F09 /* Inc_ExcTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E04CA247CECBA00985F09 /* Inc_ExcTVC.swift */; };
+		D68E04CD247D262000985F09 /* AdultTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E04CC247D262000985F09 /* AdultTVC.swift */; };
+		D68E04CF247D264400985F09 /* ChildTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E04CE247D264400985F09 /* ChildTVC.swift */; };
+		D68E04D1247D265800985F09 /* ActivitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E04D0247D265800985F09 /* ActivitiesTVC.swift */; };
+		D68E04D3247D266900985F09 /* GesturesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68E04D2247D266900985F09 /* GesturesTVC.swift */; };
+		D6A50EDC2475357F00C858F7 /* CampingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A50EDB2475357F00C858F7 /* CampingVC.swift */; };
+		D6A50EDE24753C8400C858F7 /* CampingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A50EDD24753C8400C858F7 /* CampingTVC.swift */; };
+		D6A50EE0247556A800C858F7 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A50EDF247556A800C858F7 /* Reach.swift */; };
+		D6A50EE22475578400C858F7 /* ClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A50EE12475578400C858F7 /* ClientConfig.swift */; };
+		D6A50EE424765AED00C858F7 /* CampingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A50EE324765AED00C858F7 /* CampingCVC.swift */; };
+		D6DC7FC0247F84C600DC770A /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC7FBF247F84C600DC770A /* MenuTVC.swift */; };
+		D6DC7FC2247FC10200DC770A /* Preferrances.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC7FC1247FC10200DC770A /* Preferrances.swift */; };
+		D6DC7FC4247FD05B00DC770A /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC7FC3247FD05B00DC770A /* ReachabilityManager.swift */; };
+		F51556EDA400FCE79F320C61 /* Pods_Camps_Andaman_Camps_AndamanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6075CE624616CB50075E90F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6075CC424616CB20075E90F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6075CCB24616CB30075E90F;
+			remoteInfo = Camps.Andaman;
+		};
+		D6075CF124616CB60075E90F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6075CC424616CB20075E90F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6075CCB24616CB30075E90F;
+			remoteInfo = Camps.Andaman;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6B4766824914B310049989E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A36B2D6BE08891F1A4F00E6 /* Pods-Camps.Andaman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.Andaman.release.xcconfig"; path = "Target Support Files/Pods-Camps.Andaman/Pods-Camps.Andaman.release.xcconfig"; sourceTree = "<group>"; };
+		4CE47E77A97D750DFD8CD5DB /* Pods-Camps.Andaman-Camps.AndamanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.Andaman-Camps.AndamanUITests.release.xcconfig"; path = "Target Support Files/Pods-Camps.Andaman-Camps.AndamanUITests/Pods-Camps.Andaman-Camps.AndamanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5BE10CECBB6DDC4850F0EF0C /* Pods_Camps_Andaman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_Andaman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		862995249FB7281C431126D6 /* Pods-Camps.AndamanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.AndamanTests.debug.xcconfig"; path = "Target Support Files/Pods-Camps.AndamanTests/Pods-Camps.AndamanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0FB5CC5524A900CAEF03F60 /* Pods-Camps.Andaman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.Andaman.debug.xcconfig"; path = "Target Support Files/Pods-Camps.Andaman/Pods-Camps.Andaman.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0096CA2FF67474D4DE8AAF /* Pods-Camps.Andaman-Camps.AndamanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.Andaman-Camps.AndamanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Camps.Andaman-Camps.AndamanUITests/Pods-Camps.Andaman-Camps.AndamanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6075CCC24616CB30075E90F /* AndamanCamps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AndamanCamps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6075CCF24616CB30075E90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6075CD124616CB30075E90F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D6075CD324616CB30075E90F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6075CD624616CB30075E90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6075CD924616CB30075E90F /* Camps_Andaman.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camps_Andaman.xcdatamodel; sourceTree = "<group>"; };
+		D6075CDB24616CB50075E90F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6075CDE24616CB50075E90F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D6075CE024616CB50075E90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6075CE524616CB50075E90F /* Camps.AndamanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Camps.AndamanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6075CE924616CB50075E90F /* Camps_AndamanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camps_AndamanTests.swift; sourceTree = "<group>"; };
+		D6075CEB24616CB60075E90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6075CF024616CB60075E90F /* Camps.AndamanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Camps.AndamanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6075CF424616CB60075E90F /* Camps_AndamanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camps_AndamanUITests.swift; sourceTree = "<group>"; };
+		D6075CF624616CB60075E90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6075D02246182270075E90F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		D6075D0424618A3C0075E90F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D6075D0624618A4E0075E90F /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		D6075D0D246192810075E90F /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		D6075D0E246192810075E90F /* Color+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		D6075D0F246192810075E90F /* ButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		D6075D10246192820075E90F /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		D6075D11246192820075E90F /* AlertCntrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertCntrl.swift; sourceTree = "<group>"; };
+		D6075D12246192820075E90F /* Image+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Ext.swift"; sourceTree = "<group>"; };
+		D6075D13246192820075E90F /* ViewCntrl+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewCntrl+Ext.swift"; sourceTree = "<group>"; };
+		D6075D14246192820075E90F /* TextfieldEXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldEXT.swift; sourceTree = "<group>"; };
+		D6075D15246192820075E90F /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		D6075D16246192820075E90F /* Elevation+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Elevation+Ext.swift"; sourceTree = "<group>"; };
+		D608A05B24822E5A0089FC1B /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		D62C206E24B2F1310093F2F8 /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
+		D62C207024B2F9360093F2F8 /* VerifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyService.swift; sourceTree = "<group>"; };
+		D62C207224B2FA720093F2F8 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		D64056552488FA5600133DE2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D64056572488FA7800133DE2 /* ItineraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryVC.swift; sourceTree = "<group>"; };
+		D642B390247517C100012180 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D642B3922475184900012180 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D644499B248CCC4900EBA299 /* PartnersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersTVC.swift; sourceTree = "<group>"; };
+		D644499D248CCC6E00EBA299 /* PartnersCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersCVC.swift; sourceTree = "<group>"; };
+		D644BB5924976D7900AAFC18 /* DashBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardVC.swift; sourceTree = "<group>"; };
+		D644BB5B24976D9B00AAFC18 /* ActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesVC.swift; sourceTree = "<group>"; };
+		D644BB5F2497757300AAFC18 /* BookingInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoVC.swift; sourceTree = "<group>"; };
+		D644BB62249783EE00AAFC18 /* BoardTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTVC.swift; sourceTree = "<group>"; };
+		D644BB642497841C00AAFC18 /* BookingInfoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingInfoTVC.swift; sourceTree = "<group>"; };
+		D644BB68249A131200AAFC18 /* PolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyVC.swift; sourceTree = "<group>"; };
+		D64884E5247E24F700B8A6A1 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		D648E6B2246E7D6400A2E521 /* ChildCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCVC.swift; sourceTree = "<group>"; };
+		D648E6B4246E7D8A00A2E521 /* ActivitiesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCVC.swift; sourceTree = "<group>"; };
+		D648E6B6246E7DA300A2E521 /* GestureCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureCVC.swift; sourceTree = "<group>"; };
+		D64F19B52462E15200C169FC /* HomeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVC.swift; sourceTree = "<group>"; };
+		D64F19BA246936F700C169FC /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		D64F19BE24696C3500C169FC /* ApplicatonFormVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicatonFormVC1.swift; sourceTree = "<group>"; };
+		D64F19C024696C5100C169FC /* ApplicationFormVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFormVC2.swift; sourceTree = "<group>"; };
+		D64F19C224696C7000C169FC /* ApplicationFormVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFormVC3.swift; sourceTree = "<group>"; };
+		D64F19C4246A883900C169FC /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		D64F19C6246AD8BB00C169FC /* SlidesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesVC.swift; sourceTree = "<group>"; };
+		D64F19CA246BF13900C169FC /* PackageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsVC.swift; sourceTree = "<group>"; };
+		D64F19CF246C176A00C169FC /* HotelsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsCVC.swift; sourceTree = "<group>"; };
+		D64FC86E247E30D900923CA8 /* FAQCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
+		D652340024AEF3510076E05D /* SelfDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailsVC.swift; sourceTree = "<group>"; };
+		D6524AA92488C560008FF580 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		D6554592246EAF6600E974C3 /* GestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureVC.swift; sourceTree = "<group>"; };
+		D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsVC.swift; sourceTree = "<group>"; };
+		D6554596246EAFB800E974C3 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		D6554599246EB49500E974C3 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		D655459D246EBBB100E974C3 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		D65545A124726AEE00E974C3 /* AboutCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCVC.swift; sourceTree = "<group>"; };
+		D657CF9624A4C352009B2C85 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCVCell.swift; sourceTree = "<group>"; };
+		D65CD29924AB568100BFB6D7 /* ActitvityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActitvityViewController.swift; sourceTree = "<group>"; };
+		D65E85D4248E614B003BD530 /* HotelDetailsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsTVC.swift; sourceTree = "<group>"; };
+		D66E857724AC58CF00B7127C /* OffersCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCVCell.swift; sourceTree = "<group>"; };
+		D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsTVC.swift; sourceTree = "<group>"; };
+		D672536E2474027F00B3B190 /* AboutTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTVC.swift; sourceTree = "<group>"; };
+		D673BCEB249DE58F005ADAA2 /* Camps2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Camps2.gif; sourceTree = "<group>"; };
+		D68944F8248677D500409079 /* ForgotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
+		D68944FA24876FC000409079 /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		D68E04C72477E00100985F09 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D68E04CA247CECBA00985F09 /* Inc_ExcTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inc_ExcTVC.swift; sourceTree = "<group>"; };
+		D68E04CC247D262000985F09 /* AdultTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdultTVC.swift; sourceTree = "<group>"; };
+		D68E04CE247D264400985F09 /* ChildTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildTVC.swift; sourceTree = "<group>"; };
+		D68E04D0247D265800985F09 /* ActivitiesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTVC.swift; sourceTree = "<group>"; };
+		D68E04D2247D266900985F09 /* GesturesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesTVC.swift; sourceTree = "<group>"; };
+		D6A50EDB2475357F00C858F7 /* CampingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampingVC.swift; sourceTree = "<group>"; };
+		D6A50EDD24753C8400C858F7 /* CampingTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampingTVC.swift; sourceTree = "<group>"; };
+		D6A50EDF247556A800C858F7 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		D6A50EE12475578400C858F7 /* ClientConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientConfig.swift; sourceTree = "<group>"; };
+		D6A50EE324765AED00C858F7 /* CampingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampingCVC.swift; sourceTree = "<group>"; };
+		D6DC7FBF247F84C600DC770A /* MenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
+		D6DC7FC1247FC10200DC770A /* Preferrances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferrances.swift; sourceTree = "<group>"; };
+		D6DC7FC3247FD05B00DC770A /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_Andaman_Camps_AndamanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4FD3792B8C9DC78BECAB76A /* Pods-Camps.AndamanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.AndamanTests.release.xcconfig"; path = "Target Support Files/Pods-Camps.AndamanTests/Pods-Camps.AndamanTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7614A52449C53685F129E15 /* Pods_Camps_AndamanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_AndamanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6075CC924616CB30075E90F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA1526856DDF7EE645E7BA3 /* Pods_Camps_Andaman.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6075CE224616CB50075E90F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D3DAD55E5A11E278B59A1DF /* Pods_Camps_AndamanTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6075CED24616CB60075E90F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F51556EDA400FCE79F320C61 /* Pods_Camps_Andaman_Camps_AndamanUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		492C1EF986BA38EE5478DE43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BE10CECBB6DDC4850F0EF0C /* Pods_Camps_Andaman.framework */,
+				DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */,
+				E7614A52449C53685F129E15 /* Pods_Camps_AndamanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FA0F63E1D0F99DEA67E5213 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0FB5CC5524A900CAEF03F60 /* Pods-Camps.Andaman.debug.xcconfig */,
+				3A36B2D6BE08891F1A4F00E6 /* Pods-Camps.Andaman.release.xcconfig */,
+				CC0096CA2FF67474D4DE8AAF /* Pods-Camps.Andaman-Camps.AndamanUITests.debug.xcconfig */,
+				4CE47E77A97D750DFD8CD5DB /* Pods-Camps.Andaman-Camps.AndamanUITests.release.xcconfig */,
+				862995249FB7281C431126D6 /* Pods-Camps.AndamanTests.debug.xcconfig */,
+				E4FD3792B8C9DC78BECAB76A /* Pods-Camps.AndamanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D6075CC324616CB20075E90F = {
+			isa = PBXGroup;
+			children = (
+				D6075CCE24616CB30075E90F /* Camps.Andaman */,
+				D6075CE824616CB50075E90F /* Camps.AndamanTests */,
+				D6075CF324616CB60075E90F /* Camps.AndamanUITests */,
+				D6075CCD24616CB30075E90F /* Products */,
+				6FA0F63E1D0F99DEA67E5213 /* Pods */,
+				492C1EF986BA38EE5478DE43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D6075CCD24616CB30075E90F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6075CCC24616CB30075E90F /* AndamanCamps.app */,
+				D6075CE524616CB50075E90F /* Camps.AndamanTests.xctest */,
+				D6075CF024616CB60075E90F /* Camps.AndamanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6075CCE24616CB30075E90F /* Camps.Andaman */ = {
+			isa = PBXGroup;
+			children = (
+				D6075CCF24616CB30075E90F /* AppDelegate.swift */,
+				D6075CD124616CB30075E90F /* SceneDelegate.swift */,
+				D6524AA92488C560008FF580 /* Header.h */,
+				D6075D22246192FA0075E90F /* EXT+FILE */,
+				D64F19B12462E0F600C169FC /* TableViewCells */,
+				D64F19CE246C16BF00C169FC /* CollectionViewCells */,
+				D6554598246EB47900E974C3 /* Internals */,
+				D6075D0A246190510075E90F /* Controllers */,
+				D6075CD524616CB30075E90F /* Main.storyboard */,
+				D6075CDB24616CB50075E90F /* Assets.xcassets */,
+				D6075CDD24616CB50075E90F /* LaunchScreen.storyboard */,
+				D673BCEB249DE58F005ADAA2 /* Camps2.gif */,
+				D62C207224B2FA720093F2F8 /* Config.plist */,
+				D6075CE024616CB50075E90F /* Info.plist */,
+				D6075CD824616CB30075E90F /* Camps_Andaman.xcdatamodeld */,
+			);
+			path = Camps.Andaman;
+			sourceTree = "<group>";
+		};
+		D6075CE824616CB50075E90F /* Camps.AndamanTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6075CE924616CB50075E90F /* Camps_AndamanTests.swift */,
+				D6075CEB24616CB60075E90F /* Info.plist */,
+			);
+			path = Camps.AndamanTests;
+			sourceTree = "<group>";
+		};
+		D6075CF324616CB60075E90F /* Camps.AndamanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D6075CF424616CB60075E90F /* Camps_AndamanUITests.swift */,
+				D6075CF624616CB60075E90F /* Info.plist */,
+			);
+			path = Camps.AndamanUITests;
+			sourceTree = "<group>";
+		};
+		D6075D0A246190510075E90F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D6075CD324616CB30075E90F /* ViewController.swift */,
+				D62C206E24B2F1310093F2F8 /* VerificationVC.swift */,
+				D657CF9624A4C352009B2C85 /* PDFViewController.swift */,
+				D652340024AEF3510076E05D /* SelfDetailsVC.swift */,
+				D644BB68249A131200AAFC18 /* PolicyVC.swift */,
+				D65CD29924AB568100BFB6D7 /* ActitvityViewController.swift */,
+				D644BB5F2497757300AAFC18 /* BookingInfoVC.swift */,
+				D6075D02246182270075E90F /* SignUpVC.swift */,
+				D644BB5924976D7900AAFC18 /* DashBoardVC.swift */,
+				D644BB5B24976D9B00AAFC18 /* ActivitiesVC.swift */,
+				D64F19C024696C5100C169FC /* ApplicationFormVC2.swift */,
+				D68944FA24876FC000409079 /* SupportVC.swift */,
+				D64F19BE24696C3500C169FC /* ApplicatonFormVC1.swift */,
+				D6A50EDB2475357F00C858F7 /* CampingVC.swift */,
+				D64F19C4246A883900C169FC /* SettingsVC.swift */,
+				D68E04C72477E00100985F09 /* HomeViewController.swift */,
+				D64056552488FA5600133DE2 /* DetailsViewController.swift */,
+				D64056572488FA7800133DE2 /* ItineraryVC.swift */,
+				D68944F8248677D500409079 /* ForgotVC.swift */,
+				D608A05B24822E5A0089FC1B /* WebVC.swift */,
+				D64884E5247E24F700B8A6A1 /* FAQViewController.swift */,
+				D64F19C224696C7000C169FC /* ApplicationFormVC3.swift */,
+				D6554592246EAF6600E974C3 /* GestureVC.swift */,
+				D64F19BA246936F700C169FC /* AboutVC.swift */,
+				D6554596246EAFB800E974C3 /* InfoVC.swift */,
+				D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */,
+				D6075D0424618A3C0075E90F /* MainViewController.swift */,
+				D64F19CA246BF13900C169FC /* PackageDetailsVC.swift */,
+				D64F19C6246AD8BB00C169FC /* SlidesVC.swift */,
+				D6075D0624618A4E0075E90F /* SideMenuVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D6075D22246192FA0075E90F /* EXT+FILE */ = {
+			isa = PBXGroup;
+			children = (
+				D6075D0E246192810075E90F /* Color+Ext.swift */,
+				D6075D16246192820075E90F /* Elevation+Ext.swift */,
+				D6075D12246192820075E90F /* Image+Ext.swift */,
+				D6075D0F246192810075E90F /* ButtonExtensions.swift */,
+				D6075D10246192820075E90F /* String+Ext.swift */,
+				D6075D0D246192810075E90F /* Toast.swift */,
+				D6075D15246192820075E90F /* View+Ext.swift */,
+				D6075D14246192820075E90F /* TextfieldEXT.swift */,
+				D6075D11246192820075E90F /* AlertCntrl.swift */,
+				D6075D13246192820075E90F /* ViewCntrl+Ext.swift */,
+			);
+			path = "EXT+FILE";
+			sourceTree = "<group>";
+		};
+		D64F19B12462E0F600C169FC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D672536E2474027F00B3B190 /* AboutTVC.swift */,
+				D644499B248CCC4900EBA299 /* PartnersTVC.swift */,
+				D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */,
+				D6DC7FBF247F84C600DC770A /* MenuTVC.swift */,
+				D644BB642497841C00AAFC18 /* BookingInfoTVC.swift */,
+				D644BB62249783EE00AAFC18 /* BoardTVC.swift */,
+				D68E04CC247D262000985F09 /* AdultTVC.swift */,
+				D65E85D4248E614B003BD530 /* HotelDetailsTVC.swift */,
+				D64FC86E247E30D900923CA8 /* FAQCell.swift */,
+				D68E04CE247D264400985F09 /* ChildTVC.swift */,
+				D68E04D0247D265800985F09 /* ActivitiesTVC.swift */,
+				D68E04D2247D266900985F09 /* GesturesTVC.swift */,
+				D6A50EDD24753C8400C858F7 /* CampingTVC.swift */,
+				D68E04CA247CECBA00985F09 /* Inc_ExcTVC.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		D64F19CE246C16BF00C169FC /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D64F19CF246C176A00C169FC /* HotelsCVC.swift */,
+				D66E857724AC58CF00B7127C /* OffersCVCell.swift */,
+				D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */,
+				D6A50EE324765AED00C858F7 /* CampingCVC.swift */,
+				D65545A124726AEE00E974C3 /* AboutCVC.swift */,
+				D648E6B4246E7D8A00A2E521 /* ActivitiesCVC.swift */,
+				D648E6B6246E7DA300A2E521 /* GestureCVC.swift */,
+				D648E6B2246E7D6400A2E521 /* ChildCVC.swift */,
+				D644499D248CCC6E00EBA299 /* PartnersCVC.swift */,
+				D64F19B52462E15200C169FC /* HomeCVC.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D6554598246EB47900E974C3 /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+				D6554599246EB49500E974C3 /* GlobalVariables.swift */,
+				D6DC7FC3247FD05B00DC770A /* ReachabilityManager.swift */,
+				D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */,
+				D655459D246EBBB100E974C3 /* Protocols.swift */,
+				D6DC7FC1247FC10200DC770A /* Preferrances.swift */,
+				D62C207024B2F9360093F2F8 /* VerifyService.swift */,
+				D642B390247517C100012180 /* APIService.swift */,
+				D642B3922475184900012180 /* Response.swift */,
+				D6A50EDF247556A800C858F7 /* Reach.swift */,
+				D6A50EE12475578400C858F7 /* ClientConfig.swift */,
+			);
+			path = Internals;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6075CCB24616CB30075E90F /* Camps.Andaman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6075CF924616CB60075E90F /* Build configuration list for PBXNativeTarget "Camps.Andaman" */;
+			buildPhases = (
+				CED2B9082D4BB21E528BF4F4 /* [CP] Check Pods Manifest.lock */,
+				D6075CC824616CB30075E90F /* Sources */,
+				D6075CC924616CB30075E90F /* Frameworks */,
+				D6075CCA24616CB30075E90F /* Resources */,
+				7E4B3B814B7C812E8D0B5165 /* [CP] Embed Pods Frameworks */,
+				D6B4766824914B310049989E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Camps.Andaman;
+			productName = Camps.Andaman;
+			productReference = D6075CCC24616CB30075E90F /* AndamanCamps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6075CE424616CB50075E90F /* Camps.AndamanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6075CFC24616CB60075E90F /* Build configuration list for PBXNativeTarget "Camps.AndamanTests" */;
+			buildPhases = (
+				BA57552C767A44ABEF992BA3 /* [CP] Check Pods Manifest.lock */,
+				D6075CE124616CB50075E90F /* Sources */,
+				D6075CE224616CB50075E90F /* Frameworks */,
+				D6075CE324616CB50075E90F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6075CE724616CB50075E90F /* PBXTargetDependency */,
+			);
+			name = Camps.AndamanTests;
+			productName = Camps.AndamanTests;
+			productReference = D6075CE524616CB50075E90F /* Camps.AndamanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D6075CEF24616CB60075E90F /* Camps.AndamanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6075CFF24616CB60075E90F /* Build configuration list for PBXNativeTarget "Camps.AndamanUITests" */;
+			buildPhases = (
+				AA959DCA5677522F1129C2A1 /* [CP] Check Pods Manifest.lock */,
+				D6075CEC24616CB60075E90F /* Sources */,
+				D6075CED24616CB60075E90F /* Frameworks */,
+				D6075CEE24616CB60075E90F /* Resources */,
+				F2627173A2D10469B9542BA7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6075CF224616CB60075E90F /* PBXTargetDependency */,
+			);
+			name = Camps.AndamanUITests;
+			productName = Camps.AndamanUITests;
+			productReference = D6075CF024616CB60075E90F /* Camps.AndamanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6075CC424616CB20075E90F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = ArSquareDevlopment;
+				TargetAttributes = {
+					D6075CCB24616CB30075E90F = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					D6075CE424616CB50075E90F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D6075CCB24616CB30075E90F;
+					};
+					D6075CEF24616CB60075E90F = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = D6075CCB24616CB30075E90F;
+					};
+				};
+			};
+			buildConfigurationList = D6075CC724616CB20075E90F /* Build configuration list for PBXProject "Camps.Andaman" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6075CC324616CB20075E90F;
+			productRefGroup = D6075CCD24616CB30075E90F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6075CCB24616CB30075E90F /* Camps.Andaman */,
+				D6075CE424616CB50075E90F /* Camps.AndamanTests */,
+				D6075CEF24616CB60075E90F /* Camps.AndamanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6075CCA24616CB30075E90F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6075CDF24616CB50075E90F /* LaunchScreen.storyboard in Resources */,
+				D673BCEC249DE590005ADAA2 /* Camps2.gif in Resources */,
+				D6075CDC24616CB50075E90F /* Assets.xcassets in Resources */,
+				D62C207324B2FA720093F2F8 /* Config.plist in Resources */,
+				D6075CD724616CB30075E90F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6075CE324616CB50075E90F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6075CEE24616CB60075E90F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E4B3B814B7C812E8D0B5165 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman/Pods-Camps.Andaman-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman/Pods-Camps.Andaman-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman/Pods-Camps.Andaman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA959DCA5677522F1129C2A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Camps.Andaman-Camps.AndamanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA57552C767A44ABEF992BA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Camps.AndamanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CED2B9082D4BB21E528BF4F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Camps.Andaman-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2627173A2D10469B9542BA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman-Camps.AndamanUITests/Pods-Camps.Andaman-Camps.AndamanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman-Camps.AndamanUITests/Pods-Camps.Andaman-Camps.AndamanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman-Camps.AndamanUITests/Pods-Camps.Andaman-Camps.AndamanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6075CC824616CB30075E90F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D68E04CF247D264400985F09 /* ChildTVC.swift in Sources */,
+				D6075D1F246192820075E90F /* View+Ext.swift in Sources */,
+				D68E04CB247CECBA00985F09 /* Inc_ExcTVC.swift in Sources */,
+				D6075CD424616CB30075E90F /* ViewController.swift in Sources */,
+				D6554593246EAF6600E974C3 /* GestureVC.swift in Sources */,
+				D6A50EDC2475357F00C858F7 /* CampingVC.swift in Sources */,
+				D672536D2473AD8100B3B190 /* PackageDetailsTVC.swift in Sources */,
+				D68E04D1247D265800985F09 /* ActivitiesTVC.swift in Sources */,
+				D672536F2474027F00B3B190 /* AboutTVC.swift in Sources */,
+				D6A50EE22475578400C858F7 /* ClientConfig.swift in Sources */,
+				D64FC86F247E30D900923CA8 /* FAQCell.swift in Sources */,
+				D6075CDA24616CB30075E90F /* Camps_Andaman.xcdatamodeld in Sources */,
+				D68944FB24876FC000409079 /* SupportVC.swift in Sources */,
+				D6075D1B246192820075E90F /* AlertCntrl.swift in Sources */,
+				D64884E6247E24F700B8A6A1 /* FAQViewController.swift in Sources */,
+				D648E6B7246E7DA300A2E521 /* GestureCVC.swift in Sources */,
+				D6DC7FC4247FD05B00DC770A /* ReachabilityManager.swift in Sources */,
+				D64056582488FA7800133DE2 /* ItineraryVC.swift in Sources */,
+				D6075D0724618A4E0075E90F /* SideMenuVC.swift in Sources */,
+				D6075D1D246192820075E90F /* ViewCntrl+Ext.swift in Sources */,
+				D6554595246EAF8500E974C3 /* HotelDetailsVC.swift in Sources */,
+				D6075CD024616CB30075E90F /* AppDelegate.swift in Sources */,
+				D644BB652497841C00AAFC18 /* BookingInfoTVC.swift in Sources */,
+				D644BB5A24976D7900AAFC18 /* DashBoardVC.swift in Sources */,
+				D64F19CB246BF13900C169FC /* PackageDetailsVC.swift in Sources */,
+				D644BB69249A131200AAFC18 /* PolicyVC.swift in Sources */,
+				D64F19C7246AD8BB00C169FC /* SlidesVC.swift in Sources */,
+				D657CF9724A4C352009B2C85 /* PDFViewController.swift in Sources */,
+				D6A50EE424765AED00C858F7 /* CampingCVC.swift in Sources */,
+				D655459E246EBBB100E974C3 /* Protocols.swift in Sources */,
+				D68E04C82477E00100985F09 /* HomeViewController.swift in Sources */,
+				D64F19C324696C7000C169FC /* ApplicationFormVC3.swift in Sources */,
+				D644BB5C24976D9B00AAFC18 /* ActivitiesVC.swift in Sources */,
+				D64F19C5246A883900C169FC /* SettingsVC.swift in Sources */,
+				D644BB602497757300AAFC18 /* BookingInfoVC.swift in Sources */,
+				D6075D1E246192820075E90F /* TextfieldEXT.swift in Sources */,
+				D644499C248CCC4900EBA299 /* PartnersTVC.swift in Sources */,
+				D66E857824AC58CF00B7127C /* OffersCVCell.swift in Sources */,
+				D62C207124B2F9360093F2F8 /* VerifyService.swift in Sources */,
+				D644BB63249783EE00AAFC18 /* BoardTVC.swift in Sources */,
+				D62C206F24B2F1310093F2F8 /* VerificationVC.swift in Sources */,
+				D608A05C24822E5A0089FC1B /* WebVC.swift in Sources */,
+				D6075D0524618A3C0075E90F /* MainViewController.swift in Sources */,
+				D6075D1A246192820075E90F /* String+Ext.swift in Sources */,
+				D6554597246EAFB800E974C3 /* InfoVC.swift in Sources */,
+				D642B391247517C100012180 /* APIService.swift in Sources */,
+				D644499E248CCC6E00EBA299 /* PartnersCVC.swift in Sources */,
+				D648E6B5246E7D8A00A2E521 /* ActivitiesCVC.swift in Sources */,
+				D642B3932475184900012180 /* Response.swift in Sources */,
+				D6075D20246192820075E90F /* Elevation+Ext.swift in Sources */,
+				D64F19D0246C176A00C169FC /* HotelsCVC.swift in Sources */,
+				D64F19BF24696C3500C169FC /* ApplicatonFormVC1.swift in Sources */,
+				D6075D03246182270075E90F /* SignUpVC.swift in Sources */,
+				D68E04CD247D262000985F09 /* AdultTVC.swift in Sources */,
+				D6075D17246192820075E90F /* Toast.swift in Sources */,
+				D65CD29A24AB568100BFB6D7 /* ActitvityViewController.swift in Sources */,
+				D68E04D3247D266900985F09 /* GesturesTVC.swift in Sources */,
+				D648E6B3246E7D6400A2E521 /* ChildCVC.swift in Sources */,
+				D6116A202494B9040089B995 /* CustomSegmentedControl.swift in Sources */,
+				D64F19BB246936F700C169FC /* AboutVC.swift in Sources */,
+				D655459A246EB49500E974C3 /* GlobalVariables.swift in Sources */,
+				D6DC7FC2247FC10200DC770A /* Preferrances.swift in Sources */,
+				D6A50EE0247556A800C858F7 /* Reach.swift in Sources */,
+				D6075CD224616CB30075E90F /* SceneDelegate.swift in Sources */,
+				D6075D1C246192820075E90F /* Image+Ext.swift in Sources */,
+				D64F19B62462E15200C169FC /* HomeCVC.swift in Sources */,
+				D6075D18246192820075E90F /* Color+Ext.swift in Sources */,
+				D652340124AEF3510076E05D /* SelfDetailsVC.swift in Sources */,
+				D65CD29824AB562B00BFB6D7 /* ActivitiesCVCell.swift in Sources */,
+				D65E85D5248E614B003BD530 /* HotelDetailsTVC.swift in Sources */,
+				D64F19C124696C5100C169FC /* ApplicationFormVC2.swift in Sources */,
+				D68944F9248677D500409079 /* ForgotVC.swift in Sources */,
+				D6DC7FC0247F84C600DC770A /* MenuTVC.swift in Sources */,
+				D6A50EDE24753C8400C858F7 /* CampingTVC.swift in Sources */,
+				D65545A224726AEE00E974C3 /* AboutCVC.swift in Sources */,
+				D6075D19246192820075E90F /* ButtonExtensions.swift in Sources */,
+				D64056562488FA5600133DE2 /* DetailsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6075CE124616CB50075E90F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6075CEA24616CB50075E90F /* Camps_AndamanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6075CEC24616CB60075E90F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6075CF524616CB60075E90F /* Camps_AndamanUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6075CE724616CB50075E90F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6075CCB24616CB30075E90F /* Camps.Andaman */;
+			targetProxy = D6075CE624616CB50075E90F /* PBXContainerItemProxy */;
+		};
+		D6075CF224616CB60075E90F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6075CCB24616CB30075E90F /* Camps.Andaman */;
+			targetProxy = D6075CF124616CB60075E90F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D6075CD524616CB30075E90F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6075CD624616CB30075E90F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D6075CDD24616CB50075E90F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6075CDE24616CB50075E90F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6075CF724616CB60075E90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D6075CF824616CB60075E90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6075CFA24616CB60075E90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0FB5CC5524A900CAEF03F60 /* Pods-Camps.Andaman.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dev Kumar (5QT37QX5M3)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QT37QX5M3;
+				INFOPLIST_FILE = Camps.Andaman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
+				PRODUCT_NAME = AndamanCamps;
+				PROVISIONING_PROFILE_SPECIFIER = Camps;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D6075CFB24616CB60075E90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A36B2D6BE08891F1A4F00E6 /* Pods-Camps.Andaman.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dev Kumar (5QT37QX5M3)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5QT37QX5M3;
+				INFOPLIST_FILE = Camps.Andaman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
+				PRODUCT_NAME = AndamanCamps;
+				PROVISIONING_PROFILE_SPECIFIER = Camps;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D6075CFD24616CB60075E90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862995249FB7281C431126D6 /* Pods-Camps.AndamanTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QT37QX5M3;
+				INFOPLIST_FILE = Camps.AndamanTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-Annatha.Camps-AndamanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camps.Andaman.app/Camps.Andaman";
+			};
+			name = Debug;
+		};
+		D6075CFE24616CB60075E90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FD3792B8C9DC78BECAB76A /* Pods-Camps.AndamanTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QT37QX5M3;
+				INFOPLIST_FILE = Camps.AndamanTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-Annatha.Camps-AndamanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camps.Andaman.app/Camps.Andaman";
+			};
+			name = Release;
+		};
+		D6075D0024616CB60075E90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0096CA2FF67474D4DE8AAF /* Pods-Camps.Andaman-Camps.AndamanUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QT37QX5M3;
+				INFOPLIST_FILE = Camps.AndamanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-Annatha.Camps-AndamanUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Camps.Andaman;
+			};
+			name = Debug;
+		};
+		D6075D0124616CB60075E90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CE47E77A97D750DFD8CD5DB /* Pods-Camps.Andaman-Camps.AndamanUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5QT37QX5M3;
+				INFOPLIST_FILE = Camps.AndamanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-Annatha.Camps-AndamanUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Camps.Andaman;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6075CC724616CB20075E90F /* Build configuration list for PBXProject "Camps.Andaman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6075CF724616CB60075E90F /* Debug */,
+				D6075CF824616CB60075E90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6075CF924616CB60075E90F /* Build configuration list for PBXNativeTarget "Camps.Andaman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6075CFA24616CB60075E90F /* Debug */,
+				D6075CFB24616CB60075E90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6075CFC24616CB60075E90F /* Build configuration list for PBXNativeTarget "Camps.AndamanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6075CFD24616CB60075E90F /* Debug */,
+				D6075CFE24616CB60075E90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6075CFF24616CB60075E90F /* Build configuration list for PBXNativeTarget "Camps.AndamanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6075D0024616CB60075E90F /* Debug */,
+				D6075D0124616CB60075E90F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6075CD824616CB30075E90F /* Camps_Andaman.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6075CD924616CB30075E90F /* Camps_Andaman.xcdatamodel */,
+			);
+			currentVersion = D6075CD924616CB30075E90F /* Camps_Andaman.xcdatamodel */;
+			path = Camps_Andaman.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D6075CC424616CB20075E90F /* Project object */;
+}

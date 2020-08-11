@@ -1,0 +1,32 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.5)
+  - MarqueeLabel (4.0.2)
+  - razorpay-pod (1.1.5)
+  - ReachabilitySwift (5.0.0)
+  - SideMenu (6.4.8)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - MarqueeLabel
+  - razorpay-pod (~> 1.1.1)
+  - ReachabilitySwift
+  - SideMenu (~> 6.0)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - MarqueeLabel
+    - razorpay-pod
+    - ReachabilitySwift
+    - SideMenu
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  MarqueeLabel: f762aa681ae201f66c1d511858b171f75d83013a
+  razorpay-pod: 31dd24ddb70275d82be12527b45001f9bc9f1be2
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+
+PODFILE CHECKSUM: d0e39e4743b854f5385422d078f7c369ba0e426e
+
+COCOAPODS: 1.8.4
