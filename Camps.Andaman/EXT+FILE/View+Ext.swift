@@ -87,7 +87,6 @@ extension UIView {
 
         func hideActivityIndicator() {
             let activityIndicator = self.viewWithTag(111) as? UIActivityIndicatorView
-    //        self.view.removeBlurEffect()
             activityIndicator?.stopAnimating()
             activityIndicator?.removeFromSuperview()
         }

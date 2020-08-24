@@ -40,13 +40,8 @@ extension UIViewController {
         view.endEditing(true)
     }
     
+   func passwordSecurity(passTF:UITextField, button:UIButton) {
    
-    
-    
-   
-    
-
-    func passwordSecurity(passTF:UITextField, button:UIButton) {
     if(iconClick == false) {
     passTF.isSecureTextEntry = false
     button.setImage(UIImage(named: "close"), for: .normal)
