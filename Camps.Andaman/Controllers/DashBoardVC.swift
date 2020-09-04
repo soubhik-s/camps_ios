@@ -29,7 +29,7 @@ class DashBoardVC: UIViewController {
     var razorpay: RazorpayCheckout!
       let testKey = "rzp_test_h2qJyuZhWaSEyQ"
     let liveKey = "rzp_live_LW8bJifBfpF5d3"
-    var pdfUrlStr = "https://camps.goexploreandaman.com/invoice_api/"
+//    var pdfUrlStr = "https://camps.goexploreandaman.com/invoice_api/"
     let month_Arr = ["January","Febraury","March","April","May","June","July","August","September","October", "November","December"]
     var pdfView = PDFView()
 
@@ -44,7 +44,7 @@ class DashBoardVC: UIViewController {
     
     func viewChanges() {
         razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
-        dataTV.rowHeight = 350
+        dataTV.rowHeight = 420
         dataTV.isHidden = true
         pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
         let tap = UITapGestureRecognizer(target: self, action: #selector(onTapped))
@@ -208,7 +208,7 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BoardTVC
         cell.dataView.layer.borderColor = UIColor.white.cgColor
         cell.dataView.layer.cornerRadius = 5
-        cell.dataView.layer.borderWidth = 1.0
+        cell.dataView.layer.borderWidth = 0.5
         
         cell.pkgID_Lbl.text = pkgID_Arr[indexPath.row]
         cell.campLbl.text = camp_Arr[indexPath.row]
@@ -235,10 +235,13 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         }
         
         
-        cell.payNow_Btn.makeBtnRound()
-        cell.activityBtn.makeRound()
-        cell.pkgDetals_Btn.makeRound()
-        cell.invoice_Btn.makeBtnRound()
+        cell.payNow_Btn.layer.cornerRadius = 5
+
+        cell.activityBtn.layer.cornerRadius = 5
+        cell.pkgDetals_Btn.layer.cornerRadius = 5
+        cell.invoice_Btn.layer.cornerRadius = 5
+
+       
         
         cell.activityBtn.tag = indexPath.row
         cell.payNow_Btn.tag = indexPath.row
@@ -345,10 +348,14 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         DashboardVariables.bookingID = currentCell.id_Lbl.text!
         print("DashboardVariables.bookingID = \(DashboardVariables.bookingID)")
         
-       openPdf()
+//       openPdf()
                
-       
+        let VC = self.storyboard?.instantiateViewController(withIdentifier: "PDFViewController") as! PDFViewController
 
+        present(VC, animated: true) {
+            
+        }
+//        self.navigationController?.pushViewController(VC, animated: true)
     }
     
     

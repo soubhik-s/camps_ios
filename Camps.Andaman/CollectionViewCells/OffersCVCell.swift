@@ -15,8 +15,10 @@ class OffersCVCell: UICollectionViewCell {
     
     @IBOutlet weak var discount_Lbl: UILabel!
     
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var offerCode_Lbl: UILabel!
     @IBOutlet weak var myPage: UIPageControl!
     
+    @IBOutlet weak var expiryLbl: UILabel!
     
 }

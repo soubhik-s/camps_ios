@@ -692,16 +692,16 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="25"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya9-4z-eD4">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="100" id="AmC-u4-kqn"/>
+                                                                                    <constraint firstAttribute="width" constant="80" id="AmC-u4-kqn"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arc-bD-W9d" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                <rect key="frame" x="100" y="0.0" width="294" height="25"/>
+                                                                                <rect key="frame" x="80" y="0.0" width="314" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -720,16 +720,16 @@
                                                                         <rect key="frame" x="0.0" y="35" width="394" height="25"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AfterNoon :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3r-l6-mmY">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="100" id="aNK-BD-sPt"/>
+                                                                                    <constraint firstAttribute="width" constant="90" id="aNK-BD-sPt"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnh-b5-hUP" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                <rect key="frame" x="100" y="0.0" width="294" height="25"/>
+                                                                                <rect key="frame" x="90" y="0.0" width="304" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -740,16 +740,16 @@
                                                                         <rect key="frame" x="0.0" y="70" width="394" height="25"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ank-79-sWB">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="100" id="R49-2p-2Ab"/>
+                                                                                    <constraint firstAttribute="width" constant="80" id="R49-2p-2Ab"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-YW-gWT" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                <rect key="frame" x="100" y="0.0" width="294" height="25"/>
+                                                                                <rect key="frame" x="80" y="0.0" width="314" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -760,16 +760,16 @@
                                                                         <rect key="frame" x="0.0" y="105" width="394" height="25"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverNight :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDq-nY-qHS">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="25"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="100" id="IrX-7U-lbf"/>
+                                                                                    <constraint firstAttribute="width" constant="90" id="IrX-7U-lbf"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCq-TI-avl" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                <rect key="frame" x="100" y="0.0" width="294" height="25"/>
+                                                                                <rect key="frame" x="90" y="0.0" width="304" height="25"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -823,7 +823,7 @@
                                     <constraint firstAttribute="height" constant="25" id="aNf-cl-eez"/>
                                     <constraint firstAttribute="width" constant="70" id="dQL-6r-WZN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                 <state key="normal" title="save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -948,263 +948,269 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BoardTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="350" id="D4p-2L-h4g" customClass="BoardTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="350"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BoardTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="420" id="D4p-2L-h4g" customClass="BoardTVC" customModule="AndamanCamps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="420"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D4p-2L-h4g" id="NSw-Jm-15e">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="420"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-mP-NH6">
-                                                    <rect key="frame" x="10" y="10" width="394" height="330"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dxu-8C-YiV">
-                                                            <rect key="frame" x="10" y="10" width="374" height="235"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1pP-7H-oNN">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qm-mn-z5R">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="6Iy-MZ-dsz"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQr-De-NHT">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="25" id="lcA-Fr-bEO"/>
-                                                                    </constraints>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-0n-5Tc">
-                                                                    <rect key="frame" x="0.0" y="35" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-Sy-1o1">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="DCs-HD-MQG"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-qZ-wCe">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="25" id="FIw-lr-Gbz"/>
-                                                                    </constraints>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-SF-nHm">
-                                                                    <rect key="frame" x="0.0" y="70" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-7E-TYv">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="Tp7-e6-ZPR"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxo-8y-57x">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jBd-pf-2DB">
-                                                                    <rect key="frame" x="0.0" y="105" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MJ-QM-7yh">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="fSV-kv-xIB"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-ZB-erJ">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A31-42-qIp">
-                                                                    <rect key="frame" x="0.0" y="140" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price (Rs) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goY-Xo-wvQ">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="C3V-ZO-6p9"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-T1-Weo">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Gn-OVQ">
-                                                                    <rect key="frame" x="0.0" y="175" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGE-cF-u74">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="mVA-Qk-Q96"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-l1-ZAt">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tax-tD-GGP">
-                                                                    <rect key="frame" x="0.0" y="210" width="374" height="25"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Status :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1c-Pe-hjT">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="25"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="150" id="J3B-Te-G5B"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvq-7c-0Ab">
-                                                                            <rect key="frame" x="160" y="0.0" width="214" height="25"/>
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zP-jF-Eih">
-                                                            <rect key="frame" x="10" y="255" width="60" height="25"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="5JD-1P-rfO"/>
-                                                                <constraint firstAttribute="width" constant="60" id="kef-7D-tOW"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Guk-Dh-MTy">
-                                                            <rect key="frame" x="10" y="290" width="335" height="25"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-wc-mGp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="80" id="hcJ-dq-6ce"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                                                    <state key="normal" title="Invoice">
-                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </state>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-FN-PFK">
-                                                                    <rect key="frame" x="85" y="0.0" width="80" height="25"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                    <state key="normal" title="User Info"/>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyt-gd-HUM">
-                                                                    <rect key="frame" x="170" y="0.0" width="80" height="25"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                    <state key="normal" title="Activities">
-                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </state>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-Bt-2F0">
-                                                                    <rect key="frame" x="255" y="0.0" width="80" height="25"/>
-                                                                    <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="25" id="nJ9-Ni-6Wf"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                    <state key="normal" title="Pay-Now">
-                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </state>
-                                                                </button>
-                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay4-dG-xJ3">
-                                                                    <rect key="frame" x="335" y="0.0" width="0.0" height="25"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pG-eK-uWb">
-                                                                    <rect key="frame" x="335" y="0.0" width="0.0" height="25"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDG-iY-9M6">
-                                                                    <rect key="frame" x="335" y="0.0" width="0.0" height="25"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="wRp-FD-o5c"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="dxu-8C-YiV" secondAttribute="trailing" constant="10" id="75F-bL-JUH"/>
-                                                        <constraint firstItem="dxu-8C-YiV" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="Hul-px-2ve"/>
-                                                        <constraint firstItem="Guk-Dh-MTy" firstAttribute="top" secondItem="7zP-jF-Eih" secondAttribute="bottom" constant="10" id="Ikd-Gw-Jle"/>
-                                                        <constraint firstItem="7zP-jF-Eih" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="Nei-Bm-uSU"/>
-                                                        <constraint firstItem="dxu-8C-YiV" firstAttribute="top" secondItem="Qir-mP-NH6" secondAttribute="top" constant="10" id="OI5-PM-lgb"/>
-                                                        <constraint firstItem="7zP-jF-Eih" firstAttribute="top" secondItem="dxu-8C-YiV" secondAttribute="bottom" constant="10" id="PWo-Oh-Uu2"/>
-                                                        <constraint firstItem="dxu-8C-YiV" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="S2l-sV-fL8"/>
-                                                        <constraint firstItem="Guk-Dh-MTy" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="cyj-eC-AB4"/>
-                                                    </constraints>
-                                                </view>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-1v-BRz">
+                                                    <rect key="frame" x="10" y="10" width="394" height="400"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jdy-j4-3kU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="400"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-mP-NH6">
+                                                                <rect key="frame" x="10" y="10" width="374" height="380"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dxu-8C-YiV">
+                                                                        <rect key="frame" x="10" y="10" width="354" height="235"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1pP-7H-oNN">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="127.5" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking ID :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qm-mn-z5R">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQr-De-NHT">
+                                                                                        <rect key="frame" x="92" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25" id="lcA-Fr-bEO"/>
+                                                                                </constraints>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-0n-5Tc">
+                                                                                <rect key="frame" x="0.0" y="35" width="92.5" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-Sy-1o1">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-qZ-wCe">
+                                                                                        <rect key="frame" x="57" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="25" id="FIw-lr-Gbz"/>
+                                                                                </constraints>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-SF-nHm">
+                                                                                <rect key="frame" x="0.0" y="70" width="93.5" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-7E-TYv">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxo-8y-57x">
+                                                                                        <rect key="frame" x="58" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jBd-pf-2DB">
+                                                                                <rect key="frame" x="0.0" y="105" width="106" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MJ-QM-7yh">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-ZB-erJ">
+                                                                                        <rect key="frame" x="70.5" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A31-42-qIp">
+                                                                                <rect key="frame" x="0.0" y="140" width="114" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price (Rs) :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goY-Xo-wvQ">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-T1-Weo">
+                                                                                        <rect key="frame" x="78.5" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Gn-OVQ">
+                                                                                <rect key="frame" x="0.0" y="175" width="128.5" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGE-cF-u74">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-l1-ZAt">
+                                                                                        <rect key="frame" x="93" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tax-tD-GGP">
+                                                                                <rect key="frame" x="0.0" y="210" width="150" height="25"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Status :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1c-Pe-hjT">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvq-7c-0Ab">
+                                                                                        <rect key="frame" x="114.5" y="0.0" width="35.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zP-jF-Eih">
+                                                                        <rect key="frame" x="10" y="255" width="100" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="25" id="5JD-1P-rfO"/>
+                                                                            <constraint firstAttribute="width" constant="100" id="kef-7D-tOW"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gh7-A0-ofd">
+                                                                        <rect key="frame" x="10" y="290" width="225" height="70"/>
+                                                                        <subviews>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="K6b-ML-m6h">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="225" height="30"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-FN-PFK">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                                                        <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="100" id="5h2-oA-H1g"/>
+                                                                                            <constraint firstAttribute="height" constant="30" id="taS-xB-myg"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                                        <state key="normal" title="User Info"/>
+                                                                                    </button>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyt-gd-HUM">
+                                                                                        <rect key="frame" x="125" y="0.0" width="100" height="30"/>
+                                                                                        <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                                        <state key="normal" title="Activities">
+                                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                    </button>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Guk-Dh-MTy">
+                                                                                <rect key="frame" x="0.0" y="40" width="225" height="30"/>
+                                                                                <subviews>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-wc-mGp">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                                                        <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                                        <state key="normal" title="Invoice">
+                                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                    </button>
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-Bt-2F0">
+                                                                                        <rect key="frame" x="125" y="0.0" width="100" height="30"/>
+                                                                                        <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="30" id="nJ9-Ni-6Wf"/>
+                                                                                            <constraint firstAttribute="width" constant="100" id="u47-4S-AA1"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                                        <state key="normal" title="Pay-Now">
+                                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                    </button>
+                                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay4-dG-xJ3">
+                                                                                        <rect key="frame" x="225" y="0.0" width="0.0" height="30"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pG-eK-uWb">
+                                                                                        <rect key="frame" x="225" y="0.0" width="0.0" height="30"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDG-iY-9M6">
+                                                                                        <rect key="frame" x="225" y="0.0" width="0.0" height="30"/>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="dxu-8C-YiV" secondAttribute="trailing" constant="10" id="75F-bL-JUH"/>
+                                                                    <constraint firstItem="dxu-8C-YiV" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="Hul-px-2ve"/>
+                                                                    <constraint firstItem="7zP-jF-Eih" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="Nei-Bm-uSU"/>
+                                                                    <constraint firstItem="dxu-8C-YiV" firstAttribute="top" secondItem="Qir-mP-NH6" secondAttribute="top" constant="10" id="OI5-PM-lgb"/>
+                                                                    <constraint firstItem="7zP-jF-Eih" firstAttribute="top" secondItem="dxu-8C-YiV" secondAttribute="bottom" constant="10" id="PWo-Oh-Uu2"/>
+                                                                    <constraint firstItem="dxu-8C-YiV" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="S2l-sV-fL8"/>
+                                                                    <constraint firstItem="gh7-A0-ofd" firstAttribute="top" secondItem="7zP-jF-Eih" secondAttribute="bottom" constant="10" id="ZyH-82-uph"/>
+                                                                    <constraint firstItem="gh7-A0-ofd" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="wOW-tc-ufI"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Qir-mP-NH6" firstAttribute="leading" secondItem="Jdy-j4-3kU" secondAttribute="leading" constant="10" id="Ksz-YJ-cwh"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Qir-mP-NH6" secondAttribute="bottom" constant="10" id="Ni1-8t-aEw"/>
+                                                            <constraint firstItem="Qir-mP-NH6" firstAttribute="top" secondItem="Jdy-j4-3kU" secondAttribute="top" constant="10" id="kMR-kb-hY9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Qir-mP-NH6" secondAttribute="trailing" constant="10" id="qeG-Ar-4Cw"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <blurEffect style="regular"/>
+                                                </visualEffectView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Qir-mP-NH6" secondAttribute="bottom" constant="10" id="DqV-5k-QAu"/>
-                                                <constraint firstItem="Qir-mP-NH6" firstAttribute="top" secondItem="NSw-Jm-15e" secondAttribute="top" constant="10" id="NyF-hD-W3C"/>
-                                                <constraint firstAttribute="trailing" secondItem="Qir-mP-NH6" secondAttribute="trailing" constant="10" id="toQ-66-sSG"/>
-                                                <constraint firstItem="Qir-mP-NH6" firstAttribute="leading" secondItem="NSw-Jm-15e" secondAttribute="leading" constant="10" id="zlL-OM-8hP"/>
+                                                <constraint firstItem="bn1-1v-BRz" firstAttribute="top" secondItem="NSw-Jm-15e" secondAttribute="top" constant="10" id="bpX-kL-wRQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="bn1-1v-BRz" secondAttribute="trailing" constant="10" id="s3s-7s-NKD"/>
+                                                <constraint firstAttribute="bottom" secondItem="bn1-1v-BRz" secondAttribute="bottom" constant="10" id="vMO-0g-3dn"/>
+                                                <constraint firstItem="bn1-1v-BRz" firstAttribute="leading" secondItem="NSw-Jm-15e" secondAttribute="leading" constant="10" id="xuU-9u-L1y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="activityBtn" destination="Oyt-gd-HUM" id="DrP-ap-87e"/>
+                                            <outlet property="blurView" destination="bn1-1v-BRz" id="6dq-K4-Vv0"/>
                                             <outlet property="bookingID_Lbl" destination="kQr-De-NHT" id="44a-NS-uBt"/>
                                             <outlet property="campLbl" destination="eNx-qZ-wCe" id="XG7-FR-rBQ"/>
                                             <outlet property="dataView" destination="Qir-mP-NH6" id="HFd-Jy-zVH"/>
@@ -6165,7 +6171,7 @@ muchmore.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1258"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-DU-oI2">
-                                                <rect key="frame" x="33.5" y="205" width="347" height="60"/>
+                                                <rect key="frame" x="33.5" y="235" width="347" height="60"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwh-9l-yuz">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="60"/>
@@ -6379,7 +6385,7 @@ muchmore.</string>
                                                 </subviews>
                                             </stackView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-Jp-Hak">
-                                                <rect key="frame" x="10" y="285" width="394" height="973"/>
+                                                <rect key="frame" x="10" y="315" width="394" height="943"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AdultTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AdultCell" rowHeight="150" id="xgf-bz-4eu" customClass="AdultTVC" customModule="AndamanCamps" customModuleProvider="target">
@@ -6926,7 +6932,7 @@ muchmore.</string>
                                                 </connections>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 steps to start your camping in Andaman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-Fh-Vv0">
-                                                <rect key="frame" x="73" y="160" width="268" height="25"/>
+                                                <rect key="frame" x="73" y="190" width="268" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="BJI-o3-Jio"/>
                                                 </constraints>
@@ -6938,10 +6944,10 @@ muchmore.</string>
                                                 </variation>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lAI-NJ-IeW">
-                                                <rect key="frame" x="10" y="0.0" width="394" height="150"/>
+                                                <rect key="frame" x="10" y="0.0" width="394" height="180"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="TOS-0c-GwK"/>
+                                                    <constraint firstAttribute="height" constant="180" id="TOS-0c-GwK"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LIc-18-26w">
                                                     <size key="itemSize" width="394" height="154"/>
@@ -6951,87 +6957,85 @@ muchmore.</string>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="OffersCVCell" reuseIdentifier="OfferCell" id="jWO-Li-U78" customClass="OffersCVCell" customModule="AndamanCamps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="154"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="175"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gfk-aw-vOa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="154"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="175"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihZ-mH-4Ig">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="154"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="175"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_2" translatesAutoresizingMaskIntoConstraints="NO" id="Xwr-aj-6Qt">
-                                                                            <rect key="frame" x="5" y="5" width="384" height="144"/>
+                                                                            <rect key="frame" x="5" y="5" width="384" height="165"/>
                                                                         </imageView>
+                                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3m-kJ-Y7m">
+                                                                            <rect key="frame" x="122" y="30" width="150" height="115"/>
+                                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cg1-kf-mbI">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="115"/>
+                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-er-eKa">
+                                                                                        <rect key="frame" x="0.0" y="5" width="150" height="105"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8V-iB-EPh">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="22.5"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="20" id="use-7g-u4A"/>
+                                                                                                </constraints>
+                                                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="8"/>
+                                                                                                <nil key="textColor"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWK-AT-DCW">
+                                                                                                <rect key="frame" x="0.0" y="27.5" width="150" height="22.5"/>
+                                                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
+                                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CODEJULY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4F-33-Jrm">
+                                                                                                <rect key="frame" x="0.0" y="55" width="150" height="22.5"/>
+                                                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
+                                                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSS-Vp-gsx">
+                                                                                                <rect key="frame" x="0.0" y="82.5" width="150" height="22.5"/>
+                                                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
+                                                                                                <nil key="textColor"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="bottom" secondItem="Vx1-er-eKa" secondAttribute="bottom" constant="5" id="3Cm-Ld-yvL"/>
+                                                                                    <constraint firstItem="Vx1-er-eKa" firstAttribute="leading" secondItem="cg1-kf-mbI" secondAttribute="leading" id="UZu-Mo-9bU"/>
+                                                                                    <constraint firstItem="Vx1-er-eKa" firstAttribute="top" secondItem="cg1-kf-mbI" secondAttribute="top" constant="5" id="n4F-cB-KRj"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="Vx1-er-eKa" secondAttribute="trailing" id="wKg-6p-B65"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="150" id="j4k-s8-As2"/>
+                                                                            </constraints>
+                                                                            <blurEffect style="regular"/>
+                                                                        </visualEffectView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="Xwr-aj-6Qt" firstAttribute="top" secondItem="ihZ-mH-4Ig" secondAttribute="top" constant="5" id="6Cd-zj-AJw"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="C3m-kJ-Y7m" secondAttribute="bottom" constant="30" id="7W7-ZM-vD4"/>
                                                                         <constraint firstAttribute="bottom" secondItem="Xwr-aj-6Qt" secondAttribute="bottom" constant="5" id="FUm-74-OX2"/>
+                                                                        <constraint firstItem="C3m-kJ-Y7m" firstAttribute="centerX" secondItem="ihZ-mH-4Ig" secondAttribute="centerX" id="fDu-dh-ZxY"/>
+                                                                        <constraint firstItem="C3m-kJ-Y7m" firstAttribute="top" secondItem="ihZ-mH-4Ig" secondAttribute="top" constant="30" id="v36-Cr-fED"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Xwr-aj-6Qt" secondAttribute="trailing" constant="5" id="yx2-QB-sgY"/>
                                                                         <constraint firstItem="Xwr-aj-6Qt" firstAttribute="leading" secondItem="ihZ-mH-4Ig" secondAttribute="leading" constant="5" id="zCh-yU-JEL"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-er-eKa">
-                                                                    <rect key="frame" x="137.5" y="84" width="119" height="35"/>
-                                                                    <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yBf-Bc-ICs">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="119" height="15"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-Fb-cxQ">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="15"/>
-                                                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="60" id="wJ5-nH-NYR"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
-                                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWK-AT-DCW">
-                                                                                    <rect key="frame" x="65" y="0.0" width="54" height="15"/>
-                                                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
-                                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="15" id="doh-if-MK1"/>
-                                                                            </constraints>
-                                                                        </stackView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kOj-5j-XhF">
-                                                                            <rect key="frame" x="0.0" y="20" width="119" height="15"/>
-                                                                            <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer Code :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afH-oQ-cT5">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="15"/>
-                                                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstAttribute="width" constant="60" id="bIk-C4-HH0"/>
-                                                                                        <constraint firstAttribute="height" constant="15" id="msU-lR-SA8"/>
-                                                                                    </constraints>
-                                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
-                                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CODEJULY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4F-33-Jrm">
-                                                                                    <rect key="frame" x="65" y="0.0" width="54" height="15"/>
-                                                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
-                                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="15" id="Co0-hA-eAx"/>
-                                                                            </constraints>
-                                                                        </stackView>
-                                                                    </subviews>
-                                                                </stackView>
                                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Ql-eQA">
-                                                                    <rect key="frame" x="177.5" y="124" width="39" height="20"/>
+                                                                    <rect key="frame" x="177.5" y="155" width="39" height="15"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="20" id="mcF-H5-Pei"/>
+                                                                        <constraint firstAttribute="height" constant="15" id="mcF-H5-Pei"/>
                                                                     </constraints>
                                                                     <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="currentPageIndicatorTintColor" red="0.72941176470000002" green="0.098039215690000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -7040,23 +7044,23 @@ muchmore.</string>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="ihZ-mH-4Ig" secondAttribute="trailing" id="ECc-fg-gse"/>
-                                                                <constraint firstAttribute="bottom" secondItem="auG-Ql-eQA" secondAttribute="bottom" constant="10" id="LSg-y7-odQ"/>
-                                                                <constraint firstItem="auG-Ql-eQA" firstAttribute="top" secondItem="Vx1-er-eKa" secondAttribute="bottom" constant="5" id="Tyl-DC-xjg"/>
+                                                                <constraint firstAttribute="bottom" secondItem="auG-Ql-eQA" secondAttribute="bottom" constant="5" id="LSg-y7-odQ"/>
                                                                 <constraint firstItem="ihZ-mH-4Ig" firstAttribute="leading" secondItem="gfk-aw-vOa" secondAttribute="leading" id="hLC-dR-eaD"/>
                                                                 <constraint firstItem="auG-Ql-eQA" firstAttribute="centerX" secondItem="gfk-aw-vOa" secondAttribute="centerX" id="hc8-oX-iPu"/>
                                                                 <constraint firstItem="ihZ-mH-4Ig" firstAttribute="top" secondItem="gfk-aw-vOa" secondAttribute="top" id="oVz-DM-UWi"/>
-                                                                <constraint firstItem="Vx1-er-eKa" firstAttribute="centerX" secondItem="gfk-aw-vOa" secondAttribute="centerX" id="vP2-tf-HsT"/>
                                                                 <constraint firstAttribute="bottom" secondItem="ihZ-mH-4Ig" secondAttribute="bottom" id="z7T-LN-WMF"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <size key="customSize" width="394" height="154"/>
+                                                        <size key="customSize" width="394" height="175"/>
                                                         <connections>
                                                             <outlet property="Img_View" destination="Xwr-aj-6Qt" id="Qgs-n4-XII"/>
                                                             <outlet property="data_View" destination="ihZ-mH-4Ig" id="7tZ-yB-6pO"/>
                                                             <outlet property="discount_Lbl" destination="KWK-AT-DCW" id="eNL-4M-Pec"/>
+                                                            <outlet property="expiryLbl" destination="SSS-Vp-gsx" id="ITK-jP-oj8"/>
                                                             <outlet property="myPage" destination="auG-Ql-eQA" id="Uek-zC-Rri"/>
                                                             <outlet property="offerCode_Lbl" destination="k4F-33-Jrm" id="aIG-a8-G6h"/>
+                                                            <outlet property="titleLbl" destination="k8V-iB-EPh" id="Q0H-V8-zUU"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>

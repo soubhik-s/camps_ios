@@ -314,10 +314,12 @@ class ApplicationFormVC3: UIViewController {
            
         code_TF.isHidden = true
         apply_Btn.isHidden = true
-        
+        copoun_View.isHidden = true
+
         } else {
         apply_Btn.isHidden = false
         code_TF.isHidden = false
+            copoun_View.isHidden = false
         }
     }
     

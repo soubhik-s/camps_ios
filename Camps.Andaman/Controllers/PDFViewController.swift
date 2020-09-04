@@ -19,8 +19,9 @@ class PDFViewController: UIViewController   {
     var pdfView = PDFView()
        var pdfURL: URL!
 
-    var pdfUrlStr = "https://camps.goexploreandaman.com/welcome/invoice_pdf/" + DashboardVariables.bookingID
-
+//    var pdfUrlStr = "https://camps.goexploreandaman.com/welcome/invoice_pdf/" + DashboardVariables.bookingID
+ var pdfUrlStr = "https://camps.goexploreandaman.com/welcome/invoice_pdf/" + DashboardVariables.bookingID
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             showActivityIndicator()

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     var isClicked = false
     var ipAddress:String!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         

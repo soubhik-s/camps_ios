@@ -44,8 +44,8 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     func viewChanges() {
         
-        let gifImage = UIImage.gifImageWithName(name: "Camps2")
-        userIMGView.image = gifImage
+//        let gifImage = UIImage.gifImageWithName(name: "Camps2")
+//        userIMGView.image = gifImage
         
         dataTV.rowHeight = 50
         dataTV.reloadWithAnimation()

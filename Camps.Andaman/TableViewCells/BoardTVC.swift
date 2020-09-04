@@ -32,9 +32,16 @@ class BoardTVC: UITableViewCell {
     @IBOutlet weak var doc_Lbl: UILabel!
     
     @IBOutlet weak var invoice_Btn: UIButton!
+   
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        blurView.layer.cornerRadius = 10
+        blurView.layer.masksToBounds = true 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

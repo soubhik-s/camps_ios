@@ -132,9 +132,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
         cell.Img_View.setImage(urlStr: ClientConfig.offerIMGUrl + cellPath.offersImageName)
         cell.myPage.numberOfPages = dataArr.count
         cell.myPage.currentPage = indexPath.row
-        cell.offerCode_Lbl.text = cellPath.couponCode
-
-        cell.discount_Lbl.text = "\(cellPath.discountOffers) %"
+        cell.offerCode_Lbl.text = "Code : \(cellPath.couponCode)"
+        cell.titleLbl.text = cellPath.couponName
+        cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
+        cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"
        
         return cell
     
