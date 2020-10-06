@@ -15,8 +15,9 @@ struct ClientConfig {
     static  let Activity_ImgUrl = "https://camps.goexploreandaman.com/assets/img/Activites/"
     static  let Gesture_ImgUrl = "https://camps.goexploreandaman.com/assets/img/gesture/"
     static let CampingImgUrl = "https://camps.goexploreandaman.com/assets/img/camping/"
-    static var membersImgUrl = "https://camps.goexploreandaman.com/assets/img/"
+    static let membersImgUrl = "https://camps.goexploreandaman.com/assets/img/"
     static var offerIMGUrl = "https://camps.goexploreandaman.com/assets/img/offers/"
+    static let blogIMGUrl = "https://camps.goexploreandaman.com/assets/img/blogging/"
 }
 
 struct ClientInterface {
@@ -35,9 +36,14 @@ struct ClientInterface {
     static let changePasswordUrl = ClientConfig.BASE_URL + "change_password_api"
     static let bookingUrl = ClientConfig.BASE_URL + "camp_booking_api"
 //    static let mybookingsUrl = ClientConfig.BASE_URL + "camp_booking_api/" + "1"
-    static var subscriptionUrl = ClientConfig.BASE_URL + "subscriber_api"
-    static var razorPayUrl = "https://camps.goexploreandaman.com/Razor_payment_api"
-    static var membersUrl = ClientConfig.BASE_URL + "member_api"
-    static var profileUrl = ClientInterface.registrationUrl
-    static var offersUrl = ClientConfig.BASE_URL + "promo_code_api"
+    static let subscriptionUrl = ClientConfig.BASE_URL + "subscriber_api"
+    static let razorPayUrl = "https://camps.goexploreandaman.com/Razor_payment_api"
+    static let membersUrl = ClientConfig.BASE_URL + "member_api"
+    static let profileUrl = ClientInterface.registrationUrl
+    static let offersUrl = ClientConfig.BASE_URL + "promo_code_api"
+    static let blogsUrl = ClientConfig.BASE_URL + "blogs_api"
+    static let blogCommentsUrl = ClientConfig.BASE_URL + "comment_api"
+
+    
+    
 }

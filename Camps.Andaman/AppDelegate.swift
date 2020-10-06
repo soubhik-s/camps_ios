@@ -15,6 +15,8 @@ import SideMenu
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
+    var rootViewController : UIViewController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -26,7 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UILabel.appearance(whenContainedInInstancesOf:[UISegmentedControl.self]).numberOfLines = 0
         UISegmentedControl.appearance().setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Optima", size: 12)! ], for: .normal)
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.white], for: .normal)
+        let isInstalled =  Preferrences.getInstalled()
+               print("isInstalled = \(isInstalled)")
+              
+        if isInstalled  {
+            self.NextViewController(storybord_Id: "ViewController") 
 
+            print("VC")
+
+        } else {
+            self.NextViewController(storybord_Id: "SlidesVC")
+
+            print("Slides")
+
+
+        }
         return true
     }
 
@@ -91,3 +107,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    
+    
+    func NextViewController(storybord_Id:String) {
+
+    //        let rootVC = UIViewController(nibName: storybord_Id, bundle: nil)
+            let story = UIStoryboard(name: "Main", bundle: nil)
+            let rootViewController = story.instantiateViewController(withIdentifier: storybord_Id)
+            let navigationController = UINavigationController(rootViewController: rootViewController)
+            navigationController.navigationBar.isHidden = true
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = navigationController
+            self.window?.makeKeyAndVisible()
+
+        }
+    
+}

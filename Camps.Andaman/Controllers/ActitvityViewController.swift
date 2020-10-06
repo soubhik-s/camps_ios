@@ -31,7 +31,7 @@ class ActitvityViewController: UIViewController {
     var morning_Arr = [""]
     var noon_Arr = [""]
     var eve_Arr = [""]
-    var night_Arr = [""]
+    var night_Arr:OverNightActivityUnion?
     var isAdult:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,22 +119,22 @@ class ActitvityViewController: UIViewController {
                    
         for itinerary_Data in dataArray {
         
-            if itinerary_Data.itineraryID == DashboardVariables.activtiesID {
-            iti_Arr = itinerary_Data.itienaryName
+            if itinerary_Data.itinerary_id == DashboardVariables.activtiesID {
+                iti_Arr = itinerary_Data.itienary_name ?? []
             print("iti_Arr = \(iti_Arr)")
-            morning_Arr = itinerary_Data.morningActivity
+                morning_Arr = itinerary_Data.morning_activity ?? []
             print("morning_Arr = \(morning_Arr)")
 
-            noon_Arr = itinerary_Data.afterNoonActivity
+            noon_Arr = itinerary_Data.after_noon_activity ?? []
             print("noon_Arr = \(noon_Arr)")
 
-            eve_Arr = itinerary_Data.eveningActivity
+            eve_Arr = itinerary_Data.evening_activity ?? []
             print("eve_Arr = \(eve_Arr)")
 
-            night_Arr = itinerary_Data.overNightActivity
+                night_Arr = itinerary_Data.over_night_activity
             print("night_Arr = \(night_Arr)")
                 
-                if itinerary_Data.ageGroup == "adult" {
+                if itinerary_Data.age_group == "adult" {
                     isAdult = true
                 } else {
                     isAdult = false
@@ -169,13 +169,13 @@ class ActitvityViewController: UIViewController {
 
                    }
                       
-                   if night_Arr.count < iti_Arr.count {
-                       night_Arr.append("")
-                       print("Night_Append")
-                   } else {
-                       print("No Night_Append")
-
-                   }
+//                   if night_Arr.count < iti_Arr.count {
+//                       night_Arr.append("")
+//                       print("Night_Append")
+//                   } else {
+//                       print("No Night_Append")
+//
+//                   }
                    
                    
                    
@@ -216,7 +216,7 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
         cell.noon_Lbl.text = noon_Arr[indexPath.row]
         cell.eve_Lbl.text =  eve_Arr[indexPath.row]
         
-        cell.night_Lbl.text = night_Arr[indexPath.row]
+//        cell.night_Lbl.text = night_Arr[]
         
         if isAdult == true {
         cell.dateLbl.text = adultDate_Arr[indexPath.row]

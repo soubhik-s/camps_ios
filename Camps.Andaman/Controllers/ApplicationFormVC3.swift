@@ -66,6 +66,7 @@ class ApplicationFormVC3: UIViewController {
     @IBOutlet weak var p_City_TF: UITextField!
     @IBOutlet weak var agree_Btn: UIButton!
     
+    @IBOutlet weak var net_Price_Lbl: UILabel!
     var isChecked:Bool = true
     var picker = UIPickerView()
     let callType_Arr = ["Skype","WhatsApp","Messenger","Google Duo"]
@@ -73,8 +74,15 @@ class ApplicationFormVC3: UIViewController {
     var parent_Address = "NO"
     var weekendCall = "YES"
     let termsUrl = "https://camps.goexploreandaman.com/terms-and-conditions"
+    let priceViewHeight: CGFloat = 240
     
     
+    
+    var basic_Price = 0.0
+    var discount_Price = 0.0
+    var net_Price = 0.0
+    var tax_Price = 0.0
+    var final_Price = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,7 +93,9 @@ class ApplicationFormVC3: UIViewController {
 
     func viewChanges() {
         copoun_View.layer.cornerRadius = 5
-        
+        apply_Btn.layer.cornerRadius = 5
+        apply_Btn.layer.borderColor = UIColor.white.cgColor
+        apply_Btn.layer.borderWidth = 0.5
         header_View.layer.cornerRadius = 10
         submit_Btn.makeBtnRound()
         package_Lbl.text = BookingDetails.package_name
@@ -97,23 +107,22 @@ class ApplicationFormVC3: UIViewController {
         let password_Tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
             terms_Lbl.addGestureRecognizer(password_Tap)
         copoun_Img.isHidden = true
-//       price View
-        
-        price_View.frame = CGRect(x: 10, y: 100, width: self.view.frame.width - 20, height: 250)
+        calculatePrices()
+//        price_View.frame = CGRect(x: 10, y: 100, width: self.view.frame.width - 20, height: 250)
         
     }
     
-    func showPriceView() {
-        price_View.layer.cornerRadius = 10
-        self.view.addBlurEffect()
-        view.addSubview(price_View)
-        
-    }
-    func hidePriceView() {
-        self.view.removeBlurEffect()
-        price_View.removeFromSuperview()
-        
-    }
+//    func showPriceView() {
+//        price_View.layer.cornerRadius = 10
+//        self.view.addBlurEffect()
+//        view.addSubview(price_View)
+//
+//    }
+//    func hidePriceView() {
+//        self.view.removeBlurEffect()
+//        price_View.removeFromSuperview()
+//
+//    }
     
       
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -125,6 +134,19 @@ class ApplicationFormVC3: UIViewController {
            }
     }
         
+    func calculatePrices() {
+        basic_Price = Double(BookingDetails.price.fiterPrice()) ?? 0.0
+        net_Price = basic_Price - discount_Price
+        tax_Price = net_Price * 0.05
+        final_Price = net_Price + tax_Price
+        
+        basePrice_Lbl.text = "\(basic_Price.rounded()) "
+        dPrice_Lbl.text = "\(discount_Price.rounded()) "
+        net_Price_Lbl.text = "\(net_Price.rounded()) "
+        taxPrice_Lbl.text = "\(tax_Price.rounded()) "
+        totalPrice_Lbl.text = "\(final_Price.rounded()) "
+        price_Lbl.text = "\(final_Price.rounded()) "
+    }
     
     
     
@@ -187,12 +209,14 @@ class ApplicationFormVC3: UIViewController {
     
     
     @IBAction func priceInfo_Axn(_ sender: UIButton) {
-        showPriceView()
+        showBottomView(View: price_View, height: priceViewHeight)
+//        showPriceView()
     }
     
     
     @IBAction func hidePrice_Axn(_ sender: UIButton) {
-        hidePriceView()
+        hideBottomView(View: price_View, height: priceViewHeight)
+//        hidePriceView()
     }
     
     @IBAction func submitBtn_Axn(_ sender: UIButton) {
@@ -211,7 +235,7 @@ class ApplicationFormVC3: UIViewController {
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
           
-            let details = ["ip_address":BookingDetails.ip_address, "user_id":BookingDetails.user_id, "package_id":BookingDetails.package_id, "package_name":BookingDetails.package_name, "price":price_Lbl.text! , "offer_price":dPrice_Lbl.text! ,"total_price":totalPrice_Lbl.text! , "quantity":"1", "seasonal_camp":BookingDetails.seasonal_camp, "camp_batch":BookingDetails.camp_batch, "first_name":BookingDetails.first_name, "middle_name":"", "last_name":BookingDetails.last_name, "dob":BookingDetails.DOB, "gender":BookingDetails.gender, "height":BookingDetails.height, "weight":BookingDetails.weight, "tshirt_size":BookingDetails.tshirt_size, "mother_tonque":BookingDetails.mother_tonque, "citizenship":BookingDetails.citizenship, "mobile_number":BookingDetails.mobile_number, "email":BookingDetails.email, "address":BookingDetails.street, "city":BookingDetails.city,  "country":BookingDetails.country, "pincode":BookingDetails.pincode, "medical_info":BookingDetails.medical_info, "medical_details":BookingDetails.medical_details, "treatments":BookingDetails.treatments, "treatments_details":BookingDetails.treatments_details, "p_first_name":p_FirstNameTF.text!, "p_middle_name":p_FirstNameTF.text!, "p_last_name":p_LastNameTF.text!, "p_mobile_number":p_MobileTF.text!, "p_alt_mobile_number":alt_NumberTF.text!, "p_email":P_EmailTF.text!, "video_call":callType_TF.text!, "video_call_link":callLink_TF.text!, "weekend_call":weekendCall, "time_for_call":callTime_TF.text!, "parent_address":parent_Address, "p_address":p_street_TF.text!, "p_city":p_City_TF.text!, "p_country":p_Country_TF.text!, "p_pincode":p_pincode_TF.text!, "additional_details":addInfo_TF.text!,  "coupon_code":code_TF.text! ] as [String:Any]
+            let details = ["ip_address":BookingDetails.ip_address, "user_id":BookingDetails.user_id, "package_id":BookingDetails.package_id, "package_name":BookingDetails.package_name, "price":basePrice_Lbl.text! , "offer_price":dPrice_Lbl.text! ,"total_price":totalPrice_Lbl.text! , "quantity":"1", "seasonal_camp":BookingDetails.seasonal_camp, "camp_batch":BookingDetails.camp_batch, "first_name":BookingDetails.first_name, "middle_name":"", "last_name":BookingDetails.last_name, "dob":BookingDetails.DOB, "gender":BookingDetails.gender, "height":BookingDetails.height, "weight":BookingDetails.weight, "tshirt_size":BookingDetails.tshirt_size, "mother_tonque":BookingDetails.mother_tonque, "citizenship":BookingDetails.citizenship, "mobile_number":BookingDetails.mobile_number, "email":BookingDetails.email, "address":BookingDetails.street, "city":BookingDetails.city,  "country":BookingDetails.country, "pincode":BookingDetails.pincode, "medical_info":BookingDetails.medical_info, "medical_details":BookingDetails.medical_details, "treatments":BookingDetails.treatments, "treatments_details":BookingDetails.treatments_details, "p_first_name":p_FirstNameTF.text!, "p_middle_name":p_FirstNameTF.text!, "p_last_name":p_LastNameTF.text!, "p_mobile_number":p_MobileTF.text!, "p_alt_mobile_number":alt_NumberTF.text!, "p_email":P_EmailTF.text!, "video_call":callType_TF.text!, "video_call_link":callLink_TF.text!, "weekend_call":weekendCall, "time_for_call":callTime_TF.text!, "parent_address":parent_Address, "p_address":p_street_TF.text!, "p_city":p_City_TF.text!, "p_country":p_Country_TF.text!, "p_pincode":p_pincode_TF.text!, "additional_details":addInfo_TF.text!,  "coupon_code":code_TF.text! ] as [String:Any]
             
         ApiService.postCall(url: ClientInterface.bookingUrl, params: details, methodType: "POST", tag: "Booking", finish:finishPost)
          print("details = \(details)")
@@ -234,20 +258,11 @@ class ApplicationFormVC3: UIViewController {
                 if parsedData.statusCode == true {
                     copoun_Img.isHidden =  false
                     copoun_Img.image = UIImage(named: "tickG")
-//                    code_TF.isHidden = true
-//                    apply_Btn.isHidden = true
-                    let onlyPrice = BookingDetails.price.fiterPrice()
-                    print("onlyPrice = \(String(describing: onlyPrice))")
-                   
-//                    dPrice_Lbl.text = "\(parsedData.discount) %"
-                    let discount_Amt = (Int(basePrice_Lbl.text!)! * Int(parsedData.discount)! ) / 100
-                    print("discount_Amt = \(discount_Amt), \(dPrice_Lbl.text!)")
-                    dPrice_Lbl.text = "\(discount_Amt)"
-                    let finalPrice = Int(onlyPrice)! - discount_Amt
-                    print("finalPrice = \(finalPrice)")
-                    totalPrice_Lbl.text = "\(finalPrice)"
-                    price_Lbl.text = "\(finalPrice)"
-              
+                    let discount = Double(parsedData.discount ) ?? 0.0
+                    discount_Price = basic_Price * 0.01 * discount
+                    print("discount_Price = \(discount_Price)")
+                    calculatePrices()
+
                     popUpAlert(title: parsedData.message, message: "", action: .alert)
               
                 

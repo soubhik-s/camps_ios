@@ -109,11 +109,9 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
             dataCV.reloadData()
 
            } else {
-           getData()
           
            }
         } catch {
-        getData()
         print("Parse Error: \(error)")
 
         }

@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         emailView.makeRound()
         passwordView.makeRound()
         loginBtn.makeRound()
+        
     }
     func fetch_IPAddress() {
         if reach.isConnectedToNetwork() == true {
@@ -82,7 +83,7 @@ class ViewController: UIViewController {
         sender.setImage(UIImage(named: "Check_W"), for: .normal)
         Preferrences.setRememberMe(status: true)
         } else {
-        isClicked = true
+        isClicked = false
         sender.setImage(UIImage(named: "un_chk"), for: .normal)
         Preferrences.setRememberMe(status: false)
         }

@@ -176,12 +176,84 @@ extension UIViewController {
     
 
     
+
+
+
+func showViewFromTop(View:UIView, height:CGFloat) {
+      let window = UIApplication.shared.keyWindow
+      let transparentView = UIView()
+      transparentView.tag = 9999
+      transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+      transparentView.frame = window!.frame
+      window!.addSubview(transparentView)
+      
+      let screenSize = UIScreen.main.bounds.size
+      View.frame = CGRect(x: 0, y: -screenSize.height, width: screenSize.width, height: height)
+      window?.addSubview(View)
+
+      UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+          transparentView.alpha = 0.5
+          View.frame = CGRect(x: 0, y: 0 , width: screenSize.width, height: height)
+
+      }, completion:nil)
+  }
+  
+  func hideTopView(View:UIView, height:CGFloat) {
+      let window = UIApplication.shared.keyWindow
+
+      let transView = window!.viewWithTag(9999)
+      transView!.removeFromSuperview()
+
+      let screenSize = UIScreen.main.bounds.size
+
+     UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+          View.frame = CGRect(x: 0, y: -screenSize.height, width: screenSize.width, height: height)
+      }) { (true) in
+          View.removeFromSuperview()
+
+      }
+  }
+  
+  
+  func showBottomView(View:UIView, height:CGFloat) {
+      
+ 
+      let window = UIApplication.shared.keyWindow
+      let transparentView = UIView()
+      transparentView.tag = 999
+      transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+            transparentView.frame = self.view.frame
+            window?.addSubview(transparentView)
+
+      let screenSize = UIScreen.main.bounds.size
+      View.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: height)
+      window?.addSubview(View)
+
+      
+      UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+          transparentView.alpha = 0.5
+     
+          View.frame = CGRect(x: 0, y: screenSize.height - height, width: screenSize.width, height: height)
+      }, completion: nil)
+      
+  }
+  
+  
+  func hideBottomView(View:UIView, height:CGFloat) {
+      let window = UIApplication.shared.keyWindow
+
+      let transView = window!.viewWithTag(999)
+      transView!.removeFromSuperview()
+
+      let screenSize = UIScreen.main.bounds.size
+
+      UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+              View.frame = CGRect(x: 0, y: screenSize.height, width: screenSize.width, height: height)
+          }, completion: nil)
+      
+  }
+
 }
-
-
-
-
-
 //MARK: CALayer
 
 extension CALayer {

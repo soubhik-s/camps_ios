@@ -22,7 +22,7 @@ class VerificationVC: UIViewController {
     
     @IBOutlet weak var codeTF: UITextField!
     
-    var countryCode:String! = "+91"
+    var countryCode:String = "+91"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +68,7 @@ class VerificationVC: UIViewController {
 //            verifyOTP()
            
             if let code = codeTF.text {
-            VerifyAPI.validateVerificationCode(self.countryCode!, self.mobile_TF.text!, code) { checked in
+            VerifyAPI.validateVerificationCode(self.countryCode, self.mobile_TF.text!, code) { checked in
                 self.hideActivityIndicator()
                     if (checked.success) {
                          UserDetails.mobileNumber = self.mobile_TF.text!
@@ -96,7 +96,7 @@ class VerificationVC: UIViewController {
         if reach.isConnectedToNetwork() == true {
            showActivityIndicator()
         
-            let details = ["via":"sms", "country_code":countryCode!,  "phone_number":mobile_TF.text!] as [String:Any]
+            let details = ["via":"sms", "country_code":countryCode,  "phone_number":mobile_TF.text!] as [String:Any]
           
             ApiService.postCall(url: ClientInterface.sendOTPUrl, params: details, methodType: "POST", tag: "Send", finish:finishPost)
            print("details = \(details)")
@@ -119,7 +119,8 @@ class VerificationVC: UIViewController {
        popUpAlert(title: "Alert", message: "Check Internet Connection", action: .alert)            }
        }
        
-       func finishPost (message:String, data:Data? , tag: String) -> Void {
+       
+    func finishPost (message:String, data:Data? , tag: String) -> Void {
 
            hideActivityIndicator()
 

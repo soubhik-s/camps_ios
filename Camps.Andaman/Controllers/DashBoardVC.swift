@@ -125,7 +125,7 @@ class DashBoardVC: UIViewController {
             print("camp_Arr = \(camp_Arr)")
             print("bookingData = \(bookingData)")
             package_Arr.append(bookingData.package_name!)
-            price_Arr.append(bookingData.price!)
+                        price_Arr.append(bookingData.total_price!)
                         name_Arr.append(bookingData.first_name! + " " + bookingData.last_name!)
             voucher_Arr.append(bookingData.voucher_name!)
             invoice_Arr.append(bookingData.invoice_name!)
@@ -208,7 +208,6 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BoardTVC
         cell.dataView.layer.borderColor = UIColor.white.cgColor
         cell.dataView.layer.cornerRadius = 5
-        cell.dataView.layer.borderWidth = 0.5
         
         cell.pkgID_Lbl.text = pkgID_Arr[indexPath.row]
         cell.campLbl.text = camp_Arr[indexPath.row]
@@ -348,13 +347,13 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         DashboardVariables.bookingID = currentCell.id_Lbl.text!
         print("DashboardVariables.bookingID = \(DashboardVariables.bookingID)")
         
-//       openPdf()
+       openPdf()
                
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "PDFViewController") as! PDFViewController
-
-        present(VC, animated: true) {
-            
-        }
+//        let VC = self.storyboard?.instantiateViewController(withIdentifier: "PDFViewController") as! PDFViewController
+//
+//        present(VC, animated: true) {
+//
+//        }
 //        self.navigationController?.pushViewController(VC, animated: true)
     }
     

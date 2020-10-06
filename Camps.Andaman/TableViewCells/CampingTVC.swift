@@ -87,11 +87,8 @@ class CampingTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
             dataCV.reloadData()
 
 
-        } else {
-        getData()
         }
         } catch {
-        getData()
            print("Parse Error: \(error)")
 
         }

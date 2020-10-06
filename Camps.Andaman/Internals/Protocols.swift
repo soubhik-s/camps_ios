@@ -26,3 +26,7 @@ func onItemTapped()
 protocol DetailsDelegate:class {
 func onIndexTapped()
 }
+
+protocol BlogDelegate:class {
+func onBlogSelected()
+}

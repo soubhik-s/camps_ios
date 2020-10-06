@@ -40,15 +40,7 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
     func CVChanges() {
         dataCV.isHidden = true
         getData()
-//        if CampVariables.isConnected == false {
-//            getData()
-//            dataCV.isHidden = true
-//
-//        } else {
-////        dataCV.isHidden = false
-//            dataCV.reloadData()
-//            print("IsConnected = \(CampVariables.isConnected)")
-//        }
+
         let cellSize = CGSize(width:180 , height:130)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
@@ -100,11 +92,8 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
         dataCV.isHidden = false
         dataCV.reloadData()
 
-        } else {
-            getData()
-        }
+        } 
         } catch {
-            getData()
            print("Parse Error: \(error)")
 
         }

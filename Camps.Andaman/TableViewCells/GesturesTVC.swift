@@ -87,14 +87,9 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
             dataCV.isHidden = false
             dataCV.reloadData()
 
-        } else {
-           getData()
-//            topMostController()!.popUpAlert(title: "Alert", message: "Error in  Connecting Gesture Server ", action: .alert)
-           }
+        }
           
         } catch {
-            getData()
-//           topMostController()!.popUpAlert(title: "Alert", message: "Error_Cheeck  Gesture Details", action: .alert)
            print("Parse Error: \(error)")
 
         }

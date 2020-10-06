@@ -25,7 +25,7 @@ class ItineraryVC: UIViewController {
     var morning_Arr = [""]
     var noon_Arr = [""]
     var eve_Arr = [""]
-    var night_Arr = [""]
+    var night_Arr:OverNightActivityUnion?
     var inc_Arr = [""]
     var exc_Arr = [""]
     
@@ -92,26 +92,28 @@ class ItineraryVC: UIViewController {
             print("dataArray = \(dataArray)")
         
             for itinerary_Data in dataArray {
-                if itinerary_Data.itineraryID == ItineraryDetails.itinerary_ID {
-                    description_Lbl.text = itinerary_Data.itineraryDescription
-                iti_Arr = itinerary_Data.itienaryName
+                if itinerary_Data.itinerary_id == ItineraryDetails.itinerary_ID {
+                    description_Lbl.text = itinerary_Data.itinerary_description
+                    
+                    iti_Arr = itinerary_Data.itienary_name ?? []
                 print("iti_Arr = \(iti_Arr)")
-                morning_Arr = itinerary_Data.morningActivity
+                morning_Arr = itinerary_Data.morning_activity ?? []
                 print("morning_Arr = \(morning_Arr)")
 
-                noon_Arr = itinerary_Data.afterNoonActivity
+                noon_Arr = itinerary_Data.after_noon_activity ?? []
                 print("noon_Arr = \(noon_Arr)")
 
-                eve_Arr = itinerary_Data.eveningActivity
+                    eve_Arr = itinerary_Data.evening_activity ?? []
                 print("eve_Arr = \(eve_Arr)")
 
-                night_Arr = itinerary_Data.overNightActivity
+                    night_Arr = itinerary_Data.over_night_activity
+//                    night_Arr = itinerary_Data.over_night_activity
                 print("night_Arr = \(night_Arr)")
 
-                inc_Arr = itinerary_Data.campInclusions
+                    inc_Arr = itinerary_Data.camp_inclusions ?? []
                 print("inc_Arr = \(inc_Arr)")
 
-                exc_Arr = itinerary_Data.campExclusions
+                    exc_Arr = itinerary_Data.camp_exclusions ?? []
                 print("exc_Arr = \(exc_Arr)")
                 } else {
                     print("Other ID")
@@ -142,15 +144,15 @@ class ItineraryVC: UIViewController {
 
             }
                
-            if night_Arr.count < iti_Arr.count {
-                night_Arr.append("")
-                print("Night_Append")
-            } else {
-                print("No Night_Append")
-
-            }
-            
-            
+//            if night_Arr.count < iti_Arr.count {
+//                night_Arr.append("")
+//                print("Night_Append")
+//            } else {
+//                print("No Night_Append")
+//
+//            }
+//
+//
             
             
             dataTV.isHidden = false
@@ -165,11 +167,11 @@ class ItineraryVC: UIViewController {
             dataTV.reloadWithAnimation()
             
             } else {
-                popUpAlert(title: "Alert", message: "Error in Connecting Server ", action: .alert)
+//                popUpAlert(title: "Alert", message: "Error in Connecting Server ", action: .alert)
             }
             
         } catch {
-            alert(message: "Alert", title: "No Data from Server")
+//            alert(message: "Alert", title: "No Data from Server")
             print("Parse Error: \(error)")
             
         }
@@ -192,7 +194,7 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
         print("morning_Arr = \(morning_Arr.count)")
         print("noon_Arr = \(noon_Arr.count)")
         print("eve_Arr = \(eve_Arr.count)")
-        print("night_Arr = \(night_Arr.count)")
+//        print("night_Arr = \(night_Arr.count)")
 
             if section == 0 {
             print("iti = \(iti_Arr.count)")
@@ -232,7 +234,7 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
               cell.morningLbl.text = morning_Arr[indexPath.row]
               cell.afterNoonLbl.text = noon_Arr[indexPath.row]
               cell.eveningLbl.text = eve_Arr[indexPath.row]
-              cell.nightLbl.text =  night_Arr[indexPath.row]
+//              cell.nightLbl.text =  night_Arr[1]
               
               cell.labelView.layer.cornerRadius = 5
         

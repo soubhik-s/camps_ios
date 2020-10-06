@@ -38,56 +38,104 @@ struct PackageResponseObj:Decodable {
 
 // MARK: - Itenararyresponse
 // MARK: - ItineraryResponseElement
-struct ItineraryResponseElement: Codable {
-    let itineraryID, seasonName: String
-    let ageGroup: String
-    let itineraryDescription: String
-    let campInclusions, campExclusions, itienaryName, morningActivity: [String]
-    let afterNoonActivity: [String]
-    let eveningActivity: [String]
-    let overNightActivity: [String]
+//struct ItineraryResponseElement: Codable {
+//    let itineraryID, seasonName: String
+//    let ageGroup: String
+//    let itineraryDescription: String
+//    let campInclusions, campExclusions, itienaryName, morningActivity: [String]
+//    let afterNoonActivity: [String]
+//    let eveningActivity: [String]
+//    let overNightActivity: [String]
+//
+//    enum CodingKeys: String, CodingKey {
+//        case itineraryID = "itinerary_id"
+//        case seasonName = "season_name"
+//        case ageGroup = "age_group"
+//        case itineraryDescription = "itinerary_description"
+//        case campInclusions = "camp_inclusions"
+//        case campExclusions = "camp_exclusions"
+//        case itienaryName = "itienary_name"
+//        case morningActivity = "morning_activity"
+//        case afterNoonActivity = "after_noon_activity"
+//        case eveningActivity = "evening_activity"
+//        case overNightActivity = "over_night_activity"
+//    }
+//}
+//
+//enum AgeGroup: String, Codable {
+//    case adult = "adult"
+//    case children = "children"
+//}
+//
+//enum EveningActivity: String, Codable {
+//    case birdingTour = "Birding Tour "
+//    case bonfire = "Bonfire – "
+//    case eveningActivityBonfire = "Bonfire "
+//    case eveningActivityReturnToHotelBonfire = "return to Hotel – Bonfire "
+//    case fluffyReturnToHotelBonfire = "Return to Hotel – Bonfire "
+//    case introductionSessionWithTheBatchmatesInstructors = "Introduction session with the batchmates & Instructors "
+//    case purpleBonfire = " Bonfire "
+//    case purpleReturnToHotelBonfire = "return to Hotel - Bonfire "
+//    case returnToHotelBonfire = "Return to Hotel Bonfire "
+//}
+//
+//enum OverNightActivity: String, Codable {
+//    case bonfireQuizNightDinnerStayAtHotel = "Bonfire – Quiz night - Dinner & Stay at Hotel  "
+//    case dinnerStayAtHotel = " Dinner & Stay at Hotel "
+//    case nightQuizNightDinnerStayAtHotel = "Night - Quiz night - Dinner & Stay at Hotel  "
+//    case overNightActivityDinnerStayAtHotel = "Dinner & Stay at Hotel "
+//    case overNightActivityQuizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel  "
+//    case quizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel"
+//}
 
-    enum CodingKeys: String, CodingKey {
-        case itineraryID = "itinerary_id"
-        case seasonName = "season_name"
-        case ageGroup = "age_group"
-        case itineraryDescription = "itinerary_description"
-        case campInclusions = "camp_inclusions"
-        case campExclusions = "camp_exclusions"
-        case itienaryName = "itienary_name"
-        case morningActivity = "morning_activity"
-        case afterNoonActivity = "after_noon_activity"
-        case eveningActivity = "evening_activity"
-        case overNightActivity = "over_night_activity"
+struct ItineraryResponseElement:Decodable {
+    let itinerary_id = ""
+    let season_name = ""
+    let age_group = ""
+    let itinerary_description = ""
+    let camp_inclusions:[String]?
+    let camp_exclusions:[String]?
+    let itienary_name:[String]?
+    let morning_activity:[String]?
+    let after_noon_activity:[String]?
+    let evening_activity:[String]?
+    let over_night_activity:OverNightActivityUnion
+
+}
+
+
+
+enum OverNightActivityUnion: Codable {
+    case enumArray([OverNightActivityElement])
+    case enumMap([String: OverNightActivityElement])
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let x = try? container.decode([OverNightActivityElement].self) {
+            self = .enumArray(x)
+            return
+        }
+        if let x = try? container.decode([String: OverNightActivityElement].self) {
+            self = .enumMap(x)
+            return
+        }
+        throw DecodingError.typeMismatch(OverNightActivityUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for OverNightActivityUnion"))
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .enumArray(let x):
+            try container.encode(x)
+        case .enumMap(let x):
+            try container.encode(x)
+        }
     }
 }
 
-enum AgeGroup: String, Codable {
-    case adult = "adult"
-    case children = "children"
+enum OverNightActivityElement: String, Codable {
+    case storyTellingDinnerAtHotelStayAtHotel = ""
 }
-
-enum EveningActivity: String, Codable {
-    case birdingTour = "Birding Tour "
-    case bonfire = "Bonfire – "
-    case eveningActivityBonfire = "Bonfire "
-    case eveningActivityReturnToHotelBonfire = "return to Hotel – Bonfire "
-    case fluffyReturnToHotelBonfire = "Return to Hotel – Bonfire "
-    case introductionSessionWithTheBatchmatesInstructors = "Introduction session with the batchmates & Instructors "
-    case purpleBonfire = " Bonfire "
-    case purpleReturnToHotelBonfire = "return to Hotel - Bonfire "
-    case returnToHotelBonfire = "Return to Hotel Bonfire "
-}
-
-enum OverNightActivity: String, Codable {
-    case bonfireQuizNightDinnerStayAtHotel = "Bonfire – Quiz night - Dinner & Stay at Hotel  "
-    case dinnerStayAtHotel = " Dinner & Stay at Hotel "
-    case nightQuizNightDinnerStayAtHotel = "Night - Quiz night - Dinner & Stay at Hotel  "
-    case overNightActivityDinnerStayAtHotel = "Dinner & Stay at Hotel "
-    case overNightActivityQuizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel  "
-    case quizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel"
-}
-
 typealias ItineraryResponse = [ItineraryResponseElement]
 
 
@@ -371,7 +419,7 @@ let status : String?
 let camp_status : String?
 let voucher_name : String?
 let invoice_name : String?
-
+    let total_price :String?
 enum CodingKeys: String, CodingKey {
 
     case id = "id"
@@ -431,6 +479,7 @@ enum CodingKeys: String, CodingKey {
     case camp_status = "camp_status"
     case voucher_name = "voucher_name"
     case invoice_name = "invoice_name"
+    case total_price = "total_price"
 }
 }
 
@@ -458,3 +507,36 @@ struct OffersResponseElement: Codable {
 }
 
 typealias OffersResponse = [OffersResponseElement]
+
+
+// MARK: - BlogResponseElement
+struct BlogResponseElement: Codable {
+    let id, blogTitle, blogHeaderContent, blogDescFirst: String
+    let blogDescSecond, primaryImage, secondaryImage, blogDescThird: String
+    let bloggerName, bloggerStatement, status, createdAt: String
+    let modifiedAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case blogTitle = "blog_title"
+        case blogHeaderContent = "blog_header_content"
+        case blogDescFirst = "blog_desc_first"
+        case blogDescSecond = "blog_desc_second"
+        case primaryImage = "primary_image"
+        case secondaryImage = "secondary_image"
+        case blogDescThird = "blog_desc_third"
+        case bloggerName = "blogger_name"
+        case bloggerStatement = "blogger_statement"
+        case status
+        case createdAt = "created_at"
+        case modifiedAt = "modified_at"
+    }
+}
+
+typealias BlogResponse = [BlogResponseElement]
+
+
+struct PostCommentResponse:Decodable {
+    let status:Bool
+    let message:String
+}

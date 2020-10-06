@@ -89,7 +89,8 @@ class HomeViewController: UIViewController {
         self.view.makeToast("Check Internet Connection")
             
         }
-       }
+      
+    }
    
     func finishPost (message:String, data:Data? , tag: String) -> Void {
 
@@ -119,6 +120,8 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource, CampsDelegate, GestureDelegate, CampingDelegate, UICollectionViewDelegate , UICollectionViewDataSource {
     
+    
+    
 //    MARK:- Offers Collectionview Data
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataArr.count
@@ -142,7 +145,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
     }
     
     
-    
+   
     func cellTapped() {
         print("CellTapped")
         let VC = self.storyboard?.instantiateViewController(identifier: "PackageDetailsVC") as! PackageDetailsVC
@@ -190,16 +193,19 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
         return campingCell
             
      } else if indexPath.section == 5 {
-       let parntersCell = tableView.dequeueReusableCell(withIdentifier: "PartnersCell", for: indexPath) as! PartnersTVC
-       return parntersCell
-            
-     } else {
+         
+        let parntersCell = tableView.dequeueReusableCell(withIdentifier: "PartnersCell", for: indexPath) as! PartnersTVC
+        
+        return parntersCell
+               
+    } else {
       let adultCell = tableView.dequeueReusableCell(withIdentifier: "AdultCell", for: indexPath) as! AdultTVC
       adultCell.delegate = self
       return adultCell
      }
   
-   }
+  
+    }
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 5 {

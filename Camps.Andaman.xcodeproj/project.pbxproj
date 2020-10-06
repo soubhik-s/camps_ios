@@ -73,6 +73,7 @@
 		D65CD29824AB562B00BFB6D7 /* ActivitiesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */; };
 		D65CD29A24AB568100BFB6D7 /* ActitvityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65CD29924AB568100BFB6D7 /* ActitvityViewController.swift */; };
 		D65E85D5248E614B003BD530 /* HotelDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E85D4248E614B003BD530 /* HotelDetailsTVC.swift */; };
+		D664593125247F7500FB6178 /* AppUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D664593025247F7500FB6178 /* AppUpdate.swift */; };
 		D66E857824AC58CF00B7127C /* OffersCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E857724AC58CF00B7127C /* OffersCVCell.swift */; };
 		D672536D2473AD8100B3B190 /* PackageDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */; };
 		D672536F2474027F00B3B190 /* AboutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672536E2474027F00B3B190 /* AboutTVC.swift */; };
@@ -93,6 +94,10 @@
 		D6DC7FC0247F84C600DC770A /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC7FBF247F84C600DC770A /* MenuTVC.swift */; };
 		D6DC7FC2247FC10200DC770A /* Preferrances.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC7FC1247FC10200DC770A /* Preferrances.swift */; };
 		D6DC7FC4247FD05B00DC770A /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC7FC3247FD05B00DC770A /* ReachabilityManager.swift */; };
+		D6F5AF29252AE76400F4C48B /* BlogDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF28252AE76400F4C48B /* BlogDetailsVC.swift */; };
+		D6F5AF2B252AE88900F4C48B /* BlogCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */; };
+		D6F5AF2D252AE8A000F4C48B /* BlogTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */; };
+		D6F5AF33252B36C800F4C48B /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF32252B36C800F4C48B /* BlogVC.swift */; };
 		F51556EDA400FCE79F320C61 /* Pods_Camps_Andaman_Camps_AndamanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -204,6 +209,7 @@
 		D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCVCell.swift; sourceTree = "<group>"; };
 		D65CD29924AB568100BFB6D7 /* ActitvityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActitvityViewController.swift; sourceTree = "<group>"; };
 		D65E85D4248E614B003BD530 /* HotelDetailsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsTVC.swift; sourceTree = "<group>"; };
+		D664593025247F7500FB6178 /* AppUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdate.swift; sourceTree = "<group>"; };
 		D66E857724AC58CF00B7127C /* OffersCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCVCell.swift; sourceTree = "<group>"; };
 		D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsTVC.swift; sourceTree = "<group>"; };
 		D672536E2474027F00B3B190 /* AboutTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTVC.swift; sourceTree = "<group>"; };
@@ -224,6 +230,10 @@
 		D6DC7FBF247F84C600DC770A /* MenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
 		D6DC7FC1247FC10200DC770A /* Preferrances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferrances.swift; sourceTree = "<group>"; };
 		D6DC7FC3247FD05B00DC770A /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
+		D6F5AF28252AE76400F4C48B /* BlogDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailsVC.swift; sourceTree = "<group>"; };
+		D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCVCell.swift; sourceTree = "<group>"; };
+		D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTVCell.swift; sourceTree = "<group>"; };
+		D6F5AF32252B36C800F4C48B /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
 		DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_Andaman_Camps_AndamanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD3792B8C9DC78BECAB76A /* Pods-Camps.AndamanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.AndamanTests.release.xcconfig"; path = "Target Support Files/Pods-Camps.AndamanTests/Pods-Camps.AndamanTests.release.xcconfig"; sourceTree = "<group>"; };
 		E7614A52449C53685F129E15 /* Pods_Camps_AndamanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_AndamanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -348,8 +358,10 @@
 				D6075CD324616CB30075E90F /* ViewController.swift */,
 				D62C206E24B2F1310093F2F8 /* VerificationVC.swift */,
 				D657CF9624A4C352009B2C85 /* PDFViewController.swift */,
+				D6F5AF32252B36C800F4C48B /* BlogVC.swift */,
 				D652340024AEF3510076E05D /* SelfDetailsVC.swift */,
 				D644BB68249A131200AAFC18 /* PolicyVC.swift */,
+				D6F5AF28252AE76400F4C48B /* BlogDetailsVC.swift */,
 				D65CD29924AB568100BFB6D7 /* ActitvityViewController.swift */,
 				D644BB5F2497757300AAFC18 /* BookingInfoVC.swift */,
 				D6075D02246182270075E90F /* SignUpVC.swift */,
@@ -404,6 +416,7 @@
 				D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */,
 				D6DC7FBF247F84C600DC770A /* MenuTVC.swift */,
 				D644BB642497841C00AAFC18 /* BookingInfoTVC.swift */,
+				D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */,
 				D644BB62249783EE00AAFC18 /* BoardTVC.swift */,
 				D68E04CC247D262000985F09 /* AdultTVC.swift */,
 				D65E85D4248E614B003BD530 /* HotelDetailsTVC.swift */,
@@ -422,6 +435,7 @@
 			children = (
 				D64F19CF246C176A00C169FC /* HotelsCVC.swift */,
 				D66E857724AC58CF00B7127C /* OffersCVCell.swift */,
+				D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */,
 				D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */,
 				D6A50EE324765AED00C858F7 /* CampingCVC.swift */,
 				D65545A124726AEE00E974C3 /* AboutCVC.swift */,
@@ -442,6 +456,7 @@
 				D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */,
 				D655459D246EBBB100E974C3 /* Protocols.swift */,
 				D6DC7FC1247FC10200DC770A /* Preferrances.swift */,
+				D664593025247F7500FB6178 /* AppUpdate.swift */,
 				D62C207024B2F9360093F2F8 /* VerifyService.swift */,
 				D642B390247517C100012180 /* APIService.swift */,
 				D642B3922475184900012180 /* Response.swift */,
@@ -713,8 +728,11 @@
 				D64056582488FA7800133DE2 /* ItineraryVC.swift in Sources */,
 				D6075D0724618A4E0075E90F /* SideMenuVC.swift in Sources */,
 				D6075D1D246192820075E90F /* ViewCntrl+Ext.swift in Sources */,
+				D6F5AF29252AE76400F4C48B /* BlogDetailsVC.swift in Sources */,
+				D664593125247F7500FB6178 /* AppUpdate.swift in Sources */,
 				D6554595246EAF8500E974C3 /* HotelDetailsVC.swift in Sources */,
 				D6075CD024616CB30075E90F /* AppDelegate.swift in Sources */,
+				D6F5AF2D252AE8A000F4C48B /* BlogTVCell.swift in Sources */,
 				D644BB652497841C00AAFC18 /* BookingInfoTVC.swift in Sources */,
 				D644BB5A24976D7900AAFC18 /* DashBoardVC.swift in Sources */,
 				D64F19CB246BF13900C169FC /* PackageDetailsVC.swift in Sources */,
@@ -744,9 +762,11 @@
 				D642B3932475184900012180 /* Response.swift in Sources */,
 				D6075D20246192820075E90F /* Elevation+Ext.swift in Sources */,
 				D64F19D0246C176A00C169FC /* HotelsCVC.swift in Sources */,
+				D6F5AF33252B36C800F4C48B /* BlogVC.swift in Sources */,
 				D64F19BF24696C3500C169FC /* ApplicatonFormVC1.swift in Sources */,
 				D6075D03246182270075E90F /* SignUpVC.swift in Sources */,
 				D68E04CD247D262000985F09 /* AdultTVC.swift in Sources */,
+				D6F5AF2B252AE88900F4C48B /* BlogCVCell.swift in Sources */,
 				D6075D17246192820075E90F /* Toast.swift in Sources */,
 				D65CD29A24AB568100BFB6D7 /* ActitvityViewController.swift in Sources */,
 				D68E04D3247D266900985F09 /* GesturesTVC.swift in Sources */,

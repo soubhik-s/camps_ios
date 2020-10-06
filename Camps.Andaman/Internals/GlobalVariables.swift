@@ -60,6 +60,9 @@ struct PersonDetails {
 
 }
 
+struct BlogVariables {
+    static var Selected_Id = ""
+}
 struct HotelDetails {
     static var hotelIndex = 0
 }

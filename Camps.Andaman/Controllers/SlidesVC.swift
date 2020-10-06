@@ -28,11 +28,15 @@ class SlidesVC: UIViewController {
     let img_View = UIImageView()
 
 
-    
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        AppUpdater.shared.showUpdate(withConfirmation: true)
 
+//        print("appVersion = \(appVersion ?? "0")")
+//        Preferrences.setAppVersion(type: appVersion)
         let gifImage = UIImage.gifImageWithName(name: "Camps2")
         logo_ImgView.image = gifImage
          
@@ -61,13 +65,14 @@ class SlidesVC: UIViewController {
            let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
 
             self.navigationController?.pushViewController(VC, animated: true)
-            Preferrences.setInstalled(status: true)
+        
         } else {
             popUpAlert(title: "Alert", message: "Check Internet Connection", action: .alert)
         }
 
-        
-        
+        Preferrences.setInstalled(status: true)
+
+        print("ISInstalled = \(Preferrences.getInstalled())")
     }
     
   

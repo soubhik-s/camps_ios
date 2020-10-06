@@ -10,6 +10,21 @@ import Foundation
 
 class Preferrences {
     
+    class func setAppVersion(type: String) {
+        UserDefaults.standard.set(type, forKey: "AppVersion")
+    }
+    
+    class func getAppVersion() -> String {
+      
+    if let type: String = UserDefaults.standard.string(forKey: "AppVersion") {
+    return type
+    
+    } else {
+    return ""
+    }
+    
+    }
+    
     class func setUserID(type: String) {
         UserDefaults.standard.set(type, forKey: "userID")
     }

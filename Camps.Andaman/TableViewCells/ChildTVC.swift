@@ -32,16 +32,7 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         
     
     func CVChanges() {
-//       if CampVariables.isConnected == false {
-//
-//        dataCV.isHidden = true
-//        getData()
-//
-//        } else {
-////        dataCV.isHidden = false
-//        dataCV.reloadData()
-//            print("IsConnected = \(CampVariables.isConnected)")
-//        }
+
         dataCV.isHidden = true
         getData()
         
@@ -108,13 +99,8 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         dataCV.isHidden = false
         dataCV.reloadData()
 
-        } else {
-            getData()
-//        topMostController()!.popUpAlert(title: "Alert", message: "Error in Connecting Child Package Server ", action: .alert)
-        }
+        } 
         } catch {
-            getData()
-//        topMostController()!.popUpAlert(title: "Alert", message: "Error_Cheeck Child Package  Details", action: .alert)
             print("Parse Error: \(error)")
         }
 
