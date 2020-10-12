@@ -535,7 +535,44 @@ struct BlogResponseElement: Codable {
 
 typealias BlogResponse = [BlogResponseElement]
 
+// MARK: - CommentResponseElement
+struct CommentResponseElement: Codable {
+    let id, userID, blogID: String
+    let name: String
+    let email: String
+    let message, status, createdAt: String
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case userID = "user_id"
+        case blogID = "blog_id"
+        case name, email, message, status
+        case createdAt = "created_at"
+    }
+}
+
+enum Email: String, Codable {
+    case anuC999GmailCOM = "anu.c999@gmail.com"
+    case chandrabhu24GmailCOM = "chandrabhu24@gmail.com"
+}
+
+enum Name: String, Codable {
+    case chandraBhushanSharma = "Chandra Bhushan Sharma"
+    case pos = "pos"
+}
+
+typealias CommentResponse = [CommentResponseElement]
+
+//struct CommentResponse:Decodable {
+//    let id = ""
+//    let user_id = ""
+//    let blog_id = ""
+//    let name = ""
+//    let email = ""
+//    let message = ""
+//    let status = ""
+//    let created_at = ""
+//}
 struct PostCommentResponse:Decodable {
     let status:Bool
     let message:String

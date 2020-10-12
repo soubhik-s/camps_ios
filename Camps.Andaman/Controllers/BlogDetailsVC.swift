@@ -39,6 +39,7 @@ class BlogDetailsVC: UIViewController {
     
     var dataArr:BlogResponseElement!
     let cmt_View_Height:CGFloat = 250
+    var comment_Arr:CommentResponse = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,10 +50,9 @@ class BlogDetailsVC: UIViewController {
     func viewChanges() {
 
         cmnt_Txt.layer.cornerRadius = 5
-        cmnt_Txt.layer.borderColor = UIColor.white.cgColor
+        cmnt_Txt.layer.borderColor = UIColor.baseColor.cgColor
         cmnt_Txt.layer.borderWidth = 0.5
         
-        comment_View.layer.cornerRadius = 5
         submit_Btn.layer.cornerRadius = 10
         blog_IMG.layer.cornerRadius = 10
         getBlogData()
@@ -141,13 +141,16 @@ class BlogDetailsVC: UIViewController {
                 let parsedData = try JSONDecoder().decode(PostCommentResponse.self, from: jsonData)
                 print(parsedData)
             
-                    if parsedData.status == true   {
-                        self.view.makeToast("Comment Posted Succesfully")
-                        cmnt_Txt.text = ""
-                        hideTopView(View: comment_View, height: cmt_View_Height)
-                        getBlogComments()
+                if parsedData.status == true   {
+                
+                    self.view.makeToast("Comment Posted Succesfully")
+                    cmnt_Txt.text = ""
+                    hideTopView(View: comment_View, height: cmt_View_Height)
+                    getBlogComments()
+                
                 } else {
-                    print("data is Empty")
+                  self.view.makeToast(parsedData.message)
+                        print("data is Empty")
                 }
                     
                 }
@@ -156,7 +159,7 @@ class BlogDetailsVC: UIViewController {
                 print("Parse Error: \(error)")
             }
             
-        } else {
+        } else if tag == "Blog" {
        
             do {
             
@@ -175,8 +178,7 @@ class BlogDetailsVC: UIViewController {
                     description_3_Lbl.text = parsedData.blogDescThird
                         
 
-                    comment_TV.isHidden = false
-                    comment_TV.reloadData()
+                   getBlogComments()
                 }
                     
                 
@@ -185,6 +187,36 @@ class BlogDetailsVC: UIViewController {
                 print("Parse Error: \(error)")
             }
         
+        } else {
+            
+            do {
+            
+                if let jsonData = data {
+                         
+                let parsedData = try JSONDecoder().decode(CommentResponse.self, from: jsonData)
+                print(parsedData)
+                       
+                comment_Arr = parsedData
+                   
+                if comment_Arr.isEmpty == false {
+                    comment_TV.isHidden = false
+                    comment_TV.reloadWithAnimation()
+                } else {
+                        
+                comment_TV.isHidden = true
+
+                }
+
+                comment_TV.isHidden = false
+                comment_TV.reloadData()
+                
+                }
+                               
+                } catch {
+                print("Parse Error: \(error)")
+                    
+            }
+            
         }
        
        

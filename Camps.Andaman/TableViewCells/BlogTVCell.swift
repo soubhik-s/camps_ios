@@ -22,7 +22,7 @@ class BlogTVCell: UITableViewCell  {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        data_View.layer.cornerRadius = 5
     }
                 
             

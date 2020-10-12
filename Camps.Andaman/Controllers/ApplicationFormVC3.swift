@@ -66,6 +66,7 @@ class ApplicationFormVC3: UIViewController {
     @IBOutlet weak var p_City_TF: UITextField!
     @IBOutlet weak var agree_Btn: UIButton!
     
+    @IBOutlet weak var covidLbl: UILabel!
     @IBOutlet weak var net_Price_Lbl: UILabel!
     var isChecked:Bool = true
     var picker = UIPickerView()
@@ -74,6 +75,8 @@ class ApplicationFormVC3: UIViewController {
     var parent_Address = "NO"
     var weekendCall = "YES"
     let termsUrl = "https://camps.goexploreandaman.com/terms-and-conditions"
+    let covidUrl = "https://camps.goexploreandaman.com/camp_covid19"
+
     let priceViewHeight: CGFloat = 240
     
     
@@ -83,6 +86,8 @@ class ApplicationFormVC3: UIViewController {
     var net_Price = 0.0
     var tax_Price = 0.0
     var final_Price = 0.0
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -106,6 +111,9 @@ class ApplicationFormVC3: UIViewController {
         picker.backgroundColor = .lightColor
         let password_Tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
             terms_Lbl.addGestureRecognizer(password_Tap)
+        let covid_Tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+            covidLbl.addGestureRecognizer(covid_Tap)
+        
         copoun_Img.isHidden = true
         calculatePrices()
 //        price_View.frame = CGRect(x: 10, y: 100, width: self.view.frame.width - 20, height: 250)
@@ -126,13 +134,30 @@ class ApplicationFormVC3: UIViewController {
     
       
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        if sender.view?.tag == 1 {
+            guard let url = URL(string: covidUrl) else {
+                                         return
+                 }
+                 if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+            
+                 
+        } else {
          guard let url = URL(string: termsUrl) else {
                                 return
         }
         if UIApplication.shared.canOpenURL(url) {
                UIApplication.shared.open(url, options: [:], completionHandler: nil)
            }
+   
+        }
     }
+    
+    
+    
+    
+    
         
     func calculatePrices() {
         basic_Price = Double(BookingDetails.price.fiterPrice()) ?? 0.0

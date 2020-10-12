@@ -60,19 +60,32 @@ class PackageDetailsVC: UIViewController {
         IMGView.layer.masksToBounds = true
        firstImageFadeIn()
         campTitleLbl.text = BookingDetails.package_name
-        durationLbl.text = BookingDetails.camp_Duration
+//        durationLbl.text = BookingDetails.camp_Duration
         priceLbl.text = BookingDetails.price
+        
         switch BookingDetails.selectedIndex {
+        
         case 0:
             notesLbl.text = summerNotes
+            durationLbl.text = "May / June"
+
         case 1:
-        notesLbl.text = springNotes
+         
+            notesLbl.text = springNotes
+            durationLbl.text = "March / April"
+
         case 2:
-        notesLbl.text = winterNotes
+            
+            durationLbl.text = "November / December"
+            notesLbl.text = winterNotes
+        
         case 3:
-        notesLbl.text = winterNotes
+            durationLbl.text = "January / Febraury"
+            notesLbl.text = winterNotes
+       
         case 4:
-        notesLbl.text = autumnNotes
+            durationLbl.text = "September / October"
+            notesLbl.text = autumnNotes
             
         default:
             break

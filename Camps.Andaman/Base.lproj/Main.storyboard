@@ -1620,7 +1620,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="1108"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-3p-Ndp">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="1075"/>
+                                        <rect key="frame" x="0.0" y="8" width="414" height="1100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bz-3B-GLD">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="25"/>
@@ -2323,7 +2323,7 @@
                                         <constraints>
                                             <constraint firstItem="FOM-qU-c7i" firstAttribute="top" secondItem="EWJ-LN-MLk" secondAttribute="bottom" constant="10" id="0jw-2P-oSX"/>
                                             <constraint firstItem="m24-9N-MpY" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="1yp-8K-BJl"/>
-                                            <constraint firstAttribute="height" constant="1075" id="8Fx-NN-YgH"/>
+                                            <constraint firstAttribute="height" constant="1100" id="8Fx-NN-YgH"/>
                                             <constraint firstItem="mgN-7R-FX4" firstAttribute="top" secondItem="qso-8a-fbq" secondAttribute="bottom" constant="10" id="9lr-dS-8sA"/>
                                             <constraint firstAttribute="trailing" secondItem="m24-9N-MpY" secondAttribute="trailing" constant="20" id="AMQ-s5-j3O"/>
                                             <constraint firstItem="Ehl-tb-d4K" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="DSf-Gr-MVH"/>
@@ -5011,11 +5011,11 @@ muchmore.</string>
             <objects>
                 <viewController storyboardIdentifier="ApplicatonFormVC1" id="AA9-lV-yla" customClass="ApplicatonFormVC1" customModule="AndamanCamps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O5y-sD-jml">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS2" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-3I-oi6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMd-xb-YUt">
                                 <rect key="frame" x="143.5" y="44" width="127" height="25"/>
@@ -5045,10 +5045,10 @@ muchmore.</string>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahu-VF-hef">
-                                <rect key="frame" x="0.0" y="84" width="414" height="916"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="1216"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-4j-mnv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fs6-1V-GgV">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="120"/>
@@ -5248,11 +5248,8 @@ muchmore.</string>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kDI-Fm-RQ2">
                                                         <rect key="frame" x="0.0" y="88" width="374" height="34"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENDER :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygb-We-T52">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="34"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="bpH-2Y-WBb"/>
-                                                                </constraints>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygb-We-T52">
+                                                                <rect key="frame" x="0.0" y="0.0" width="204" height="34"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -5261,8 +5258,11 @@ muchmore.</string>
                                                                 </variation>
                                                             </label>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8VE-A4-w80">
-                                                                <rect key="frame" x="120" y="0.0" width="254" height="35"/>
+                                                                <rect key="frame" x="224" y="0.0" width="150" height="35"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="150" id="q7s-yP-K53"/>
+                                                                </constraints>
                                                                 <segments>
                                                                     <segment title="Male"/>
                                                                     <segment title="Female"/>
@@ -5329,8 +5329,124 @@ muchmore.</string>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UlO-3g-GDl">
+                                                <rect key="frame" x="20" y="789" width="374" height="304"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-5z-hbf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Sibling ..?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPP-0V-85P">
+                                                                <rect key="frame" x="0.0" y="0.0" width="204" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="gGI-Dy-NTL"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                                </variation>
+                                                            </label>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" segmentControlStyle="bar" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="rrq-iS-2kR">
+                                                                <rect key="frame" x="224" y="0.0" width="150" height="31"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="150" id="vwY-kE-31L"/>
+                                                                </constraints>
+                                                                <segments>
+                                                                    <segment title="YES"/>
+                                                                    <segment title="NO"/>
+                                                                </segments>
+                                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="selectedSegmentTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <connections>
+                                                                    <action selector="sibling_SC_Axn:" destination="AA9-lV-yla" eventType="valueChanged" id="J0N-fW-x6e"/>
+                                                                </connections>
+                                                            </segmentedControl>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-xw-Xva">
+                                                        <rect key="frame" x="0.0" y="50" width="374" height="254"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIBLING'S INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y8-JL-Q31">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" red="0.95686274510000002" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wl9-3K-uI5">
+                                                                <rect key="frame" x="0.0" y="44" width="374" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="sL7-xk-xfF">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                                                    </constraint>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                                </variation>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-Ur-0eS">
+                                                                <rect key="frame" x="0.0" y="88" width="374" height="34"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                                </variation>
+                                                            </textField>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GDY-Pg-gyk">
+                                                                <rect key="frame" x="0.0" y="132" width="374" height="34"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sibling's Gender :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtc-fO-w3l">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="204" height="34"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                                        </variation>
+                                                                    </label>
+                                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="npB-WR-G1B">
+                                                                        <rect key="frame" x="224" y="0.0" width="150" height="35"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="150" id="cDh-Ua-B4V"/>
+                                                                        </constraints>
+                                                                        <segments>
+                                                                            <segment title="Male"/>
+                                                                            <segment title="Female"/>
+                                                                        </segments>
+                                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="selectedSegmentTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <connections>
+                                                                            <action selector="siblingGender_Axn:" destination="AA9-lV-yla" eventType="valueChanged" id="cxy-Rh-T5O"/>
+                                                                        </connections>
+                                                                    </segmentedControl>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="7b1-gb-dyJ"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-ag-ul5">
+                                                                <rect key="frame" x="0.0" y="176" width="374" height="34"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                                </variation>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KO-c3-Dzp">
+                                                                <rect key="frame" x="0.0" y="220" width="374" height="34"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSW-K1-4wA">
-                                                <rect key="frame" x="157" y="794" width="100" height="30"/>
+                                                <rect key="frame" x="157" y="1133" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="7Zx-jg-bhP">
@@ -5369,22 +5485,22 @@ muchmore.</string>
                                             <constraint firstItem="nAP-Ag-SEb" firstAttribute="leading" secondItem="Aky-4j-mnv" secondAttribute="leading" constant="20" id="BOA-qC-jOk">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
-                                            <constraint firstItem="Y10-56-Hrs" firstAttribute="centerX" secondItem="Aky-4j-mnv" secondAttribute="centerX" id="Bsf-NU-WUC"/>
+                                            <constraint firstItem="UlO-3g-GDl" firstAttribute="leading" secondItem="Aky-4j-mnv" secondAttribute="leading" constant="20" id="JW2-dn-wxS"/>
                                             <constraint firstAttribute="trailing" secondItem="nAP-Ag-SEb" secondAttribute="trailing" constant="20" id="MIb-Al-7BK">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
                                             <constraint firstItem="Y10-56-Hrs" firstAttribute="leading" secondItem="Aky-4j-mnv" secondAttribute="leading" constant="20" id="P5M-ZH-9zi">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
-                                            <constraint firstAttribute="height" constant="900" id="ZMf-4e-8gh"/>
+                                            <constraint firstItem="UlO-3g-GDl" firstAttribute="top" secondItem="Y10-56-Hrs" secondAttribute="bottom" constant="20" id="ZAm-mC-auA"/>
+                                            <constraint firstAttribute="height" constant="1200" id="ZMf-4e-8gh"/>
+                                            <constraint firstAttribute="trailing" secondItem="UlO-3g-GDl" secondAttribute="trailing" constant="20" id="bHs-VJ-nlu"/>
+                                            <constraint firstItem="dSW-K1-4wA" firstAttribute="top" secondItem="UlO-3g-GDl" secondAttribute="bottom" constant="40" id="dEQ-tm-N9J"/>
                                             <constraint firstItem="ZrW-25-EsB" firstAttribute="leading" secondItem="Aky-4j-mnv" secondAttribute="leading" constant="20" id="dGd-qb-F4d"/>
                                             <constraint firstAttribute="trailing" secondItem="Fs6-1V-GgV" secondAttribute="trailing" constant="20" id="dPl-9q-oqB">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
                                             <constraint firstItem="dSW-K1-4wA" firstAttribute="centerX" secondItem="Aky-4j-mnv" secondAttribute="centerX" id="eUc-Ke-IyB"/>
-                                            <constraint firstItem="dSW-K1-4wA" firstAttribute="top" secondItem="Y10-56-Hrs" secondAttribute="bottom" constant="25" id="fKD-HO-5C8">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                            </constraint>
                                             <constraint firstItem="Fs6-1V-GgV" firstAttribute="top" secondItem="Aky-4j-mnv" secondAttribute="top" id="hfv-4x-ycU">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                             </constraint>
@@ -5441,7 +5557,7 @@ muchmore.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9y-Y3-2LY"/>
                     </view>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="DOBTF" destination="s6P-cI-cPb" id="9DK-3x-fd4"/>
                         <outlet property="TshirtTF" destination="RDI-H2-M58" id="Q4r-53-Fl2"/>
@@ -5459,6 +5575,12 @@ muchmore.</string>
                         <outlet property="packageLbl" destination="dyL-EH-IrQ" id="Cny-li-bby"/>
                         <outlet property="priceLbl" destination="bgW-i1-C8b" id="zfV-9F-AFy"/>
                         <outlet property="seasonTF" destination="nAP-Ag-SEb" id="h9a-HM-TWa"/>
+                        <outlet property="sibling_EmailTF" destination="0KO-c3-Dzp" id="cgB-LR-saJ"/>
+                        <outlet property="sibling_FName_TF" destination="Wl9-3K-uI5" id="GN1-6z-LH3"/>
+                        <outlet property="sibling_LName_TF" destination="nSc-Ur-0eS" id="aR2-ko-hmy"/>
+                        <outlet property="sibling_MobileTF" destination="6w1-ag-ul5" id="yFb-Fq-hEW"/>
+                        <outlet property="sibling_SC" destination="rrq-iS-2kR" id="cqg-Qc-DbC"/>
+                        <outlet property="sibling_SV" destination="4Ls-xw-Xva" id="m1p-pm-vz7"/>
                         <outlet property="weightTF" destination="V0F-y0-gGy" id="Ff4-Yt-VuM"/>
                     </connections>
                 </viewController>
@@ -5651,7 +5773,7 @@ muchmore.</string>
                                                                     <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                 </variation>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 DAYS / 11 NIGHTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ9-As-kJM">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May  / June" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQ9-As-kJM">
                                                                 <rect key="frame" x="0.0" y="22" width="386" height="20"/>
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                                 <constraints>
@@ -7282,28 +7404,35 @@ muchmore.</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-ki-tfQ">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-ki-tfQ">
                                                 <rect key="frame" x="20" y="815" width="374" height="310"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="wtn-JV-asH" imageView="VsG-jM-yaO" style="IBUITableViewCellStyleDefault" id="r5w-zp-COV">
-                                                        <rect key="frame" x="0.0" y="28" width="374" height="81.5"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="wtn-JV-asH" detailTextLabel="uTS-qm-Tt5" imageView="VsG-jM-yaO" style="IBUITableViewCellStyleSubtitle" id="r5w-zp-COV">
+                                                        <rect key="frame" x="0.0" y="28" width="374" height="52.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5w-zp-COV" id="cEC-Y1-9CN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="81.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wtn-JV-asH">
-                                                                    <rect key="frame" x="99" y="0.0" width="255" height="81.5"/>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wtn-JV-asH">
+                                                                    <rect key="frame" x="88" y="7.5" width="27.5" height="18"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="user" id="VsG-jM-yaO">
-                                                                    <rect key="frame" x="20" y="8.5" width="64" height="64"/>
+                                                                    <rect key="frame" x="20" y="0.0" width="53" height="52.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </imageView>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uTS-qm-Tt5">
+                                                                    <rect key="frame" x="88" y="28" width="42" height="15.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -7466,25 +7595,32 @@ muchmore.</string>
                                                 <rect key="frame" x="10" y="270" width="394" height="830"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommentCell" textLabel="F2I-Jr-DjI" imageView="4g8-5j-eLp" style="IBUITableViewCellStyleDefault" id="byK-Mb-DXb">
-                                                        <rect key="frame" x="0.0" y="28" width="394" height="77"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommentCell" textLabel="F2I-Jr-DjI" detailTextLabel="562-tj-EIl" imageView="4g8-5j-eLp" style="IBUITableViewCellStyleSubtitle" id="byK-Mb-DXb">
+                                                        <rect key="frame" x="0.0" y="28" width="394" height="56"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="byK-Mb-DXb" id="Evx-Gp-khJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="77"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F2I-Jr-DjI">
-                                                                    <rect key="frame" x="99" y="0.0" width="275" height="77"/>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F2I-Jr-DjI">
+                                                                    <rect key="frame" x="91" y="8" width="283" height="20.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="user" id="4g8-5j-eLp">
-                                                                    <rect key="frame" x="20" y="6.5" width="64" height="64"/>
+                                                                    <rect key="frame" x="20" y="0.0" width="56" height="56"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </imageView>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="562-tj-EIl">
+                                                                    <rect key="frame" x="91" y="30.5" width="42" height="15.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                                                    <color key="textColor" red="0.95686274510000002" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -7670,7 +7806,7 @@ muchmore.</string>
                     <viewLayoutGuide key="safeArea" id="by1-vP-Uwv"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="5886" y="-1217"/>
+            <point key="canvasLocation" x="6826" y="-1167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="k1b-gM-vuM">
@@ -8416,13 +8552,13 @@ muchmore.</string>
                                                                 </variation>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="40s-Qy-D8w">
-                                                                <rect key="frame" x="80" y="40" width="214" height="70"/>
+                                                                <rect key="frame" x="79" y="40" width="216" height="70"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HpY-cz-kT2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="214" height="20"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="20"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Name :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seP-XH-8xy">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                 <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -8431,7 +8567,7 @@ muchmore.</string>
                                                                                 </variation>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMER GROUP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJb-1b-m7P">
-                                                                                <rect key="frame" x="109.5" y="0.0" width="104.5" height="20"/>
+                                                                                <rect key="frame" x="110.5" y="0.0" width="105.5" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                 <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -8445,10 +8581,13 @@ muchmore.</string>
                                                                         </constraints>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y6J-Ql-DqF">
-                                                                        <rect key="frame" x="0.0" y="25" width="214" height="20"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="216" height="20"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Final Price (₹) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-zD-S4T">
-                                                                                <rect key="frame" x="0.0" y="2.5" width="108" height="15.5"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Price (₹) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-zD-S4T">
+                                                                                <rect key="frame" x="0.0" y="2.5" width="110" height="15.5"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="110" id="gib-qo-h2F"/>
+                                                                                </constraints>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                 <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -8456,8 +8595,8 @@ muchmore.</string>
                                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                                                                 </variation>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="RS - 99,999  /-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Za-dAh">
-                                                                                <rect key="frame" x="113" y="2.5" width="81" height="15.5"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RS - 99,999  /-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Za-dAh">
+                                                                                <rect key="frame" x="115" y="2.5" width="81" height="15.5"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                 <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -8466,7 +8605,7 @@ muchmore.</string>
                                                                                 </variation>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-Lp-Gon">
-                                                                                <rect key="frame" x="199" y="2.5" width="15" height="15"/>
+                                                                                <rect key="frame" x="201" y="2.5" width="15" height="15"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="15" id="2rt-Eq-wgt"/>
                                                                                     <constraint firstAttribute="width" constant="15" id="MmV-d2-nDV"/>
@@ -8482,10 +8621,10 @@ muchmore.</string>
                                                                         </constraints>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TXo-yI-iza">
-                                                                        <rect key="frame" x="0.0" y="50" width="214" height="20"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="216" height="20"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age Gruup :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKL-uT-O12">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="20"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                 <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -8494,7 +8633,7 @@ muchmore.</string>
                                                                                 </variation>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yi-Lw-plt">
-                                                                                <rect key="frame" x="109.5" y="0.0" width="104.5" height="20"/>
+                                                                                <rect key="frame" x="110.5" y="0.0" width="105.5" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                 <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -8622,7 +8761,7 @@ muchmore.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qhg-nc-Oud">
-                                                        <rect key="frame" x="132" y="1192.5" width="150" height="30"/>
+                                                        <rect key="frame" x="132" y="1196" width="150" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKp-zh-rlX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
@@ -8650,7 +8789,7 @@ muchmore.</string>
                                                         <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDITIONAL INFORMATION " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-sV-mWY">
-                                                        <rect key="frame" x="20" y="890" width="374" height="25"/>
+                                                        <rect key="frame" x="20" y="850" width="374" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="jys-U3-GWn"/>
                                                         </constraints>
@@ -8661,113 +8800,174 @@ muchmore.</string>
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
                                                         </variation>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8V-Bh-lGa">
-                                                        <rect key="frame" x="20" y="1109" width="374" height="53.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8V-Bh-lGa">
+                                                        <rect key="frame" x="20" y="1069" width="374" height="97"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc9-pp-qFN">
-                                                                <rect key="frame" x="0.0" y="19.5" width="15" height="15"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="15" id="U2X-NI-Qcb">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                    </constraint>
-                                                                    <constraint firstAttribute="width" constant="15" id="kde-Sb-cHM">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <state key="normal" image="Check_W"/>
-                                                                <connections>
-                                                                    <action selector="agreeBtn_Axn:" destination="ypT-JH-TXH" eventType="touchUpInside" id="1vO-tU-nNt"/>
-                                                                </connections>
-                                                            </button>
-                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryY-Qh-XVJ">
-                                                                <rect key="frame" x="25" y="0.0" width="349" height="53.5"/>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="I  agree that the above mentioned information is true to the best of my knowledge.I agree to the terms and conditions of ">
-                                                                        <attributes>
-                                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="15" name="Optima-Regular"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                    <fragment content="GoExploreAndaman">
-                                                                        <attributes>
-                                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="15" name="Optima-Regular"/>
-                                                                            <integer key="NSUnderline" value="1"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                    <fragment content=".">
-                                                                        <attributes>
-                                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="15" name="Optima-Regular"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="I  agree that the above mentioned information is true to the best of my knowledge.I agree to the terms and conditions of ">
-                                                                            <attributes>
-                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <font key="NSFont" size="17" name="Optima-Regular"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                        <fragment content="GoExploreAndaman">
-                                                                            <attributes>
-                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <font key="NSFont" size="17" name="Optima-Regular"/>
-                                                                                <integer key="NSUnderline" value="1"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                        <fragment content=".">
-                                                                            <attributes>
-                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <font key="NSFont" size="17" name="Optima-Regular"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                </variation>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-hD-vdf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="53.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc9-pp-qFN">
+                                                                        <rect key="frame" x="0.0" y="19.5" width="15" height="15"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="15" id="U2X-NI-Qcb">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                                            </constraint>
+                                                                            <constraint firstAttribute="width" constant="15" id="kde-Sb-cHM">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                                            </constraint>
+                                                                        </constraints>
+                                                                        <state key="normal" image="Check_W"/>
+                                                                        <connections>
+                                                                            <action selector="agreeBtn_Axn:" destination="ypT-JH-TXH" eventType="touchUpInside" id="1vO-tU-nNt"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryY-Qh-XVJ">
+                                                                        <rect key="frame" x="25" y="0.0" width="349" height="53.5"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="I  agree that the above mentioned information is true to the best of my knowledge.I agree to the terms and conditions of ">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <font key="NSFont" size="15" name="Optima-Regular"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content="GoExploreAndaman">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <font key="NSFont" size="15" name="Optima-Regular"/>
+                                                                                    <integer key="NSUnderline" value="1"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content=".">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <font key="NSFont" size="15" name="Optima-Regular"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <attributedString key="attributedText">
+                                                                                <fragment content="I  agree that the above mentioned information is true to the best of my knowledge.I agree to the terms and conditions of ">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <font key="NSFont" size="17" name="Optima-Regular"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                                <fragment content="GoExploreAndaman">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <font key="NSFont" size="17" name="Optima-Regular"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                                <fragment content=".">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <font key="NSFont" size="17" name="Optima-Regular"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </variation>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bD6-eo-73K">
+                                                                <rect key="frame" x="0.0" y="63.5" width="374" height="33.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYP-0F-7xw">
+                                                                        <rect key="frame" x="0.0" y="9.5" width="15" height="15"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="15" id="BiD-L0-rTX">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                                            </constraint>
+                                                                            <constraint firstAttribute="width" constant="15" id="W11-Mq-VqH">
+                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                                            </constraint>
+                                                                        </constraints>
+                                                                        <state key="normal" image="Check_W"/>
+                                                                        <connections>
+                                                                            <action selector="agreeBtn_Axn:" destination="ypT-JH-TXH" eventType="touchUpInside" id="Hu1-TP-Kfy"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEM-FP-6Rm">
+                                                                        <rect key="frame" x="25" y="0.0" width="349" height="33.5"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="I  agree with the ">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <font key="NSFont" size="14" name="Optima-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content="COVID-19">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <font key="NSFont" size="14" name="Optima-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                    <integer key="NSUnderline" value="1"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content=" Guidelines with Camp Booking">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                    <font key="NSFont" size="14" name="Optima-Regular"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                                            <attributedString key="attributedText">
+                                                                                <fragment content="I  agree with the ">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <font key="NSFont" size="16" name="Optima-Regular"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                                <fragment content="COVID-19 ">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <font key="NSFont" size="16" name="Optima-Regular"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                                <fragment content="Guidelines">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <font key="NSFont" size="16" name="Optima-Regular"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                                <fragment content=" ">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <font key="NSFont" size="16" name="Optima-Regular"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                        <integer key="NSUnderline" value="1"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                                <fragment content="with Camp Booking">
+                                                                                    <attributes>
+                                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <font key="NSFont" size="16" name="Optima-Regular"/>
+                                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                    </attributes>
+                                                                                </fragment>
+                                                                            </attributedString>
+                                                                        </variation>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ebk-tc-HXF">
-                                                        <rect key="frame" x="20" y="585" width="374" height="295"/>
+                                                        <rect key="frame" x="20" y="585" width="374" height="255"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2P-0f-zsI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Add Sibiling..?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37Z-Re-XA0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                                                        </variation>
-                                                                    </label>
-                                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Qj-gc-ogq">
-                                                                        <rect key="frame" x="274" y="0.0" width="100" height="31"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="100" id="YK2-p5-hdZ">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
-                                                                            </constraint>
-                                                                        </constraints>
-                                                                        <segments>
-                                                                            <segment title="YES"/>
-                                                                            <segment title="NO"/>
-                                                                        </segments>
-                                                                        <color key="selectedSegmentTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    </segmentedControl>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="I3i-eV-Eke">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="40"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
-                                                            </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F12-cc-oBZ">
-                                                                <rect key="frame" x="0.0" y="40" width="374" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Parent's address same as above..?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-GB-BBe">
                                                                         <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
@@ -8803,7 +9003,7 @@ muchmore.</string>
                                                                 <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nv9-bD-gvh">
-                                                                <rect key="frame" x="0.0" y="80" width="374" height="215"/>
+                                                                <rect key="frame" x="0.0" y="40" width="374" height="215"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-6r-nQX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -8840,7 +9040,7 @@ muchmore.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Infomation " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-hB-oK6">
-                                                        <rect key="frame" x="20" y="925" width="374" height="34"/>
+                                                        <rect key="frame" x="20" y="885" width="374" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="ogz-6U-l6T">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8850,7 +9050,7 @@ muchmore.</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Am8-fI-1VN">
-                                                        <rect key="frame" x="20" y="974" width="374" height="114"/>
+                                                        <rect key="frame" x="20" y="934" width="374" height="114"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bax-OL-GuU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -9043,6 +9243,7 @@ muchmore.</string>
                         <outlet property="code_TF" destination="MY6-7E-zMn" id="RjD-cb-G9d"/>
                         <outlet property="copoun_Img" destination="HdP-L9-hre" id="oyA-Bk-07I"/>
                         <outlet property="copoun_View" destination="ESE-nG-eWD" id="9in-ph-IDa"/>
+                        <outlet property="covidLbl" destination="gEM-FP-6Rm" id="YFG-W9-75G"/>
                         <outlet property="dPrice_Lbl" destination="MbK-kl-1EK" id="0Z9-yv-HTw"/>
                         <outlet property="header_View" destination="ang-nN-l8l" id="2LD-Dn-P7L"/>
                         <outlet property="hide_btn" destination="hPP-kd-ewN" id="AVn-Q1-4oz"/>

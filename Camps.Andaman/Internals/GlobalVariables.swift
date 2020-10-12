@@ -94,7 +94,13 @@ struct BookingDetails {
     static var package_id = "1"
     static var quantity = "1"
     static var age_Group = "Adult"
-
+    static var camp_Month = "May / June"
+    static var siblingsInfo = "NO"
+    static var siblingsFName = ""
+    static var siblingsLName = ""
+    static var siblingsGender = ""
+    static var siblingsMobile = ""
+    static var siblingsEmail = ""
 
 
     static var ip_address = "10"

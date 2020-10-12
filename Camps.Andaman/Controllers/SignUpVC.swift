@@ -101,7 +101,8 @@ class SignUpVC: UIViewController {
             emailTF.text = ""
             passwordTF.text = ""
              mobileTF.text = ""
-              popUpAlert(title: "Success", message: "Registration Completed", action: .alert)
+        
+            popUpAlert(title: "Success", message: "Registration Completed", action: .alert)
         } else {
         popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
         }

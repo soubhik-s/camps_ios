@@ -252,7 +252,47 @@ func showViewFromTop(View:UIView, height:CGFloat) {
           }, completion: nil)
       
   }
+    
+    func getCurrentMonth() -> Int {
+        let today = Date()
+        let calendar = Calendar.current
+        let formatter = DateFormatter()
+        let components = calendar.dateComponents([.month], from: today)
+        let month = components.month ?? 0
+        formatter.dateStyle = .short
+        print(formatter.string(from: today))
+        print("month = \(month)")
+        return month
+    }
 
+    func getCurrentYear() -> Int {
+           let today = Date()
+           let calendar = Calendar.current
+           let formatter = DateFormatter()
+           let components = calendar.dateComponents([.year], from: today)
+           let year = components.year ?? 0
+           formatter.dateStyle = .short
+           print(formatter.string(from: today))
+           print("year = \(year)")
+           return year
+       }
+    
+    func getCurrentday() -> Int {
+            
+        let today = Date()
+        let calendar = Calendar.current
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+
+        let components = calendar.dateComponents([.day], from: today)
+        let day = components.day ?? 0
+        print(formatter.string(from: today))
+        print("day = \(day)")
+           
+        return day
+         
+    }
+    
 }
 //MARK: CALayer
 

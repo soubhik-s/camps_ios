@@ -189,7 +189,7 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if firstName_TF.text == "" || lastName_TF.text == "" || email_TF.text! == "" || mobile_TF.text == "" {
             popUpAlert(title: "Alert", message: "Enter All Details", action: .alert)
         } else if email_TF.text!.isValidEmail() == false {
-        popUpAlert(title: "Alert", message: "Enter Valid EMail", action: .alert)
+        popUpAlert(title: "Alert", message: "Enter Valid Email", action: .alert)
         
         } else if mobile_TF.text!.isValidContact() == false {
         popUpAlert(title: "Alert", message: "Enter Valid Mobile Number", action: .alert)

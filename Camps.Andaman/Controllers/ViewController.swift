@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     var isClicked = false
     var ipAddress:String!
- 
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,11 +40,14 @@ class ViewController: UIViewController {
         loginBtn.makeRound()
         
     }
+    
+    
     func fetch_IPAddress() {
         if reach.isConnectedToNetwork() == true {
             ipAddress = getIPAddress()!
             print("ipAddress = \(ipAddress)")
             BookingDetails.ip_address = ipAddress
+     
         } else {
             
             popUpAlert(title: "Check", message: "Check Internet Connection", action: .alert)
