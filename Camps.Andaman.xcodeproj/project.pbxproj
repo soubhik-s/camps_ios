@@ -98,6 +98,7 @@
 		D6F5AF2B252AE88900F4C48B /* BlogCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */; };
 		D6F5AF2D252AE8A000F4C48B /* BlogTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */; };
 		D6F5AF33252B36C800F4C48B /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF32252B36C800F4C48B /* BlogVC.swift */; };
+		D6F5AF3525357FC900F4C48B /* CovidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF3425357FC900F4C48B /* CovidVC.swift */; };
 		F51556EDA400FCE79F320C61 /* Pods_Camps_Andaman_Camps_AndamanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -234,6 +235,7 @@
 		D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCVCell.swift; sourceTree = "<group>"; };
 		D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTVCell.swift; sourceTree = "<group>"; };
 		D6F5AF32252B36C800F4C48B /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
+		D6F5AF3425357FC900F4C48B /* CovidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidVC.swift; sourceTree = "<group>"; };
 		DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_Andaman_Camps_AndamanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD3792B8C9DC78BECAB76A /* Pods-Camps.AndamanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.AndamanTests.release.xcconfig"; path = "Target Support Files/Pods-Camps.AndamanTests/Pods-Camps.AndamanTests.release.xcconfig"; sourceTree = "<group>"; };
 		E7614A52449C53685F129E15 /* Pods_Camps_AndamanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_AndamanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,6 +359,7 @@
 			children = (
 				D6075CD324616CB30075E90F /* ViewController.swift */,
 				D62C206E24B2F1310093F2F8 /* VerificationVC.swift */,
+				D6F5AF3425357FC900F4C48B /* CovidVC.swift */,
 				D657CF9624A4C352009B2C85 /* PDFViewController.swift */,
 				D6F5AF32252B36C800F4C48B /* BlogVC.swift */,
 				D652340024AEF3510076E05D /* SelfDetailsVC.swift */,
@@ -784,6 +787,7 @@
 				D65CD29824AB562B00BFB6D7 /* ActivitiesCVCell.swift in Sources */,
 				D65E85D5248E614B003BD530 /* HotelDetailsTVC.swift in Sources */,
 				D64F19C124696C5100C169FC /* ApplicationFormVC2.swift in Sources */,
+				D6F5AF3525357FC900F4C48B /* CovidVC.swift in Sources */,
 				D68944F9248677D500409079 /* ForgotVC.swift in Sources */,
 				D6DC7FC0247F84C600DC770A /* MenuTVC.swift in Sources */,
 				D6A50EDE24753C8400C858F7 /* CampingTVC.swift in Sources */,

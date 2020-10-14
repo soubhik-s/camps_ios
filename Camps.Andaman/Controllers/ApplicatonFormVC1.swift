@@ -41,11 +41,11 @@ class ApplicatonFormVC1: UIViewController {
     
     let picker = UIPickerView()
    
-    let springCamp = [""]
-    let summerCamp = [""]
-    let autumnCamp = [""]
-    let pre_winterCamp = [""]
-    let winterCamp = [""]
+    var springCamp = [""]
+    var summerCamp = [""]
+    var autumnCamp = [""]
+    var pre_winterCamp = [""]
+    var winterCamp = [""]
 
     let childBatch = ["Batch-I"]
     let adultBatch = ["Batch-II"]
@@ -86,273 +86,90 @@ class ApplicatonFormVC1: UIViewController {
         mobileTF.text = UserDetails.mobileNumber
         emailTF.text = UserDetails.email
         sibling_SV.isHidden = true
-        
+        seasonActivity()
         
     }
     
-    
-    
     func seasonActivity() {
+       
         let day = getCurrentday()
         let currentMonth = getCurrentMonth()
         let cureentYear = getCurrentYear()
       
-        if BookingDetails.package_id < 6 {
-            if currentMonth < 5 {
-                summerCamp = ["summerCamp - May / \(cureentYear)", "summerCamp - June/\(cureentYear)"]
-            }
-        }
-        switch BookingDetails.package_id {
-        
-        case 1:
+        if BookingDetails.package_id == "1" || BookingDetails.package_id == "6" {
            
             if currentMonth < 5 {
-                summerCamp = ["summerCamp - May / \(cureentYear)", "summerCamp - June/\(cureentYear)"]
-            } else if currentMonth == 5 || 6 {
-                
-                if day < 15 {
-                    
-                   summerCamp = ["summerCamp - May / \(cureentYear)", "summerCamp - June/\(cureentYear)"]
-                    
-                } else {
-                    
-                    summerCamp = ["summerCamp - May / \(cureentYear + 1)", "summerCamp - June/\(cureentYear + 1)"]
+                summerCamp = ["SummerCamp - May / \(cureentYear)", "summerCamp - June/\(cureentYear)"]
+            
+            } else if currentMonth == 5 {
+                summerCamp = ["SummerCamp - May / \(cureentYear + 1)", "summerCamp - June / \(cureentYear)"]
 
-                }
             } else {
                 summerCamp = ["summerCamp - May / \(cureentYear + 1)", "summerCamp - June/\(cureentYear + 1)"]
 
             }
-            
-        
-        case 2:
-                  
-                 
-            if day < 15 {
                        
-                       winterCamp = ["SummerCamp - January / \(cureentYear)","SummerCamp - Febraury / \(cureentYear)" ]
-                   
-                   } else {
-                       
-                       winterCamp = ["SummerCamp - January / \(cureentYear + 1)" ,"SummerCamp - Febrauary / \(cureentYear + 1)" ]
-
-                   }
-        case 3:
-                  
-                   if day < 15 {
-                       
-                       summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                   
-                   } else {
-                       
-                       summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                       
-                   }
-        case 4:
-                  
-                   if day < 15 {
-                       
-                       summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                   
-                   } else {
-                       
-                       summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                       
-                   }
-           
-        case 5:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            case 6:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            
-            case 7:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            case 8:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            case 9:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            case 10:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-                        
-
-            case 11:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            case 12:
-                      
-                       if day < 15 {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear)"]
-                       
-                       } else {
-                           
-                           summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
-                           
-                       }
-            
-        default:
-            break
-        }
-        
-        
-        if BookingDetails.package_id == "1" || BookingDetails.package_id == "6" {
-                
-            if currentMonth < 5 {
-                
-                    summerCamp = ["SummerCamp - May / \(cureentYear)", "SummerCamp - June / \(cureentYear)"]
-
-            } else if currentMonth == 5 {
-                
-            } else if currentMonth > 5 {
-            
-            }
-                        
-
-            } else if currentMonth == 6 {
-                
-                if day < 15 {
-                
-                    summerCamp = ["SummerCamp -June / \(cureentYear)"]
-                    
-                    } else {
-                        summerCamp = ["SummerCamp - June / \(cureentYear + 1)"]
-                    
-                }
-                }
-            
-            } else if BookingDetails.package_id == "2" || BookingDetails.package_id == "7" {
+        } else if BookingDetails.package_id == "2" || BookingDetails.package_id == "7" {
                
-          
-            if currentMonth == 3 {
-                       
-                if day < 15 {
-                       
-                    summerCamp = ["SummerCamp-May / \(cureentYear)"]
-               
-                } else {
-                   
-                    summerCamp = ["SummerCamp-May / \(cureentYear + 1)"]
+           if currentMonth < 3 {
+                springCamp = ["springCamp - March / \(cureentYear)", "springCamp - April /\(cureentYear)"]
+            
+            } else if currentMonth == 3 {
+                springCamp = ["springCamp - March / \(cureentYear + 1)", "springCamp - April /\(cureentYear)"]
 
-                   }
-                           
+            } else {
+                springCamp = ["springCamp - March / \(cureentYear + 1)", "springCamp - April /\(cureentYear + 1 )"]
 
-               } else if currentMonth == 4 {
-                   
-                   if day < 15 {
-                   
-                    summerCamp = ["SpringCamp -June / \(cureentYear)"]
-                       
-                       
-                   } else {
-                   
-                    summerCamp = ["SpringCamp - June / \(cureentYear + 1)"]
-                       
-                   }
-                  
             }
             
-           } else if BookingDetails.package_id == "3" || BookingDetails.package_id == "8" {
+        } else if BookingDetails.package_id == "3" || BookingDetails.package_id == "8" {
+               // Pre_winter NOVEMBER - DECEMBER 11-12
+        
+           if currentMonth < 11 {
+                pre_winterCamp = ["PreWinterCamp - November / \(cureentYear)", "PreWinterCamp - December / \(cureentYear)"]
+            
+            } else if currentMonth == 11 {
+                pre_winterCamp = ["PreWinterCamp - November / \(cureentYear + 1)", "PreWinterCamp - December / \(cureentYear)"]
 
-               if currentMonth == 11 {
-                          
-                   if day < 15 {
-                          
-                       summerCamp = ["PreWinterCamp - Novenber / \(cureentYear)"]
-                  
-                   } else {
-                      
-                       summerCamp = ["PreWinterCamp - Novenber / \(cureentYear + 1)"]
+            } else {
+                pre_winterCamp = ["PreWinterCamp - November / \(cureentYear + 1 )", "PreWinterCamp - December / \(cureentYear + 1)"]
 
-                      }
-                              
-
-                  } else if currentMonth == 4 {
-                      
-                      if day < 15 {
-                      
-                       summerCamp = ["SpringCamp -June / \(cureentYear)"]
-                          
-                          
-                      } else {
-                      
-                       summerCamp = ["SpringCamp - June / \(cureentYear + 1)"]
-                          
-                      }
-                     
-               }
+            }
+                         
                
-           } else if BookingDetails.package_id == "4" || BookingDetails.package_id == "9" {
-               return winterCamp.count
+        } else if BookingDetails.package_id == "4" || BookingDetails.package_id == "9" {
+//        Winter Jan - feb 1-2
+            if currentMonth < 1 {
+                winterCamp = ["WinterCamp - January / \(cureentYear)", "WinterCamp - Febraury /\(cureentYear)"]
+            
+            } else if currentMonth == 1 {
+                winterCamp = ["WinterCamp - January / \(cureentYear + 1 )", "WinterCamp - Febraury /\(cureentYear)"]
 
-           } else if BookingDetails.package_id == "5" || BookingDetails.package_id == "10" {
-               return autumnCamp.count
+            } else {
+                winterCamp = ["WinterCamp - January / \(cureentYear + 1)", "WinterCamp - Febraury /\(cureentYear + 1)"]
 
+            }
+                          
+        } else if BookingDetails.package_id == "5" || BookingDetails.package_id == "10" {
+//            Autumn Camp Sep - Oct 9-10
+        
+           if currentMonth < 9 {
+            autumnCamp = ["AutumnCamp - September / \(cureentYear)", "AutumnCamp - October / \(cureentYear)"]
+            
+            } else if currentMonth == 9 {
+            
+            autumnCamp = ["AutumnCamp - September / \(cureentYear)", "AutumnCamp - October / \(cureentYear)"]
+
+            } else {
+            
+            autumnCamp = ["AutumnCamp - September / \(cureentYear + 1)", "AutumnCamp - October / \(cureentYear + 1 )"]
+
+            }
+                          
            } else {
-               print("No PID")
-               return 0
-           }
+            print("No Package ID")
+           
+        }
         
         
     }
@@ -369,11 +186,13 @@ class ApplicatonFormVC1: UIViewController {
         if sender.selectedSegmentIndex == 1 {
             
             sibling_SV.isHidden = true
-            
+            BookingDetails.siblingsInfo = "NO"
+            isSibling = false 
         } else {
             
             sibling_SV.isHidden = false
-
+            BookingDetails.siblingsInfo = "YES"
+            isSibling = true
             
         }
         
@@ -399,11 +218,9 @@ class ApplicatonFormVC1: UIViewController {
         } else if weightTF.text!.count > 3 || heightTF.text!.count > 3 {
             sender.shake()
             popUpAlert(title: "Weight/Height", message: "Not morethan 3 digits", action: .alert)
-        } else {
+        } else if isSibling == true {
       
-            if isSibling == true {
-            
-            if sibling_FName_TF.text == "" {
+             if sibling_FName_TF.text == "" {
                 popUpAlert(title: "Alert", message: "Enter Sibling's FirstName", action: .alert)
 
             } else if sibling_LName_TF.text == "" {
@@ -416,42 +233,42 @@ class ApplicatonFormVC1: UIViewController {
                 popUpAlert(title: "Alert", message: "Enter Sibling's Email", action: .alert)
 
             } else  {
-                BookingDetails.siblingsInfo = "NO"
-
+                
+                BookingDetails.siblingsInfo = "YES"
                 postDetails()
-                }
+                
+            }
             
-            } else {
             
-               BookingDetails.siblingsInfo = "NO"
-
-                postDetails()
+        } else {
+            BookingDetails.siblingsInfo = "NO"
+            postDetails()
         }
-        }
+        
        
     }
     
     
     func postDetails() {
        
-                BookingDetails.user_id = UserDetails.id
-                BookingDetails.seasonal_camp = seasonTF.text!
-                BookingDetails.camp_batch = batchTF.text!
-                BookingDetails.first_name = firstNameTF.text!
-                BookingDetails.last_name = lastNameTF.text!
-                BookingDetails.mobile_number = mobileTF.text!
-                BookingDetails.email = emailTF.text!
-                BookingDetails.weight = weightTF.text!
-                 BookingDetails.height = heightTF.text!
-                BookingDetails.citizenship = citizenShipTF.text!
-                BookingDetails.tshirt_size = TshirtTF.text!
-                BookingDetails.mother_tonque = motherTongueTF.text!
-                BookingDetails.DOB = DOBTF.text!
-                
-                BookingDetails.siblingsMobile = sibling_MobileTF.text!
-                BookingDetails.siblingsFName = sibling_LName_TF.text!
-                BookingDetails.siblingsLName = sibling_LName_TF.text!
-              BookingDetails.siblingsEmail = sibling_EmailTF.text!
+             
+        BookingDetails.user_id = UserDetails.id
+        BookingDetails.seasonal_camp = seasonTF.text!
+        BookingDetails.camp_batch = batchTF.text!
+        BookingDetails.first_name = firstNameTF.text!
+        BookingDetails.last_name = lastNameTF.text!
+        BookingDetails.mobile_number = mobileTF.text!
+        BookingDetails.email = emailTF.text!
+        BookingDetails.weight = weightTF.text!
+        BookingDetails.height = heightTF.text!
+        BookingDetails.citizenship = citizenShipTF.text!
+        BookingDetails.tshirt_size = TshirtTF.text!
+        BookingDetails.mother_tonque = motherTongueTF.text!
+        BookingDetails.DOB = DOBTF.text!
+        BookingDetails.siblingsMobile = sibling_MobileTF.text!
+        BookingDetails.siblingsFName = sibling_LName_TF.text!
+        BookingDetails.siblingsLName = sibling_LName_TF.text!
+        BookingDetails.siblingsEmail = sibling_EmailTF.text!
 
 
                 
@@ -485,9 +302,11 @@ class ApplicatonFormVC1: UIViewController {
     @IBAction func siblingGender_Axn(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 1  {
-            BookingDetails.siblingsInfo = "NO"
+            BookingDetails.siblingsGender = "Femaale"
+       
         } else {
-            BookingDetails.siblingsInfo = "YES"
+        
+            BookingDetails.siblingsInfo = "Male"
 
         }
         

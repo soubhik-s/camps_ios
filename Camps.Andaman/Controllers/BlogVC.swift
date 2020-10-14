@@ -18,7 +18,7 @@ class BlogVC: UIViewController {
     
     var dataArr:BlogResponse = []
     var sideManager:SideMenuManager!
-    var commentArr:CommentResponse = []
+    var recentPostArr:BlogResponse = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +34,10 @@ class BlogVC: UIViewController {
                
         post_TV.isHidden = true
         getData()
-        
-        post_TV.rowHeight = 60
+        blogTV.layer.cornerRadius = 5
+        post_TV.layer.cornerRadius = 5
+
+        post_TV.rowHeight = 50
         
     }
 
@@ -50,24 +52,18 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        if tableView == blogTV {
-      
-            return dataArr.count
-       
-        } else {
-           
-           return 5
+       return dataArr.count
 
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let blogCell = blogTV.dequeueReusableCell(withIdentifier: "BlogCell", for: indexPath) as! BlogTVCell
         let postCell = post_TV.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-       
+
         if tableView == blogTV {
             let cellPath = dataArr[indexPath.row]
+
             BlogVariables.Selected_Id = cellPath.id
             print("Selected_Id = \(BlogVariables.Selected_Id)")
             
@@ -80,14 +76,16 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
             return blogCell
         
         } else {
-        
-            let cellPath = commentArr[indexPath.row]
+            let cellPath = recentPostArr[indexPath.row]
+
             
+            if indexPath.row < 5 {
             
-            postCell.textLabel?.text = cellPath.name
-            postCell.detailTextLabel?.text = cellPath.message
+            postCell.textLabel?.text = cellPath.createdAt
+            postCell.detailTextLabel?.text = cellPath.bloggerStatement
             postCell.imageView?.makeRound()
-            
+            postCell.imageView?.setImage(urlStr: ClientConfig.blogIMGUrl + cellPath.primaryImage)
+        }
             return postCell
         }
        
@@ -130,16 +128,16 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
     
         self.view.hideActivityIndicator()
         
-        if tag == "Blog" {
             
-            do {
+          
+        do {
                 
-                if let jsonData = data {
+            if let jsonData = data {
                     
-                let parsedData = try JSONDecoder().decode(BlogResponse.self, from: jsonData)
+            let parsedData = try JSONDecoder().decode(BlogResponse.self, from: jsonData)
                 print(parsedData)
                
-                if  parsedData.isEmpty == false {
+            if  parsedData.isEmpty == false {
                   
                 dataArr = parsedData
                 print("BlogData = \(dataArr)")
@@ -147,58 +145,25 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
                 post_TV.isHidden = false
                 BlogVariables.Selected_Id = dataArr.first?.id as! String
                 blogTV.reloadWithAnimation()
-                getCommentData()
+                   
+                recentPostArr = parsedData.reversed()
+                post_TV.reloadData()
+                    
+                
                
                 } else {
                  print("BlogData is EMpty ")
                 }
                     
-                }
+                
+            }
                 
             } catch {
              print("Parse Error in Blog API: \(error)")
                 
             }
         
-        } else {
-           
-            do {
-                         
-            if let jsonData = data {
-            let parsedData = try JSONDecoder().decode(CommentResponse.self, from: jsonData)
-            print(parsedData)
-                
-                commentArr = parsedData.reversed()
-               
-                if commentArr.isEmpty == false  {
-                    post_TV.isHidden = false
-                    post_TV.reloadWithAnimation()
-                } else {
-                    post_TV.isHidden = true
-                }
-                
-//            if  parsedData.isEmpty == false {
-//
-//                dataArr = parsedData
-//                print("BlogData = \(dataArr)")
-//                blogTV.isHidden = false
-//                post_TV.isHidden = false
-//                BlogVariables.Selected_Id = dataArr.first?.id as! String
-//                blogTV.reloadWithAnimation()
-//                post_TV.reloadWithAnimation()
-//
-//            } else {
-//            print("BlogData is EMpty ")
-//
-//            }
-                
-            }
-                          
-            } catch {
-               print("Parse Error in Comment API  \(error)")
-                
-            }
-        }
+        
           
        
     }

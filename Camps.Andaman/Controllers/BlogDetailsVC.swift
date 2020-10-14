@@ -11,6 +11,7 @@ import IQKeyboardManagerSwift
 
 class BlogDetailsVC: UIViewController {
 
+    @IBOutlet weak var IMG_View2: UIImageView!
     
     @IBOutlet weak var cmnt_Txt: IQTextView!
     
@@ -49,12 +50,15 @@ class BlogDetailsVC: UIViewController {
 
     func viewChanges() {
 
+        blog_IMG.layer.cornerRadius = 10
+        IMG_View2.layer.cornerRadius = 10
         cmnt_Txt.layer.cornerRadius = 5
         cmnt_Txt.layer.borderColor = UIColor.baseColor.cgColor
         cmnt_Txt.layer.borderWidth = 0.5
-        
+        comment_View.layer.cornerRadius = 15
         submit_Btn.layer.cornerRadius = 10
         blog_IMG.layer.cornerRadius = 10
+        comment_TV.layer.cornerRadius = 10
         getBlogData()
     }
     
@@ -97,7 +101,7 @@ class BlogDetailsVC: UIViewController {
             self.view.showActivityIndicator()
             ApiService.callPostToken(url: ClientInterface.blogsUrl + "/\(BlogVariables.Selected_Id)", params: "", methodType: "GET", tag: "Blog", finish:finishPost)
         } else {
-        self.view.makeToast("Check Internet connection")
+            self.view.makeToast("Check Internet connection")
         }
         
     }
@@ -106,7 +110,7 @@ class BlogDetailsVC: UIViewController {
         
         if reach.isConnectedToNetwork() == true {
             self.view.showActivityIndicator()
-            ApiService.callPostToken(url: ClientInterface.blogCommentsUrl + "/\(BlogVariables.Selected_Id)", params: "", methodType: "GET", tag: "Blog_Comment", finish:finishPost)
+            ApiService.callPostToken(url: ClientInterface.blogCommentsUrl , params: "", methodType: "GET", tag: "Blog_Comment", finish:finishPost)
         } else {
         self.view.makeToast("Check Internet connection")
         }
@@ -176,7 +180,7 @@ class BlogDetailsVC: UIViewController {
                     description_1_Lbl.text = parsedData.blogDescFirst
                     description_2_Lbl.text = parsedData.blogDescSecond
                     description_3_Lbl.text = parsedData.blogDescThird
-                        
+                    IMG_View2.setImage(urlStr: ClientConfig.blogIMGUrl + parsedData.secondaryImage )
 
                    getBlogComments()
                 }
@@ -207,9 +211,7 @@ class BlogDetailsVC: UIViewController {
 
                 }
 
-                comment_TV.isHidden = false
-                comment_TV.reloadData()
-                
+               
                 }
                                
                 } catch {
@@ -228,19 +230,15 @@ class BlogDetailsVC: UIViewController {
 
 extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return comment_Arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
-//        if dataArr.primaryImage != "" {
-//            cell.imageView?.setImage(urlStr: ClientConfig.blogIMGUrl + dataArr.primaryImage)
-//
-//        }
-//
-//        cell.textLabel?.text = "\(dataArr.blogTitle)/n\(dataArr.bloggerName)"
-//
-        cell.imageView?.makeRound()
+        let cellPath = comment_Arr[indexPath.row]
+        cell.textLabel?.text = cellPath.message
+        cell.detailTextLabel?.text = cellPath.name
+
         
         return cell
     }

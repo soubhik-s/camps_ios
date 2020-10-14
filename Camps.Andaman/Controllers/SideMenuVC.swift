@@ -26,8 +26,8 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var insta_Btn: UIButton!
     @IBOutlet weak var fb_Btn: UIButton!
     
-    var menuList = ["My Dashborad", "Profile","Blog","Customer Support", "About Us", "FAQ's","Policy","Logout"]
-    var IMGList = ["Dashboard","profile","blog", "support_1","About","FAQ's","insurance", "Logout"]
+    var menuList = ["My Dashborad", "Profile","Blog", "COVID-!9","Customer Support", "About Us", "FAQ's","Policy","Logout"]
+    var IMGList = ["Dashboard","profile","blog","icons8-virus-free-30", "support_1","About","FAQ's","insurance", "Logout"]
     
     
     
@@ -96,7 +96,17 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
 //                
 //            }
             
-        case 3:
+            case 3:
+                    
+                let VC = self.storyboard?.instantiateViewController(withIdentifier: "CovidVC") as! CovidVC
+                       
+                
+                VC.modalPresentationStyle = .fullScreen
+
+                self.present(VC, animated: true) {
+                                      
+                       }
+        case 4:
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "SupportVC") as! SupportVC
             
             VC.modalPresentationStyle = .fullScreen
@@ -106,7 +116,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             }
             
             
-        case 4:
+        case 5:
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "AboutVC") as! AboutVC
             VC.modalPresentationStyle = .fullScreen
             self.present(VC, animated: true) {
@@ -114,7 +124,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             }
       
             
-        case 5:
+        case 6:
         
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewController") as! FAQViewController
         
@@ -123,7 +133,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                            
             }
         
-        case 6 :
+        case 7 :
         
         
         let VC = self.storyboard?.instantiateViewController(withIdentifier: "PolicyVC") as! PolicyVC
@@ -133,7 +143,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                        
         }
             
-        case 7 :
+        case 8 :
             
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             

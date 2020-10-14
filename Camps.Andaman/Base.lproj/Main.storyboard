@@ -3657,7 +3657,7 @@ muchmore.</string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5S-Vo-YWA">
                                                     <rect key="frame" x="10" y="10" width="394" height="30"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About" translatesAutoresizingMaskIntoConstraints="NO" id="ivc-B5-0Ud">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-virus-free-30" translatesAutoresizingMaskIntoConstraints="NO" id="ivc-B5-0Ud">
                                                             <rect key="frame" x="10" y="7.5" width="15" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="NIL-Ze-Xyr"/>
@@ -7275,28 +7275,9 @@ muchmore.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0B-gQ-MXN">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1125"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="ivS-B8-0FM">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="y2b-LV-OXr"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2F-sZ-Led">
-                                                <rect key="frame" x="0.0" y="10" width="414" height="40"/>
-                                                <color key="backgroundColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="532-U8-J5I"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zqO-fU-LzO">
-                                                <rect key="frame" x="20" y="160" width="374" height="600"/>
+                                                <rect key="frame" x="20" y="10" width="374" height="760"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="600" id="T3u-y9-BXH"/>
-                                                </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BlogTVCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlogCell" rowHeight="300" id="uC6-Jk-QAc" customClass="BlogTVCell" customModule="AndamanCamps" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="374" height="300"/>
@@ -7306,19 +7287,19 @@ muchmore.</string>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbL-u6-EVL">
-                                                                    <rect key="frame" x="10" y="10" width="354" height="280"/>
+                                                                    <rect key="frame" x="0.0" y="10" width="374" height="280"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_1" translatesAutoresizingMaskIntoConstraints="NO" id="w2G-2h-bx2">
-                                                                            <rect key="frame" x="5" y="5" width="344" height="120"/>
+                                                                            <rect key="frame" x="5" y="5" width="364" height="120"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="120" id="XMJ-gI-ZOg"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="H6b-Bb-MQf">
-                                                                            <rect key="frame" x="10" y="130" width="334" height="115"/>
+                                                                            <rect key="frame" x="10" y="130" width="354" height="115"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ul-Oc-0RP">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="20"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="20"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="20" id="OSQ-lC-oIK"/>
                                                                                     </constraints>
@@ -7327,7 +7308,7 @@ muchmore.</string>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5E-5r-Kfg">
-                                                                                    <rect key="frame" x="0.0" y="25" width="334" height="20"/>
+                                                                                    <rect key="frame" x="0.0" y="25" width="354" height="20"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="20" id="lqa-Ei-Kd7"/>
                                                                                     </constraints>
@@ -7336,7 +7317,7 @@ muchmore.</string>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzY-Fr-bA0">
-                                                                                    <rect key="frame" x="0.0" y="50" width="334" height="65"/>
+                                                                                    <rect key="frame" x="0.0" y="50" width="354" height="65"/>
                                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -7344,7 +7325,7 @@ muchmore.</string>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzb-1e-1MU">
-                                                                            <rect key="frame" x="244" y="250" width="100" height="25"/>
+                                                                            <rect key="frame" x="264" y="250" width="100" height="25"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="25" id="qDX-td-eez"/>
                                                                                 <constraint firstAttribute="width" constant="100" id="xj3-QF-8A4"/>
@@ -7374,9 +7355,9 @@ muchmore.</string>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="dbL-u6-EVL" secondAttribute="bottom" constant="10" id="EDE-xN-8ov"/>
-                                                                <constraint firstItem="dbL-u6-EVL" firstAttribute="leading" secondItem="fZy-cW-ttt" secondAttribute="leading" constant="10" id="LnH-F9-c56"/>
+                                                                <constraint firstItem="dbL-u6-EVL" firstAttribute="leading" secondItem="fZy-cW-ttt" secondAttribute="leading" id="LnH-F9-c56"/>
                                                                 <constraint firstItem="dbL-u6-EVL" firstAttribute="top" secondItem="fZy-cW-ttt" secondAttribute="top" constant="10" id="SKq-EI-YZY"/>
-                                                                <constraint firstAttribute="trailing" secondItem="dbL-u6-EVL" secondAttribute="trailing" constant="10" id="jMt-aY-y4c"/>
+                                                                <constraint firstAttribute="trailing" secondItem="dbL-u6-EVL" secondAttribute="trailing" id="jMt-aY-y4c"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -7396,40 +7377,43 @@ muchmore.</string>
                                                 </connections>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT POST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d60-JF-YB0">
-                                                <rect key="frame" x="20" y="780" width="95.5" height="25"/>
+                                                <rect key="frame" x="20" y="790" width="95.5" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="gdj-8R-Ddg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-ki-tfQ">
-                                                <rect key="frame" x="20" y="815" width="374" height="310"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-ki-tfQ">
+                                                <rect key="frame" x="20" y="825" width="374" height="300"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="BLx-rX-Czu"/>
+                                                </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="wtn-JV-asH" detailTextLabel="uTS-qm-Tt5" imageView="VsG-jM-yaO" style="IBUITableViewCellStyleSubtitle" id="r5w-zp-COV">
-                                                        <rect key="frame" x="0.0" y="28" width="374" height="52.5"/>
+                                                        <rect key="frame" x="0.0" y="28" width="374" height="83"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5w-zp-COV" id="cEC-Y1-9CN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="52.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="83"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wtn-JV-asH">
-                                                                    <rect key="frame" x="88" y="7.5" width="27.5" height="18"/>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wtn-JV-asH">
+                                                                    <rect key="frame" x="99" y="23.5" width="27.5" height="18"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="user" id="VsG-jM-yaO">
-                                                                    <rect key="frame" x="20" y="0.0" width="53" height="52.5"/>
+                                                                    <rect key="frame" x="20" y="9.5" width="64" height="64"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </imageView>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uTS-qm-Tt5">
-                                                                    <rect key="frame" x="88" y="28" width="42" height="15.5"/>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uTS-qm-Tt5">
+                                                                    <rect key="frame" x="99" y="44" width="40.5" height="14.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="12"/>
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -7448,19 +7432,13 @@ muchmore.</string>
                                         <constraints>
                                             <constraint firstItem="d60-JF-YB0" firstAttribute="leading" secondItem="S0B-gQ-MXN" secondAttribute="leading" constant="20" id="4IO-ds-kJn"/>
                                             <constraint firstItem="ptc-ki-tfQ" firstAttribute="top" secondItem="d60-JF-YB0" secondAttribute="bottom" constant="10" id="I0B-7M-4SE"/>
-                                            <constraint firstItem="ivS-B8-0FM" firstAttribute="leading" secondItem="S0B-gQ-MXN" secondAttribute="leading" id="P3N-da-Zfl"/>
-                                            <constraint firstAttribute="trailing" secondItem="t2F-sZ-Led" secondAttribute="trailing" id="QBV-Jt-oLP"/>
+                                            <constraint firstItem="zqO-fU-LzO" firstAttribute="top" secondItem="S0B-gQ-MXN" secondAttribute="top" constant="10" id="JEX-I2-vgs"/>
                                             <constraint firstAttribute="height" constant="1125" id="S81-NU-AV9"/>
                                             <constraint firstItem="ptc-ki-tfQ" firstAttribute="leading" secondItem="S0B-gQ-MXN" secondAttribute="leading" constant="20" id="UMz-P8-nEt"/>
-                                            <constraint firstItem="t2F-sZ-Led" firstAttribute="top" secondItem="S0B-gQ-MXN" secondAttribute="top" constant="10" id="UbQ-r3-MmE"/>
                                             <constraint firstItem="zqO-fU-LzO" firstAttribute="leading" secondItem="S0B-gQ-MXN" secondAttribute="leading" constant="20" id="ae7-uc-CRZ"/>
-                                            <constraint firstItem="zqO-fU-LzO" firstAttribute="top" secondItem="ivS-B8-0FM" secondAttribute="bottom" constant="10" id="d9D-HF-31F"/>
-                                            <constraint firstAttribute="trailing" secondItem="ptc-ki-tfQ" secondAttribute="trailing" constant="20" id="eoG-Aj-rMU"/>
-                                            <constraint firstAttribute="trailing" secondItem="ivS-B8-0FM" secondAttribute="trailing" id="g8h-lo-rb4"/>
+                                            <constraint firstAttribute="trailing" secondItem="ptc-ki-tfQ" secondAttribute="trailing" constant="20" id="cUZ-2x-vbg"/>
                                             <constraint firstAttribute="trailing" secondItem="zqO-fU-LzO" secondAttribute="trailing" constant="20" id="hJE-dr-eDs"/>
                                             <constraint firstAttribute="bottom" secondItem="ptc-ki-tfQ" secondAttribute="bottom" id="kfD-bP-7Bi"/>
-                                            <constraint firstItem="ivS-B8-0FM" firstAttribute="top" secondItem="S0B-gQ-MXN" secondAttribute="top" id="nGq-3a-BS8"/>
-                                            <constraint firstItem="t2F-sZ-Led" firstAttribute="leading" secondItem="S0B-gQ-MXN" secondAttribute="leading" id="xB5-fQ-zqB"/>
                                             <constraint firstItem="d60-JF-YB0" firstAttribute="top" secondItem="zqO-fU-LzO" secondAttribute="bottom" constant="20" id="yVn-7d-ELp"/>
                                         </constraints>
                                     </view>
@@ -7485,14 +7463,25 @@ muchmore.</string>
                                     <action selector="menu_Axn:" destination="0wK-nc-X94" eventType="touchUpInside" id="luy-ou-UsP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-Lh-jnJ">
+                                <rect key="frame" x="187.5" y="44" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HSI-Yn-4cp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HOY-TT-kD3" firstAttribute="leading" secondItem="ycF-Je-9G6" secondAttribute="leading" id="2KE-Dv-ttY"/>
+                            <constraint firstItem="AvI-Lh-jnJ" firstAttribute="top" secondItem="ycF-Je-9G6" secondAttribute="top" id="2Lf-Rc-BAd"/>
                             <constraint firstItem="HOY-TT-kD3" firstAttribute="width" secondItem="itP-kK-HrM" secondAttribute="width" id="9pE-Ua-7ci"/>
                             <constraint firstItem="DQc-N4-4wr" firstAttribute="leading" secondItem="ycF-Je-9G6" secondAttribute="leading" id="JNK-wU-Xbr"/>
                             <constraint firstItem="S0B-gQ-MXN" firstAttribute="width" secondItem="itP-kK-HrM" secondAttribute="width" id="Qzx-qs-zIj"/>
                             <constraint firstItem="NSM-3U-AcO" firstAttribute="top" secondItem="ycF-Je-9G6" secondAttribute="top" constant="5" id="U4R-JB-2f5"/>
+                            <constraint firstItem="AvI-Lh-jnJ" firstAttribute="centerX" secondItem="itP-kK-HrM" secondAttribute="centerX" id="VMG-X7-z6b"/>
                             <constraint firstAttribute="bottom" secondItem="HOY-TT-kD3" secondAttribute="bottom" id="XEe-tw-YyX"/>
                             <constraint firstItem="HOY-TT-kD3" firstAttribute="trailing" secondItem="ycF-Je-9G6" secondAttribute="trailing" id="YUw-k0-q8U"/>
                             <constraint firstAttribute="bottom" secondItem="DQc-N4-4wr" secondAttribute="bottom" id="cY2-FI-coK"/>
@@ -7513,6 +7502,279 @@ muchmore.</string>
             </objects>
             <point key="canvasLocation" x="7642" y="-1353"/>
         </scene>
+        <!--CovidVC-->
+        <scene sceneID="BPJ-5V-NA5">
+            <objects>
+                <viewController storyboardIdentifier="CovidVC" id="W75-af-XhB" customClass="CovidVC" customModule="AndamanCamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Yy-4I-XSg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="U39-sc-ksO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-cl-8nd">
+                                <rect key="frame" x="0.0" y="82" width="414" height="814"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-hY-FOr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronavirus" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-o6-oc4">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="sQ6-KV-3wT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-ZZ-WaW">
+                                                <rect key="frame" x="0.0" y="210" width="414" height="602"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="hH0-nj-whB" style="IBUITableViewCellStyleDefault" id="jf3-rS-jT6">
+                                                        <rect key="frame" x="0.0" y="28" width="414" height="6321.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jf3-rS-jT6" id="wOV-bm-uTU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="6321.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hH0-nj-whB">
+                                                                    <rect key="frame" x="20" y="0.0" width="374" height="6321.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <mutableString key="text">COVID-19 is a coronavirus that was first identified in December 2019. Since then, it has quickly spread and infected more than half of the population globally. Now it is analysed that COVID-19 mainly spread from person-to-person. This happens when an infected person produces respiratory droplets when they sneeze or cough, passing the droplets and the virus onto those in close contact (less than 2 metres or 6 feet).
+People infected with COVID-19 may have flu-like symptoms that can be mild, moderate or severe. The symptoms may appear from 2 to 14 days after exposure to the virus. 
+ Adults who are older, anyone with underlying medical conditions (such as diabetes, lung disease or heart disease) or those who are immunocompromised (transplant recipients, people receiving chemotherapy) are at a higher risk of becoming very sick if they are infected with COVID-19.
+In GoExploreAndaman Camp, several precautionary measures have been implemented to initiate the camp bookings and avoid the presence of deadly virus in or from the camp. The precautionary measures are as follows,
+Complete information about participants to the staff and camp residents
+We request candidates to provide complete information about their location, health history, and staff and camp residents access to the most up-to-date and accurate. It is ensured that all staff and camp residents are educated/informed of the infection prevention and control measures that are being implemented in the camp to help reduce and minimize the risk of potential disease transmission in the camp. Inform the staff and camp residents of procedures to follow should they become sick. It's advised that employees do not work when they are sick.
+It is also ensured that the GoExploreAndaman camp provide remuneration to employees who are on isolation precautions. This should be provided throughout their duration of self-isolation as this will help to ensure those who are sick will report their symptoms and to ensure the employee will adhere to isolation protocols – both are essential in helping to control the transmission of COVID-19. Employers should not require the worker to provide a doctor’s note for sick leave if they are sick or are required to self-isolate.
+
+How or team will manage people with suspected COVID-19
+People who are experiencing symptoms will be immediately attended and suggested to the nearby COVID facility center. The on-site doctor will provide primary medicals and directed to the nearby testing centres. 
+If a staff member or camp resident have symptoms of COVID-19 while in the camp, the measures and course of action during that time are as follows:
+•	Ensured that all the person wear a surgical mask (if available) or tissues to cover their mouth and nose;
+•	Allowing the person to an safe area separate from others, preferably with a closed door;
+•	directing the person to the online self-assessment tool or the on-site medical clinic, if available, these will advise on the next steps;
+•	the person can also be directed to 811;
+•	Supporting the person to self-isolate in the camp, unless they are within driving distance of their home and are able to travel home in personal, un-shared transportation. More important information is provided below in regards to self-isolation; and
+•	Any rooms the person has been in while symptomatic should be cleaned and disinfected.
+•	In case of urgent medicare, the medical superintendent of the camp will be alongside with the camp and help him throughout the endeavour.
+
+Travel Restrictions
+More than 160 countries globally and provinces and territories have been affected by COVID-19. Travel restrictions have been enacted to help slow the introduction and spread of the virus in India.
+Anyone arriving from India
+Anyone arriving from India does not need to self-isolate, unless and until it is recommended by the camp doctor.
+Anyone arriving from other jurisdictions
+Anyone arriving from provinces, countries, other than India or from international destinations) is required to self-isolate for 14 days and monitor themselves for any development of symptoms.
+In case of self-isolation, the participants will be in quarantine either in mainland India or Andaman as per the Govt. notice and policies. 
+The support and Advice for camp residents who are self-isolating
+•	Catering complete requirements to the room and ensuring of not leaving isolation quarters unless absolutely necessary, such as seeking medical care.
+•	Ensuring minimal work, visiting public areas or use public transportation, and guiding social distancing measures.
+•	If the person must be in contact with others, they should keep at least 2 metres (6 feet) away, keep the interaction brief and wear a mask according to advice of health staff.
+•	If a person is self-isolating at home they should stay in a separate room and, if possible, arranging separate bathroom from others in their home. Do not share cutlery, glasses, plates or personal items.
+•	For people self-isolating in a facility: workers should be offered a single occupancy room and should remain in the facility, unless a higher level of care is needed.
+•	Please do not turn away from the camp people who are suspected or confirmed cases without a plan in place of where they can be safely isolated
+Hand hygiene and respiratory etiquette
+These measures help to prevent or reduce the spread of COVID-19 and other illnesses. Good hand and respiratory hygiene is important for all workers, whether or not they are self-isolating. This can save lives. Operators of work camps should ensure that workers have easy access to hand hygiene facilities throughout the camps. Hands should be cleaned frequently with soap and water or with a hand sanitizer (containing a minimum of 60% alcohol).
+Hand sanitizer is not effective if a worker’s hands are soiled with dirt, food, etc., therefore the employees are instructed to use soap and water periodically.
+If soap and water are not available or accessible, employees are instructed to use hand wipes to remove debris, followed by hand sanitizer.
+If using soap and water, hands should be washed for at least 20 seconds.
+Hand Hygiene Tips
+It is advised to wash your hands thoroughly during,
+•	Before eating or preparing food
+•	After sneezing, coughing or blowing your nose
+•	Before and after contact with a sick or infected person (confirmed or suspected)
+•	After touching dirty surfaces such as taps, doorknobs, phones, remotes
+•	After using the bathroom
+Respiratory etiquette is also essential in the prevention of disease spread
+The key elements of respiratory etiquette and must practices activities in the camp site are:
+•	cover your mouth and nose with a sleeve or tissue when coughing or sneezing;
+•	dispose used tissues in the garbage immediately; and
+•	Clean your hands after coughing or sneezing.
+Work camp operators can support good respiratory hygiene by:
+•	educating workers on its importance; and
+•	Making sure everyone have access to tissues.
+Avoid contaminating common surfaces and items
+At least once daily but preferably more often, clean surfaces that are touched or used often (toilets, phones, door handles, remotes, etc.) with an appropriate disinfectant. (See “Infection control supplies" below for additional cleaning information). Workers should be instructed not to share personal items with others, such as:
+Electronic devices;
+Linens;
+Towels; and
+Utensils, etc.
+Caring for yourself
+Everyone will be instructed to self-monitor for symptoms.  A “call list” is provided to the worker indicating who to call if:
+•	symptoms develop;
+•	an emergency situation occurs; or
+•	There are any other urgent needs.
+Confidentiality is critical to help workers feel safe to reach out immediately should mild symptoms develop. If symptoms worsen, each work camp should have a protocol established in order to access higher level medical care if needed. Encourage workers to:
+•	rest;
+•	eat a balanced diet; and
+•	stay in contact with friends and family via phone, social media or other long-distance means.
+Social distancing: physical distance with social connection
+Everyone, including those who are not self-isolated, is encouraged to perform physical distancing. It is one of the most effective means of reducing the spread of COVID-19. It also involves making changes in your everyday routines to minimize contact with others. Practising physical distancing means:
+
+•	Keep a distance of at least 2 metres (6 feet) from others – including at work.
+•	Avoid crowded places and large gatherings.
+•	In Camping, social gatherings of more than 50 people outdoors are not permitted.
+•	Greet people with a wave or nod – do not shake hands or hug.
+Limit contact with people who are at a higher risk of developing complications from COVID-19 such as:
+•	The elderly;
+•	The immune compromised;
+•	People in poor health; or
+•	People with underlying medical conditions
+•	Stagger meal times to decrease the number of workers in a cafeteria.
+•	If necessary, shop during off-peak hours to maintain the safe distancing of 2 metres.
+Having sufficient infection control supplies
+GoExploreAndaman Camp stepped in with a stock of infection control supplies on site. The supplies must be adequate enough to support any confirmed or suspected cases, but to also support diligent daily hygiene practices of all workers.
+Supplies should include:
+•	hand-washing supplies (soap, water) and hand sanitizers (minimum 60% alcohol content);
+•	appropriate cleaning supplies (more information below);
+•	surgical masks, if possible, for those who are in self-isolation or those with symptoms being transported to another facility;
+•	tissues; and
+•	disposable gloves.
+GoExploreAndaman camp has an on-site medical facility that provides a higher level of care (for example, physicians, nurse practitioners).
+•	Personal protective equipment (PPE) for contact and droplet precautions, this includes eye protection (preferably with side shields), surgical/procedural masks, disposable gowns and gloves.
+•	N-95 respirators on-site, if possible, for medical responders in the rare event that they are needed for aerosol-generating medical procedures (for example, administering CPR, intubation).
+•	Airborne precautions are recommended only for aerosol-generating procedures, such as open suctioning of respiratory tract, intubation, bronchoscopy, cardiopulmonary resuscitation.
+•	PPE for airborne precautions includes: N-95 respirators, eye protection (either a face shield or googles with side shields), gloves and gown.
+These supplies are procured from private suppliers. It is ordered only on demand basis or we will conduct with the available stock limit.
+Regular Clean and disinfection 
+High-touch areas in the camp, such as toilets, bedside tables and door handles are disinfected at least once a day, preferably twice a day, with an agent effective against coronavirus.
+Coronavirus is an enveloped virus, meaning it is one of the easiest types of viruses to kill with appropriate disinfectants. Types of disinfectants that can be used include:
+•	diluted bleach solution: 1 part bleach to 9 parts water;
+•	accelerated hydrogen peroxide (0.5%);
+•	quaternary ammonium compounds (QUATs)
+Surfaces that have become soiled with respiratory secretions or bodily fluids are cleaned twice:
+•	once to remove the secretions; and
+•	Second time with an effective disinfectant to disinfect the area.
+Use disposable gloves and protective clothing (for example, plastic aprons, if available) when cleaning or handling surfaces, clothing or linen that has been soiled with bodily fluids.
+Ensuring safe handling of food
+Germs from infected people or contaminated surfaces can be easily transferred to food. During an outbreak, facilities are reinforced routine food safety and sanitation practices. Where possible, measures are implemented to minimize the handling of shared food and items that may touch another person’s food.
+•	Discontinuation of self-serve buffet lines – opt to have designated staff dispense food.
+•	Minimize the handling of multiple sets of cutlery.
+•	Remove shared food containers from dining areas:
+o	shared pitchers of water/juice;
+o	shared coffee cream dispensers;
+o	salt and pepper shakers, etc.
+•	Dispense snacks directly to staff or clients and use only pre-packaged snacks.
+•	Ensure that food handling staff practice good hand hygiene and do not work in food handling areas if they are ill.
+•	Ensure that all surfaces of the tables and chairs (including underneath the edges of the chair) are cleaned and disinfected after each meal.
+People in self-isolation can place dishes outside their rooms for pick-up. Disposable gloves can be used by the staff who are picking up and handling these dishes. Ordinary cleaning and sanitation procedures for dishes are sufficient for killing the virus. Please note that the use of disposable cutlery and plates by ill workers is not permitted in the camping site.
+Ensuring laundry is handled safely
+Using precautions when doing laundry.
+•	Contaminated laundry should be placed into a laundry bag or basket with a plastic liner and should not be shaken.
+•	Gloves and a surgical mask should be worn when in direct contact with contaminated laundry.
+•	Linens and clothing belonging to an ill person can be washed together with other laundry, using regular laundry soap and hot water (60 – 90° C).
+•	Laundry should be thoroughly dried.
+•	Hand hygiene should be performed after handling contaminated laundry and after removing gloves.
+•	If the laundry container comes in contact with contaminated laundry, it can be disinfected using a diluted bleach solution.
+Prepare a summary of project information for reference in event of a camp outbreak
+The camp documents the initiatives and procedures that the company has implemented to prevent and manage COVID-19. The plan can be tailored to unique circumstances and scaled to the size of the camp. At minimum, the camp’s plan includes the following information:
+
+•	Project location
+•	Contact information for all camp personnel: name, telephone number and email addresses of each person
+•	Medical service provider(s) details
+•	Number of residents
+•	Number of staff (both those working at the camp and housed at the camp)
+•	Demographics and health care status of the workers (if known)
+•	Workers’ origin: local, regional, provincial or international – if international, include from which countries
+•	Turnover patterns and work shifts:
+•	Fly in or fly out?
+•	How long are the shifts or rotations?
+•	From which travel hubs are they flying or driving?
+•	Overview of the camp set-up.
+Description of camp facilities including:
+•	number of rooms
+•	room occupancy
+•	number of showers
+•	number of washrooms
+•	dining and community areas
+•	Recreational facilities (gyms, pool tables, television rooms, etc.)
+Ensure confidentiality
+It is important that any targeted communicable disease interventions:
+•	are non-stigmatizing; and
+•	Respect the confidentiality of all persons involved.
+This includes maintaining privacy for people who are:
+•	Seeking health care
+•	in self-isolation; or
+•	Involved in contact tracing or outbreak investigation.</mutableString>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cZX-o6-oc4" secondAttribute="trailing" id="6wK-Jk-xFv"/>
+                                            <constraint firstAttribute="trailing" secondItem="W9h-ZZ-WaW" secondAttribute="trailing" id="9Ml-Gc-l3v"/>
+                                            <constraint firstAttribute="bottom" secondItem="W9h-ZZ-WaW" secondAttribute="bottom" id="AGv-j5-PT2"/>
+                                            <constraint firstItem="W9h-ZZ-WaW" firstAttribute="top" secondItem="cZX-o6-oc4" secondAttribute="bottom" constant="10" id="BEG-Ah-iAp"/>
+                                            <constraint firstAttribute="height" constant="812" id="Joc-6j-uuZ"/>
+                                            <constraint firstItem="cZX-o6-oc4" firstAttribute="top" secondItem="I5G-hY-FOr" secondAttribute="top" id="VaW-N1-77S"/>
+                                            <constraint firstItem="cZX-o6-oc4" firstAttribute="leading" secondItem="I5G-hY-FOr" secondAttribute="leading" id="gCB-3V-jnS"/>
+                                            <constraint firstItem="W9h-ZZ-WaW" firstAttribute="leading" secondItem="I5G-hY-FOr" secondAttribute="leading" id="h38-Af-X1M"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="I5G-hY-FOr" firstAttribute="leading" secondItem="0g0-cl-8nd" secondAttribute="leading" id="Hdx-Q1-k4U"/>
+                                    <constraint firstAttribute="bottom" secondItem="I5G-hY-FOr" secondAttribute="bottom" id="c1l-UB-xCH"/>
+                                    <constraint firstAttribute="trailing" secondItem="I5G-hY-FOr" secondAttribute="trailing" id="u2R-yJ-DMH"/>
+                                    <constraint firstItem="I5G-hY-FOr" firstAttribute="top" secondItem="0g0-cl-8nd" secondAttribute="top" id="ufR-V2-eOx"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VgY-KA-K2m"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="be3-7d-rgz"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID-19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRS-jJ-STU">
+                                <rect key="frame" x="160.5" y="49" width="93" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DGp-sq-Ex4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXr-Pe-aQX">
+                                <rect key="frame" x="10" y="49" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="mfw-G6-KIx"/>
+                                    <constraint firstAttribute="height" constant="25" id="tHe-Kb-Nkg"/>
+                                </constraints>
+                                <state key="normal" image="cross"/>
+                                <connections>
+                                    <action selector="back_Axn:" destination="W75-af-XhB" eventType="touchUpInside" id="OGh-Z7-qPN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0g0-cl-8nd" firstAttribute="leading" secondItem="UNf-Gc-poz" secondAttribute="leading" id="9Xf-CS-ACh"/>
+                            <constraint firstItem="xXr-Pe-aQX" firstAttribute="leading" secondItem="UNf-Gc-poz" secondAttribute="leading" constant="10" id="BdE-od-7ud"/>
+                            <constraint firstItem="jRS-jJ-STU" firstAttribute="centerX" secondItem="7Yy-4I-XSg" secondAttribute="centerX" id="ERa-zJ-YJc"/>
+                            <constraint firstAttribute="bottom" secondItem="U39-sc-ksO" secondAttribute="bottom" id="F7Z-lq-Rtg"/>
+                            <constraint firstItem="0g0-cl-8nd" firstAttribute="trailing" secondItem="UNf-Gc-poz" secondAttribute="trailing" id="HBS-10-HLp"/>
+                            <constraint firstAttribute="bottom" secondItem="0g0-cl-8nd" secondAttribute="bottom" id="VFA-Lx-eaR"/>
+                            <constraint firstItem="I5G-hY-FOr" firstAttribute="width" secondItem="7Yy-4I-XSg" secondAttribute="width" id="dWQ-55-7bq"/>
+                            <constraint firstItem="xXr-Pe-aQX" firstAttribute="centerY" secondItem="jRS-jJ-STU" secondAttribute="centerY" id="e7E-8Q-D0b"/>
+                            <constraint firstItem="UNf-Gc-poz" firstAttribute="trailing" secondItem="U39-sc-ksO" secondAttribute="trailing" id="e7U-Tu-gKi"/>
+                            <constraint firstItem="U39-sc-ksO" firstAttribute="top" secondItem="7Yy-4I-XSg" secondAttribute="top" id="fIy-rB-K0u"/>
+                            <constraint firstItem="U39-sc-ksO" firstAttribute="leading" secondItem="UNf-Gc-poz" secondAttribute="leading" id="gVS-cu-nN1"/>
+                            <constraint firstItem="0g0-cl-8nd" firstAttribute="width" secondItem="7Yy-4I-XSg" secondAttribute="width" id="jXO-al-4j2"/>
+                            <constraint firstItem="jRS-jJ-STU" firstAttribute="top" secondItem="UNf-Gc-poz" secondAttribute="top" constant="5" id="xul-qK-ek4"/>
+                            <constraint firstItem="0g0-cl-8nd" firstAttribute="top" secondItem="jRS-jJ-STU" secondAttribute="bottom" constant="8" id="y2Y-cy-TM7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UNf-Gc-poz"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataTV" destination="W9h-ZZ-WaW" id="mdU-oe-iIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYB-9b-AC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5379.7101449275369" y="-1634.5982142857142"/>
+        </scene>
         <!--Blog DetailsVC-->
         <scene sceneID="Bca-7H-cgY">
             <objects>
@@ -7528,7 +7790,7 @@ muchmore.</string>
                                 <rect key="frame" x="0.0" y="75" width="414" height="1125"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSS-oC-WXK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1120"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_2" translatesAutoresizingMaskIntoConstraints="NO" id="V4H-Zg-sl6">
                                                 <rect key="frame" x="10" y="30" width="394" height="150"/>
@@ -7555,7 +7817,7 @@ muchmore.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wmd-E4-crc">
-                                                <rect key="frame" x="10" y="200" width="394" height="20"/>
+                                                <rect key="frame" x="10" y="200" width="394" height="180"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWq-eH-cVb">
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="0.0"/>
@@ -7569,8 +7831,14 @@ muchmore.</string>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="gfm-Uy-n4k">
+                                                        <rect key="frame" x="0.0" y="20" width="394" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="bjB-cF-YLZ"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Y-Rq-Jfo">
-                                                        <rect key="frame" x="0.0" y="20" width="394" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="180" width="394" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -7578,7 +7846,7 @@ muchmore.</string>
                                                 </subviews>
                                             </stackView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SOy-Gn-lv3">
-                                                <rect key="frame" x="10" y="230" width="221" height="31"/>
+                                                <rect key="frame" x="10" y="390" width="221" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="mdb-hI-82M"/>
                                                 </constraints>
@@ -7592,38 +7860,38 @@ muchmore.</string>
                                                 </connections>
                                             </segmentedControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="luX-KX-ak0">
-                                                <rect key="frame" x="10" y="270" width="394" height="830"/>
+                                                <rect key="frame" x="10" y="430" width="394" height="690"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommentCell" textLabel="F2I-Jr-DjI" detailTextLabel="562-tj-EIl" imageView="4g8-5j-eLp" style="IBUITableViewCellStyleSubtitle" id="byK-Mb-DXb">
-                                                        <rect key="frame" x="0.0" y="28" width="394" height="56"/>
+                                                        <rect key="frame" x="0.0" y="28" width="394" height="51"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="byK-Mb-DXb" id="Evx-Gp-khJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="51"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F2I-Jr-DjI">
-                                                                    <rect key="frame" x="91" y="8" width="283" height="20.5"/>
+                                                                    <rect key="frame" x="20" y="7.5" width="354" height="18"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="user" id="4g8-5j-eLp">
-                                                                    <rect key="frame" x="20" y="0.0" width="56" height="56"/>
+                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4g8-5j-eLp">
+                                                                    <rect key="frame" x="20" y="0.0" width="57" height="57"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </imageView>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="562-tj-EIl">
-                                                                    <rect key="frame" x="91" y="30.5" width="42" height="15.5"/>
+                                                                    <rect key="frame" x="20" y="28" width="39" height="14.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
-                                                                    <color key="textColor" red="0.95686274510000002" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </tableViewCellContentView>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableViewCell>
                                                 </prototypes>
                                                 <connections>
@@ -7652,7 +7920,7 @@ muchmore.</string>
                                             <constraint firstItem="SOy-Gn-lv3" firstAttribute="leading" secondItem="pSS-oC-WXK" secondAttribute="leading" constant="10" id="kbz-eZ-MXy"/>
                                             <constraint firstItem="FfP-ks-9Nh" firstAttribute="top" secondItem="pSS-oC-WXK" secondAttribute="top" constant="10" id="mIS-DK-eM2"/>
                                             <constraint firstAttribute="trailing" secondItem="V4H-Zg-sl6" secondAttribute="trailing" constant="10" id="snD-Wu-Lrm"/>
-                                            <constraint firstAttribute="height" constant="1100" id="twR-D7-LBV"/>
+                                            <constraint firstAttribute="height" constant="1120" id="twR-D7-LBV"/>
                                             <constraint firstItem="luX-KX-ak0" firstAttribute="leading" secondItem="pSS-oC-WXK" secondAttribute="leading" constant="10" id="y0v-C3-3p4"/>
                                         </constraints>
                                     </view>
@@ -7709,6 +7977,7 @@ muchmore.</string>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="IMG_View2" destination="gfm-Uy-n4k" id="xFt-Ht-D5Y"/>
                         <outlet property="blog_IMG" destination="V4H-Zg-sl6" id="euM-Yh-ggh"/>
                         <outlet property="blog_Title" destination="FfP-ks-9Nh" id="GPF-BZ-ChD"/>
                         <outlet property="blogger_Name_Lbl" destination="iNA-61-cPk" id="aPq-g0-Uil"/>
@@ -9939,7 +10208,6 @@ muchmore.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="About" width="22" height="23"/>
         <image name="Aboutus" width="1920" height="1280"/>
         <image name="BG" width="375" height="812"/>
         <image name="BarrenIsland" width="400" height="268"/>
@@ -9964,6 +10232,7 @@ muchmore.</string>
         <image name="close" width="24" height="24"/>
         <image name="contact_2" width="3936" height="2028"/>
         <image name="contract" width="24" height="24"/>
+        <image name="coronavirus" width="664" height="291"/>
         <image name="cross" width="32" height="32"/>
         <image name="cross2" width="30" height="30"/>
         <image name="crossR" width="24" height="24"/>
@@ -9979,6 +10248,7 @@ muchmore.</string>
         <image name="homepage1" width="1920" height="1280"/>
         <image name="homepage2" width="1920" height="1282"/>
         <image name="hotel_2" width="700" height="367"/>
+        <image name="icons8-virus-free-30" width="30" height="30"/>
         <image name="info-1" width="26" height="26"/>
         <image name="insta_2" width="32" height="32"/>
         <image name="leftArrow" width="48" height="48"/>
