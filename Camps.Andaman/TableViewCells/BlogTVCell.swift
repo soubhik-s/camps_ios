@@ -18,7 +18,7 @@ class BlogTVCell: UITableViewCell  {
     @IBOutlet weak var blog_Title: UILabel!
     
     @IBOutlet weak var data_View: UIView!
-    
+    var blog_Id = "0"
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -27,6 +27,9 @@ class BlogTVCell: UITableViewCell  {
                 
             
     @IBAction func more_Btn_Axn(_ sender: UIButton) {
+        BlogVariables.Selected_Id = blog_Id
+        print("Selected_Id = \(BlogVariables.Selected_Id)")
+
         let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlogDetailsVC") as! BlogDetailsVC
         self.parentContainerViewController()?.navigationController?.pushViewController(VC, animated: true)
         

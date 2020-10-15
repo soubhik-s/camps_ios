@@ -113,12 +113,10 @@ class DashBoardVC: UIViewController {
             let parsedData = try JSONDecoder().decode(GetBookingResponse.self, from: jsonData)
             print(parsedData)
         
-           dataArr = parsedData
-           print("DashBoardData = \(dataArr)")
-           print("dataCount = \(dataArr.count)")
+                dataArr = parsedData.reversed()
           
-         
-                for bookingData in dataArr {
+           
+            for bookingData in dataArr {
                     if bookingData.user_id == UserDetails.id {
             
             camp_Arr.append(bookingData.camp_batch!)
@@ -149,8 +147,6 @@ class DashBoardVC: UIViewController {
             }
             }
                 
-            } else {
-            getData()
             }
            
             } catch {
@@ -176,20 +172,9 @@ class DashBoardVC: UIViewController {
 
                     }
                 
-                } else {
-
-                    if tag == "Status" {
-
-                    }
-
-                self.view.makeToast("Error in Updating Status Check Email..")
                 }
-                } else {
-                popUpAlert(title: "Alert", message: "Failed to  Connect Server. Try Again. ", action: .alert)
                 }
-            
                 } catch {
-                popUpAlert(title: "Alert", message: "Failed to  Connect Server. Try Again. ", action: .alert)
                 print("Parse Error: \(error)")
                     
             }
@@ -380,36 +365,19 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
          price = currentCell.priceLbl.text!.fiterPrice()
         print("price = \(price)")
      
-        func showPaymentForm(){
-            let options: [String:Any] = [
-            "amount": "\(price)00", //This is in currency subunits. 100 = 100 paise= INR 1.
-            "currency": "INR",//We support more that 92 international currencies.
-            "description": "Camp Package",
-            "image": "https://camps.goexploreandaman.com/assets/images/photo/autumn.jpg",
-            "name": "AndamanCamps",
-            "prefill": [
-                    "contact": UserDetails.mobileNumber,
-                    "email": UserDetails.email,
-            ],
-            "theme": [
-                    "color": "#165096"
-                ]
-            ]
-               
-                razorpay.open(options)
-        }
+        
         
         if currentCell.doc_Lbl.text == "pending" {
         popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
             
         } else {
-        let alert = UIAlertController(title: "Initiatinng Payment", message: "Rs - \(price)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Initiatinng Payment", message: "₹ - \(price)", preferredStyle: .alert)
         alert.setBackgroundColor(color: .white)
         alert.setTint(color: .baseColor)
         alert.setTitlet(font: UIFont(name: "Baskerville-SemiBold", size: 15), color: .systemRed)
         alert.setMessage(font: UIFont(name: "Baskerville-SemiBold", size: 15.0), color: .black)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            showPaymentForm()
+            self.showPaymentForm()
 
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
@@ -421,6 +389,24 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         }
     }
     
+    func showPaymentForm(){
+        let options: [String:Any] = [
+        "amount": "\(price)00", //This is in currency subunits. 100 = 100 paise= INR 1.
+        "currency": "INR",//We support more that 92 international currencies.
+        "description": "Camp Package",
+        "image": "https://camps.goexploreandaman.com/assets/images/photo/autumn.jpg",
+        "name": "AndamanCamps",
+        "prefill": [
+                "contact": UserDetails.mobileNumber,
+                "email": UserDetails.email,
+        ],
+        "theme": [
+                "color": "#165096"
+            ]
+        ]
+           
+            razorpay.open(options)
+    }
     
     
 }
@@ -439,7 +425,7 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocol {
         postStatusData()
         self.navigationController?.popViewController(animated: true)
    
-        alert(message: "Payment done.", title: "Success  ")
+        alert(message: "Payment done.", title: "Success")
 //        popUpAlert(title: "Payemnt  Done", message: "Updating Stauts", action: .alert)
     }
     

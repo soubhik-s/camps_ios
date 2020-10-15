@@ -13,7 +13,7 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     @IBOutlet weak var dataCV: UICollectionView!
     var title_Arr2 = ["TREKKING","KAYAKING","BIRD WATCHING","CELLULAR JAIL"]
     var img_Arr2 = ["trek_2","kayaking","BIRD_WATCH","JAIL",]
-    var dataArr:GestureResponse = []
+    var dataArr:GestureResonse = []
     var img_Arr:[String]  = []
     var title_Arr:[String] = []
     var description_Arr:[String] = []
@@ -67,7 +67,7 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
 
         do {
             if let jsonData = data {
-            let parsedData = try JSONDecoder().decode(GestureResponse.self, from: jsonData)
+            let parsedData = try JSONDecoder().decode(GestureResonse.self, from: jsonData)
 
             print(parsedData)
 
@@ -78,11 +78,11 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
                 title_Arr.append(adultData.gestureName)
                print("Gesturetitle_Arr = \(title_Arr)")
 
-            let imgUrlStr = "https://camps.goexploreandaman.com/assets/img/gesture/" + adultData.gestureImageLink
+                let imgUrlStr = "https://camps.goexploreandaman.com/assets/img/gesture/" + adultData.gestureImageLinkFirst
             img_Arr.append(imgUrlStr)
             print("GestureIMGArr = \(img_Arr)")
  
-                description_Arr.append(adultData.gestureDescription)
+                description_Arr.append(adultData.gestureDescriptionFirst)
             }
             dataCV.isHidden = false
             dataCV.reloadData()

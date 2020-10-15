@@ -243,23 +243,32 @@ enum CreatedBy: String, Decodable {
 typealias ActivityResponse = [ActivityResponseElement]
 
 
-// MARK: - GestureResponseElement
-struct GestureResponseElement: Decodable {
-    let gestureID, gestureName, gestureDescription, gestureActivity: String
-    let gestureImageLink, createdAt, createdBy: String
+// MARK: - GestureResonseElement
+struct GestureResonseElement: Codable {
+    let gestureID, gestureName, gestureActivity, gestureDescriptionFirst: String
+    let gestureDescriptionSecond, gestureDescriptionThird, gestureDescriptionFourth, gestureImageLinkFirst: String
+    let gestureImageLinkSecond, gestureImageLinkThird, gestureImageLinkFourth, createdAt: String
+    let modifiedAt, createdBy: String
 
     enum CodingKeys: String, CodingKey {
         case gestureID = "gesture_id"
         case gestureName = "gesture_name"
-        case gestureDescription = "gesture_description"
         case gestureActivity = "gesture_activity"
-        case gestureImageLink = "gesture_image_link"
+        case gestureDescriptionFirst = "gesture_description_first"
+        case gestureDescriptionSecond = "gesture_description_second"
+        case gestureDescriptionThird = "gesture_description_third"
+        case gestureDescriptionFourth = "gesture_description_fourth"
+        case gestureImageLinkFirst = "gesture_image_link_first"
+        case gestureImageLinkSecond = "gesture_image_link_second"
+        case gestureImageLinkThird = "gesture_image_link_third"
+        case gestureImageLinkFourth = "gesture_image_link_fourth"
         case createdAt = "created_at"
+        case modifiedAt = "modified_at"
         case createdBy = "created_by"
     }
 }
 
-typealias GestureResponse = [GestureResponseElement]
+typealias GestureResonse = [GestureResonseElement]
 
 // MARK: - SignupResponse
 struct SignupResponse: Decodable {

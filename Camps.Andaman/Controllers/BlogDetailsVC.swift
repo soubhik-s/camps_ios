@@ -52,11 +52,11 @@ class BlogDetailsVC: UIViewController {
 
         blog_IMG.layer.cornerRadius = 10
         IMG_View2.layer.cornerRadius = 10
-        cmnt_Txt.layer.cornerRadius = 5
+        cmnt_Txt.layer.cornerRadius = 3
         cmnt_Txt.layer.borderColor = UIColor.baseColor.cgColor
         cmnt_Txt.layer.borderWidth = 0.5
-        comment_View.layer.cornerRadius = 15
-        submit_Btn.layer.cornerRadius = 10
+        comment_View.layer.cornerRadius = 20
+        submit_Btn.layer.cornerRadius = 5
         blog_IMG.layer.cornerRadius = 10
         comment_TV.layer.cornerRadius = 10
         getBlogData()
@@ -110,7 +110,7 @@ class BlogDetailsVC: UIViewController {
         
         if reach.isConnectedToNetwork() == true {
             self.view.showActivityIndicator()
-            ApiService.callPostToken(url: ClientInterface.blogCommentsUrl , params: "", methodType: "GET", tag: "Blog_Comment", finish:finishPost)
+            ApiService.callPostToken(url: ClientInterface.blogCommentsUrl + "/\(BlogVariables.Selected_Id)" , params: "", methodType: "GET", tag: "Blog_Comment", finish:finishPost)
         } else {
         self.view.makeToast("Check Internet connection")
         }
@@ -122,7 +122,7 @@ class BlogDetailsVC: UIViewController {
             self.view.showActivityIndicator()
             let details = ["user_id":UserDetails.id, "blog_id":BlogVariables.Selected_Id, "name":UserDetails.firstName, "email":UserDetails.email, "message":cmnt_Txt.text! ] as [String:Any]
                 
-            ApiService.postCall(url: ClientInterface.registrationUrl, params: details, methodType: "POST", tag: "Post_Comment", finish:finishPost)
+            ApiService.postCall(url: ClientInterface.blogCommentsUrl, params: details, methodType: "POST", tag: "Post_Comment", finish:finishPost)
             print("details = \(details)")
             
         } else {
@@ -150,11 +150,11 @@ class BlogDetailsVC: UIViewController {
                     self.view.makeToast("Comment Posted Succesfully")
                     cmnt_Txt.text = ""
                     hideTopView(View: comment_View, height: cmt_View_Height)
+                    comment_SC.selectedSegmentIndex = 0
                     getBlogComments()
                 
                 } else {
                   self.view.makeToast(parsedData.message)
-                        print("data is Empty")
                 }
                     
                 }

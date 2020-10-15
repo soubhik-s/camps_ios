@@ -64,8 +64,7 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
         if tableView == blogTV {
             let cellPath = dataArr[indexPath.row]
 
-            BlogVariables.Selected_Id = cellPath.id
-            print("Selected_Id = \(BlogVariables.Selected_Id)")
+            blogCell.blog_Id = cellPath.id
             
             blogCell.date_Lbl.text = cellPath.createdAt
             blogCell.blog_Title.text = cellPath.blogTitle
@@ -80,7 +79,10 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
 
             
             if indexPath.row < 5 {
-            
+               
+            postCell.imageView?.sizeThatFits(CGSize(width: 40, height: 40))
+
+            postCell.imageView?.sizeToFit()
             postCell.textLabel?.text = cellPath.createdAt
             postCell.detailTextLabel?.text = cellPath.bloggerStatement
             postCell.imageView?.makeRound()
