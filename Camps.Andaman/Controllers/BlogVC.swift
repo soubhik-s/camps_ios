@@ -37,7 +37,7 @@ class BlogVC: UIViewController {
         blogTV.layer.cornerRadius = 5
         post_TV.layer.cornerRadius = 5
 
-        post_TV.rowHeight = 50
+        post_TV.rowHeight = 60
         
     }
 
@@ -52,6 +52,9 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
+        if tableView == post_TV {
+            return recentPostArr.count
+        }
        return dataArr.count
 
     }
@@ -78,18 +81,22 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
             let cellPath = recentPostArr[indexPath.row]
 
             
-            if indexPath.row < 5 {
-               
-            postCell.imageView?.sizeThatFits(CGSize(width: 40, height: 40))
-
+            let itemSize:CGSize = CGSize(width: 50, height: 50)
+            UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale)
+            let imageRect = CGRect(x: 0, y: 0, width: 50, height: 50)
+            
+            postCell.imageView!.image?.draw(in: imageRect)
+            postCell.imageView!.image =  UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            postCell.imageView?.layer.cornerRadius = 25
             postCell.imageView?.sizeToFit()
             postCell.textLabel?.text = cellPath.createdAt
             postCell.detailTextLabel?.text = cellPath.bloggerStatement
-            postCell.imageView?.makeRound()
+//            postCell.imageView?.makeRound()
             postCell.imageView?.setImage(urlStr: ClientConfig.blogIMGUrl + cellPath.primaryImage)
         }
             return postCell
-        }
+        
        
         
     }
@@ -148,7 +155,8 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
                 BlogVariables.Selected_Id = dataArr.first?.id as! String
                 blogTV.reloadWithAnimation()
                    
-                recentPostArr = parsedData.reversed()
+                recentPostArr = parsedData.suffix(5).reversed()
+                print("recentPostArr = \(recentPostArr.count)")
                 post_TV.reloadData()
                     
                 

@@ -11,12 +11,11 @@ import UIKit
 class CampingCVC: UICollectionViewCell {
     
     
-    @IBOutlet weak var decriptionLbl: UILabel!
     
     @IBOutlet weak var IMGView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     
     
-    @IBOutlet weak var activityLbl: UILabel!
+    
     
 }

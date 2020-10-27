@@ -11,16 +11,16 @@ import UIKit
 
 
 struct GestureVariables {
-    static var Title = ""
-    static var IMG = ""
-    static var Description = ""
+   
+    static var selected_Id = ""
+    static var isGesture:Bool = false
+    
 }
 
-struct LocationVariables {
+struct ActivityVariables {
     static var locTitle = ""
     static var locIMG = ""
     static var locDescription = ""
-    static var locActitvity = ""
 
 }
 
@@ -67,9 +67,11 @@ struct HotelDetails {
     static var hotelIndex = 0
 }
 struct ItineraryDetails {
-    static var itinerary_ID = "10"
+    static var itinerary_ID = ""
     static var image = ""
     static var title = ""
+    static var age_Group = ""
+    static var season_Name = ""
 }
 
 struct BookingDetails {

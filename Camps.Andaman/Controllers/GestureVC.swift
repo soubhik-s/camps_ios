@@ -10,11 +10,19 @@ import UIKit
 
 class GestureVC: UIViewController {
 
-    @IBOutlet weak var IMGVIew: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var descriptionLbl: UILabel!
     
-   override func viewDidLoad() {
+    
+    @IBOutlet weak var gestureCV: UICollectionView!
+    @IBOutlet weak var gestureTV: UITableView!
+
+    let gestureIMGUrl = "https://camps.goexploreandaman.com/assets/img/gesture/"
+    let campinIMGUrl  = "https://camps.goexploreandaman.com/assets/img/camping/"
+    var img_Arr:[String] = []
+    var des_Arr:[String] = []
+    var activity_Arr:[String] = []
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         viewChanges()
@@ -22,25 +30,183 @@ class GestureVC: UIViewController {
     
 
     func viewChanges() {
-        IMGVIew.layer.cornerRadius = 10
-        IMGVIew.layer.masksToBounds = true
-        if GestureVariables.Title != "" {
-            IMGVIew.image = GestureVariables.IMG.toImage()
-            titleLbl.text = GestureVariables.Title
-            descriptionLbl.text = GestureVariables.Description
+        gestureCV.isHidden = true
+        gestureTV.isHidden = true
+
+        CVChanges()
+      
+        if GestureVariables.isGesture == true {
+            getGestureData()
+
+        } else {
+            getCampingData()
         }
         
+    }
+    func CVChanges() {
+        let cellSize = CGSize(width:gestureCV.frame.width , height:155)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal //.horizontal
+        layout.itemSize = cellSize
+        layout.minimumLineSpacing = 10.0
+        layout.minimumInteritemSpacing = 1.0
+        gestureCV.setCollectionViewLayout(layout, animated: true)
+        gestureCV.delegate = self
+        gestureCV.dataSource = self
+        gestureCV.showsHorizontalScrollIndicator = false
+            
         
-       
+    }
+    
+    func getCampingData()  {
+            
+        if reach.isConnectedToNetwork() == true {
+            self.view.showActivityIndicator()
+            ApiService.callPostToken(url: ClientInterface.campingUrl, params: "", methodType: "GET", tag: "Camping", finish:finishPost)
+
+    
+        } else {
+            self.popUpAlert(title: "Alert", message: "Check Internet Connection", action: .alert)
+            
+        }
+           
+    }
+     func getGestureData()  {
+         
+        if reach.isConnectedToNetwork() == true {
+            self.view.showActivityIndicator()
+            ApiService.callPostToken(url: ClientInterface.gesturesUrl, params: "", methodType: "GET", tag: "Gesture", finish:finishPost)
+
+           } else {
+                self.popUpAlert(title: "Alert", message: "Check Internet Connection", action: .alert)
+
+            }
+        
+    }
+
+    
+    func finishPost (message:String, data:Data? , tag: String) -> Void {
+
+        self.view.hideActivityIndicator()
+
+        if tag == "Camping"  {
+              
+        
+            do {
+                
+                if let jsonData = data {
+                    
+                let parsedData = try JSONDecoder().decode(CampingListResponse.self, from: jsonData)
+
+                print(parsedData)
+                    
+                for gesture_Data in parsedData {
+                if GestureVariables.selected_Id == gesture_Data.campingID {
+                               
+                img_Arr.append(gesture_Data.campingImageLinkFirst)
+                img_Arr.append(gesture_Data.campingImageLinkSecond)
+                img_Arr.append(gesture_Data.campingImageLinkThird)
+                img_Arr.append(gesture_Data.campingImageLinkFourth)
+                des_Arr.append(gesture_Data.campingDescriptionFirst)
+                des_Arr.append(gesture_Data.campingDescriptionSecond)
+                des_Arr.append(gesture_Data.campingDescriptionThird)
+                des_Arr.append(gesture_Data.campingDescriptionFourth)
+                
+                activity_Arr =  gesture_Data.campingActivity.components(separatedBy: "->")
+                titleLbl.text = gesture_Data.campingName
+                   
+                    print("img_Arr = \(img_Arr)")
+                    print("des_Arr = \(des_Arr)")
+                    print("activity_Arr = \(activity_Arr)")
+
+
+                img_Arr = img_Arr.filter({ $0 != ""})
+                des_Arr = des_Arr.filter({ $0 != ""})
+                activity_Arr = activity_Arr.filter({ $0 != ""})
+
+                print("img_Arr = \(img_Arr)")
+                print("des_Arr = \(des_Arr)")
+                print("activity_Arr = \(activity_Arr)")
+
+
+                    gestureCV.isHidden = false
+                    gestureTV.isHidden = false
+
+                    gestureCV.reloadData()
+                    gestureTV.reloadWithAnimation()
+                }
+                            
+                }
+
+                }
+                    
+                  
+                } catch {
+                   print("Parse Error: \(error)")
+
+                }
+           
+            
+            } else {
+
+            do {
+            
+            if let jsonData = data {
+                
+            let parsedData = try JSONDecoder().decode(GestureResonse.self, from: jsonData)
+
+            print(parsedData)
+                
+            for gesture_Data in parsedData {
+            if GestureVariables.selected_Id == gesture_Data.gestureID {
+                           
+            img_Arr.append(gesture_Data.gestureImageLinkFirst)
+            img_Arr.append(gesture_Data.gestureImageLinkSecond)
+            img_Arr.append(gesture_Data.gestureImageLinkThird)
+            img_Arr.append(gesture_Data.gestureImageLinkFourth)
+            des_Arr.append(gesture_Data.gestureDescriptionFirst)
+            des_Arr.append(gesture_Data.gestureDescriptionSecond)
+            des_Arr.append(gesture_Data.gestureDescriptionThird)
+            des_Arr.append(gesture_Data.gestureDescriptionFourth)
+               activity_Arr =  gesture_Data.gestureActivity.components(separatedBy: "->")
+            titleLbl.text = gesture_Data.gestureName
+                print("img_Arr = \(img_Arr)")
+                print("des_Arr = \(des_Arr)")
+                print("activity_Arr = \(activity_Arr)")
+
+
+            img_Arr = img_Arr.filter({ $0 != ""})
+            des_Arr = des_Arr.filter({ $0 != ""})
+            activity_Arr = activity_Arr.filter({ $0 != ""})
+
+                print("img_Arr = \(img_Arr)")
+                print("des_Arr = \(des_Arr)")
+
+                gestureCV.isHidden = false
+                gestureTV.isHidden = false
+
+                gestureCV.reloadData()
+                gestureTV.reloadWithAnimation()
+            }
+                        
+            }
+
+            }
+                
+              
+            } catch {
+               print("Parse Error: \(error)")
+
+            }
+            }
+
     }
    
     
     
     @IBAction func backAxn(_ sender: UIButton) {
         
-       let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         self.navigationController?.popViewController(animated: true)
-//        self.navigationController?.pushViewController(VC, animated: true)
 
 
     }
@@ -49,4 +215,127 @@ class GestureVC: UIViewController {
     
     
 
+}
+extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectionViewDelegate , UICollectionViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+            return 2
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        if section == 1 {
+            return activity_Arr.count
+        } else {
+            return des_Arr.count
+
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+
+        if GestureVariables.isGesture == true {
+           
+            if indexPath.section == 1 {
+                cell.textLabel?.text = activity_Arr[indexPath.row]
+
+            } else {
+                cell.textLabel?.text = des_Arr[indexPath.row]
+
+            }
+
+        } else {
+            if indexPath.section == 1 {
+            cell.textLabel?.text = activity_Arr[indexPath.row]
+
+            } else {
+                cell.textLabel?.text = des_Arr[indexPath.row]
+
+            }
+
+        }
+        
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+            let returnedView = UIView(frame: CGRect(x: 20, y: 0, width: tableView.frame.width - 40 , height: 25))
+
+            returnedView.backgroundColor = .clear
+            returnedView.layer.cornerRadius = 10
+
+           let img_View = UIImageView(frame: CGRect(x: 20, y: 3, width: 17, height: 17))
+
+            let label = UILabel(frame: CGRect(x: 50, y: 0, width: returnedView.frame.width - 40 , height: returnedView.frame.height))
+        label.textColor = .white
+            label.backgroundColor = .clear
+            label.textAlignment = .left
+            label.font = UIFont(name: "Optima-Bold", size: 15)
+
+    //        label.layer.cornerRadius = 10
+    //        label.layer.masksToBounds = true
+
+
+            switch section {
+
+            
+            case 1:
+                
+                if activity_Arr.isEmpty == false {
+                returnedView.isHidden = false
+
+                label.text = "ACTIVITIES"
+                img_View.image = UIImage(named: "info")
+                } else {
+                    returnedView.isHidden = true
+
+                }
+
+            default:
+
+                returnedView.isHidden = true
+
+            }
+            returnedView.addSubview(img_View)
+            returnedView.addSubview(label)
+
+            return returnedView
+
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return img_Arr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! GetureDetailsCVC
+        if img_Arr.count > 1 {
+            cell.myPageCntrl.isHidden = false
+            cell.myPageCntrl.numberOfPages = img_Arr.count
+
+        } else {
+            cell.myPageCntrl.isHidden = true
+
+        }
+        
+        if GestureVariables.isGesture == true {
+            cell.IMG_View.setImage(urlStr: gestureIMGUrl + img_Arr[indexPath.row])
+
+        } else {
+            cell.IMG_View.setImage(urlStr: campinIMGUrl + img_Arr[indexPath.row])
+
+        }
+        
+        cell.IMG_View.layer.cornerRadius = 10
+        
+        return cell
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }

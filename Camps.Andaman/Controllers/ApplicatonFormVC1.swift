@@ -47,8 +47,8 @@ class ApplicatonFormVC1: UIViewController {
     var pre_winterCamp = [""]
     var winterCamp = [""]
 
-    let childBatch = ["Batch-I"]
-    let adultBatch = ["Batch-II"]
+    let childBatch = ["Batch-I [1st - 15th day] - Child"]
+    let adultBatch = ["Batch-II [15th - 26th day] - Adult"]
 
     let TShirt_Arr = ["S","M","L","XL","XXL"]
     

@@ -13,7 +13,6 @@ class GestureCVC: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     
     
-    @IBOutlet weak var descriptionLbl: UILabel!
     
     
     

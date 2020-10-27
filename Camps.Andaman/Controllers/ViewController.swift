@@ -58,11 +58,7 @@ class ViewController: UIViewController {
         
         let VC = self.storyboard?.instantiateViewController(withIdentifier: "VerificationVC") as! VerificationVC
         self.navigationController?.pushViewController(VC, animated: true)
-//        VC.modalPresentationStyle = .fullScreen
-//        VC.modalTransitionStyle = .flipHorizontal
-//      self.present(VC, animated: true) {
-//
-//        }
+
         print("Suignup")
        
     }

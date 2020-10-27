@@ -11,17 +11,12 @@ import UIKit
 class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var dataCV: UICollectionView!
-    var title_Arr2 = ["TREKKING","KAYAKING","BIRD WATCHING","CELLULAR JAIL"]
-    var img_Arr2 = ["trek_2","kayaking","BIRD_WATCH","JAIL",]
+   
     var dataArr:GestureResonse = []
-    var img_Arr:[String]  = []
-    var title_Arr:[String] = []
-    var description_Arr:[String] = []
-       
+    
+    let gestureIMGUrl = "https://camps.goexploreandaman.com/assets/img/gesture/"
 
-   weak var delegate:GestureDelegate?
-
-        
+     
         override func awakeFromNib() {
             super.awakeFromNib()
 
@@ -60,30 +55,20 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
 
     func finishPost (message:String, data:Data? , tag: String) -> Void {
-
-
+        
         self.contentView.hideActivityIndicator()
-
-
+        
         do {
             if let jsonData = data {
             let parsedData = try JSONDecoder().decode(GestureResonse.self, from: jsonData)
 
             print(parsedData)
 
-
+            if parsedData.isEmpty == false {
             dataArr = parsedData
-            print("GestureData = \(dataArr)")
-            for adultData in dataArr {
-                title_Arr.append(adultData.gestureName)
-               print("Gesturetitle_Arr = \(title_Arr)")
-
-                let imgUrlStr = "https://camps.goexploreandaman.com/assets/img/gesture/" + adultData.gestureImageLinkFirst
-            img_Arr.append(imgUrlStr)
-            print("GestureIMGArr = \(img_Arr)")
- 
-                description_Arr.append(adultData.gestureDescriptionFirst)
+                
             }
+            print("GestureData = \(dataArr)")
             dataCV.isHidden = false
             dataCV.reloadData()
 
@@ -98,7 +83,7 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
         
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return title_Arr.count
+            return dataArr.count
     
     }
         
@@ -107,10 +92,11 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GestureCell", for: indexPath) as! GestureCVC
 
-        cell.titleLbl.text = title_Arr[indexPath.row]
-        cell.IMGView.setImage(urlStr: "\(img_Arr[indexPath.row])")
-        cell.descriptionLbl.text = description_Arr[indexPath.row]
-          
+        let cellPath = dataArr[indexPath.row]
+        cell.titleLbl.text = cellPath.gestureName
+        cell.IMGView.setImage(urlStr: gestureIMGUrl + cellPath.gestureImageLinkFirst)
+                
+
         cell.IMGView.makeRounded()
             
         
@@ -119,17 +105,20 @@ class GesturesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! GestureCVC
-        GestureVariables.Title = cell.titleLbl.text!
-        GestureVariables.IMG = (cell.IMGView.image?.toString()!)!
-        GestureVariables.Description = cell.descriptionLbl.text!
-        
-//        self.onDidSelectItem?(indexPath)
+        let cellPath = dataArr[indexPath.row]
 
+        GestureVariables.selected_Id = cellPath.gestureID
         
-        if delegate != nil {
-            delegate?.onGestureItemTapped()
-        }
+        
+        
+        GestureVariables.isGesture = true
+        GestureVariables.selected_Id = cellPath.gestureID
+        
+        let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GestureVC") as! GestureVC
+
+        self.parentContainerViewController()?.navigationController?.pushViewController(VC, animated: true)
+
+
            
     }
 }

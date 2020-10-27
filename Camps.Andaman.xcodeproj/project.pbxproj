@@ -63,6 +63,7 @@
 		D64F19D0246C176A00C169FC /* HotelsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64F19CF246C176A00C169FC /* HotelsCVC.swift */; };
 		D64FC86F247E30D900923CA8 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FC86E247E30D900923CA8 /* FAQCell.swift */; };
 		D652340124AEF3510076E05D /* SelfDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652340024AEF3510076E05D /* SelfDetailsVC.swift */; };
+		D6548D4225443CFE0058BF3B /* GetureDetailsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6548D4125443CFD0058BF3B /* GetureDetailsCVC.swift */; };
 		D6554593246EAF6600E974C3 /* GestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554592246EAF6600E974C3 /* GestureVC.swift */; };
 		D6554595246EAF8500E974C3 /* HotelDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */; };
 		D6554597246EAFB800E974C3 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554596246EAFB800E974C3 /* InfoVC.swift */; };
@@ -200,6 +201,7 @@
 		D64FC86E247E30D900923CA8 /* FAQCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
 		D652340024AEF3510076E05D /* SelfDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailsVC.swift; sourceTree = "<group>"; };
 		D6524AA92488C560008FF580 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		D6548D4125443CFD0058BF3B /* GetureDetailsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetureDetailsCVC.swift; sourceTree = "<group>"; };
 		D6554592246EAF6600E974C3 /* GestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureVC.swift; sourceTree = "<group>"; };
 		D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsVC.swift; sourceTree = "<group>"; };
 		D6554596246EAFB800E974C3 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				D64F19CF246C176A00C169FC /* HotelsCVC.swift */,
 				D66E857724AC58CF00B7127C /* OffersCVCell.swift */,
 				D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */,
+				D6548D4125443CFD0058BF3B /* GetureDetailsCVC.swift */,
 				D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */,
 				D6A50EE324765AED00C858F7 /* CampingCVC.swift */,
 				D65545A124726AEE00E974C3 /* AboutCVC.swift */,
@@ -786,6 +789,7 @@
 				D652340124AEF3510076E05D /* SelfDetailsVC.swift in Sources */,
 				D65CD29824AB562B00BFB6D7 /* ActivitiesCVCell.swift in Sources */,
 				D65E85D5248E614B003BD530 /* HotelDetailsTVC.swift in Sources */,
+				D6548D4225443CFE0058BF3B /* GetureDetailsCVC.swift in Sources */,
 				D64F19C124696C5100C169FC /* ApplicationFormVC2.swift in Sources */,
 				D6F5AF3525357FC900F4C48B /* CovidVC.swift in Sources */,
 				D68944F9248677D500409079 /* ForgotVC.swift in Sources */,

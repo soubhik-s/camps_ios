@@ -12,19 +12,9 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var dataCV: UICollectionView!
     
-    
-//   let title_Arr = ["FREEDOM FIGHTERS FAMILY","TREKKING","SCUBA DIVIVNG","LOCAL ARTISANS","PEARL CULTIVATION", "TRIBAL DANCE","MONUMENT VISIT","NIOT","BARREN ISLANDS","M.G NATIONAL PARK", "BIRD WATCHING"]
-//
-//
-    let img_Arr2 = ["Freedom_fighters","Trekking","Scuba", "local_artisans","Pearl_farm","nicobari_dance","monuments","NIOT","BarrenIsland","MG_Nationalpark","Birdwatch","LifestyleCulture","QA"]
 
-
-      var dataArr:ActivityResponse = []
-//       var onDidSelectItem: ((IndexPath) -> ())?
-    var img_Arr:[String]  = []
-    var title_Arr:[String] = []
-    var description_Arr:[String] = []
-
+    var dataArr:ActivityResponse = []
+   
     weak var delegate:GestureDelegate?
 
         
@@ -78,17 +68,12 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
 
         print(parsedData)
 
-        dataArr = parsedData
-        print("ActivityData = \(dataArr)")
-        for adultData in dataArr {
-        title_Arr.append(adultData.activityName)
-        print("Actitvitytitle_Arr = \(title_Arr)")
+            if parsedData.isEmpty == false {
+                dataArr = parsedData
 
-            let imgUrlStr = ClientConfig.Activity_ImgUrl + adultData.activityImageLink
-            img_Arr.append(adultData.activityImageLink)
-        print("ActivityimgArr = \(img_Arr)")
-            description_Arr.append(adultData.activityDescription)
-        }
+            }
+        print("ActivityData = \(dataArr)")
+        
         dataCV.isHidden = false
         dataCV.reloadData()
 
@@ -105,7 +90,7 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
 
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return title_Arr.count
+            return dataArr.count
     
     }
         
@@ -114,12 +99,10 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivitiesCell", for: indexPath) as! ActivitiesCVC
 
-        cell.titleLbl.text = title_Arr[indexPath.row]
-       let Urlstr = ClientConfig.Activity_ImgUrl + img_Arr[indexPath.row]
-//        cell.IMGView.image = UIImage(named: "\(img_Arr2[indexPath.row])")
-        cell.IMGView.setImage(urlStr: Urlstr)
+        let cellPath = dataArr[indexPath.row]
+        cell.titleLbl.text = cellPath.activityName
+        cell.IMGView.setImage(urlStr: ClientConfig.Activity_ImgUrl + cellPath.activityImageLink)
         cell.IMGView.layer.cornerRadius = 10
-        cell.descriptionLbl.text = description_Arr[indexPath.row]
         
         return cell
         
@@ -127,16 +110,16 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
         
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! ActivitiesCVC
-        GestureVariables.Title = cell.titleLbl.text!
-        GestureVariables.IMG = (cell.IMGView.image?.toString()!)!
-        GestureVariables.Description = cell.descriptionLbl.text!
-//        self.onDidSelectItem?(indexPath)
-
+         let cellPath = dataArr[indexPath.row]
         
-        if delegate != nil {
-            delegate?.onGestureItemTapped()
-        }
+        ActivityVariables.locTitle = cellPath.activityName
+        ActivityVariables.locIMG = cellPath.activityImageLink
+        ActivityVariables.locDescription = cellPath.activityDescription
+
+        let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampingVC") as! CampingVC
+
+        self.parentContainerViewController()?.navigationController?.pushViewController(VC, animated: true)
+        
         
     }
 }

@@ -61,10 +61,8 @@ class HotelDetailsVC: UIViewController {
     
     @IBAction func backBtn(_ sender: UIButton) {
 
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "PackageDetailsVC") as! PackageDetailsVC
       
         self.navigationController?.popViewController(animated: true)
-//   self.navigationController?.pushViewController(VC, animated: true)
    
     }
     
@@ -272,7 +270,7 @@ extension HotelDetailsVC : UITableViewDelegate, UITableViewDataSource {
 
         case 1:
             label.text = "About"
-            img_View.image = UIImage(named: "info")
+            img_View.image = UIImage(named: "infoN")
         case 2:
         label.text = "Rooms"
             img_View.image = UIImage(named: "bed_3")

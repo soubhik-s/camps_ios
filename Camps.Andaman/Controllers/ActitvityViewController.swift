@@ -26,12 +26,12 @@ class ActitvityViewController: UIViewController {
     var childDate_Arr = ["1st" , "2nd" , "3rd" , "4th", "5th","6th","7th","8th","9th","10th","11th","12th","13th","14th"]
     var adultDate_Arr = [ "15th","16th" , "17th" , "18th" , "19th", "20th", "21st", "22th", "23th", "24th", "25th", "26th", "27th", "28th", "29th", "30th"]
 
-    var pkg_Id = [""]
-    var iti_Arr = [""]
-    var morning_Arr = [""]
-    var noon_Arr = [""]
-    var eve_Arr = [""]
-    var night_Arr:OverNightActivityUnion?
+    var pkg_Id:[String] = []
+    var iti_Arr:[String] = []
+    var morning_Arr:[String] = []
+    var noon_Arr:[String] = []
+    var eve_Arr:[String] = []
+    var night_Arr:[String] = []
     var isAdult:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,22 +119,22 @@ class ActitvityViewController: UIViewController {
                    
         for itinerary_Data in dataArray {
         
-            if itinerary_Data.itinerary_id == DashboardVariables.activtiesID {
-                iti_Arr = itinerary_Data.itienary_name ?? []
+            if itinerary_Data.itineraryID == DashboardVariables.activtiesID {
+                iti_Arr = itinerary_Data.itienaryName
             print("iti_Arr = \(iti_Arr)")
-                morning_Arr = itinerary_Data.morning_activity ?? []
+                morning_Arr = itinerary_Data.morningActivity
             print("morning_Arr = \(morning_Arr)")
 
-            noon_Arr = itinerary_Data.after_noon_activity ?? []
+                noon_Arr = itinerary_Data.afterNoonActivity
             print("noon_Arr = \(noon_Arr)")
 
-            eve_Arr = itinerary_Data.evening_activity ?? []
+                eve_Arr = itinerary_Data.eveningActivity
             print("eve_Arr = \(eve_Arr)")
 
-                night_Arr = itinerary_Data.over_night_activity
+                night_Arr = itinerary_Data.overNightActivity
             print("night_Arr = \(night_Arr)")
                 
-                if itinerary_Data.age_group == "adult" {
+                if itinerary_Data.ageGroup == "adult" {
                     isAdult = true
                 } else {
                     isAdult = false
@@ -144,8 +144,11 @@ class ActitvityViewController: UIViewController {
                 print("Other ID")
             }
             }
-                   if morning_Arr.count < iti_Arr.count {
-                       morning_Arr.append("")
+                
+         
+            if morning_Arr.count < iti_Arr.count {
+            
+                morning_Arr.append("")
                        print("morning_Append")
                    } else  {
                        print("No Moringing_Append")
@@ -169,16 +172,24 @@ class ActitvityViewController: UIViewController {
 
                    }
                       
-//                   if night_Arr.count < iti_Arr.count {
-//                       night_Arr.append("")
-//                       print("Night_Append")
-//                   } else {
-//                       print("No Night_Append")
-//
-//                   }
+                   if night_Arr.count < iti_Arr.count {
+                       night_Arr.append("")
+                       print("Night_Append")
+                   } else {
+                       print("No Night_Append")
+
+                   }
                    
+            details_View.isHidden = false 
                    
-                   
+            morning_Lbl.text = morning_Arr[0]
+            noon_Lbl.text = noon_Arr[0]
+            eve_Lbl.text = eve_Arr[0]
+            night_Lbl.text = night_Arr[0]
+
+                      
+            contentTitle_Lbl.text = days_Arr[0] + " # \(iti_Arr[0]).. "
+         
                    
             dataCV.isHidden = false
             dataCV.reloadData()
@@ -215,8 +226,7 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
         
         cell.noon_Lbl.text = noon_Arr[indexPath.row]
         cell.eve_Lbl.text =  eve_Arr[indexPath.row]
-        
-//        cell.night_Lbl.text = night_Arr[]
+        cell.night_Lbl.text = night_Arr[indexPath.row]
         
         if isAdult == true {
         cell.dateLbl.text = adultDate_Arr[indexPath.row]

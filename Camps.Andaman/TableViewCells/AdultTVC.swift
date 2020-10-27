@@ -15,17 +15,8 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet weak var dataCV: UICollectionView!
     
     var dataArr:PackageResponse = []
-    var img_Arr:[String]  = []
-    var title_Arr:[String] = []
-    var price_Arr:[String] = []
-    var duration_Arr:[String] = []
-
-    var isConnected:Bool = false
     
-    var title_Arr2 = ["SUMMER","SPRING","PRE-WINTER","WINTER","AUTUMN",]
-    var img_Arr2 = ["summer","spring","prewinter","winter","autumn"]
-//    var onDidSelectItem: ((IndexPath) -> ())?
-
+     let IMG_Url = "https://camps.goexploreandaman.com/assets/images/photo/"
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -36,14 +27,7 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     func CVChanges() {
         dataCV.isHidden = true
         getData()
-//        if CampVariables.isConnected == false {
-//            print("ISConnected = \(CampVariables.isConnected)")
-//            getData()
-//        dataCV.isHidden = true
-//
-//        } else {
-//        print("Connected")
-//        }
+
        
 
     let cellSize = CGSize(width:130 , height:130)
@@ -81,36 +65,20 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         do {
             if let jsonData = data {
             let parsedData = try JSONDecoder().decode(PackageResponse.self, from: jsonData)
+                print(parsedData)
+                
+                if parsedData.isEmpty == false {
+                    for adultData in parsedData {
+                        if adultData.age_group == "adult" {
+                            dataArr.append(adultData)
 
-            print(parsedData)
-
-
-            dataArr = parsedData
-            print("dataARr = \(dataArr)")
-            for adultData in dataArr {
-                if adultData.age_group == "adult" {
-            title_Arr.append(adultData.package_title)
-               print("Adult_Arr = \(title_Arr)")
-
-            let imgUrlStr = "https://camps.goexploreandaman.com/assets/images/photo/" + adultData.package_image_name
-            img_Arr.append(imgUrlStr)
-            print("AdultimgArr = \(img_Arr)")
-            price_Arr.append(adultData.package_price)
-
-            print("Adultprice_Arr = \(price_Arr)")
-            duration_Arr.append(adultData.package_description)
-            print("Adultduration_Arr = \(duration_Arr)")
-
-
-
+                        }
+                    }
+                    dataCV.isHidden = false
+                    dataCV.reloadData()
+                }
+                
             }
-            }
-            dataCV.isHidden = false
-            dataCV.reloadData()
-
-           } else {
-          
-           }
         } catch {
         print("Parse Error: \(error)")
 
@@ -119,7 +87,7 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return title_Arr.count
+        return dataArr.count
 
         
     }
@@ -127,10 +95,14 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AdultCell", for: indexPath) as! HomeCVC
 
-        cell.titleLbl.text = title_Arr[indexPath.row]
-        cell.IMGView.setImage(urlStr: img_Arr[indexPath.row])
-        cell.priceLbl.text = "Rs- \(price_Arr[indexPath.row]) /-"
-        cell.durationLbl.text = duration_Arr[indexPath.row]
+        let cellPath = dataArr[indexPath.row]
+        
+        if cellPath.age_group == "adult" {
+            cell.titleLbl.text = cellPath.package_title
+            cell.durationLbl.text = cellPath.package_description
+            cell.priceLbl.text = "₹ \(cellPath.package_price)"
+            cell.IMGView.setImage(urlStr: IMG_Url + cellPath.package_image_name)
+        }
         
        
         cell.IMGView.layer.cornerRadius = 10
@@ -140,13 +112,9 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! HomeCVC
-//        CampVariables.hotelIndex = indexPath.row
-//        CampVariables.campTitle = cell.titleLbl.text!
-//        CampVariables.duration = cell.durationLbl.text!
-//        CampVariables.price = cell.priceLbl.text!
-//        print("Selectedindex = \(CampVariables.campTitle)")
-//
-        
+
+        let cellPath = dataArr[indexPath.row]
+
         BookingDetails.selectedIndex = indexPath.row
         BookingDetails.camp_Duration = cell.durationLbl.text!
 
@@ -156,6 +124,11 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
        
         ItineraryDetails.image = cell.IMGView.image!.toString()!
         ItineraryDetails.title = cell.titleLbl.text!
+        
+        ItineraryDetails.season_Name = cellPath.package_season_name
+        ItineraryDetails.age_Group = cellPath.age_group
+             
+        
         switch indexPath.item {
         case 0:
             ItineraryDetails.itinerary_ID = "15"
@@ -182,25 +155,17 @@ class AdultTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         }
         print("itinerary_Id = \(ItineraryDetails.itinerary_ID)")
         print("packageID = \(BookingDetails.package_id)")
-//        getTopMostViewController()!.navigationController?.pushViewController(VC, animated: true)
-           
-//       self.onDidSelectItem?(indexPath)
 
         
-        if delegate != nil {
-        delegate?.cellTapped()
-        }
+        let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PackageDetailsVC") as! PackageDetailsVC
+        self.parentContainerViewController()?.navigationController?.pushViewController(VC, animated: true)
+        
+      
         
     }
     
     
    
     
-    func reConnect() {
-        if isConnected == false {
-    self.getData()
-    } else {
-    print("Connected")
-    }
-    }
+   
 }

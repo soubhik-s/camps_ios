@@ -88,135 +88,74 @@ struct PackageResponseObj:Decodable {
 //    case quizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel"
 //}
 
-struct ItineraryResponseElement:Decodable {
-    let itinerary_id = ""
-    let season_name = ""
-    let age_group = ""
-    let itinerary_description = ""
-    let camp_inclusions:[String]?
-    let camp_exclusions:[String]?
-    let itienary_name:[String]?
-    let morning_activity:[String]?
-    let after_noon_activity:[String]?
-    let evening_activity:[String]?
-    let over_night_activity:OverNightActivityUnion
+// MARK: - ItineraryResponseElement
+struct ItineraryResponseElement: Codable {
+    let itineraryID, seasonName: String
+    let ageGroup: String
+    let itineraryDescription: String
+    let campInclusions, campExclusions, itienaryName, morningActivity: [String]
+    let afterNoonActivity, eveningActivity: [String]
+    let overNightActivity: [String]
 
-}
-
-
-
-enum OverNightActivityUnion: Codable {
-    case enumArray([OverNightActivityElement])
-    case enumMap([String: OverNightActivityElement])
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let x = try? container.decode([OverNightActivityElement].self) {
-            self = .enumArray(x)
-            return
-        }
-        if let x = try? container.decode([String: OverNightActivityElement].self) {
-            self = .enumMap(x)
-            return
-        }
-        throw DecodingError.typeMismatch(OverNightActivityUnion.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for OverNightActivityUnion"))
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        switch self {
-        case .enumArray(let x):
-            try container.encode(x)
-        case .enumMap(let x):
-            try container.encode(x)
-        }
+    enum CodingKeys: String, CodingKey {
+        case itineraryID = "itinerary_id"
+        case seasonName = "season_name"
+        case ageGroup = "age_group"
+        case itineraryDescription = "itinerary_description"
+        case campInclusions = "camp_inclusions"
+        case campExclusions = "camp_exclusions"
+        case itienaryName = "itienary_name"
+        case morningActivity = "morning_activity"
+        case afterNoonActivity = "after_noon_activity"
+        case eveningActivity = "evening_activity"
+        case overNightActivity = "over_night_activity"
     }
 }
 
-enum OverNightActivityElement: String, Codable {
-    case storyTellingDinnerAtHotelStayAtHotel = ""
+enum AgeGroup: String, Codable {
+    case adult = "adult"
+    case children = "children"
 }
+
+enum OverNightActivity: String, Codable {
+    case bonfireQuizNightDinnerStayAtHotel = "Bonfire – Quiz night - Dinner & Stay at Hotel  "
+    case dinnerStayAtHotel = "Dinner & Stay at Hotel "
+    case overNightActivityQuizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel  "
+    case quizNightDinnerStayAtHotel = "Quiz night - Dinner & Stay at Hotel"
+    case returnToHotelBonfire = "Return to Hotel Bonfire "
+}
+
 typealias ItineraryResponse = [ItineraryResponseElement]
 
 
-//typealias ItinerarayResponse = [ItenararyresponseObj]
-//
-//struct ItenararyresponseObj:Decodable {
-//    let itinerary_id:String
-//    let season_name:String
-//    let age_group:String
-//    let itinerary_description:String
-//    let camp_inclusions:String
-//    let camp_exclusions:String
-//    let itienary_name:String
-//    let morning_activity:String
-//    let after_noon_activity:String
-//    let evening_activity:String
-//    let over_night_activity:String
-//    let status:String
-//    let activity_date:String
-//
-//
-//
-//}
 
-
-//struct PackageResponseElement: Codable {
-//    let packageID, packageSeasonName, packageTitle, packagePrice: String
-//    let packageDescription: PackageDescription
-//    let packageImageName: String
-//    let ageGroup: AgeGroup
-//    let packagesTermsNConditionsLink: String
-//    let createdAt: String
-//    let userType: UserType
-//
-//    enum CodingKeys: String, CodingKey {
-//        case packageID = "package_id"
-//        case packageSeasonName = "package_season_name"
-//        case packageTitle = "package_title"
-//        case packagePrice = "package_price"
-//        case packageDescription = "package_description"
-//        case packageImageName = "package_image_name"
-//        case ageGroup = "age_group"
-//        case packagesTermsNConditionsLink = "packages_terms_n_conditions_link"
-//        case createdAt = "created_at"
-//        case userType = "user_type"
-//    }
-//}
-//
-//enum AgeGroup: String, Codable {
-//    case adult = "adult"
-//    case children = "children"
-//}
-//
-//enum PackageDescription: String, Codable {
-//    case packageDescription11Nights12Days = "11 Nights / 12 Days"
-//    case the11Nights12Days = "11 Nights /12 Days"
-//}
-//
-//enum UserType: String, Codable {
-//    case admin = "admin"
-//}
-//
-//typealias PackageResponse = [PackageResponseElement]
-
-// MARK: - CampingResponseElement
-struct CampingResponseElement: Decodable {
-    let campingID, campingName, campingDescription, campingActivity: String
-    let campingImageLink, createdAt, createdBy: String
+// MARK: - CampingListResponseElement
+struct CampingListResponseElement: Codable {
+    let campingID, campingName, campingDescriptionFirst, campingDescriptionSecond: String
+    let campingDescriptionThird, campingDescriptionFourth, campingImageLinkFirst, campingImageLinkSecond: String
+    let campingImageLinkThird, campingImageLinkFourth, campingActivity, createdAt: String
+    let modifiedAt, createdBy: String
 
     enum CodingKeys: String, CodingKey {
         case campingID = "camping_id"
         case campingName = "camping_name"
-        case campingDescription = "camping_description"
+        case campingDescriptionFirst = "camping_description_first"
+        case campingDescriptionSecond = "camping_description_second"
+        case campingDescriptionThird = "camping_description_third"
+        case campingDescriptionFourth = "camping_description_fourth"
+        case campingImageLinkFirst = "camping_image_link_first"
+        case campingImageLinkSecond = "camping_image_link_second"
+        case campingImageLinkThird = "camping_image_link_third"
+        case campingImageLinkFourth = "camping_image_link_fourth"
         case campingActivity = "camping_activity"
-        case campingImageLink = "camping_image_link"
         case createdAt = "created_at"
+        case modifiedAt = "modified_at"
         case createdBy = "created_by"
     }
 }
 
-typealias CampingResponse = [CampingResponseElement]
+typealias CampingListResponse = [CampingListResponseElement]
+
 
 // MARK: - ActivityResponseElement
 struct ActivityResponseElement: Decodable {

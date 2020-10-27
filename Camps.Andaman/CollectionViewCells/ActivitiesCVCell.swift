@@ -21,4 +21,17 @@ class ActivitiesCVCell: UICollectionViewCell {
     @IBOutlet weak var dateLbl: UILabel!
     
     @IBOutlet weak var title_Lbl: UILabel!
+    
+    
+    
+    override var isSelected: Bool {
+             
+        didSet {
+        
+            self.title_Lbl.textColor = isSelected ? UIColor.baseColor : UIColor.white
+
+            self.data_View.backgroundColor = isSelected ? UIColor.white : UIColor.baseColor
+                    
+        }
+               }
 }

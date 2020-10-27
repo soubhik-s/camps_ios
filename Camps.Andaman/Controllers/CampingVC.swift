@@ -6,13 +6,14 @@
 //  Copyright © 2020 ArSquareDevlopment. All rights reserved.
 //
 
+
+//Mark : Activities Details
 import UIKit
 
 class CampingVC: UIViewController {
     
     
     @IBOutlet weak var subView: UIView!
-    @IBOutlet weak var activitiesLbl: UILabel!
     
     @IBOutlet weak var headerIMGView: UIImageView!
     
@@ -32,25 +33,16 @@ class CampingVC: UIViewController {
     func viewChanges() {
         headerIMGView.layer.cornerRadius = 10
        
-        headerIMGView.layer.masksToBounds = true
-        
-        if LocationVariables.locTitle != "" {
-        
-            title_Lbl.text = LocationVariables.locTitle
-            headerIMGView.image = LocationVariables.locIMG.toImage()
-            descriptionLbl.text = LocationVariables.locDescription
-            activitiesLbl.text = LocationVariables.locActitvity
-        }
-        
+        headerIMGView.setImage(urlStr: ClientConfig.Activity_ImgUrl + ActivityVariables.locIMG)
+        title_Lbl.text = ActivityVariables.locTitle
+        descriptionLbl.text = ActivityVariables.locDescription
 
     }
     
     
     @IBAction func back_Axn(_ sender: UIButton) {
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
        
         self.navigationController?.popViewController(animated: true)
-//     self.navigationController?.pushViewController(VC, animated: true)
 
        
     }

@@ -33,12 +33,13 @@ class HomeViewController: UIViewController {
     
     func viewChanges() {
     
+        offerCV.isHidden = true
         dataTV.reloadData()
         CVChanges()
-        
+        getData()
+
     }
     func CVChanges() {
-        getData()
         let cellSize = CGSize(width:offerCV.frame.size.width, height:offerCV.frame.size.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
@@ -101,11 +102,20 @@ class HomeViewController: UIViewController {
         if let jsonData = data {
         let parsedData = try JSONDecoder().decode(OffersResponse.self, from: jsonData)
             print(parsedData)
-            dataArr = parsedData
-            offerCV.reloadData()
-        } else {
-        popUpAlert(title: "Alert", message: "Error in Connecting Server ", action: .alert)
-        }
+            
+            if parsedData.isEmpty == false {
+                for offerData in parsedData {
+                    if offerData.status == "active" {
+                        dataArr.append(offerData)
+
+                    }
+                }
+                offerCV.isHidden = false
+
+                print("OfferdataArr = \(dataArr)")
+                offerCV.reloadData()
+            }
+        } 
         } catch {
         popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
         print("Parse Error: \(error)")
@@ -118,7 +128,7 @@ class HomeViewController: UIViewController {
    
    
 }
-extension HomeViewController : UITableViewDelegate, UITableViewDataSource, CampsDelegate, GestureDelegate, CampingDelegate, UICollectionViewDelegate , UICollectionViewDataSource {
+extension HomeViewController : UITableViewDelegate, UITableViewDataSource,  GestureDelegate,  UICollectionViewDelegate , UICollectionViewDataSource {
     
     
     
@@ -131,6 +141,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath) as! OffersCVCell
         
         let cellPath = dataArr[indexPath.row]
+        if cellPath.status == "active" {
         cell.contentView.frame  = offerCV.frame
         cell.Img_View.setImage(urlStr: ClientConfig.offerIMGUrl + cellPath.offersImageName)
         cell.myPage.numberOfPages = dataArr.count
@@ -139,29 +150,22 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
         cell.titleLbl.text = cellPath.couponName
         cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
         cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"
-       
+        }
+        
         return cell
     
     }
     
     
    
-    func cellTapped() {
-        print("CellTapped")
-        let VC = self.storyboard?.instantiateViewController(identifier: "PackageDetailsVC") as! PackageDetailsVC
-        self.navigationController?.pushViewController(VC, animated: true)
-    }
+   
     
     func onGestureItemTapped() {
         let VC = self.storyboard?.instantiateViewController(identifier: "GestureVC") as! GestureVC
         self.navigationController?.pushViewController(VC, animated: true)
     }
     
-    func onItemTapped() {
-        let VC = self.storyboard?.instantiateViewController(identifier: "CampingVC") as! CampingVC
-        self.navigationController?.pushViewController(VC, animated: true)
-        
-    }
+   
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 6
@@ -174,7 +178,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
         
        if indexPath.section == 1 {
        let childCell = tableView.dequeueReusableCell(withIdentifier: "ChildCell", for: indexPath) as! ChildTVC
-        childCell.delegate = self
         return childCell
         
        } else if  indexPath.section == 2 {
@@ -184,12 +187,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
         
       } else if indexPath.section == 3 {
         let gestureCell = tableView.dequeueReusableCell(withIdentifier: "GestureCell", for: indexPath) as! GesturesTVC
-        gestureCell.delegate = self
         return gestureCell
         
      } else if indexPath.section == 4{
        let campingCell = tableView.dequeueReusableCell(withIdentifier: "CampingCell", for: indexPath) as! CampingTVC
-        campingCell.delegate = self
         return campingCell
             
      } else if indexPath.section == 5 {
@@ -200,7 +201,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource, Camps
                
     } else {
       let adultCell = tableView.dequeueReusableCell(withIdentifier: "AdultCell", for: indexPath) as! AdultTVC
-      adultCell.delegate = self
       return adultCell
      }
   

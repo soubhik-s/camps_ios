@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SettingsVC: UIViewController {
     
     @IBOutlet weak var oldPassTF: UITextField!
     @IBOutlet weak var firstName_TF: UITextField!
@@ -22,7 +22,6 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     @IBOutlet weak var mobile_TF: UITextField!
     @IBOutlet weak var email_TF: UITextField!
-    @IBOutlet weak var userIMGView: UIImageView!
     
     @IBOutlet weak var newPassTF: UITextField!
     @IBOutlet weak var doneBtn: UIButton!
@@ -60,7 +59,6 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         oldPass_View.makeRound()
         newPass_View.makeRound()
         doneBtn.makeBtnRound()
-        userIMGView.makeRounded()
         
         if UserDetails.email != "" {
         email_TF.text = UserDetails.email
@@ -71,7 +69,7 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         if Preferrences.getUserID() == UserDetails.id {
             if Preferrences.getUserIMG() != "" {
-                userIMGView.image = Preferrences.getUserIMG().toImage()
+                
             } else {
                 print("Imgae is nill")
             }
@@ -84,19 +82,15 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         newPass_View.isHidden = true
         doneBtn.isHidden = true
 
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-        userIMGView.isUserInteractionEnabled = true
-        userIMGView.addGestureRecognizer(tap)
+       
         let password_Tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         passView.addGestureRecognizer(password_Tap)
     }
+  
+    
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        if sender.view?.tag == 1 {
         changePass()
-        } else {
-        print("Image Tapped")
-        openGallery()
-        }
+        
         
        
 
@@ -149,22 +143,22 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         }
     }
     
-    // image picker
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
-    {
-
-        pickedImage = info[.editedImage] as? UIImage
-        userIMGView.image = pickedImage
-        print("Image is picked")
-        picker.dismiss(animated: true) {
-            Preferrences.setUserID(type: UserDetails.id)
-            Preferrences.setUserIMG(type: (self.userIMGView.image?.toString())!)
-            print("Image Saved")
-        }
-        
-        
-        
-    }
+//    // image picker
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+//    {
+//
+//        pickedImage = info[.editedImage] as? UIImage
+//        userIMGView.image = pickedImage
+//        print("Image is picked")
+//        picker.dismiss(animated: true) {
+//            Preferrences.setUserID(type: UserDetails.id)
+//            Preferrences.setUserIMG(type: (self.userIMGView.image?.toString())!)
+//            print("Image Saved")
+//        }
+//        
+//        
+//        
+//    }
     
     @IBAction func back_Axn(_ sender: UIButton) {
         

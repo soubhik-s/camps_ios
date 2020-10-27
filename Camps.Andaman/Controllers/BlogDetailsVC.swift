@@ -174,7 +174,7 @@ class BlogDetailsVC: UIViewController {
                     dataArr = parsedData
                     print("Blog_Details_dataArr = \(dataArr)")
                     blog_Title.text = parsedData.blogTitle
-                    blogger_Name_Lbl.text = parsedData.bloggerName
+                    blogger_Name_Lbl.text = "By : \(parsedData.bloggerName)"
                     statement_Lbl.text = parsedData.bloggerStatement
                     blog_IMG.setImage(urlStr: ClientConfig.blogIMGUrl + parsedData.primaryImage )
                     description_1_Lbl.text = parsedData.blogDescFirst

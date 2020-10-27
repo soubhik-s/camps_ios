@@ -16,17 +16,16 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
 
     var dataArr:PackageResponse = []
   
-    var title_Arr:[String] = []
-    var img_Arr:[String] = []
-    var price_Arr:[String] = []
-    var duration_Arr:[String] = []
-    weak var delegate:CampsDelegate?
+   let IMG_Url = "https://camps.goexploreandaman.com/assets/images/photo/"
 
 
-        override func awakeFromNib() {
-            super.awakeFromNib()
+      
+    override func awakeFromNib() {
+        super.awakeFromNib()
 
-           CVChanges()
+        
+        CVChanges()
+    
     
     }
         
@@ -79,27 +78,21 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         let parsedData = try JSONDecoder().decode(PackageResponse.self, from: jsonData)
         print(parsedData)
 
-
-        dataArr = parsedData
-        print("Child Arr = \(dataArr)")
-        for adultData in dataArr {
-        if adultData.age_group == "children" {
-        title_Arr.append(adultData.package_title)
-        print("Childtitle_Arr = \(title_Arr)")
-
-            let imgUrlStr = ClientConfig.Imgae_Url  + adultData.package_image_name
-        img_Arr.append(imgUrlStr)
-        print("ChildimgArr = \(img_Arr)")
-        price_Arr.append(adultData.package_price)
-        print("Childprice_Arr = \(price_Arr)")
-        duration_Arr.append(adultData.package_description)
-        print("Childduration_Arr = \(duration_Arr)")
+           if parsedData.isEmpty == false {
+            for adultData in parsedData {
+                if adultData.age_group != "adult" {
+                    dataArr.append(adultData)
+                    
+                }
+                
+            }
+            
+            dataCV.isHidden = false
+            dataCV.reloadData()
+            
+            }
+            
         }
-        }
-        dataCV.isHidden = false
-        dataCV.reloadData()
-
-        } 
         } catch {
             print("Parse Error: \(error)")
         }
@@ -108,7 +101,7 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         
        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return title_Arr.count
+        return dataArr.count
     
     }
         
@@ -116,10 +109,16 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChildCell", for: indexPath) as! ChildCVC
-            cell.titleLbl.text = title_Arr[indexPath.row]
-            cell.durationLbl.text = duration_Arr[indexPath.row]
-            cell.priceLbl.text = "Rs - \(price_Arr[indexPath.row])"
-            cell.IMGView.setImage(urlStr: img_Arr[indexPath.row])
+        let cellPath = dataArr[indexPath.row]
+
+        if cellPath.age_group == "children" {
+            cell.titleLbl.text = cellPath.package_title
+            cell.durationLbl.text = cellPath.package_description
+            cell.priceLbl.text = "₹ \(cellPath.package_price)"
+            cell.IMGView.setImage(urlStr: IMG_Url + cellPath.package_image_name)
+        }
+        
+            
             cell.IMGView.layer.cornerRadius = 10
             
             return cell
@@ -127,7 +126,8 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! ChildCVC
-      
+      let cellPath = dataArr[indexPath.row]
+
         BookingDetails.selectedIndex = indexPath.row
 
         
@@ -140,6 +140,10 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         ItineraryDetails.image = cell.IMGView.image!.toString()!
 
         ItineraryDetails.title = cell.titleLbl.text!
+        
+        ItineraryDetails.season_Name = cellPath.package_season_name
+        ItineraryDetails.age_Group = cellPath.age_group
+       
         switch indexPath.item {
         case 0:
         ItineraryDetails.itinerary_ID = "10"
@@ -168,12 +172,10 @@ class ChildTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataS
         print("itinerary_Id = \(ItineraryDetails.itinerary_ID)")
         print("Package_Id = \(BookingDetails.package_id)")
 
-//        self.onDidSelectItem?(indexPath)
 
         
-        if delegate != nil {
-        delegate?.cellTapped()
-        }
+        let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "PackageDetailsVC") as! PackageDetailsVC
+        self.parentContainerViewController()?.navigationController?.pushViewController(VC, animated: true)
         
     }
 

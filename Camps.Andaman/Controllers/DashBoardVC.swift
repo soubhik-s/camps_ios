@@ -44,7 +44,7 @@ class DashBoardVC: UIViewController {
     
     func viewChanges() {
         razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
-        dataTV.rowHeight = 420
+        dataTV.rowHeight = 380
         dataTV.isHidden = true
         pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
         let tap = UITapGestureRecognizer(target: self, action: #selector(onTapped))
@@ -258,15 +258,7 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let VC = self.storyboard?.instantiateViewController(identifier: "BookingInfoVC") as! BookingInfoVC
         self.navigationController?.pushViewController(VC, animated: true)
         
-//        if currentCell.docStatus_Lbl.text == "approved" {
-//
-//            let VC = self.storyboard?.instantiateViewController(identifier: "BookingInfoVC") as! BookingInfoVC
-//        self.navigationController?.pushViewController(VC, animated: true)
-//
-//        } else {
-//        popUpAlert(title: "Alert", message: " Verification not Completed ", action: .alert)
-//
-//        }
+
                
        
        

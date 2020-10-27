@@ -11,7 +11,6 @@ import UIKit
 class ActivitiesCVC: UICollectionViewCell {
     
     
-    @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var IMGView: UIImageView!
     
     @IBOutlet weak var titleLbl: UILabel!
