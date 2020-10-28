@@ -64,6 +64,7 @@
 		D64FC86F247E30D900923CA8 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FC86E247E30D900923CA8 /* FAQCell.swift */; };
 		D652340124AEF3510076E05D /* SelfDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D652340024AEF3510076E05D /* SelfDetailsVC.swift */; };
 		D6548D4225443CFE0058BF3B /* GetureDetailsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6548D4125443CFD0058BF3B /* GetureDetailsCVC.swift */; };
+		D6548D5725497E290058BF3B /* BlogDetailsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6548D5625497E290058BF3B /* BlogDetailsCVC.swift */; };
 		D6554593246EAF6600E974C3 /* GestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554592246EAF6600E974C3 /* GestureVC.swift */; };
 		D6554595246EAF8500E974C3 /* HotelDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */; };
 		D6554597246EAFB800E974C3 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6554596246EAFB800E974C3 /* InfoVC.swift */; };
@@ -202,6 +203,7 @@
 		D652340024AEF3510076E05D /* SelfDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailsVC.swift; sourceTree = "<group>"; };
 		D6524AA92488C560008FF580 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		D6548D4125443CFD0058BF3B /* GetureDetailsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetureDetailsCVC.swift; sourceTree = "<group>"; };
+		D6548D5625497E290058BF3B /* BlogDetailsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailsCVC.swift; sourceTree = "<group>"; };
 		D6554592246EAF6600E974C3 /* GestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureVC.swift; sourceTree = "<group>"; };
 		D6554594246EAF8500E974C3 /* HotelDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetailsVC.swift; sourceTree = "<group>"; };
 		D6554596246EAFB800E974C3 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				D64F19CF246C176A00C169FC /* HotelsCVC.swift */,
 				D66E857724AC58CF00B7127C /* OffersCVCell.swift */,
 				D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */,
+				D6548D5625497E290058BF3B /* BlogDetailsCVC.swift */,
 				D6548D4125443CFD0058BF3B /* GetureDetailsCVC.swift */,
 				D65CD29724AB562B00BFB6D7 /* ActivitiesCVCell.swift */,
 				D6A50EE324765AED00C858F7 /* CampingCVC.swift */,
@@ -743,6 +746,7 @@
 				D644BB5A24976D7900AAFC18 /* DashBoardVC.swift in Sources */,
 				D64F19CB246BF13900C169FC /* PackageDetailsVC.swift in Sources */,
 				D644BB69249A131200AAFC18 /* PolicyVC.swift in Sources */,
+				D6548D5725497E290058BF3B /* BlogDetailsCVC.swift in Sources */,
 				D64F19C7246AD8BB00C169FC /* SlidesVC.swift in Sources */,
 				D657CF9724A4C352009B2C85 /* PDFViewController.swift in Sources */,
 				D6A50EE424765AED00C858F7 /* CampingCVC.swift in Sources */,

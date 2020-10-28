@@ -457,12 +457,16 @@ struct OffersResponseElement: Codable {
 typealias OffersResponse = [OffersResponseElement]
 
 
-// MARK: - BlogResponseElement
-struct BlogResponseElement: Codable {
-    let id, blogTitle, blogHeaderContent, blogDescFirst: String
-    let blogDescSecond, primaryImage, secondaryImage, blogDescThird: String
-    let bloggerName, bloggerStatement, status, createdAt: String
-    let modifiedAt: String
+// MARK: - BlogListResponseElement
+struct BlogListResponseElement: Codable {
+    let id, blogTitle: String
+    let blogHeaderContent: String
+    let blogDescFirst, blogDescSecond, primaryImage, secondaryImage: String
+    let blogDescThird, blogDescFourth, blogDescFifth, blogDescSixth: String
+    let blogDescSeventh, blogDescEighth, blogDescNinth, blogDescTenth: String
+    let bloggerName: String
+    let bloggerStatement: String
+    let status, createdAt, modifiedAt: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -473,6 +477,13 @@ struct BlogResponseElement: Codable {
         case primaryImage = "primary_image"
         case secondaryImage = "secondary_image"
         case blogDescThird = "blog_desc_third"
+        case blogDescFourth = "blog_desc_fourth"
+        case blogDescFifth = "blog_desc_fifth"
+        case blogDescSixth = "blog_desc_sixth"
+        case blogDescSeventh = "blog_desc_seventh"
+        case blogDescEighth = "blog_desc_eighth"
+        case blogDescNinth = "blog_desc_ninth"
+        case blogDescTenth = "blog_desc_tenth"
         case bloggerName = "blogger_name"
         case bloggerStatement = "blogger_statement"
         case status
@@ -481,7 +492,9 @@ struct BlogResponseElement: Codable {
     }
 }
 
-typealias BlogResponse = [BlogResponseElement]
+
+
+typealias BlogListResponse = [BlogListResponseElement]
 
 // MARK: - CommentResponseElement
 struct CommentResponseElement: Codable {

@@ -28,9 +28,10 @@ class ActivitiesCVCell: UICollectionViewCell {
              
         didSet {
         
-            self.title_Lbl.textColor = isSelected ? UIColor.baseColor : UIColor.white
+            self.title_Lbl.textColor = isSelected ? UIColor.white : UIColor.baseColor
 
-            self.data_View.backgroundColor = isSelected ? UIColor.white : UIColor.baseColor
+            self.data_View.backgroundColor = isSelected ? UIColor.baseColor : UIColor.white
+            self.data_View.layer.borderColor = isSelected ? UIColor.white.cgColor : UIColor.baseColor.cgColor
                     
         }
                }

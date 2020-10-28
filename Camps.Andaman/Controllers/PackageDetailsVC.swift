@@ -25,7 +25,7 @@ class PackageDetailsVC: UIViewController {
     
     @IBOutlet weak var ititneraryView: UIView!
     
-    var hotelImgArr = ["hotel_2","hotel_3","hotel_4"]
+    var hotelImgArr = ["SP5","hotel_3","hotel_4"]
     var hotelTitleArr = ["Sea Princess Beach Resort","Symphony Palms Resort","Pearl Park Beach Resort"]
     
     let summerNotes = "The best time to visit seashores and beaches, soak in water slides and carpet the beach with recreational outdoor activities such as gaming, building sand castles, and enjoying the great abyss of the ocean. Walking on the flawless stretch of white sand, adorned with the special buzz of air, and a dinner betwixt louder and soothing music or attending a huge party wave sums up the most memorable day of your life."

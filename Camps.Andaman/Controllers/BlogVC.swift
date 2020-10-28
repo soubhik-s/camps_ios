@@ -16,9 +16,9 @@ class BlogVC: UIViewController {
     
     @IBOutlet weak var post_TV: UITableView!
     
-    var dataArr:BlogResponse = []
+    var dataArr:BlogListResponse = []
     var sideManager:SideMenuManager!
-    var recentPostArr:BlogResponse = []
+    var recentPostArr:BlogListResponse = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +73,7 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
             blogCell.blog_Title.text = cellPath.blogTitle
             blogCell.blog_IMGView.setImage(urlStr: ClientConfig.blogIMGUrl + cellPath.primaryImage)
             blogCell.description_Lbl.text = cellPath.blogDescFirst
-                   
+            blogCell.blog_IMGView.layer.cornerRadius = 10
                                
             return blogCell
         
@@ -91,7 +91,7 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
             postCell.imageView?.layer.cornerRadius = 25
             postCell.imageView?.sizeToFit()
             postCell.textLabel?.text = cellPath.createdAt
-            postCell.detailTextLabel?.text = cellPath.bloggerStatement
+            postCell.detailTextLabel?.text = cellPath.blogTitle
 //            postCell.imageView?.makeRound()
             postCell.imageView?.setImage(urlStr: ClientConfig.blogIMGUrl + cellPath.primaryImage)
         }
@@ -143,7 +143,7 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
                 
             if let jsonData = data {
                     
-            let parsedData = try JSONDecoder().decode(BlogResponse.self, from: jsonData)
+            let parsedData = try JSONDecoder().decode(BlogListResponse.self, from: jsonData)
                 print(parsedData)
                
             if  parsedData.isEmpty == false {

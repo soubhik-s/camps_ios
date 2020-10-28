@@ -269,7 +269,8 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
          let btnPosition = sender.convert(CGPoint(), to: dataTV)
          let index = dataTV.indexPathForRow(at: btnPosition)
          let currentCell = dataTV.cellForRow(at: index!) as! BoardTVC
-        DashboardVariables.pkgID = currentCell.packageLbl.text!
+        DashboardVariables.pkgID = currentCell.pkgID_Lbl.text!
+        print("PKGID = \(DashboardVariables.pkgID)")
          switch currentCell.pkgID_Lbl.text! {
                             
          case "1":
@@ -418,7 +419,8 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocol {
         self.navigationController?.popViewController(animated: true)
    
         alert(message: "Payment done.", title: "Success")
-//        popUpAlert(title: "Payemnt  Done", message: "Updating Stauts", action: .alert)
+
+
     }
     
     

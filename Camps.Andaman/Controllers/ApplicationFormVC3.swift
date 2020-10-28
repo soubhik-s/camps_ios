@@ -161,16 +161,24 @@ class ApplicationFormVC3: UIViewController {
         
     func calculatePrices() {
         basic_Price = Double(BookingDetails.price.fiterPrice()) ?? 0.0
-        net_Price = basic_Price - discount_Price
-        tax_Price = net_Price * 0.05
-        final_Price = net_Price + tax_Price
-        
+//        net_Price = basic_Price - discount_Price
+        tax_Price = basic_Price * 0.05
+//        final_Price = net_Price + tax_Price
+        net_Price = basic_Price + tax_Price
+        final_Price = net_Price - discount_Price
         basePrice_Lbl.text = "\(basic_Price.rounded()) "
         dPrice_Lbl.text = "\(discount_Price.rounded()) "
         net_Price_Lbl.text = "\(net_Price.rounded()) "
         taxPrice_Lbl.text = "\(tax_Price.rounded()) "
         totalPrice_Lbl.text = "\(final_Price.rounded()) "
         price_Lbl.text = "\(final_Price.rounded()) "
+        
+        print("basic_Price = \(basic_Price)")
+        print("tax_Price = \(tax_Price)")
+        print("net_Price = \(net_Price)")
+        print("discount_Price = \(discount_Price)")
+        print("final_Price = \(final_Price)")
+
     }
     
     

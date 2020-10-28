@@ -11,7 +11,6 @@ import IQKeyboardManagerSwift
 
 class BlogDetailsVC: UIViewController {
 
-    @IBOutlet weak var IMG_View2: UIImageView!
     
     @IBOutlet weak var cmnt_Txt: IQTextView!
     
@@ -19,28 +18,20 @@ class BlogDetailsVC: UIViewController {
     @IBOutlet weak var submit_Btn: UIButton!
     
     @IBOutlet var comment_View: UIView!
-    @IBOutlet weak var blog_Title: UILabel!
-    
-    @IBOutlet weak var blogger_Name_Lbl: UILabel!
-  
-    @IBOutlet weak var statement_Lbl: UILabel!
-  
-    @IBOutlet weak var blog_IMG: UIImageView!
-    
-    @IBOutlet weak var description_1_Lbl: UILabel!
-    
-    @IBOutlet weak var description_2_Lbl: UILabel!
    
+  
+    @IBOutlet weak var blog_IMG_CV: UICollectionView!
     
-    @IBOutlet weak var description_3_Lbl: UILabel!
-    
+   
+    @IBOutlet weak var blog_TV: UITableView!
     @IBOutlet weak var comment_SC: UISegmentedControl!
     
     @IBOutlet weak var comment_TV: UITableView!
-    
-    var dataArr:BlogResponseElement!
+    var des_Arr:[String] = []
+    var IMG_Arr:[String] = []
     let cmt_View_Height:CGFloat = 250
     var comment_Arr:CommentResponse = []
+    let blogImg_Url = "https://camps.goexploreandaman.com/assets/img/blogging/"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,20 +40,32 @@ class BlogDetailsVC: UIViewController {
     
 
     func viewChanges() {
-
-        blog_IMG.layer.cornerRadius = 10
-        IMG_View2.layer.cornerRadius = 10
+        CVChanges()
+        blog_TV.isHidden = true
         cmnt_Txt.layer.cornerRadius = 3
         cmnt_Txt.layer.borderColor = UIColor.baseColor.cgColor
         cmnt_Txt.layer.borderWidth = 0.5
         comment_View.layer.cornerRadius = 20
         submit_Btn.layer.cornerRadius = 5
-        blog_IMG.layer.cornerRadius = 10
         comment_TV.layer.cornerRadius = 10
         getBlogData()
     }
     
-    
+    func CVChanges() {
+        let cellSize = CGSize(width:blog_IMG_CV.frame.width , height:blog_IMG_CV.frame.height)
+           let layout = UICollectionViewFlowLayout()
+           layout.scrollDirection = .horizontal //.horizontal
+           layout.itemSize = cellSize
+           layout.minimumLineSpacing = 10.0
+           layout.minimumInteritemSpacing = 1.0
+           blog_IMG_CV.setCollectionViewLayout(layout, animated: true)
+           blog_IMG_CV.delegate = self
+           blog_IMG_CV.dataSource = self
+           blog_IMG_CV.showsHorizontalScrollIndicator = false
+               
+           
+       }
+       
     
     @IBAction func submit_Axn(_ sender: UIButton) {
         if cmnt_Txt.text != "" {
@@ -168,20 +171,35 @@ class BlogDetailsVC: UIViewController {
             do {
             
                 if let jsonData = data {
-                let parsedData = try JSONDecoder().decode(BlogResponseElement.self, from: jsonData)
+                let parsedData = try JSONDecoder().decode(BlogListResponseElement.self, from: jsonData)
                 print(parsedData)
-            
-                    dataArr = parsedData
-                    print("Blog_Details_dataArr = \(dataArr)")
-                    blog_Title.text = parsedData.blogTitle
-                    blogger_Name_Lbl.text = "By : \(parsedData.bloggerName)"
-                    statement_Lbl.text = parsedData.bloggerStatement
-                    blog_IMG.setImage(urlStr: ClientConfig.blogIMGUrl + parsedData.primaryImage )
-                    description_1_Lbl.text = parsedData.blogDescFirst
-                    description_2_Lbl.text = parsedData.blogDescSecond
-                    description_3_Lbl.text = parsedData.blogDescThird
-                    IMG_View2.setImage(urlStr: ClientConfig.blogIMGUrl + parsedData.secondaryImage )
+                    
+                    IMG_Arr.append(parsedData.primaryImage)
+                    IMG_Arr.append(parsedData.secondaryImage)
 
+                    des_Arr.append(parsedData.blogTitle)
+                    des_Arr.append(parsedData.bloggerName)
+                    des_Arr.append(parsedData.blogHeaderContent)
+                    des_Arr.append(parsedData.blogDescFirst)
+                    des_Arr.append(parsedData.blogDescSecond)
+                    des_Arr.append(parsedData.blogDescThird)
+                    des_Arr.append(parsedData.blogDescFourth)
+                    des_Arr.append(parsedData.blogDescFifth)
+                    des_Arr.append(parsedData.blogDescSixth)
+                    des_Arr.append(parsedData.blogDescSeventh)
+                    des_Arr.append(parsedData.blogDescEighth)
+                    des_Arr.append(parsedData.blogDescNinth)
+                    des_Arr.append(parsedData.blogDescTenth)
+                    des_Arr.append(parsedData.blogTitle)
+
+                    des_Arr = des_Arr.filter({ $0 != ""})
+                    IMG_Arr = IMG_Arr.filter({ $0 != ""})
+
+                    blog_TV.isHidden = false
+                    blog_IMG_CV.isHidden = false
+                    blog_IMG_CV.reloadData()
+                    blog_TV.reloadData()
+                   
                    getBlogComments()
                 }
                     
@@ -228,19 +246,57 @@ class BlogDetailsVC: UIViewController {
 }
 
 
-extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource {
+extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource, UICollectionViewDelegate , UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return IMG_Arr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlogCVCell", for: indexPath) as! BlogDetailsCVC
+        
+        cell.IMG_View.setImage(urlStr: blogImg_Url + IMG_Arr[indexPath.row])
+        cell.IMG_View.layer.cornerRadius = 10
+        cell.myPageCntrl.numberOfPages = IMG_Arr.count
+        cell.myPageCntrl.currentPage = indexPath.row
+
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return comment_Arr.count
+        
+        if tableView == blog_TV {
+            return des_Arr.count
+
+        } else {
+            return comment_Arr.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
+        
+        let blogCell = blog_TV.dequeueReusableCell(withIdentifier: "BlogCell", for: indexPath)
+        
+        
+        let cell = comment_TV.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
+        
+        if tableView == blog_TV {
+            blogCell.textLabel?.text = des_Arr[indexPath.row]
+            
+            
+            if indexPath.row == 1 {
+                blogCell.textLabel?.textAlignment = .right
+            }
+            
+            return blogCell
+        } else {
+        
         let cellPath = comment_Arr[indexPath.row]
         cell.textLabel?.text = cellPath.message
         cell.detailTextLabel?.text = cellPath.name
 
         
         return cell
+        }
     }
     
     
