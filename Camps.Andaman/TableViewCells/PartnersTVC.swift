@@ -15,7 +15,7 @@ class PartnersTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     
     
     
-    var img_Arr = ["partner1","klm","tbo", "partner4", "partner5", "thai"]
+    var img_Arr = ["partner1","klm","tbo", "partner4", "partner5", "thai" , "AATA2"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class PartnersTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
     }
 
     func CVChanges() {
-        let cellSize = CGSize(width:120 , height:50)
+        let cellSize = CGSize(width:125 , height:dataCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
@@ -46,6 +46,7 @@ class PartnersTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDa
         cell.IMG_View.image = UIImage(named: "\(img_Arr[indexPath.row])")
         
         cell.IMG_View.layer.cornerRadius = 10
+        cell.IMG_View.layer.masksToBounds = true
         return cell
         
        }

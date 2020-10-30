@@ -11,14 +11,17 @@ import IQKeyboardManagerSwift
 
 class BlogDetailsVC: UIViewController {
 
+    @IBOutlet weak var by_Author_Lbl: UILabel!
     
+    @IBOutlet weak var blog_Title_Lbl: UILabel!
     @IBOutlet weak var cmnt_Txt: IQTextView!
     
     @IBOutlet weak var close_Btn: UIButton!
     @IBOutlet weak var submit_Btn: UIButton!
     
     @IBOutlet var comment_View: UIView!
-   
+    @IBOutlet weak var cmnt_subView: UIView!
+    
   
     @IBOutlet weak var blog_IMG_CV: UICollectionView!
     
@@ -45,10 +48,11 @@ class BlogDetailsVC: UIViewController {
         cmnt_Txt.layer.cornerRadius = 3
         cmnt_Txt.layer.borderColor = UIColor.baseColor.cgColor
         cmnt_Txt.layer.borderWidth = 0.5
-        comment_View.layer.cornerRadius = 20
         submit_Btn.layer.cornerRadius = 5
         comment_TV.layer.cornerRadius = 10
         getBlogData()
+        blog_TV.rowHeight = UITableView.automaticDimension
+        cmnt_subView.layer.cornerRadius = 5
     }
     
     func CVChanges() {
@@ -177,8 +181,11 @@ class BlogDetailsVC: UIViewController {
                     IMG_Arr.append(parsedData.primaryImage)
                     IMG_Arr.append(parsedData.secondaryImage)
 
-                    des_Arr.append(parsedData.blogTitle)
-                    des_Arr.append(parsedData.bloggerName)
+                    blog_Title_Lbl.text = parsedData.blogTitle
+                    by_Author_Lbl.text = "by: \(parsedData.bloggerName)"
+                    
+//                    des_Arr.append(parsedData.blogTitle)
+//                    des_Arr.append(parsedData.bloggerName)
                     des_Arr.append(parsedData.blogHeaderContent)
                     des_Arr.append(parsedData.blogDescFirst)
                     des_Arr.append(parsedData.blogDescSecond)
@@ -256,11 +263,15 @@ extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource, UICollect
         
         cell.IMG_View.setImage(urlStr: blogImg_Url + IMG_Arr[indexPath.row])
         cell.IMG_View.layer.cornerRadius = 10
+        cell.IMG_View.clipsToBounds = true
         cell.myPageCntrl.numberOfPages = IMG_Arr.count
         cell.myPageCntrl.currentPage = indexPath.row
 
         return cell
     }
+    
+    
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -283,10 +294,7 @@ extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource, UICollect
             blogCell.textLabel?.text = des_Arr[indexPath.row]
             
             
-            if indexPath.row == 1 {
-                blogCell.textLabel?.textAlignment = .right
-            }
-            
+           
             return blogCell
         } else {
         

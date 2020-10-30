@@ -307,6 +307,7 @@ struct StatusResponse:Decodable {
     let message:String
 }
 
+
 typealias GetBookingResponse = [BookingResponseObj]
 
 struct BookingResponseObj : Decodable {
@@ -367,7 +368,16 @@ let status : String?
 let camp_status : String?
 let voucher_name : String?
 let invoice_name : String?
-    let total_price :String?
+let total_price :String?
+let siblings_info:String?
+let siblings_first_name:String?
+let siblings_middle_name:String?
+let siblings_last_name:String?
+let siblings_gender:String?
+let siblings_mobile_number:String?
+let siblings_email:String?
+
+    
 enum CodingKeys: String, CodingKey {
 
     case id = "id"
@@ -428,15 +438,26 @@ enum CodingKeys: String, CodingKey {
     case voucher_name = "voucher_name"
     case invoice_name = "invoice_name"
     case total_price = "total_price"
+    
+    case siblings_info = "siblings_info"
+    case siblings_first_name = "siblings_first_name"
+    case siblings_middle_name = "siblings_middle_name"
+    case siblings_last_name = "siblings_last_name"
+    case siblings_gender = "siblings_gender"
+    case siblings_mobile_number = "siblings_mobile_number"
+    case siblings_email = "siblings_email"
+    
 }
+
 }
 
 
-/// MARK: - OffersResponseElement
+// MARK: - OffersResponseElement
 struct OffersResponseElement: Codable {
     let id, couponName, couponCode, offersImageName: String
-    let validFrom, validTo, discountOffers, usersRestriction: String
-    let offersDetails, status, createdAt, createdBy: String
+    let validFrom, validTo, discountOffers, discountType: String
+    let url, usersRestriction, offersDetails, status: String
+    let createdAt, modifiedAt, createdBy: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -446,16 +467,18 @@ struct OffersResponseElement: Codable {
         case validFrom = "valid_from"
         case validTo = "valid_to"
         case discountOffers = "discount_offers"
+        case discountType = "discount_type"
+        case url
         case usersRestriction = "users_restriction"
         case offersDetails = "offers_details"
         case status
         case createdAt = "created_at"
+        case modifiedAt = "modified_at"
         case createdBy = "created_by"
     }
 }
 
 typealias OffersResponse = [OffersResponseElement]
-
 
 // MARK: - BlogListResponseElement
 struct BlogListResponseElement: Codable {

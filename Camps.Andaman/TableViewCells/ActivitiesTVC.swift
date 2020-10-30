@@ -31,7 +31,7 @@ class ActivitiesTVC: UITableViewCell, UICollectionViewDelegate, UICollectionView
         dataCV.isHidden = true
         getData()
 
-        let cellSize = CGSize(width:180 , height:130)
+        let cellSize = CGSize(width:250 , height:dataCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize

@@ -43,6 +43,9 @@ class PolicyVC: UIViewController {
     }
       
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        
+        
+        
             switch sender.view?.tag {
             case 0:
                 guard let url = URL(string: "\(url_Arr[0])") else {
@@ -52,6 +55,7 @@ class PolicyVC: UIViewController {
                      UIApplication.shared.open(url, options: [:], completionHandler: nil)
                  }
             case 1:
+
                guard let url = URL(string: "\(url_Arr[1])") else {
                      return
                  }
@@ -68,6 +72,8 @@ class PolicyVC: UIViewController {
             default:
                 break
             }
+        
+        
         }
     
     

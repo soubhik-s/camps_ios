@@ -30,7 +30,7 @@ class CampingTVC: UITableViewCell, UICollectionViewDelegate, UICollectionViewDat
     func CVChanges() {
        getData()
         dataCV.isHidden = true
-        let cellSize = CGSize(width:130 , height:130)
+        let cellSize = CGSize(width:150 , height:dataCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize

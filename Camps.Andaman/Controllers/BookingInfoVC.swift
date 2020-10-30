@@ -10,7 +10,11 @@ import UIKit
 
 class BookingInfoVC: UIViewController {
 
+    @IBOutlet weak var sib_Mobile_No: UILabel!
     
+    @IBOutlet weak var sib_Gender_Lbl: UILabel!
+    @IBOutlet weak var sib_email_Lbl: UILabel!
+    @IBOutlet weak var sib_Name_Lbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var signLbl: UILabel!
     
@@ -52,6 +56,7 @@ class BookingInfoVC: UIViewController {
     @IBOutlet weak var callTypeLbl: UILabel!
     var dataArr:GetBookingResponse = []
     
+    @IBOutlet weak var sibling_SV: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,6 +125,18 @@ class BookingInfoVC: UIViewController {
                         contactNoLbl.text = bookingData.video_call_link!
                         W_CallLbl.text = bookingData.weekend_call!
                         callTimeLbl.text = bookingData.weekend_time_for_call!
+                  
+                        sib_Name_Lbl.text = bookingData.siblings_first_name ?? "" + bookingData.siblings_last_name!
+                        sib_email_Lbl.text = bookingData.siblings_email
+                        sib_Gender_Lbl.text = bookingData.siblings_gender
+                        sib_Mobile_No.text = bookingData.siblings_gender
+                         
+                        if   bookingData.siblings_info?.isEmpty == false {
+                            
+                            sibling_SV.isHidden = false
+                        }
+                        
+                        
                     } else {
                         print("Other_ID")
                     }

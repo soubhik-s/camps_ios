@@ -102,23 +102,23 @@ class ApplicatonFormVC1: UIViewController {
                 summerCamp = ["SummerCamp - May / \(cureentYear)", "summerCamp - June/\(cureentYear)"]
             
             } else if currentMonth == 5 {
-                summerCamp = ["SummerCamp - May / \(cureentYear + 1)", "summerCamp - June / \(cureentYear)"]
+                summerCamp = ["SummerCamp - May / \(cureentYear + 1)", "SummerCamp - June / \(cureentYear)"]
 
             } else {
-                summerCamp = ["summerCamp - May / \(cureentYear + 1)", "summerCamp - June/\(cureentYear + 1)"]
+                summerCamp = ["SummerCamp - May / \(cureentYear + 1)", "SummerCamp - June/\(cureentYear + 1)"]
 
             }
                        
         } else if BookingDetails.package_id == "2" || BookingDetails.package_id == "7" {
                
            if currentMonth < 3 {
-                springCamp = ["springCamp - March / \(cureentYear)", "springCamp - April /\(cureentYear)"]
+                springCamp = ["SpringCamp - March / \(cureentYear)", "SpringCamp - April /\(cureentYear)"]
             
             } else if currentMonth == 3 {
-                springCamp = ["springCamp - March / \(cureentYear + 1)", "springCamp - April /\(cureentYear)"]
+                springCamp = ["SpringCamp - March / \(cureentYear + 1)", "SpringCamp - April /\(cureentYear)"]
 
             } else {
-                springCamp = ["springCamp - March / \(cureentYear + 1)", "springCamp - April /\(cureentYear + 1 )"]
+                springCamp = ["SpringCamp - March / \(cureentYear + 1)", "SpringCamp - April /\(cureentYear + 1 )"]
 
             }
             
@@ -211,10 +211,8 @@ class ApplicatonFormVC1: UIViewController {
         sender.shake()
         popUpAlert(title: "Alert", message: "Enter Valid Email", action: .alert)
         
-        } else if DOBTF.text!.getNoOfYears() > 35 || DOBTF.text!.getNoOfYears() < 14 {
-        sender.shake()
-        popUpAlert(title: "Alert", message: "Age should be 14 - 35 Years", action: .alert)
-        
+        } else if noofyears() == false {
+            
         } else if weightTF.text!.count > 3 || heightTF.text!.count > 3 {
             sender.shake()
             popUpAlert(title: "Weight/Height", message: "Not morethan 3 digits", action: .alert)
@@ -248,6 +246,32 @@ class ApplicatonFormVC1: UIViewController {
        
     }
     
+    func noofyears() -> Bool {
+        if BookingDetails.age_Group == "Children" {
+        
+            if DOBTF.text!.getNoOfYears() > 18 || DOBTF.text!.getNoOfYears() < 14 {
+                popUpAlert(title: "Alert", message: "Age should be 18 - 14 Years", action: .alert)
+            
+                return false
+            
+            } else {
+                return true
+            }
+        
+        }  else if BookingDetails.age_Group == "Adult" {
+                
+            if DOBTF.text!.getNoOfYears() > 35 || DOBTF.text!.getNoOfYears() < 19 {
+                 
+            popUpAlert(title: "Alert", message: "Age should be 19 - 35 Years", action: .alert)
+                return false
+            } else {
+                return true
+            }
+        } else {
+            return false
+        }
+        print("age = \(DOBTF.text?.getNoOfYears())")
+    }
     
     func postDetails() {
        
@@ -294,7 +318,7 @@ class ApplicatonFormVC1: UIViewController {
       
         } else {
         BookingDetails.gender = "Male"
-        print("MAle")
+        print("Male")
         }
     }
     
@@ -302,7 +326,7 @@ class ApplicatonFormVC1: UIViewController {
     @IBAction func siblingGender_Axn(_ sender: UISegmentedControl) {
         
         if sender.selectedSegmentIndex == 1  {
-            BookingDetails.siblingsGender = "Femaale"
+            BookingDetails.siblingsGender = "Female"
        
         } else {
         

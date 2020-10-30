@@ -44,7 +44,7 @@ class GestureVC: UIViewController {
         
     }
     func CVChanges() {
-        let cellSize = CGSize(width:gestureCV.frame.width , height:155)
+        let cellSize = CGSize(width:gestureCV.frame.width , height:gestureCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
@@ -160,7 +160,7 @@ class GestureVC: UIViewController {
             for gesture_Data in parsedData {
             if GestureVariables.selected_Id == gesture_Data.gestureID {
                            
-            img_Arr.append(gesture_Data.gestureImageLinkFirst)
+                img_Arr.append(gesture_Data.gestureImageLinkFirst)
             img_Arr.append(gesture_Data.gestureImageLinkSecond)
             img_Arr.append(gesture_Data.gestureImageLinkThird)
             img_Arr.append(gesture_Data.gestureImageLinkFourth)
@@ -168,7 +168,11 @@ class GestureVC: UIViewController {
             des_Arr.append(gesture_Data.gestureDescriptionSecond)
             des_Arr.append(gesture_Data.gestureDescriptionThird)
             des_Arr.append(gesture_Data.gestureDescriptionFourth)
-               activity_Arr =  gesture_Data.gestureActivity.components(separatedBy: "->")
+              
+                if gesture_Data.gestureActivity.isEmpty == false {
+                    activity_Arr =  gesture_Data.gestureActivity.components(separatedBy: "->")
+
+                }
             titleLbl.text = gesture_Data.gestureName
                 print("img_Arr = \(img_Arr)")
                 print("des_Arr = \(des_Arr)")
@@ -234,26 +238,22 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        if GestureVariables.isGesture == true {
-           
-            if indexPath.section == 1 {
-                cell.textLabel?.text = activity_Arr[indexPath.row]
+        if indexPath.section == 1 {
+            
+        cell.textLabel?.text = activity_Arr[indexPath.row]
 
-            } else {
-                cell.textLabel?.text = des_Arr[indexPath.row]
-
-            }
-
+            
         } else {
-            if indexPath.section == 1 {
-            cell.textLabel?.text = activity_Arr[indexPath.row]
-
-            } else {
+            if des_Arr.isEmpty == false {
                 cell.textLabel?.text = des_Arr[indexPath.row]
 
             }
 
         }
+           
+           
+
+        
         
         
         return cell
@@ -265,9 +265,9 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
             returnedView.backgroundColor = .clear
             returnedView.layer.cornerRadius = 10
 
-           let img_View = UIImageView(frame: CGRect(x: 20, y: 3, width: 17, height: 17))
+           let img_View = UIImageView(frame: CGRect(x: 20, y: 3, width: 25, height: 25))
 
-            let label = UILabel(frame: CGRect(x: 50, y: 0, width: returnedView.frame.width - 40 , height: returnedView.frame.height))
+            let label = UILabel(frame: CGRect(x: 40, y: 0, width: returnedView.frame.width - 40 , height: returnedView.frame.height))
         label.textColor = .white
             label.backgroundColor = .clear
             label.textAlignment = .left
@@ -279,14 +279,14 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
 
             switch section {
 
-            
+
             case 1:
-                
+
                 if activity_Arr.isEmpty == false {
                 returnedView.isHidden = false
 
-                label.text = "ACTIVITIES"
-                img_View.image = UIImage(named: "info")
+                label.text = "Activities"
+                img_View.image = UIImage(named: "infoN")
                 } else {
                     returnedView.isHidden = true
 

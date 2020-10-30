@@ -32,14 +32,11 @@ struct DashboardVariables {
     static var pkgID = ""
 }
 
-//struct CampVariables {
-//    static var campTitle = "SUMMER"
-//    static var duration = "11 Nights / 12 Days"
-//    static var price = "Rs - 99,999/-"
-//    static var hotelIndex = 0
-//    static var ageGroup = "Child"
-//    static var isConnected:Bool = false
-//}
+struct PrivacyVariables {
+    static var selected_Id = ""
+    static var isPrivacy:Bool = false
+    
+}
 
 struct UserDetails {
     static var id = "1"

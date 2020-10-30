@@ -150,6 +150,8 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource,  Gest
         cell.titleLbl.text = cellPath.couponName
         cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
         cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"
+        cell.Img_View.layer.cornerRadius = 10
+        
         }
         
         return cell
@@ -209,9 +211,9 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource,  Gest
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 5 {
-        return 70
+        return 100
         } else {
-        return 150
+        return 180
         }
     }
         

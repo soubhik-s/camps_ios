@@ -14,5 +14,7 @@ class HotelsCVC: UICollectionViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var IMGView: UIImageView!
     
+    @IBOutlet weak var place_Lbl: UILabel!
     
+    @IBOutlet weak var myPageCntrl: UIPageControl!
 }

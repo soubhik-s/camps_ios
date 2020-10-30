@@ -257,7 +257,7 @@ class SettingsVC: UIViewController {
                 doneBtn.isHidden = true
                 oldPassTF.text = ""
                 newPassTF.text = ""
-                arr_IMG.image = UIImage(named: "down")
+                arr_IMG.image = UIImage(named: "down13")
                 popUpAlert(title: "Success", message: "Password changed ", action: .alert)
             }
             

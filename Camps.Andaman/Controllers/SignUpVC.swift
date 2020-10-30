@@ -22,6 +22,9 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var mobileView: UIView!
     
+    @IBOutlet weak var DOB_TF: UITextField!
+    @IBOutlet weak var location_TF: UITextField!
+    var user_Gender = "Male"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,12 +66,12 @@ class SignUpVC: UIViewController {
     
     @IBAction func signUpAxn(_ sender: UIButton) {
         
-        if emailTF.text == "" || passwordTF.text == "" || mobileTF.text == "" || firstName_Tf.text == "" || lastName_TF.text == "" {
+        if emailTF.text == "" || passwordTF.text == "" || mobileTF.text == "" || firstName_Tf.text == "" || lastName_TF.text == "" || DOB_TF.text == "" {
         signUpBtn.shake()
         popUpAlert(title: "Alert", message: "Enter all Details", action: .alert)
         
         } else if emailTF.text?.isValidEmail() == false {
-        sender.shake()
+        signUpBtn.shake()
         popUpAlert(title: "Alert", message: "Enter a Valid Email", action: .alert)
         } else {
         postData()
@@ -76,10 +79,29 @@ class SignUpVC: UIViewController {
         
     }
     
+    
+    
+    @IBAction func genderSC_Axn(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 1 {
+            user_Gender = "Female"
+        } else {
+            user_Gender = "Male"
+
+        }
+        
+    }
+    
+    
+    @IBAction func dobTF_Axn(_ sender: UITextField) {
+        sender.pastDatePicker()
+    }
+    
     func postData()  {
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-            let details = ["first_name":firstName_Tf.text!, "last_name":lastName_TF.text!, "email":emailTF.text!, "mobile_number":mobileTF.text!, "password":passwordTF.text!] as [String:Any]
+            let details = ["first_name":firstName_Tf.text!, "last_name":lastName_TF.text!, "email":emailTF.text!, "mobile_number":mobileTF.text!, "password":passwordTF.text! , "dob":DOB_TF.text! ,"gender":user_Gender , "location":location_TF.text!
+                ] as [String:Any]
+            
         ApiService.postCall(url: ClientInterface.registrationUrl, params: details, methodType: "POST", tag: "Signup", finish:finishPost)
         print("details = \(details)")
         } else {
@@ -101,6 +123,8 @@ class SignUpVC: UIViewController {
             emailTF.text = ""
             passwordTF.text = ""
              mobileTF.text = ""
+            DOB_TF.text = ""
+            location_TF.text = ""
         
             popUpAlert(title: "Success", message: "Registration Completed", action: .alert)
         } else {

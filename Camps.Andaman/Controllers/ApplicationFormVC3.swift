@@ -116,33 +116,31 @@ class ApplicationFormVC3: UIViewController {
         
         copoun_Img.isHidden = true
         calculatePrices()
-//        price_View.frame = CGRect(x: 10, y: 100, width: self.view.frame.width - 20, height: 250)
         
     }
     
-//    func showPriceView() {
-//        price_View.layer.cornerRadius = 10
-//        self.view.addBlurEffect()
-//        view.addSubview(price_View)
-//
-//    }
-//    func hidePriceView() {
-//        self.view.removeBlurEffect()
-//        price_View.removeFromSuperview()
-//
-//    }
+
     
       
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        
+        
         if sender.view?.tag == 1 {
-            guard let url = URL(string: covidUrl) else {
-                                         return
-                 }
-                 if UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
             
-                 
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "") as! CovidVC
+            VC.modalPresentationStyle = .fullScreen
+            VC.modalTransitionStyle = .flipHorizontal
+            present(VC, animated: true) {
+                
+            }
+//            guard let url = URL(string: covidUrl) else {
+//                                         return
+//                 }
+//                 if UIApplication.shared.canOpenURL(url) {
+//                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//                    }
+
+
         } else {
          guard let url = URL(string: termsUrl) else {
                                 return
@@ -161,9 +159,7 @@ class ApplicationFormVC3: UIViewController {
         
     func calculatePrices() {
         basic_Price = Double(BookingDetails.price.fiterPrice()) ?? 0.0
-//        net_Price = basic_Price - discount_Price
         tax_Price = basic_Price * 0.05
-//        final_Price = net_Price + tax_Price
         net_Price = basic_Price + tax_Price
         final_Price = net_Price - discount_Price
         basePrice_Lbl.text = "\(basic_Price.rounded()) "
@@ -243,13 +239,11 @@ class ApplicationFormVC3: UIViewController {
     
     @IBAction func priceInfo_Axn(_ sender: UIButton) {
         showBottomView(View: price_View, height: priceViewHeight)
-//        showPriceView()
     }
     
     
     @IBAction func hidePrice_Axn(_ sender: UIButton) {
         hideBottomView(View: price_View, height: priceViewHeight)
-//        hidePriceView()
     }
     
     @IBAction func submitBtn_Axn(_ sender: UIButton) {

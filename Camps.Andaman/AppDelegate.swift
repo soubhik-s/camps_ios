@@ -31,17 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isInstalled =  Preferrences.getInstalled()
                print("isInstalled = \(isInstalled)")
               
-        if isInstalled  {
-            self.NextViewController(storybord_Id: "ViewController") 
-
-            print("VC")
-
+        if isInstalled{
+              
+        self.NextViewController(storybord_Id: "ViewController")
+        
         } else {
-            self.NextViewController(storybord_Id: "SlidesVC")
+        self.NextViewController(storybord_Id: "SlidesVC")
 
-            print("Slides")
-
-
+        
         }
         return true
     }
@@ -110,17 +107,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     
-    func NextViewController(storybord_Id:String) {
+     func NextViewController(storybord_Id:String) {
 
-    //        let rootVC = UIViewController(nibName: storybord_Id, bundle: nil)
-            let story = UIStoryboard(name: "Main", bundle: nil)
-            let rootViewController = story.instantiateViewController(withIdentifier: storybord_Id)
-            let navigationController = UINavigationController(rootViewController: rootViewController)
-            navigationController.navigationBar.isHidden = true
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = navigationController
-            self.window?.makeKeyAndVisible()
+           let story = UIStoryboard(name: "Main", bundle: nil)
+           let rootViewController = story.instantiateViewController(withIdentifier: storybord_Id)
+           
+           let navigationController = UINavigationController(rootViewController: rootViewController)
+           navigationController.navigationBar.isHidden = true
+        
+           self.window = UIWindow(frame: UIScreen.main.bounds)
+           self.window?.rootViewController = navigationController
+           self.window?.makeKeyAndVisible()
+        print("storybord_Id = \(storybord_Id)")
 
-        }
+       }
     
 }

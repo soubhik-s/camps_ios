@@ -25,9 +25,9 @@ class PackageDetailsVC: UIViewController {
     
     @IBOutlet weak var ititneraryView: UIView!
     
-    var hotelImgArr = ["SP5","hotel_3","hotel_4"]
+    let hotelImgArr = ["SP5","symphony_7","hotel_4"]
     var hotelTitleArr = ["Sea Princess Beach Resort","Symphony Palms Resort","Pearl Park Beach Resort"]
-    
+    let place_Arr =  ["Port_Blair", "Havelock", "Neil_Island"]
     let summerNotes = "The best time to visit seashores and beaches, soak in water slides and carpet the beach with recreational outdoor activities such as gaming, building sand castles, and enjoying the great abyss of the ocean. Walking on the flawless stretch of white sand, adorned with the special buzz of air, and a dinner betwixt louder and soothing music or attending a huge party wave sums up the most memorable day of your life."
     let autumnNotes = "Enter into the fall gateway and experience the colours of autumn season in Andaman in its true form. Dive into the depths of water landscape, visualize the colourful sea life through the naked eye and be a part of the wonderful beachside parities and night life in Andaman Islands."
 
@@ -37,7 +37,9 @@ class PackageDetailsVC: UIViewController {
       var title_Arr = ["SUMMER","SPRING","PRE-WINTER","WINTER","AUTUMN",]
 
     
-    
+    var timer = Timer()
+       var counter = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,8 +62,7 @@ class PackageDetailsVC: UIViewController {
         IMGView.layer.masksToBounds = true
        firstImageFadeIn()
         campTitleLbl.text = BookingDetails.package_name
-//        durationLbl.text = BookingDetails.camp_Duration
-        priceLbl.text = BookingDetails.price
+        priceLbl.text = "₹ \(BookingDetails.price)"
         
         switch BookingDetails.selectedIndex {
         
@@ -90,7 +91,37 @@ class PackageDetailsVC: UIViewController {
         default:
             break
         }
+    
+    
+    DispatchQueue.main.async {
+                 
+        self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+        
+        }
+    
     }
+    
+    
+   
+           
+       
+       
+      
+    @objc func changeImage() {
+       
+       if counter < hotelTitleArr.count {
+           let index = IndexPath.init(item: counter, section: 0)
+           self.hotelsCV.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+           counter += 1
+       } else {
+           counter = 0
+           let index = IndexPath.init(item: counter, section: 0)
+           self.hotelsCV.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+           counter = 1
+       }
+           
+       }
+    
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         
@@ -102,9 +133,15 @@ class PackageDetailsVC: UIViewController {
     }
     
     @IBAction func bookbBtnAxn(_ sender: UIButton) {
+        if UserDetails.id == "" {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.navigationController?.pushViewController(VC, animated: true)
+        } else {
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "ApplicatonFormVC1") as! ApplicatonFormVC1
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
         
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "ApplicatonFormVC1") as! ApplicatonFormVC1
-        self.navigationController?.pushViewController(VC, animated: true)
+        
     }
     
     @IBAction func backAxn(_ sender: UIButton) {
@@ -120,7 +157,7 @@ class PackageDetailsVC: UIViewController {
     
     
     func CVChanges() {
-      let cellSize = CGSize(width:150 , height:150)
+        let cellSize = CGSize(width:hotelsCV.frame.width , height:hotelsCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
@@ -156,6 +193,9 @@ extension PackageDetailsVC:  UICollectionViewDelegate, UICollectionViewDataSourc
         cell.IMGView.layer.cornerRadius = 10
         cell.IMGView.image = UIImage(named: "\(hotelImgArr[indexPath.row])")
         cell.titleLbl.text = hotelTitleArr[indexPath.row]
+        cell.place_Lbl.text = place_Arr[indexPath.row]
+        cell.myPageCntrl.currentPage = indexPath.row
+        
         
         return cell
     }

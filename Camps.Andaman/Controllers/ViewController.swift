@@ -54,6 +54,15 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    
+    @IBAction func back_Axn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        
+        
+    }
+    
+    
     @IBAction func signUpAxn(_ sender: UIButton) {
         
         let VC = self.storyboard?.instantiateViewController(withIdentifier: "VerificationVC") as! VerificationVC

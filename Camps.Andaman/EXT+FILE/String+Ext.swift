@@ -86,8 +86,9 @@ extension String {
     
     func getDate() -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
 //        dateFormatter.dateStyle = .short
+//        dateFormatter.timeStyle = .medium
         let convertedDate = dateFormatter.date(from: self)
         print("convertedDate = \(String(describing: convertedDate))")
         return convertedDate
@@ -98,6 +99,23 @@ extension String {
    //        dateFormatter.dateStyle = .short
            return dateFormatter.date(from: self) // replace Date String
        }
+    
+    func convertDateFormat() -> String {
+
+         let olDateFormatter = DateFormatter()
+         olDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+         let oldDate = olDateFormatter.date(from: self)
+
+         let convertDateFormatter = DateFormatter()
+         convertDateFormatter.dateFormat = "MMM dd yyyy h:mm a"
+
+ 
+        let convertedDate = convertDateFormatter.string(from: oldDate!)
+        print("convertedDate = \(String(describing: convertedDate))")
+
+         return convertedDate
+    }
    
 }
 

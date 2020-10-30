@@ -14,12 +14,11 @@ class BlogVC: UIViewController {
     
     @IBOutlet weak var blogTV: UITableView!
     
-    @IBOutlet weak var post_TV: UITableView!
     
     var dataArr:BlogListResponse = []
     var sideManager:SideMenuManager!
     var recentPostArr:BlogListResponse = []
-
+    var selected_Id = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,15 +31,21 @@ class BlogVC: UIViewController {
         
         blogTV.isHidden = true
                
-        post_TV.isHidden = true
         getData()
         blogTV.layer.cornerRadius = 5
-        post_TV.layer.cornerRadius = 5
 
-        post_TV.rowHeight = 60
         
     }
 
+    @IBAction func blogSC_Axn(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 1 {
+            selected_Id = 1
+        } else {
+            selected_Id = 0
+
+        }
+        blogTV.reloadWithAnimation()
+    }
     
     @IBAction func menu_Axn(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -52,24 +57,26 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        if tableView == post_TV {
+        if selected_Id == 1 {
             return recentPostArr.count
+        } else {
+            return dataArr.count
+
         }
-       return dataArr.count
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let blogCell = blogTV.dequeueReusableCell(withIdentifier: "BlogCell", for: indexPath) as! BlogTVCell
-        let postCell = post_TV.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let postCell = blogTV.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        if tableView == blogTV {
+        if selected_Id == 0 {
             let cellPath = dataArr[indexPath.row]
 
             blogCell.blog_Id = cellPath.id
             
-            blogCell.date_Lbl.text = cellPath.createdAt
+            blogCell.date_Lbl.text = cellPath.createdAt.convertDateFormat()
             blogCell.blog_Title.text = cellPath.blogTitle
             blogCell.blog_IMGView.setImage(urlStr: ClientConfig.blogIMGUrl + cellPath.primaryImage)
             blogCell.description_Lbl.text = cellPath.blogDescFirst
@@ -90,8 +97,8 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
             UIGraphicsEndImageContext()
             postCell.imageView?.layer.cornerRadius = 25
             postCell.imageView?.sizeToFit()
-            postCell.textLabel?.text = cellPath.createdAt
-            postCell.detailTextLabel?.text = cellPath.blogTitle
+            postCell.textLabel?.text = cellPath.blogTitle
+            postCell.detailTextLabel?.text = cellPath.createdAt.convertDateFormat()
 //            postCell.imageView?.makeRound()
             postCell.imageView?.setImage(urlStr: ClientConfig.blogIMGUrl + cellPath.primaryImage)
         }
@@ -99,6 +106,19 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
         
        
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selected_Id == 1 {
+            let cellPath = recentPostArr[indexPath.row]
+            BlogVariables.Selected_Id = cellPath.id
+            print("Selected_Id = \(BlogVariables.Selected_Id)")
+    
+            let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BlogDetailsVC") as! BlogDetailsVC
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+         
+
     }
     
     
@@ -151,13 +171,11 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
                 dataArr = parsedData
                 print("BlogData = \(dataArr)")
                 blogTV.isHidden = false
-                post_TV.isHidden = false
                 BlogVariables.Selected_Id = dataArr.first?.id as! String
                 blogTV.reloadWithAnimation()
                    
                 recentPostArr = parsedData.suffix(5).reversed()
                 print("recentPostArr = \(recentPostArr.count)")
-                post_TV.reloadData()
                     
                 
                
