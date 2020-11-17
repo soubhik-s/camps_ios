@@ -41,8 +41,40 @@ class GestureVC: UIViewController {
         } else {
             getCampingData()
         }
+   
+        DispatchQueue.main.async {
         
+            timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+            
+        }
+               
+          
     }
+           
+        
+    @objc func changeImage() {
+           
+    
+        if counter < img_Arr.count {
+        
+            let index = IndexPath.init(item: counter, section: 0)
+            
+            self.gestureCV.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            
+            counter += 1
+           
+        } else {
+        
+            counter = 0
+               let index = IndexPath.init(item: counter, section: 0)
+               self.gestureCV.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+               counter = 1
+           }
+               
+    
+    }
+    
+    
     func CVChanges() {
         let cellSize = CGSize(width:gestureCV.frame.width , height:gestureCV.frame.height)
         let layout = UICollectionViewFlowLayout()
@@ -297,7 +329,7 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
                 returnedView.isHidden = true
 
             }
-            returnedView.addSubview(img_View)
+//            returnedView.addSubview(img_View)
             returnedView.addSubview(label)
 
             return returnedView

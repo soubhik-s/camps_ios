@@ -33,7 +33,6 @@ class SlidesVC: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppUpdater.shared.showUpdate(withConfirmation: true)
 
 //        print("appVersion = \(appVersion ?? "0")")
 //        Preferrences.setAppVersion(type: appVersion)

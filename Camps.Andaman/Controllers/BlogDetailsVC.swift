@@ -9,6 +9,10 @@
 import UIKit
 import IQKeyboardManagerSwift
 
+
+var timer = Timer()
+var counter = 0
+   
 class BlogDetailsVC: UIViewController {
 
     @IBOutlet weak var by_Author_Lbl: UILabel!
@@ -35,6 +39,7 @@ class BlogDetailsVC: UIViewController {
     let cmt_View_Height:CGFloat = 250
     var comment_Arr:CommentResponse = []
     let blogImg_Url = "https://camps.goexploreandaman.com/assets/img/blogging/"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,6 +58,30 @@ class BlogDetailsVC: UIViewController {
         getBlogData()
         blog_TV.rowHeight = UITableView.automaticDimension
         cmnt_subView.layer.cornerRadius = 5
+    
+        DispatchQueue.main.async {
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+        
+        }
+               
+    }
+           
+       
+    @objc func changeImage() {
+           
+        if counter < IMG_Arr.count {
+               let index = IndexPath.init(item: counter, section: 0)
+               self.blog_IMG_CV.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+               counter += 1
+        
+        } else {
+               counter = 0
+               let index = IndexPath.init(item: counter, section: 0)
+               self.blog_IMG_CV.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+               counter = 1
+           }
+               
+         
     }
     
     func CVChanges() {

@@ -18,11 +18,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dataTV: UITableView!
     @IBOutlet weak var subView: UIView!
     
-    let title_Array = ["It's time to start your adventures","Wild nature,safe adventure"]
-    let subTitle_Arr = ["Set the target and prepare yourself to experience your dream adventurous activities. ","A friendly associate with knowledge on every corners of the Andaman Islands."]
+    let title_Array = ["It's time to start your adventures","Wild nature,safe adventure" ,"Bon-Fire" , "Sand Art", "Beach Yoga" ]
+   
     var timer = Timer()
     var counter = 0
-
+    
+    
+    var img_Arr:[String] = ["adventure","wildLife", "bon_Fire","sand", "Yoga"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +35,8 @@ class HomeViewController: UIViewController {
     
     func viewChanges() {
     
-        offerCV.isHidden = true
         dataTV.reloadData()
         CVChanges()
-        getData()
 
     }
     func CVChanges() {
@@ -73,57 +73,63 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBAction func offerBtn_Axn(_ sender: UIButton) {
+        let VC = self.storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersVC
+        self.navigationController?.pushViewController(VC, animated: true)
+    }
     
     @IBAction func menu_Axn(_ sender: UIButton) {
         
     }
     
     
-     func getData()  {
-           
-        if reach.isConnectedToNetwork() == true {
-       
-        offerCV.showActivityIndicator()
-        ApiService.callPostToken(url: ClientInterface.offersUrl, params: "", methodType: "GET", tag: "Offer", finish:finishPost)
-
-        } else {
-        self.view.makeToast("Check Internet Connection")
-            
-        }
-      
-    }
-   
-    func finishPost (message:String, data:Data? , tag: String) -> Void {
-
-        offerCV.hideActivityIndicator()
-
-        do {
-
-        if let jsonData = data {
-        let parsedData = try JSONDecoder().decode(OffersResponse.self, from: jsonData)
-            print(parsedData)
-            
-            if parsedData.isEmpty == false {
-                for offerData in parsedData {
-                    if offerData.status == "active" {
-                        dataArr.append(offerData)
-
-                    }
-                }
-                offerCV.isHidden = false
-
-                print("OfferdataArr = \(dataArr)")
-                offerCV.reloadData()
-            }
-        } 
-        } catch {
-        popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
-        print("Parse Error: \(error)")
-        }
-
-
-
-    }
+//     func getData()  {
+//
+//        if reach.isConnectedToNetwork() == true {
+//
+//        offerCV.showActivityIndicator()
+//        ApiService.callPostToken(url: ClientInterface.offersUrl, params: "", methodType: "GET", tag: "Offer", finish:finishPost)
+//
+//        } else {
+//        self.view.makeToast("Check Internet Connection")
+//
+//        }
+//
+//    }
+//
+//    func finishPost (message:String, data:Data? , tag: String) -> Void {
+//
+//        offerCV.hideActivityIndicator()
+//
+//        do {
+//
+//        if let jsonData = data {
+//        let parsedData = try JSONDecoder().decode(OffersResponse.self, from: jsonData)
+//            print(parsedData)
+//
+//            if parsedData.isEmpty == false {
+//                for offerData in parsedData {
+//                    if offerData.status == "active" {
+//                        dataArr.append(offerData)
+//
+//                    }
+//                }
+//
+//
+//                offerCV.isHidden = false
+//                offerCV.reloadData()
+//
+//                print("OfferdataArr = \(dataArr)")
+//            }
+//        }
+//        } catch {
+//        popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
+//        print("Parse Error: \(error)")
+//        }
+//
+//
+//
+//    }
     
    
    
@@ -134,25 +140,18 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource,  Gest
     
 //    MARK:- Offers Collectionview Data
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArr.count
+        
+        return title_Array.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath) as! OffersCVCell
         
-        let cellPath = dataArr[indexPath.row]
-        if cellPath.status == "active" {
-        cell.contentView.frame  = offerCV.frame
-        cell.Img_View.setImage(urlStr: ClientConfig.offerIMGUrl + cellPath.offersImageName)
-        cell.myPage.numberOfPages = dataArr.count
-        cell.myPage.currentPage = indexPath.row
-        cell.offerCode_Lbl.text = "Code : \(cellPath.couponCode)"
-        cell.titleLbl.text = cellPath.couponName
-        cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
-        cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"
-        cell.Img_View.layer.cornerRadius = 10
         
-        }
+        cell.titleLbl.text = title_Array[indexPath.row]
+        cell.Img_View.image = UIImage(named: "\(img_Arr[indexPath.row])")
+        
         
         return cell
     

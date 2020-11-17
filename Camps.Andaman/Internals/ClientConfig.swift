@@ -18,6 +18,7 @@ struct ClientConfig {
     static let membersImgUrl = "https://camps.goexploreandaman.com/assets/img/"
     static var offerIMGUrl = "https://camps.goexploreandaman.com/assets/img/offers/"
     static let blogIMGUrl = "https://camps.goexploreandaman.com/assets/img/blogging/"
+    static let inclussionsImgUrl = "https://camps.goexploreandaman.com/assets/img/inclusions/"
 }
 
 struct ClientInterface {
@@ -43,7 +44,7 @@ struct ClientInterface {
     static let offersUrl = ClientConfig.BASE_URL + "promo_code_api"
     static let blogsUrl = ClientConfig.BASE_URL + "blogs_api"
     static let blogCommentsUrl = ClientConfig.BASE_URL + "comment_api"
-
+    static let benefitsUrl = ClientConfig.BASE_URL + "content_api"
     
     
 }

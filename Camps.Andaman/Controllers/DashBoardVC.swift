@@ -43,7 +43,7 @@ class DashBoardVC: UIViewController {
     }
     
     func viewChanges() {
-        razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
+        razorpay = RazorpayCheckout.initWithKey(testKey, andDelegate: self)
         dataTV.rowHeight = 380
         dataTV.isHidden = true
         pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
@@ -166,6 +166,7 @@ class DashBoardVC: UIViewController {
                     
                 if parsedData.status == true {
                     if tag == "Status" {
+                    getData()
                     popUpAlert(title: "Alert", message: "Payment status Updated", action: .alert)
                     } else {
                         self.view.makeToast("Payment Details Updated..")

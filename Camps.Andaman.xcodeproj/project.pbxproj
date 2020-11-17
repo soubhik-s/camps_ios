@@ -33,6 +33,8 @@
 		D6075D20246192820075E90F /* Elevation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6075D16246192820075E90F /* Elevation+Ext.swift */; };
 		D608A05C24822E5A0089FC1B /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D608A05B24822E5A0089FC1B /* WebVC.swift */; };
 		D6116A202494B9040089B995 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */; };
+		D61EB52F2563A47300F5821A /* BenefitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61EB52E2563A47300F5821A /* BenefitsVC.swift */; };
+		D61EB5312563A49800F5821A /* WhyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61EB5302563A49800F5821A /* WhyVC.swift */; };
 		D62C206F24B2F1310093F2F8 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C206E24B2F1310093F2F8 /* VerificationVC.swift */; };
 		D62C207124B2F9360093F2F8 /* VerifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C207024B2F9360093F2F8 /* VerifyService.swift */; };
 		D62C207324B2FA720093F2F8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62C207224B2FA720093F2F8 /* Config.plist */; };
@@ -172,6 +174,8 @@
 		D6075D16246192820075E90F /* Elevation+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Elevation+Ext.swift"; sourceTree = "<group>"; };
 		D608A05B24822E5A0089FC1B /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		D61EB52E2563A47300F5821A /* BenefitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsVC.swift; sourceTree = "<group>"; };
+		D61EB5302563A49800F5821A /* WhyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyVC.swift; sourceTree = "<group>"; };
 		D62C206E24B2F1310093F2F8 /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
 		D62C207024B2F9360093F2F8 /* VerifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyService.swift; sourceTree = "<group>"; };
 		D62C207224B2FA720093F2F8 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -365,6 +369,8 @@
 			children = (
 				D6075CD324616CB30075E90F /* ViewController.swift */,
 				D62C206E24B2F1310093F2F8 /* VerificationVC.swift */,
+				D61EB52E2563A47300F5821A /* BenefitsVC.swift */,
+				D61EB5302563A49800F5821A /* WhyVC.swift */,
 				D6548D58254BE84B0058BF3B /* OffersVC.swift */,
 				D6F5AF3425357FC900F4C48B /* CovidVC.swift */,
 				D657CF9624A4C352009B2C85 /* PDFViewController.swift */,
@@ -750,6 +756,7 @@
 				D64F19CB246BF13900C169FC /* PackageDetailsVC.swift in Sources */,
 				D644BB69249A131200AAFC18 /* PolicyVC.swift in Sources */,
 				D6548D5725497E290058BF3B /* BlogDetailsCVC.swift in Sources */,
+				D61EB52F2563A47300F5821A /* BenefitsVC.swift in Sources */,
 				D64F19C7246AD8BB00C169FC /* SlidesVC.swift in Sources */,
 				D657CF9724A4C352009B2C85 /* PDFViewController.swift in Sources */,
 				D6A50EE424765AED00C858F7 /* CampingCVC.swift in Sources */,
@@ -766,6 +773,7 @@
 				D644BB63249783EE00AAFC18 /* BoardTVC.swift in Sources */,
 				D62C206F24B2F1310093F2F8 /* VerificationVC.swift in Sources */,
 				D608A05C24822E5A0089FC1B /* WebVC.swift in Sources */,
+				D61EB5312563A49800F5821A /* WhyVC.swift in Sources */,
 				D6075D0524618A3C0075E90F /* MainViewController.swift in Sources */,
 				D6075D1A246192820075E90F /* String+Ext.swift in Sources */,
 				D6554597246EAFB800E974C3 /* InfoVC.swift in Sources */,

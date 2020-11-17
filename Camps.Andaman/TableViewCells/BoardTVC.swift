@@ -68,7 +68,7 @@ class BoardTVC: UITableViewCell {
 
     @IBAction func oofers_Btn_Axn(_ sender: UIButton) {
         let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OffersVC") as! OffersVC
-        
+        DashboardVariables.isDashboard = true 
         self.parentContainerViewController()?.navigationController?.pushViewController(VC, animated: true)
         
     }

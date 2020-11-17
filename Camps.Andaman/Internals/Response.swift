@@ -291,6 +291,115 @@ typealias AboutResponse = [AboutResponseElement]
 
 
 
+// MARK: - BenefitsResponse
+struct BenefitsResponse: Codable {
+    let campActivities: [CampActivity]
+//    let offersList: [JSONAny]
+    let adultBenefits:[AdultBenefit]
+    let childBenefits:[ChildBenefit]
+
+    let allContent: [AllContent]
+    let allChooseContent: [Points]
+    let allInclusions: [AllInclusion]
+    let points: Points
+
+    enum CodingKeys: String, CodingKey {
+        case campActivities = "camp_activities"
+//        case offersList = "offers_list"
+        case adultBenefits = "adult_benefits"
+        case childBenefits = "child_benefits"
+        case allContent = "all_content"
+        case allChooseContent = "all_choose_content"
+        case allInclusions = "all_inclusions"
+        case points
+    }
+}
+
+// MARK: - Benefit
+struct AdultBenefit: Codable {
+    let id, title, benefits, type: String
+    let status, createdAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, title, benefits, type, status
+        case createdAt = "created_at"
+    }
+}
+struct ChildBenefit: Codable {
+    let id, title, benefits, type: String
+    let status, createdAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, title, benefits, type, status
+        case createdAt = "created_at"
+    }
+}
+// MARK: - Points
+struct Points: Codable {
+    let id, title: String
+    let pointsDescription: String?
+    let status, createdAt: String
+    let points: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, title
+        case pointsDescription = "description"
+        case status
+        case createdAt = "created_at"
+        case points
+    }
+}
+
+// MARK: - AllContent
+struct AllContent: Codable {
+    let id, title, descriptionFirst, descriptionSecond: String
+    let descriptionThird, descriptionFourth, type, status: String
+    let createdAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, title
+        case descriptionFirst = "description_first"
+        case descriptionSecond = "description_second"
+        case descriptionThird = "description_third"
+        case descriptionFourth = "description_fourth"
+        case type, status
+        case createdAt = "created_at"
+    }
+}
+
+// MARK: - AllInclusion
+struct AllInclusion: Codable {
+    let id, title, inclusionsImageLink, type: String
+    let ageGroup, status, createdAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, title
+        case inclusionsImageLink = "inclusions_image_link"
+        case type
+        case ageGroup = "age_group"
+        case status
+        case createdAt = "created_at"
+    }
+}
+
+// MARK: - CampActivity
+struct CampActivity: Codable {
+    let activityID, activityName, activityImageLink, activityDescription: String
+    let createdAt: String
+    let createdBy: String
+
+    enum CodingKeys: String, CodingKey {
+        case activityID = "activity_id"
+        case activityName = "activity_name"
+        case activityImageLink = "activity_image_link"
+        case activityDescription = "activity_description"
+        case createdAt = "created_at"
+        case createdBy = "created_by"
+    }
+}
+
+
+
 struct PostBookingData {
     let packag_Id:String
     let packag_Name:String

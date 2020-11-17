@@ -38,7 +38,8 @@ class ViewController: UIViewController {
         emailView.makeRound()
         passwordView.makeRound()
         loginBtn.makeRound()
-        
+        AppUpdater.shared.showUpdate(withConfirmation: true)
+
     }
     
     

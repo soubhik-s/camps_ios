@@ -95,6 +95,8 @@ extension BlogVC : UITableViewDelegate , UITableViewDataSource {
             postCell.imageView!.image?.draw(in: imageRect)
             postCell.imageView!.image =  UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
+            
+            
             postCell.imageView?.layer.cornerRadius = 25
             postCell.imageView?.sizeToFit()
             postCell.textLabel?.text = cellPath.blogTitle

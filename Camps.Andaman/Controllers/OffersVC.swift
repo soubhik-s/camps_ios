@@ -12,7 +12,6 @@ class OffersVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
    
 
    var dataArr:OffersResponse = []
-
     
     @IBOutlet weak var offersCV: UICollectionView!
     
@@ -72,16 +71,38 @@ class OffersVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
              print(parsedData)
              
              if parsedData.isEmpty == false {
-                 for offerData in parsedData {
-                    if offerData.discountType == "others" {
-                         dataArr.append(offerData)
+                
+                for offerData in parsedData {
+                
+                    if DashboardVariables.isDashboard == true {
+                     DashboardVariables.isDashboard = false
+                        if offerData.discountType == "others" {
+                            dataArr.append(offerData)
 
-                     }
+                        }
+                    
+                    } else {
+                        if offerData.status == "active" {
+                                
+                            dataArr.append(offerData)
+                        
+                                
+                        }
+                    }
+                    
                  }
                  offersCV.isHidden = false
 
                  print("OfferdataArr = \(dataArr)")
-                 offersCV.reloadData()
+                if dataArr.isEmpty == false {
+                    offersCV.reloadData()
+
+                } else {
+                    popUpAlert(title: "Alert", message: "No Active Offers ", action: .alert)
+                }
+                
+                
+                
              }
          }
          } catch {

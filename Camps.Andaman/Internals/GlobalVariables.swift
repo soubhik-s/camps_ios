@@ -30,6 +30,7 @@ struct DashboardVariables {
     static var activtiesID = ""
     static var bookingID = ""
     static var pkgID = ""
+    static var isDashboard:Bool = false
 }
 
 struct PrivacyVariables {

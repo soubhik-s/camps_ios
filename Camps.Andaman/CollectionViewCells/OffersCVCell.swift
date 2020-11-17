@@ -21,4 +21,9 @@ class OffersCVCell: UICollectionViewCell {
     
     @IBOutlet weak var expiryLbl: UILabel!
     
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+    
+    
+    
 }
