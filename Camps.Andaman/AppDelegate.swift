@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //      MARK:Network Monitor
 //        ReachabilityManager.shared.startMonitoring()
         UILabel.appearance(whenContainedInInstancesOf:[UISegmentedControl.self]).numberOfLines = 0
-        UISegmentedControl.appearance().setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Optima", size: 12)! ], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([ NSAttributedString.Key.font: UIFont(name: "Optima", size: 14)! ], for: .normal)
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.white], for: .normal)
         let isInstalled =  Preferrences.getInstalled()
                print("isInstalled = \(isInstalled)")

@@ -35,7 +35,7 @@ class OffersVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
         offersCV.dataSource = self
         offersCV.reloadData()
         
-       
+        print("Status = \(DashboardVariables.isDashboard)")
         
     }
     
@@ -75,8 +75,8 @@ class OffersVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
                 for offerData in parsedData {
                 
                     if DashboardVariables.isDashboard == true {
-                     DashboardVariables.isDashboard = false
                         if offerData.discountType == "others" {
+
                             dataArr.append(offerData)
 
                         }
@@ -90,17 +90,20 @@ class OffersVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
                         }
                     }
                     
-                 }
-                 offersCV.isHidden = false
+                    print("OfferdataArr = \(dataArr)")
 
-                 print("OfferdataArr = \(dataArr)")
+                 
+                }
+                 
+
                 if dataArr.isEmpty == false {
+                    offersCV.isHidden = false
+
                     offersCV.reloadData()
 
                 } else {
                     popUpAlert(title: "Alert", message: "No Active Offers ", action: .alert)
                 }
-                
                 
                 
              }

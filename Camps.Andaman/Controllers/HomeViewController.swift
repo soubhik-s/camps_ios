@@ -11,7 +11,6 @@ import SideMenu
 
 class HomeViewController: UIViewController {
     
-    var dataArr:OffersResponse = []
     @IBOutlet weak var offerCV: UICollectionView!
     
     
@@ -20,9 +19,8 @@ class HomeViewController: UIViewController {
     
     let title_Array = ["It's time to start your adventures","Wild nature,safe adventure" ,"Bon-Fire" , "Sand Art", "Beach Yoga" ]
    
-    var timer = Timer()
-    var counter = 0
-    
+   var timer = Timer()
+   var counter = 0
     
     var img_Arr:[String] = ["adventure","wildLife", "bon_Fire","sand", "Yoga"]
 
@@ -59,7 +57,7 @@ class HomeViewController: UIViewController {
     
     @objc func changeImage() {
     
-    if counter < dataArr.count {
+    if counter < title_Array.count {
         let index = IndexPath.init(item: counter, section: 0)
         self.offerCV.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
         counter += 1
@@ -75,6 +73,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func offerBtn_Axn(_ sender: UIButton) {
         let VC = self.storyboard?.instantiateViewController(withIdentifier: "OffersVC") as! OffersVC
+        DashboardVariables.isDashboard = false
+
         self.navigationController?.pushViewController(VC, animated: true)
     }
     
@@ -83,54 +83,7 @@ class HomeViewController: UIViewController {
     }
     
     
-//     func getData()  {
-//
-//        if reach.isConnectedToNetwork() == true {
-//
-//        offerCV.showActivityIndicator()
-//        ApiService.callPostToken(url: ClientInterface.offersUrl, params: "", methodType: "GET", tag: "Offer", finish:finishPost)
-//
-//        } else {
-//        self.view.makeToast("Check Internet Connection")
-//
-//        }
-//
-//    }
-//
-//    func finishPost (message:String, data:Data? , tag: String) -> Void {
-//
-//        offerCV.hideActivityIndicator()
-//
-//        do {
-//
-//        if let jsonData = data {
-//        let parsedData = try JSONDecoder().decode(OffersResponse.self, from: jsonData)
-//            print(parsedData)
-//
-//            if parsedData.isEmpty == false {
-//                for offerData in parsedData {
-//                    if offerData.status == "active" {
-//                        dataArr.append(offerData)
-//
-//                    }
-//                }
-//
-//
-//                offerCV.isHidden = false
-//                offerCV.reloadData()
-//
-//                print("OfferdataArr = \(dataArr)")
-//            }
-//        }
-//        } catch {
-//        popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
-//        print("Parse Error: \(error)")
-//        }
-//
-//
-//
-//    }
-    
+
    
    
 }
@@ -151,7 +104,10 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource,  Gest
         
         cell.titleLbl.text = title_Array[indexPath.row]
         cell.Img_View.image = UIImage(named: "\(img_Arr[indexPath.row])")
-        
+        cell.myPage.currentPage = indexPath.item
+        cell.myPage.numberOfPages = title_Array.count
+        cell.blurView.layer.cornerRadius = 10
+        cell.Img_View.layer.cornerRadius = 10
         
         return cell
     

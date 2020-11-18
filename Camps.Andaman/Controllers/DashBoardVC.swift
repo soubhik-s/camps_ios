@@ -43,7 +43,7 @@ class DashBoardVC: UIViewController {
     }
     
     func viewChanges() {
-        razorpay = RazorpayCheckout.initWithKey(testKey, andDelegate: self)
+        razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
         dataTV.rowHeight = 380
         dataTV.isHidden = true
         pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
@@ -113,6 +113,7 @@ class DashBoardVC: UIViewController {
             let parsedData = try JSONDecoder().decode(GetBookingResponse.self, from: jsonData)
             print(parsedData)
         
+                if parsedData.isEmpty == false {
                 dataArr = parsedData.reversed()
           
            
@@ -147,12 +148,17 @@ class DashBoardVC: UIViewController {
             }
             }
                 
+            } else {
+                popUpAlert(title: "Alert", message: "No Bookings", action: .alert)
+            }
+                
             }
            
             } catch {
             popUpAlert(title: "Alert", message: "Failed to  Connect Server. Try Again. ", action: .alert)
               print("Parse Error: \(error)")
             }
+           
         
         } else {
             
@@ -165,10 +171,12 @@ class DashBoardVC: UIViewController {
 
                     
                 if parsedData.status == true {
+
                     if tag == "Status" {
-                    getData()
                     popUpAlert(title: "Alert", message: "Payment status Updated", action: .alert)
                     } else {
+                        getData()
+
                         self.view.makeToast("Payment Details Updated..")
 
                     }
@@ -416,7 +424,6 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocol {
         print("PaymentId = \(paymentId)")
 
         postRazorData()
-        postStatusData()
         self.navigationController?.popViewController(animated: true)
    
         alert(message: "Payment done.", title: "Success")

@@ -270,7 +270,7 @@ class ApplicatonFormVC1: UIViewController {
         } else {
             return false
         }
-        print("age = \(DOBTF.text?.getNoOfYears())")
+        
     }
     
     func postDetails() {

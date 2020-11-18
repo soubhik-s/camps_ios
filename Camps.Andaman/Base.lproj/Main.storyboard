@@ -19,332 +19,304 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="log_in" translatesAutoresizingMaskIntoConstraints="NO" id="XTS-vH-bEP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eff-V2-VMc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teT-wH-tEa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-VG-BXD">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camps" translatesAutoresizingMaskIntoConstraints="NO" id="Wwh-8W-nsh">
+                                        <rect key="frame" x="132" y="30" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="H92-4U-M24">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="150" id="IkF-y2-6ok">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHQ-OD-FBA">
+                                        <rect key="frame" x="20" y="210" width="374" height="400"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teT-wH-tEa">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ko-hN-EHA">
+                                                <rect key="frame" x="155" y="20" width="64.5" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="3bF-5v-xhZ">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="LOGIN">
+                                                        <attributes>
+                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" size="20" name="Optima-Bold"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="LOGIN">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="30" name="Optima-Bold"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserEmail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIh-vd-QMv">
+                                                <rect key="frame" x="10" y="70" width="354" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="wcq-LL-y3l">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17v-4h-Qd9">
+                                                <rect key="frame" x="10" y="100" width="354" height="40"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camps" translatesAutoresizingMaskIntoConstraints="NO" id="Wwh-8W-nsh">
-                                                        <rect key="frame" x="132" y="30" width="150" height="150"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="Vu5-zF-vrd">
+                                                        <rect key="frame" x="12" y="12.5" width="15" height="15"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="150" id="H92-4U-M24">
-                                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                                            <constraint firstAttribute="height" constant="15" id="PHw-1K-wMq">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
                                                             </constraint>
-                                                            <constraint firstAttribute="height" constant="150" id="IkF-y2-6ok">
-                                                                <variation key="heightClass=regular-widthClass=regular" constant="300"/>
+                                                            <constraint firstAttribute="width" constant="15" id="aaH-9T-rQR">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
                                                             </constraint>
                                                         </constraints>
                                                     </imageView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHQ-OD-FBA">
-                                                        <rect key="frame" x="20" y="210" width="374" height="400"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ko-hN-EHA">
-                                                                <rect key="frame" x="155" y="20" width="64.5" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="3bF-5v-xhZ">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <attributedString key="attributedText">
-                                                                    <fragment content="LOGIN">
-                                                                        <attributes>
-                                                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <font key="NSFont" size="20" name="Optima-Bold"/>
-                                                                            <integer key="NSUnderline" value="1"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <attributedString key="attributedText">
-                                                                        <fragment content="LOGIN">
-                                                                            <attributes>
-                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <font key="NSFont" size="30" name="Optima-Bold"/>
-                                                                                <integer key="NSUnderline" value="1"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                </variation>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserEmail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIh-vd-QMv">
-                                                                <rect key="frame" x="10" y="70" width="354" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="wcq-LL-y3l">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
-                                                                </variation>
-                                                            </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17v-4h-Qd9">
-                                                                <rect key="frame" x="10" y="100" width="354" height="40"/>
-                                                                <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="Vu5-zF-vrd">
-                                                                        <rect key="frame" x="12" y="12.5" width="15" height="15"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="15" id="PHw-1K-wMq">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                            </constraint>
-                                                                            <constraint firstAttribute="width" constant="15" id="aaH-9T-rQR">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                            </constraint>
-                                                                        </constraints>
-                                                                    </imageView>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-a6-jEc">
-                                                                        <rect key="frame" x="32" y="0.0" width="312" height="40"/>
-                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
-                                                                        </variation>
-                                                                    </textField>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="Vu5-zF-vrd" firstAttribute="leading" secondItem="17v-4h-Qd9" secondAttribute="leading" constant="12" id="KOJ-WB-Vjc"/>
-                                                                    <constraint firstItem="n3v-a6-jEc" firstAttribute="leading" secondItem="Vu5-zF-vrd" secondAttribute="trailing" constant="5" id="Qy2-ua-2cZ"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="n3v-a6-jEc" secondAttribute="trailing" constant="10" id="Skw-l3-Ggy"/>
-                                                                    <constraint firstItem="n3v-a6-jEc" firstAttribute="top" secondItem="17v-4h-Qd9" secondAttribute="top" id="YBw-S1-dWM"/>
-                                                                    <constraint firstAttribute="height" constant="40" id="c0s-Js-ke7">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
-                                                                    </constraint>
-                                                                    <constraint firstAttribute="bottom" secondItem="n3v-a6-jEc" secondAttribute="bottom" id="pW5-U6-dlX"/>
-                                                                    <constraint firstItem="Vu5-zF-vrd" firstAttribute="centerY" secondItem="17v-4h-Qd9" secondAttribute="centerY" id="sNu-Qa-CcH"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-nX-VL6">
-                                                                <rect key="frame" x="10" y="150" width="354" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="JMA-gx-1LN">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
-                                                                </variation>
-                                                            </label>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZT-uS-NVT">
-                                                                <rect key="frame" x="10" y="175" width="354" height="40"/>
-                                                                <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oy0-XP-nVb">
-                                                                        <rect key="frame" x="10" y="0.0" width="304" height="40"/>
-                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
-                                                                        </variation>
-                                                                    </textField>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew1-c8-No1">
-                                                                        <rect key="frame" x="324" y="10" width="20" height="20"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="20" id="Qef-7T-KgP">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                                                            </constraint>
-                                                                            <constraint firstAttribute="height" constant="20" id="WNp-Ml-9eG">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                                                            </constraint>
-                                                                        </constraints>
-                                                                        <state key="normal" image="close"/>
-                                                                        <connections>
-                                                                            <action selector="secureBtnAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfa-aF-Uhf"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="oy0-XP-nVb" firstAttribute="leading" secondItem="ZZT-uS-NVT" secondAttribute="leading" constant="10" id="1Bo-m2-0gO"/>
-                                                                    <constraint firstItem="ew1-c8-No1" firstAttribute="centerY" secondItem="ZZT-uS-NVT" secondAttribute="centerY" id="8Ds-k8-wwn"/>
-                                                                    <constraint firstAttribute="height" constant="40" id="8gi-jG-8Ah">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
-                                                                    </constraint>
-                                                                    <constraint firstItem="ew1-c8-No1" firstAttribute="leading" secondItem="oy0-XP-nVb" secondAttribute="trailing" constant="10" id="MPK-5U-5Y6"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="ew1-c8-No1" secondAttribute="trailing" constant="10" id="W3W-6u-V0Q"/>
-                                                                    <constraint firstItem="oy0-XP-nVb" firstAttribute="top" secondItem="ZZT-uS-NVT" secondAttribute="top" id="ao4-oY-c87"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="oy0-XP-nVb" secondAttribute="bottom" id="lCo-Bc-QIi"/>
-                                                                </constraints>
-                                                            </view>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j8L-JA-bsJ">
-                                                                <rect key="frame" x="20" y="240" width="124.5" height="15"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-Ig-8yC">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="15" id="RE3-a6-SQ3">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                            </constraint>
-                                                                            <constraint firstAttribute="width" constant="15" id="waM-EH-hcB">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                            </constraint>
-                                                                        </constraints>
-                                                                        <state key="normal" image="un_chk"/>
-                                                                        <connections>
-                                                                            <action selector="rememberAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fP-bj-mz1"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndr-Do-Jl3">
-                                                                        <rect key="frame" x="25" y="0.0" width="99.5" height="15"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="15" id="Jcs-ed-0IP">
-                                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
-                                                                            </constraint>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
-                                                                        </variation>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve4-gZ-bbz">
-                                                                <rect key="frame" x="10" y="280" width="354" height="40"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="3ZM-ge-iqv">
-                                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
-                                                                    </constraint>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                                                <state key="normal" title="LOGIN"/>
-                                                                <variation key="heightClass=regular-widthClass=regular">
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
-                                                                </variation>
-                                                                <connections>
-                                                                    <action selector="loginAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcg-Ep-Efc"/>
-                                                                </connections>
-                                                            </button>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4iu-yO-Jt2">
-                                                                <rect key="frame" x="99" y="350" width="176" height="30"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L5-RB-lgL">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                        <state key="normal" title="Forgot Password">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                                                        </variation>
-                                                                        <connections>
-                                                                            <action selector="forgot_Axn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRM-R3-NfK"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-eb-foW">
-                                                                        <rect key="frame" x="124" y="0.0" width="52" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                        <state key="normal" title="Sign Up">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                                                        </variation>
-                                                                        <connections>
-                                                                            <action selector="signUpAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1P-uU-s4f"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n3v-a6-jEc">
+                                                        <rect key="frame" x="32" y="0.0" width="312" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                                        </variation>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Vu5-zF-vrd" firstAttribute="leading" secondItem="17v-4h-Qd9" secondAttribute="leading" constant="12" id="KOJ-WB-Vjc"/>
+                                                    <constraint firstItem="n3v-a6-jEc" firstAttribute="leading" secondItem="Vu5-zF-vrd" secondAttribute="trailing" constant="5" id="Qy2-ua-2cZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="n3v-a6-jEc" secondAttribute="trailing" constant="10" id="Skw-l3-Ggy"/>
+                                                    <constraint firstItem="n3v-a6-jEc" firstAttribute="top" secondItem="17v-4h-Qd9" secondAttribute="top" id="YBw-S1-dWM"/>
+                                                    <constraint firstAttribute="height" constant="40" id="c0s-Js-ke7">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="bottom" secondItem="n3v-a6-jEc" secondAttribute="bottom" id="pW5-U6-dlX"/>
+                                                    <constraint firstItem="Vu5-zF-vrd" firstAttribute="centerY" secondItem="17v-4h-Qd9" secondAttribute="centerY" id="sNu-Qa-CcH"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91T-nX-VL6">
+                                                <rect key="frame" x="10" y="150" width="354" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="JMA-gx-1LN">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZT-uS-NVT">
+                                                <rect key="frame" x="10" y="175" width="354" height="40"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oy0-XP-nVb">
+                                                        <rect key="frame" x="10" y="0.0" width="304" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ew1-c8-No1">
+                                                        <rect key="frame" x="324" y="10" width="20" height="20"/>
                                                         <constraints>
-                                                            <constraint firstItem="17v-4h-Qd9" firstAttribute="top" secondItem="eIh-vd-QMv" secondAttribute="bottom" constant="5" id="0bC-TP-eVX"/>
-                                                            <constraint firstItem="ZZT-uS-NVT" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="32V-8k-N12"/>
-                                                            <constraint firstItem="4iu-yO-Jt2" firstAttribute="top" secondItem="Ve4-gZ-bbz" secondAttribute="bottom" constant="30" id="8nw-Pn-Q2r"/>
-                                                            <constraint firstItem="2Ko-hN-EHA" firstAttribute="centerX" secondItem="aHQ-OD-FBA" secondAttribute="centerX" id="Alx-lx-vvN"/>
-                                                            <constraint firstItem="eIh-vd-QMv" firstAttribute="top" secondItem="2Ko-hN-EHA" secondAttribute="bottom" constant="20" id="Bi3-qJ-ioS"/>
-                                                            <constraint firstItem="j8L-JA-bsJ" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="20" id="CqT-E9-NYY"/>
-                                                            <constraint firstItem="2Ko-hN-EHA" firstAttribute="top" secondItem="aHQ-OD-FBA" secondAttribute="top" constant="20" id="FyB-En-1Zf"/>
-                                                            <constraint firstItem="91T-nX-VL6" firstAttribute="top" secondItem="17v-4h-Qd9" secondAttribute="bottom" constant="10" id="IKQ-cZ-QU7"/>
-                                                            <constraint firstItem="j8L-JA-bsJ" firstAttribute="top" secondItem="ZZT-uS-NVT" secondAttribute="bottom" constant="25" id="LOu-hQ-z3a"/>
-                                                            <constraint firstAttribute="trailing" secondItem="17v-4h-Qd9" secondAttribute="trailing" constant="10" id="POY-EJ-C2Z"/>
-                                                            <constraint firstItem="eIh-vd-QMv" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="PW5-fp-obL"/>
-                                                            <constraint firstAttribute="trailing" secondItem="eIh-vd-QMv" secondAttribute="trailing" constant="10" id="Qve-VI-saS"/>
-                                                            <constraint firstAttribute="trailing" secondItem="91T-nX-VL6" secondAttribute="trailing" constant="10" id="SWi-cS-gs6"/>
-                                                            <constraint firstItem="91T-nX-VL6" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="UiZ-aH-b6M"/>
-                                                            <constraint firstItem="17v-4h-Qd9" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="e0r-J0-27d"/>
-                                                            <constraint firstItem="ZZT-uS-NVT" firstAttribute="top" secondItem="91T-nX-VL6" secondAttribute="bottom" id="iR4-To-D1K"/>
-                                                            <constraint firstItem="4iu-yO-Jt2" firstAttribute="centerX" secondItem="aHQ-OD-FBA" secondAttribute="centerX" id="lwa-To-kdv"/>
-                                                            <constraint firstItem="Ve4-gZ-bbz" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="mF7-dk-EnH"/>
-                                                            <constraint firstAttribute="height" constant="400" id="pQS-Ko-Aur"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ve4-gZ-bbz" secondAttribute="trailing" constant="10" id="tbM-O9-mTa"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ZZT-uS-NVT" secondAttribute="trailing" constant="10" id="xXQ-W7-Er0"/>
-                                                            <constraint firstItem="Ve4-gZ-bbz" firstAttribute="top" secondItem="j8L-JA-bsJ" secondAttribute="bottom" constant="25" id="zG3-cc-aMS"/>
+                                                            <constraint firstAttribute="width" constant="20" id="Qef-7T-KgP">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="height" constant="20" id="WNp-Ml-9eG">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                                            </constraint>
                                                         </constraints>
-                                                    </view>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5To-mq-Lhf">
-                                                        <rect key="frame" x="20" y="10" width="20" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="20" id="Kjl-0e-jZ3"/>
-                                                            <constraint firstAttribute="height" constant="20" id="unv-J6-wRS"/>
-                                                        </constraints>
-                                                        <state key="normal" image="leftArrow"/>
+                                                        <state key="normal" image="close"/>
                                                         <connections>
-                                                            <action selector="back_Axn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cA-2H-5O8"/>
+                                                            <action selector="secureBtnAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfa-aF-Uhf"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="5To-mq-Lhf" firstAttribute="leading" secondItem="teT-wH-tEa" secondAttribute="leading" constant="20" id="0Py-Jc-e11"/>
-                                                    <constraint firstItem="aHQ-OD-FBA" firstAttribute="top" secondItem="Wwh-8W-nsh" secondAttribute="bottom" constant="30" id="7oZ-7S-jFB"/>
-                                                    <constraint firstItem="aHQ-OD-FBA" firstAttribute="centerX" secondItem="teT-wH-tEa" secondAttribute="centerX" id="TTP-Oh-gRL"/>
-                                                    <constraint firstItem="aHQ-OD-FBA" firstAttribute="leading" secondItem="teT-wH-tEa" secondAttribute="leading" constant="20" id="TfE-0A-nKX">
-                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                                    <constraint firstItem="oy0-XP-nVb" firstAttribute="leading" secondItem="ZZT-uS-NVT" secondAttribute="leading" constant="10" id="1Bo-m2-0gO"/>
+                                                    <constraint firstItem="ew1-c8-No1" firstAttribute="centerY" secondItem="ZZT-uS-NVT" secondAttribute="centerY" id="8Ds-k8-wwn"/>
+                                                    <constraint firstAttribute="height" constant="40" id="8gi-jG-8Ah">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                                                     </constraint>
-                                                    <constraint firstItem="5To-mq-Lhf" firstAttribute="top" secondItem="teT-wH-tEa" secondAttribute="top" constant="10" id="baa-Ym-BG1"/>
-                                                    <constraint firstAttribute="trailing" secondItem="aHQ-OD-FBA" secondAttribute="trailing" constant="20" id="ctM-j7-jMb">
-                                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
-                                                    </constraint>
-                                                    <constraint firstItem="Wwh-8W-nsh" firstAttribute="centerX" secondItem="teT-wH-tEa" secondAttribute="centerX" id="pDU-C1-hqc"/>
-                                                    <constraint firstItem="Wwh-8W-nsh" firstAttribute="top" secondItem="teT-wH-tEa" secondAttribute="top" constant="30" id="ylV-sl-MiK"/>
+                                                    <constraint firstItem="ew1-c8-No1" firstAttribute="leading" secondItem="oy0-XP-nVb" secondAttribute="trailing" constant="10" id="MPK-5U-5Y6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ew1-c8-No1" secondAttribute="trailing" constant="10" id="W3W-6u-V0Q"/>
+                                                    <constraint firstItem="oy0-XP-nVb" firstAttribute="top" secondItem="ZZT-uS-NVT" secondAttribute="top" id="ao4-oY-c87"/>
+                                                    <constraint firstAttribute="bottom" secondItem="oy0-XP-nVb" secondAttribute="bottom" id="lCo-Bc-QIi"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j8L-JA-bsJ">
+                                                <rect key="frame" x="20" y="240" width="124.5" height="15"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-Ig-8yC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="RE3-a6-SQ3">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                            </constraint>
+                                                            <constraint firstAttribute="width" constant="15" id="waM-EH-hcB">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <state key="normal" image="un_chk"/>
+                                                        <connections>
+                                                            <action selector="rememberAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fP-bj-mz1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndr-Do-Jl3">
+                                                        <rect key="frame" x="25" y="0.0" width="99.5" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="Jcs-ed-0IP">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="25"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve4-gZ-bbz">
+                                                <rect key="frame" x="10" y="280" width="354" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="3ZM-ge-iqv">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                <state key="normal" title="LOGIN"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="22"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="loginAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcg-Ep-Efc"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4iu-yO-Jt2">
+                                                <rect key="frame" x="99" y="350" width="176" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L5-RB-lgL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="104" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <state key="normal" title="Forgot Password">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="forgot_Axn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRM-R3-NfK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-eb-foW">
+                                                        <rect key="frame" x="124" y="0.0" width="52" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <state key="normal" title="Sign Up">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="signUpAxn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1P-uU-s4f"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="teT-wH-tEa" secondAttribute="bottom" id="9Wr-i5-2an"/>
-                                            <constraint firstItem="teT-wH-tEa" firstAttribute="leading" secondItem="rHO-VG-BXD" secondAttribute="leading" id="M7g-AV-D0U"/>
-                                            <constraint firstItem="teT-wH-tEa" firstAttribute="top" secondItem="rHO-VG-BXD" secondAttribute="top" id="TPp-lf-eO1"/>
-                                            <constraint firstAttribute="trailing" secondItem="teT-wH-tEa" secondAttribute="trailing" id="ljV-ME-I02"/>
-                                            <constraint firstAttribute="height" constant="852" id="x3W-Ii-HR7"/>
+                                            <constraint firstItem="17v-4h-Qd9" firstAttribute="top" secondItem="eIh-vd-QMv" secondAttribute="bottom" constant="5" id="0bC-TP-eVX"/>
+                                            <constraint firstItem="ZZT-uS-NVT" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="32V-8k-N12"/>
+                                            <constraint firstItem="4iu-yO-Jt2" firstAttribute="top" secondItem="Ve4-gZ-bbz" secondAttribute="bottom" constant="30" id="8nw-Pn-Q2r"/>
+                                            <constraint firstItem="2Ko-hN-EHA" firstAttribute="centerX" secondItem="aHQ-OD-FBA" secondAttribute="centerX" id="Alx-lx-vvN"/>
+                                            <constraint firstItem="eIh-vd-QMv" firstAttribute="top" secondItem="2Ko-hN-EHA" secondAttribute="bottom" constant="20" id="Bi3-qJ-ioS"/>
+                                            <constraint firstItem="j8L-JA-bsJ" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="20" id="CqT-E9-NYY"/>
+                                            <constraint firstItem="2Ko-hN-EHA" firstAttribute="top" secondItem="aHQ-OD-FBA" secondAttribute="top" constant="20" id="FyB-En-1Zf"/>
+                                            <constraint firstItem="91T-nX-VL6" firstAttribute="top" secondItem="17v-4h-Qd9" secondAttribute="bottom" constant="10" id="IKQ-cZ-QU7"/>
+                                            <constraint firstItem="j8L-JA-bsJ" firstAttribute="top" secondItem="ZZT-uS-NVT" secondAttribute="bottom" constant="25" id="LOu-hQ-z3a"/>
+                                            <constraint firstAttribute="trailing" secondItem="17v-4h-Qd9" secondAttribute="trailing" constant="10" id="POY-EJ-C2Z"/>
+                                            <constraint firstItem="eIh-vd-QMv" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="PW5-fp-obL"/>
+                                            <constraint firstAttribute="trailing" secondItem="eIh-vd-QMv" secondAttribute="trailing" constant="10" id="Qve-VI-saS"/>
+                                            <constraint firstAttribute="trailing" secondItem="91T-nX-VL6" secondAttribute="trailing" constant="10" id="SWi-cS-gs6"/>
+                                            <constraint firstItem="91T-nX-VL6" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="UiZ-aH-b6M"/>
+                                            <constraint firstItem="17v-4h-Qd9" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="e0r-J0-27d"/>
+                                            <constraint firstItem="ZZT-uS-NVT" firstAttribute="top" secondItem="91T-nX-VL6" secondAttribute="bottom" id="iR4-To-D1K"/>
+                                            <constraint firstItem="4iu-yO-Jt2" firstAttribute="centerX" secondItem="aHQ-OD-FBA" secondAttribute="centerX" id="lwa-To-kdv"/>
+                                            <constraint firstItem="Ve4-gZ-bbz" firstAttribute="leading" secondItem="aHQ-OD-FBA" secondAttribute="leading" constant="10" id="mF7-dk-EnH"/>
+                                            <constraint firstAttribute="height" constant="400" id="pQS-Ko-Aur"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ve4-gZ-bbz" secondAttribute="trailing" constant="10" id="tbM-O9-mTa"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZZT-uS-NVT" secondAttribute="trailing" constant="10" id="xXQ-W7-Er0"/>
+                                            <constraint firstItem="Ve4-gZ-bbz" firstAttribute="top" secondItem="j8L-JA-bsJ" secondAttribute="bottom" constant="25" id="zG3-cc-aMS"/>
                                         </constraints>
                                     </view>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5To-mq-Lhf">
+                                        <rect key="frame" x="20" y="10" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Kjl-0e-jZ3"/>
+                                            <constraint firstAttribute="height" constant="20" id="unv-J6-wRS"/>
+                                        </constraints>
+                                        <state key="normal" image="leftArrow"/>
+                                        <connections>
+                                            <action selector="back_Axn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cA-2H-5O8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rHO-VG-BXD" secondAttribute="trailing" id="6kz-n2-kKk"/>
-                                    <constraint firstItem="rHO-VG-BXD" firstAttribute="top" secondItem="eff-V2-VMc" secondAttribute="top" id="ICp-nC-6Za"/>
-                                    <constraint firstAttribute="bottom" secondItem="rHO-VG-BXD" secondAttribute="bottom" id="nUz-7V-eJz"/>
-                                    <constraint firstItem="rHO-VG-BXD" firstAttribute="leading" secondItem="eff-V2-VMc" secondAttribute="leading" id="nlb-hl-PUe"/>
+                                    <constraint firstItem="5To-mq-Lhf" firstAttribute="leading" secondItem="teT-wH-tEa" secondAttribute="leading" constant="20" id="0Py-Jc-e11"/>
+                                    <constraint firstItem="aHQ-OD-FBA" firstAttribute="top" secondItem="Wwh-8W-nsh" secondAttribute="bottom" constant="30" id="7oZ-7S-jFB"/>
+                                    <constraint firstItem="aHQ-OD-FBA" firstAttribute="centerX" secondItem="teT-wH-tEa" secondAttribute="centerX" id="TTP-Oh-gRL"/>
+                                    <constraint firstItem="aHQ-OD-FBA" firstAttribute="leading" secondItem="teT-wH-tEa" secondAttribute="leading" constant="20" id="TfE-0A-nKX">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                    <constraint firstItem="5To-mq-Lhf" firstAttribute="top" secondItem="teT-wH-tEa" secondAttribute="top" constant="10" id="baa-Ym-BG1"/>
+                                    <constraint firstAttribute="trailing" secondItem="aHQ-OD-FBA" secondAttribute="trailing" constant="20" id="ctM-j7-jMb">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                    </constraint>
+                                    <constraint firstItem="Wwh-8W-nsh" firstAttribute="centerX" secondItem="teT-wH-tEa" secondAttribute="centerX" id="pDU-C1-hqc"/>
+                                    <constraint firstItem="Wwh-8W-nsh" firstAttribute="top" secondItem="teT-wH-tEa" secondAttribute="top" constant="30" id="ylV-sl-MiK"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="pz3-sG-gnV"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="jhU-Wp-xpW"/>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rHO-VG-BXD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="HVL-a3-NXL"/>
-                            <constraint firstItem="eff-V2-VMc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="S70-VO-szK"/>
+                            <constraint firstItem="teT-wH-tEa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="I1b-0F-I3z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="teT-wH-tEa" secondAttribute="bottom" id="KRc-3x-qrb"/>
                             <constraint firstAttribute="bottom" secondItem="XTS-vH-bEP" secondAttribute="bottom" id="X9w-yJ-mZX"/>
-                            <constraint firstItem="eff-V2-VMc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g51-vM-eFA"/>
-                            <constraint firstAttribute="bottom" secondItem="eff-V2-VMc" secondAttribute="bottom" id="hW6-2D-hNr"/>
-                            <constraint firstItem="eff-V2-VMc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iV1-jY-0TJ"/>
+                            <constraint firstItem="teT-wH-tEa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hwU-Sk-s9H"/>
                             <constraint firstItem="XTS-vH-bEP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jok-H8-kJc"/>
-                            <constraint firstItem="eff-V2-VMc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ka5-uC-0hs"/>
                             <constraint firstItem="XTS-vH-bEP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="paW-p0-bQx"/>
                             <constraint firstItem="XTS-vH-bEP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rrV-ST-2AG"/>
+                            <constraint firstItem="teT-wH-tEa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xS3-K3-9yD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -6868,7 +6840,7 @@ muchmore.</string>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <subviews>
                                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-er-eKa">
-                                                                                                <rect key="frame" x="0.0" y="5" width="300" height="30"/>
+                                                                                                <rect key="frame" x="0.0" y="10" width="300" height="30"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's time to start your adventures" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8V-iB-EPh">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
@@ -6902,7 +6874,7 @@ muchmore.</string>
                                                                                         </subviews>
                                                                                         <constraints>
                                                                                             <constraint firstItem="Vx1-er-eKa" firstAttribute="leading" secondItem="cg1-kf-mbI" secondAttribute="leading" id="UZu-Mo-9bU"/>
-                                                                                            <constraint firstItem="Vx1-er-eKa" firstAttribute="top" secondItem="cg1-kf-mbI" secondAttribute="top" constant="5" id="n4F-cB-KRj"/>
+                                                                                            <constraint firstItem="Vx1-er-eKa" firstAttribute="top" secondItem="cg1-kf-mbI" secondAttribute="top" constant="10" id="n4F-cB-KRj"/>
                                                                                             <constraint firstAttribute="trailing" secondItem="Vx1-er-eKa" secondAttribute="trailing" id="wKg-6p-B65"/>
                                                                                         </constraints>
                                                                                     </view>
@@ -7971,7 +7943,7 @@ muchmore.</string>
                                     <constraint firstAttribute="width" constant="25" id="1kW-X6-WTw"/>
                                     <constraint firstAttribute="height" constant="25" id="OvY-fB-kG7"/>
                                 </constraints>
-                                <state key="normal" image="Menu"/>
+                                <state key="normal" image="cross"/>
                                 <connections>
                                     <action selector="menu_Axn:" destination="0wK-nc-X94" eventType="touchUpInside" id="luy-ou-UsP"/>
                                 </connections>
@@ -8386,7 +8358,7 @@ This includes maintaining privacy for people who are:
                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="194"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="homepage1" translatesAutoresizingMaskIntoConstraints="NO" id="II4-i2-VXL">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Benefits" translatesAutoresizingMaskIntoConstraints="NO" id="II4-i2-VXL">
                                                                     <rect key="frame" x="5" y="5" width="381" height="183"/>
                                                                 </imageView>
                                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-ft-4OM">
@@ -10863,9 +10835,9 @@ This includes maintaining privacy for people who are:
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" # Nature is a natural cure." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JPr-3l-LYz">
-                                                                    <rect key="frame" x="20" y="14.5" width="177" height="18"/>
+                                                                    <rect key="frame" x="20" y="14.5" width="172.5" height="18"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -10882,21 +10854,21 @@ This includes maintaining privacy for people who are:
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="eIZ-gh-zz5" imageView="2GR-5n-TD9" style="IBUITableViewCellStyleDefault" id="jfH-rs-Drt">
-                                                        <rect key="frame" x="0.0" y="123" width="414" height="44"/>
+                                                        <rect key="frame" x="0.0" y="123" width="414" height="83"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jfH-rs-Drt" id="mXq-lW-VEZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eIZ-gh-zz5">
-                                                                    <rect key="frame" x="79" y="0.0" width="315" height="44"/>
+                                                                    <rect key="frame" x="99" y="0.0" width="295" height="83"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="autumn" id="2GR-5n-TD9">
-                                                                    <rect key="frame" x="20" y="0.0" width="44" height="44"/>
+                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="user" id="2GR-5n-TD9">
+                                                                    <rect key="frame" x="20" y="9.5" width="64" height="64"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </imageView>
                                                             </subviews>
@@ -10975,6 +10947,7 @@ This includes maintaining privacy for people who are:
                     </view>
                     <connections>
                         <outlet property="dataTV" destination="teY-60-FtH" id="TI5-As-9he"/>
+                        <outlet property="img_View" destination="sPS-zd-voY" id="sfC-lC-h5X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ks-AI-lh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -11043,16 +11016,16 @@ This includes maintaining privacy for people who are:
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text=" # Flexible &amp; Hassle free" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q7q-Dp-cgT">
-                                                                    <rect key="frame" x="20" y="22.5" width="158" height="18"/>
+                                                                    <rect key="frame" x="20" y="20.5" width="158" height="18"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="GoExplore Andaman camps will help you experience the best. Enjoy amazing culture, rich history and spectacular real beauty." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lYV-m2-OxM">
-                                                                    <rect key="frame" x="20" y="43" width="357.5" height="28.5"/>
+                                                                    <rect key="frame" x="20" y="41" width="355" height="31"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                     <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -11113,6 +11086,7 @@ This includes maintaining privacy for people who are:
                     </view>
                     <connections>
                         <outlet property="dataTV" destination="dPV-sZ-0gL" id="swF-wH-5ob"/>
+                        <outlet property="img_View" destination="AtD-9q-44e" id="bIY-hF-gg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1F-6j-FHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

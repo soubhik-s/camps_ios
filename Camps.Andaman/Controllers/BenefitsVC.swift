@@ -12,6 +12,7 @@ class BenefitsVC: UIViewController {
 
   
     
+    @IBOutlet weak var img_View: UIImageView!
     
     @IBOutlet weak var dataTV: UITableView!
     var adultBenefits_Arr:[AdultBenefit] = []
@@ -29,7 +30,7 @@ class BenefitsVC: UIViewController {
     func viewChanges() {
         dataTV.dataSource = self
         dataTV.delegate = self
-        
+        img_View.layer.cornerRadius = 10
         getBenfitsData()
         
     }

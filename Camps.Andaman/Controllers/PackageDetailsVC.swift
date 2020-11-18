@@ -60,7 +60,9 @@ class PackageDetailsVC: UIViewController {
         ititneraryView.addGestureRecognizer(tap)
         IMGView.layer.cornerRadius = 10
         IMGView.layer.masksToBounds = true
-       firstImageFadeIn()
+
+        IMGView.image = ItineraryDetails.image.toImage()
+        
         campTitleLbl.text = BookingDetails.package_name
         priceLbl.text = "₹ \(BookingDetails.price)"
         
@@ -211,45 +213,45 @@ extension PackageDetailsVC:  UICollectionViewDelegate, UICollectionViewDataSourc
         self.navigationController?.pushViewController(VC, animated: true)
     }
     
-    
-    func firstImageFadeIn() {
-      UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-        self.IMGView.alpha = 0.8
-      }, completion: {_ in
-    self.IMGView.alpha = 1
-
-      self.IMGView.image = UIImage(named: "homepage2")
-      self.secondImageFadeIn()
-      })
-
-    }
-       
-    
-    func secondImageFadeIn() {
-          
-        UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-            self.IMGView.alpha = 0.8
-
-        }, completion: {_ in
-        self.IMGView.alpha = 1
-        self.IMGView.image = UIImage(named: "homepage3")
-        self.thirdImageFadeIn()
-        })
-
-    }
-    func thirdImageFadeIn() {
-          
-      UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-        self.IMGView.alpha = 0.8
-
-        }, completion: {_ in
-        self.IMGView.alpha = 1
-
-        self.IMGView.image = UIImage(named: "homepage1")
-        self.firstImageFadeIn()
-        })
-
-    }
+//
+//    func firstImageFadeIn() {
+//      UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
+//        self.IMGView.alpha = 0.8
+//      }, completion: {_ in
+//    self.IMGView.alpha = 1
+//
+//      self.IMGView.image = UIImage(named: "homepage2")
+//      self.secondImageFadeIn()
+//      })
+//
+//    }
+//
+//
+//    func secondImageFadeIn() {
+//
+//        UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
+//            self.IMGView.alpha = 0.8
+//
+//        }, completion: {_ in
+//        self.IMGView.alpha = 1
+//        self.IMGView.image = UIImage(named: "homepage3")
+//        self.thirdImageFadeIn()
+//        })
+//
+//    }
+//    func thirdImageFadeIn() {
+//
+//      UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
+//        self.IMGView.alpha = 0.8
+//
+//        }, completion: {_ in
+//        self.IMGView.alpha = 1
+//
+//        self.IMGView.image = UIImage(named: "homepage1")
+//        self.firstImageFadeIn()
+//        })
+//
+//    }
 
    
 

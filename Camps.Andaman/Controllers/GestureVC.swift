@@ -22,6 +22,9 @@ class GestureVC: UIViewController {
     var des_Arr:[String] = []
     var activity_Arr:[String] = []
     
+    var timer = Timer()
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +35,7 @@ class GestureVC: UIViewController {
     func viewChanges() {
         gestureCV.isHidden = true
         gestureTV.isHidden = true
-
+        gestureTV.sectionHeaderHeight = 30
         CVChanges()
       
         if GestureVariables.isGesture == true {
@@ -44,7 +47,7 @@ class GestureVC: UIViewController {
    
         DispatchQueue.main.async {
         
-            timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
             
         }
                
@@ -299,11 +302,11 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
 
            let img_View = UIImageView(frame: CGRect(x: 20, y: 3, width: 25, height: 25))
 
-            let label = UILabel(frame: CGRect(x: 40, y: 0, width: returnedView.frame.width - 40 , height: returnedView.frame.height))
+            let label = UILabel(frame: CGRect(x: 20, y: 0, width: returnedView.frame.width - 40 , height: returnedView.frame.height))
         label.textColor = .white
             label.backgroundColor = .clear
             label.textAlignment = .left
-            label.font = UIFont(name: "Optima-Bold", size: 15)
+            label.font = UIFont(name: "Optima", size: 17)
 
     //        label.layer.cornerRadius = 10
     //        label.layer.masksToBounds = true
@@ -317,7 +320,7 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
                 if activity_Arr.isEmpty == false {
                 returnedView.isHidden = false
 
-                label.text = "Activities"
+                label.text = "Activities:"
                 img_View.image = UIImage(named: "infoN")
                 } else {
                     returnedView.isHidden = true

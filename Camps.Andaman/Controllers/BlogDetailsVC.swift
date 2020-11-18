@@ -10,8 +10,7 @@ import UIKit
 import IQKeyboardManagerSwift
 
 
-var timer = Timer()
-var counter = 0
+
    
 class BlogDetailsVC: UIViewController {
 
@@ -39,7 +38,8 @@ class BlogDetailsVC: UIViewController {
     let cmt_View_Height:CGFloat = 250
     var comment_Arr:CommentResponse = []
     let blogImg_Url = "https://camps.goexploreandaman.com/assets/img/blogging/"
-    
+    var timer = Timer()
+    var counter = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,7 +60,7 @@ class BlogDetailsVC: UIViewController {
         cmnt_subView.layer.cornerRadius = 5
     
         DispatchQueue.main.async {
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         
         }
                

@@ -14,6 +14,7 @@ class WhyVC: UIViewController {
     var content_Arr:[Points] = []
     var points_Arr:[String] = []
 
+    @IBOutlet weak var img_View: UIImageView!
     
     override func viewDidLoad() {            super.viewDidLoad()
 
@@ -24,6 +25,7 @@ class WhyVC: UIViewController {
 
     
     func viewChanges() {
+        img_View.layer.cornerRadius = 10
         dataTV.dataSource = self
         dataTV.delegate = self
         dataTV.sectionHeaderHeight = 60
@@ -102,24 +104,28 @@ extension WhyVC: UITableViewDelegate , UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             if section == 1 {
-                return content_Arr.count
-            } else {
                 return points_Arr.count
+
+            } else {
+                return content_Arr.count
+
             }
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell =  dataTV.dequeueReusableCell(withIdentifier: "BenefitCell", for: indexPath)
             if indexPath.section == 1 {
-                let cellPath = content_Arr[indexPath.row]
-                cell.textLabel?.text = "# \(cellPath.title)"
-                cell.detailTextLabel?.text = cellPath.pointsDescription 
+                cell.textLabel?.text = "# \(points_Arr[indexPath.row])"
+                cell.detailTextLabel?.text = ""
+
                 
             } else {
                     
                          
-                cell.textLabel?.text = "# \(points_Arr[indexPath.row])"
-                cell.detailTextLabel?.isHidden = true
+                let cellPath = content_Arr[indexPath.row]
+                cell.textLabel?.text = "# \(cellPath.title)"
+                cell.detailTextLabel?.text = cellPath.pointsDescription
+               
             }
             
             return cell

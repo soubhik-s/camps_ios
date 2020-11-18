@@ -18,7 +18,6 @@ class CovidVC: UIViewController, UITableViewDelegate , UITableViewDataSource, UI
     
     var timer = Timer()
     var counter = 0
-
     let IMG_Arr = ["covid1","covid2","covid3","covid4"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +100,8 @@ class CovidVC: UIViewController, UITableViewDelegate , UITableViewDataSource, UI
         cell.IMG_View.image = UIImage(named: IMG_Arr[indexPath.row])
         cell.myPageCntrl.numberOfPages = IMG_Arr.count
         cell.myPageCntrl.currentPage = indexPath.item
-            
+        cell.IMG_View.layer.cornerRadius = 10
+       
         }
         return cell
         
