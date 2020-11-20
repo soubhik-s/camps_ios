@@ -26,7 +26,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var insta_Btn: UIButton!
     @IBOutlet weak var fb_Btn: UIButton!
     
-    var menuList = ["My Dashborad", "Profile","Blog","Benefits" , "Why Choose us..?", "COVID-!9","Customer Support", "About Us", "FAQ's","Policy","Logout"]
+    var menuList = ["My Dashborad", "Profile","Blog","Benefits" , "Why Choose us..?", "Health Guidelines","Customer Support", "About Us", "FAQ's","Policy","Logout"]
     var IMGList = ["Dashboard","profile","blog","fire2","why", "icons8-virus-free-30", "support_1","About","FAQ's","insurance", "Logout"]
     
     

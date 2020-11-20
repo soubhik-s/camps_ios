@@ -142,10 +142,10 @@ class GestureVC: UIViewController {
                 img_Arr.append(gesture_Data.campingImageLinkSecond)
                 img_Arr.append(gesture_Data.campingImageLinkThird)
                 img_Arr.append(gesture_Data.campingImageLinkFourth)
-                des_Arr.append(gesture_Data.campingDescriptionFirst)
-                des_Arr.append(gesture_Data.campingDescriptionSecond)
-                des_Arr.append(gesture_Data.campingDescriptionThird)
-                des_Arr.append(gesture_Data.campingDescriptionFourth)
+                    des_Arr.append(gesture_Data.campingDescriptionFirst.removeSpecialCharsFromString())
+                    des_Arr.append(gesture_Data.campingDescriptionSecond.removeSpecialCharsFromString())
+                    des_Arr.append(gesture_Data.campingDescriptionThird.removeSpecialCharsFromString())
+                    des_Arr.append(gesture_Data.campingDescriptionFourth.removeSpecialCharsFromString())
                 
                 activity_Arr =  gesture_Data.campingActivity.components(separatedBy: "->")
                 titleLbl.text = gesture_Data.campingName
@@ -199,10 +199,10 @@ class GestureVC: UIViewController {
             img_Arr.append(gesture_Data.gestureImageLinkSecond)
             img_Arr.append(gesture_Data.gestureImageLinkThird)
             img_Arr.append(gesture_Data.gestureImageLinkFourth)
-            des_Arr.append(gesture_Data.gestureDescriptionFirst)
-            des_Arr.append(gesture_Data.gestureDescriptionSecond)
-            des_Arr.append(gesture_Data.gestureDescriptionThird)
-            des_Arr.append(gesture_Data.gestureDescriptionFourth)
+                des_Arr.append(gesture_Data.gestureDescriptionFirst.removeSpecialCharsFromString())
+                des_Arr.append(gesture_Data.gestureDescriptionSecond.removeSpecialCharsFromString())
+                des_Arr.append(gesture_Data.gestureDescriptionThird.removeSpecialCharsFromString())
+                des_Arr.append(gesture_Data.gestureDescriptionFourth.removeSpecialCharsFromString())
               
                 if gesture_Data.gestureActivity.isEmpty == false {
                     activity_Arr =  gesture_Data.gestureActivity.components(separatedBy: "->")
@@ -275,7 +275,7 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
 
         if indexPath.section == 1 {
             
-        cell.textLabel?.text = activity_Arr[indexPath.row]
+        cell.textLabel?.text = "# \(activity_Arr[indexPath.row])"
 
             
         } else {

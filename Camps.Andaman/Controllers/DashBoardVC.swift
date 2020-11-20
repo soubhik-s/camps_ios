@@ -32,10 +32,10 @@ class DashBoardVC: UIViewController {
 //    var pdfUrlStr = "https://camps.goexploreandaman.com/invoice_api/"
     let month_Arr = ["January","Febraury","March","April","May","June","July","August","September","October", "November","December"]
     var pdfView = PDFView()
-
+     var refreshContrl = UIRefreshControl()
     var webView = WKWebView()
     var pdfURL: URL!
-
+    var isRefreshing:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +43,7 @@ class DashBoardVC: UIViewController {
     }
     
     func viewChanges() {
+        refreshSettings()
         razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
         dataTV.rowHeight = 380
         dataTV.isHidden = true
@@ -52,6 +53,24 @@ class DashBoardVC: UIViewController {
         getData()
     }
     
+    
+    func refreshSettings() {
+            refreshContrl.tintColor = .white
+    //         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+            self.refreshContrl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+             dataTV.refreshControl = refreshContrl
+            
+        }
+       
+       
+    @objc func reloadData() {
+        self.dataTV.refreshControl?.beginRefreshing()
+        isRefreshing = true
+        getData()
+
+    }
+        
+        
     
     @objc func onTapped(){
         print("Tapped")
@@ -114,6 +133,9 @@ class DashBoardVC: UIViewController {
             print(parsedData)
         
                 if parsedData.isEmpty == false {
+                    if isRefreshing == true {
+                        dataTV.refreshControl?.endRefreshing()
+                    }
                 dataArr = parsedData.reversed()
           
            
@@ -125,7 +147,7 @@ class DashBoardVC: UIViewController {
             print("bookingData = \(bookingData)")
             package_Arr.append(bookingData.package_name!)
                         price_Arr.append(bookingData.total_price!)
-                        name_Arr.append(bookingData.first_name! + " " + bookingData.last_name!)
+                        name_Arr.append(bookingData.first_name! + " " + bookingData.middle_name! + "" + bookingData.last_name!)
             voucher_Arr.append(bookingData.voucher_name!)
             invoice_Arr.append(bookingData.invoice_name!)
             status_Arr.append(bookingData.camp_status!)

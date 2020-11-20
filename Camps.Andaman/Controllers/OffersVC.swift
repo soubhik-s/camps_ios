@@ -125,18 +125,18 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCell", for: indexPath) as! OffersCVCell
     
     let cellPath = dataArr[indexPath.row]
-    if cellPath.discountType == "others" {
-    cell.Img_View.setImage(urlStr: ClientConfig.offerIMGUrl + cellPath.offersImageName)
-        cell.myPage.isHidden = true
-    cell.myPage.numberOfPages = dataArr.count
-    cell.myPage.currentPage = indexPath.row
-    cell.offerCode_Lbl.text = "Code : \(cellPath.couponCode)"
-    cell.titleLbl.text = cellPath.couponName
-    cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
-    cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"
-    cell.Img_View.layer.cornerRadius = 10
+   
+   
+    cell.myPage.isHidden = true
+        cell.Img_View.setImage(urlStr: ClientConfig.offerIMGUrl + cellPath.offersImageName)
+        cell.myPage.numberOfPages = dataArr.count
+        cell.myPage.currentPage = indexPath.row
+        cell.offerCode_Lbl.text = "Code : \(cellPath.couponCode)"
+        cell.titleLbl.text = cellPath.couponName
+        cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
+        cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"
+        cell.Img_View.layer.cornerRadius = 10
     
-    }
     
     return cell
 
