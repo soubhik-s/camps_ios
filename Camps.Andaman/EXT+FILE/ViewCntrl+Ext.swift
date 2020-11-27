@@ -107,7 +107,7 @@ extension UIViewController {
         let interface = ptr?.pointee
         let addrFamily = interface?.ifa_addr.pointee.sa_family
         if addrFamily == UInt8(AF_INET) || addrFamily == UInt8(AF_INET6) {
-        if let name: String = String(cString: (interface?.ifa_name)!), name == "en0" {
+        if let name: String? = String(cString: (interface?.ifa_name)!), name == "en0" {
         var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
         getnameinfo(interface?.ifa_addr, socklen_t((interface?.ifa_addr.pointee.sa_len)!), &hostname, socklen_t(hostname.count), nil, socklen_t(0), NI_NUMERICHOST)
         address = String(cString: hostname)
@@ -125,7 +125,7 @@ extension UIViewController {
         let dateForm = DateFormatter()
         dateForm.dateFormat = "yyyy-MM-dd"  // MM-dd-yyyy
 
-        if let text:String = dateForm.string(from: current) {
+        if let text:String? = dateForm.string(from: current) {
          return text
         } else {
            return "Unable To Convrt setCurrentDate"
@@ -139,7 +139,7 @@ extension UIViewController {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         formatter.dateFormat = "HH:mm"
-        if let text:String = formatter.string(from: curretTime) {
+        if let text:String? = formatter.string(from: curretTime) {
             return text
         } else {
             return "Unable To Convrt setCurrentTime"
