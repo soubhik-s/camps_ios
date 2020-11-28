@@ -35,6 +35,11 @@ class BoardTVC: UITableViewCell {
    
     @IBOutlet weak var blurView: UIVisualEffectView!
     
+    @IBOutlet weak var download_Btn: UIButton!
+    
+    
+    @IBOutlet weak var upload_Btn: UIButton!
+  
     
     
     override func awakeFromNib() {

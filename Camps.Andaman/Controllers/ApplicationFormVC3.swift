@@ -68,6 +68,13 @@ class ApplicationFormVC3: UIViewController {
     
     @IBOutlet weak var covidLbl: UILabel!
     @IBOutlet weak var net_Price_Lbl: UILabel!
+   
+    
+    @IBOutlet weak var GST_Lbl: UILabel!
+    
+    
+    
+    
     var isChecked:Bool = true
     var picker = UIPickerView()
     let callType_Arr = ["Skype","WhatsApp","Messenger","Google Duo"]
@@ -86,7 +93,7 @@ class ApplicationFormVC3: UIViewController {
     var net_Price = 0.0
     var tax_Price = 0.0
     var final_Price = 0.0
-   
+    var taxPercent = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,7 +122,7 @@ class ApplicationFormVC3: UIViewController {
             covidLbl.addGestureRecognizer(covid_Tap)
         
         copoun_Img.isHidden = true
-        calculatePrices()
+        getGSTPercent()
         
     }
     
@@ -159,16 +166,25 @@ class ApplicationFormVC3: UIViewController {
         
     func calculatePrices() {
         basic_Price = Double(BookingDetails.price.fiterPrice()) ?? 0.0
-        tax_Price = basic_Price * 0.05
-        net_Price = basic_Price + tax_Price
-        final_Price = net_Price - discount_Price
-        basePrice_Lbl.text = "\(basic_Price.rounded()) "
-        dPrice_Lbl.text = "\(discount_Price.rounded()) "
-        net_Price_Lbl.text = "\(net_Price.rounded()) "
-        taxPrice_Lbl.text = "\(tax_Price.rounded()) "
-        totalPrice_Lbl.text = "\(final_Price.rounded()) "
-        price_Lbl.text = "\(final_Price.rounded()) "
         
+        tax_Price = basic_Price * (0.01 * taxPercent )
+        net_Price = basic_Price - discount_Price
+        final_Price = net_Price + tax_Price
+        
+//        net_Price = basic_Price + tax_Price
+//        final_Price = net_Price - discount_Price
+//        basePrice_Lbl.text = "\(basic_Price.rounded()) "
+//        dPrice_Lbl.text = "\(discount_Price.rounded()) "
+//        net_Price_Lbl.text = "\(net_Price.rounded()) "
+//        taxPrice_Lbl.text = "\(tax_Price.rounded()) "
+//        totalPrice_Lbl.text = "\(final_Price.rounded()) "
+//        price_Lbl.text = "\(final_Price.rounded()) "
+//
+        dPrice_Lbl.text = "\(discount_Price.rounded())"
+        net_Price_Lbl.text = "\(net_Price)"
+        taxPrice_Lbl.text = "\(tax_Price)"
+        totalPrice_Lbl.text = "\(final_Price.rounded())"
+
         print("basic_Price = \(basic_Price)")
         print("tax_Price = \(tax_Price)")
         print("net_Price = \(net_Price)")
@@ -271,6 +287,17 @@ class ApplicationFormVC3: UIViewController {
         popUpAlert(title: "Alert", message: "Check Internet Connection.", action: .alert)
         }
     }
+    func getGSTPercent()  {
+        if reach.isConnectedToNetwork() == true {
+        showActivityIndicator()
+          
+          
+        ApiService.callPost(url: ClientInterface.bookingUrl, params: "", methodType: "GET", tag: "GST", finish:finishPost)
+            
+        } else {
+        popUpAlert(title: "Alert", message: "Check Internet Connection.", action: .alert)
+        }
+    }
     
     func finishPost (message:String, data:Data? , tag: String) -> Void {
     
@@ -307,6 +334,24 @@ class ApplicationFormVC3: UIViewController {
                 print("Parse Error: \(error)")
                 }
             
+        } else if tag == "GST" {
+            do {
+                if let jsonData = data {
+                let parsedData = try JSONDecoder().decode(GSTResponse.self, from: jsonData)
+                print(parsedData)
+                
+                    GST_Lbl.text = " GST - \(parsedData.gst_percentage) % (₹)"
+                    taxPercent = Double(parsedData.gst_percentage)!
+                    print("taxPercent = \(taxPercent)")
+                    calculatePrices()
+
+               
+                } else {
+                }
+                } catch {
+                popUpAlert(title: "Alert", message: "Error in Applying Copoun.Try Again. ", action: .alert)
+                print("Parse Error: \(error)")
+                }
         } else {
 
         do {

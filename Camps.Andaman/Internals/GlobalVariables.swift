@@ -116,7 +116,7 @@ struct BookingDetails {
     static var treatments_details = "NA"
     
     static var seasonIndex = 0
-    
+    static var IMG_Arr = [UIImage]()
     
 
 

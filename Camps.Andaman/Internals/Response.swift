@@ -16,6 +16,10 @@ struct OTPResponse:Decodable {
     let message:String
 }
 
+struct GSTResponse:Decodable {
+    let id:String
+    let gst_percentage:String
+}
 
 
 // MARK: - PackageResponseElement
@@ -485,8 +489,11 @@ let siblings_last_name:String?
 let siblings_gender:String?
 let siblings_mobile_number:String?
 let siblings_email:String?
+let parent_id_number:String?
+let verfied_docusign_file:String?
+let docusign_file:String?
+let docusign_status:String?
 
-    
 enum CodingKeys: String, CodingKey {
 
     case id = "id"
@@ -555,7 +562,11 @@ enum CodingKeys: String, CodingKey {
     case siblings_gender = "siblings_gender"
     case siblings_mobile_number = "siblings_mobile_number"
     case siblings_email = "siblings_email"
-    
+    case docusign_file = "docusign_file"
+    case verfied_docusign_file = "verfied_docusign_file"
+    case docusign_status = "docusign_status"
+    case parent_id_number = "parent_id_number"
+
 }
 
 }

@@ -18,44 +18,36 @@ class ActitvityViewController: UIViewController {
     @IBOutlet weak var dataCV: UICollectionView!
     @IBOutlet weak var calender_Lbl: UILabel!
     
-    var dataArray:[ItineraryResponseElement] = []
     var days_Arr = ["# Day 1","# Day 2","# Day 3","# Day 4","# Day 5","# Day 6","# Day 7","# Day 8","# Day 9","# Day 10","# Day 11", "# Day 12"  ]
    
-    var title_Arr = ["Welcome 😀 ","Love & Lemon 🥰" , "Freedom Fam" , "Nature Love" , "Absolute Blue" , "Adventure Awaits" , "Tiny Tribe" , "Happy Riders ", "Grooving in Nature" , "Island Explorer" , "Savor the Moments" , "Memories"]
+    var title_Arr = ["Welcome ","Love & Lemon " , "Freedom Fam" , "Nature Love" , "Absolute Blue" , "Adventure Awaits" , "Tiny Tribe" , "Happy Riders ", "Grooving in Nature" , "Island Explorer" , "Savor the Moments" , "Memories"]
     
     let day_1_Arr = ["16:00 – 17:30 : Briefing and Introductory session " , "18:00 – 19:00 : Welcome Party ", "19:00- 20:30 : Cook your soup – Good Kick Start for camp. Enjoy the dinner at Camp Station. "]
   
     
     let day_2_Arr = ["4.30 : Rise Early ","5.00 - 6:00 : Practice yoga at the sunrise on Beach ", "6:00 – 7:00 : Fresh Up","7:00 – 8.00 :Breakfast & get ready for Adventurous activities. " , "8.30 - 10:30 : Transfer to Jolly Bouy Islands" , "10.30 - 12:00 : Local Sightseeing includes - Mahatma Gandhi Marine National Park. Enjoy the island by exploring the butterflies, diverse fish species and many more." ,"12.00 - 13.30 : Snorkeling Activity & Swimming" , " 13.45 - 14.30 : Lunch time - Enjoy eating a packed lunch", "14:30 - 15.30 : Glass Boat Ride 1-1.5hr" , "15.30 - 17.00 : Return to Hotel ", "17:30 - 18:30 : Fresh Up & Rest","20.30- 21.00 : Dinner – Bon Appetite ", "21:00 : Lights Off"]
     
-    let day_3_Arr = ["4.30 : Rise Early ","5.00 - 6:15 : Practice yoga at the sunrise on Beach ", "6:15 – 7:15 : Fresh Up ","0715 hrs to 0845 hrs : Cook your own breakfast and relish it. " , "0930 hrs to 1100 hrs : Visit to Industries & Meeting with Artisans" , "1100 hrs to 1300 hrs : With the help of a local artisan – Handicraft Palm Mats on your own." ," 1300 hrs to 1400 hrs : Lunchtime (Packed)" , " 1400 hrs to 1700 hrs : Visit to National Memorial Cellular Jail + Carbyn Beach " , "1700 hrs to 1800 hrs : Light & Sound Show Cellular Jail " , "1800 hrs to 1930 hrs : Transfer back to resort " , "1930 hrs to 2000 hrs : Leisure & Fresh up " , "2000 hrs to 2100] hrs  : Dinner – Bon Appetite ","2100 hrs : Lights Off"]
+    let day_3_Arr = ["4:30 : Rise Early ","5:00 - 6:15 : Practice yoga at the sunrise on Beach ", "6:15 – 7:15 : Fresh Up ","07:15 - 08:45 : Cook your own breakfast and relish it. " , "09:30 - 11:00 : Visit to Industries & Meeting with Artisans" , "11:00 - 13:00 : With the help of a local artisan – Handicraft Palm Mats on your own." ," 13:00 - 14:00 : Lunchtime (Packed)" , " 14:00 - 17:00 : Visit to National Memorial Cellular Jail + Carbyn Beach " , "17:00 18:00 : Light & Sound Show Cellular Jail " , "18:00 - 19:30 : Transfer back to resort " , "19:30 - 20:00 hrs : Leisure & Fresh up " , "20:00 - 21:00 : Dinner – Bon Appetite ","21:00 : Lights Off"]
     
-    let day_4_Arr = ["0400 hrs : Rise Early and Set a journey early " , "0430 hrs to 0530 hrs : Leave Hotel Check Post to Baratang ", "0600 hrs to 0800 hrs : Reach Baratang " , "0800 hrs to 0830 hrs : Relish your packed Breakfast" , "0830 hrs to 0930 hrs : Reach Limestone cave and mud volcano through Fiber Boat from baratang." , "0930 hrs to 1330 hrs : Sightseeing – Limestone caves and Mud Volcano – Watch the natural rich that leaves you wonderstruck." ," 1330 hrs to 1400 hrs: Lunchtime (Packed) " , " 1430 hrs to 1600 hrs : Check Post Baratang to Port Blair " , "1600 hrs to 1700 hrs : Reach Camp Resort " , "1700 hrs to 1830 hrs : Leisure & Fresh up " , "1830 hrs to 2030 hrs : Birdwatching briefing session " , "2030 hrs to 2100 hrs : Dinner will be served, Enjoy " , "2100 hrs : Lights Off"]
+    let day_4_Arr = ["04:00 : Rise Early and Set a journey early " , "04:30 - 05:30 : Leave Hotel Check Post to Baratang ", "06:00 - 08:00  : Reach Baratang " , "08:00 - 08:30 : Relish your packed Breakfast" , "08:30 - 09:30 : Reach Limestone cave and mud volcano through Fiber Boat from baratang." , "09:30 - 13:30 : Sightseeing – Limestone caves and Mud Volcano – Watch the natural rich that leaves you wonderstruck." ," 13:30 - 14:00 : Lunchtime (Packed) " , " 14:30 - 16:00 : Check Post Baratang to Port Blair " , "16:00 - 17:00 : Reach Camp Resort " , "17:00 - 18:30 : Leisure & Fresh up " , "18:30 - 20:30 : Birdwatching briefing session " , "20:30 - 21:00 : Dinner will be served, Enjoy " , "21:00 : Lights Off"]
     
-    let day_5_Arr = ["0400 hrs : Rise Early  " , "0430 hrs to 0730 hrs : Bird Watching (25 campers) The other campers will continue in Beach yoga ", "0730 hrs to 0830 hrs : Fresh Up " , "0830 hrs to 0930 hrs : Breakfast & get ready for Next Islands." , "0930 hrs to 1300 hrs : Transfer to Havelock Islands." , "1300 hrs to 1400 hrs : Lunch Will be Served" ," 1430 hrs to 1730 hrs : Visit Radhanagar Beach. Radhanagar beach is known as one of the cleanest beaches in Asia. This beach is good for photography. " , " 1730 hrs to 1900 hrs : Return to Resort & Fresh Up(Leisure Time) " , "1900 hrs to 2030 hrs : Time for some fun – ‘Freeze dance’ around the bonfire is the perfect evening time to spend. Freeze Dance - Keep dancing until the music is on and freeze when the music is off. " , "2030 hrs to 2100 hrs : Dinner – Bon Appetite " , "2100 hrs: Lights Off"]
+    let day_5_Arr = ["04:00 : Rise Early  " , "04:30 - 07:30 : Bird Watching (25 campers) The other campers will continue in Beach yoga ", "07:30 - 08:30 : Fresh Up " , "08:30 - 09:30 : Breakfast & get ready for Next Islands." , "09:30 - 13:00 hrs : Transfer to Havelock Islands." , "13:00 - 14:00 : Lunch Will be Served" ," 14:30 - 17:30 : Visit Radhanagar Beach. Radhanagar beach is known as one of the cleanest beaches in Asia. This beach is good for photography. " , " 17:30 - 19:00 : Return to Resort & Fresh Up(Leisure Time) " , "19:00 20:30 : Time for some fun – ‘Freeze dance’ around the bonfire is the perfect evening time to spend. Freeze Dance - Keep dancing until the music is on and freeze when the music is off. " , "20:30 - 21:00 hrs : Dinner – Bon Appetite " , "21:00 : Lights Off"]
     
-    let day_6_Arr = ["04:30 : Rise Early","0500 hrs to 0630 hrs : Practice yoga at the sunrise on Beach" , "0630 hrs to 0730 hrs : Fresh Up " , "0730 hrs to 0830 hrs : Breakfast & get ready for Adventurous activities. " , "0900 hrs to 1300 hrs : Scuba Diving, Swimming" , " 1300 hrs to 1400 hrs : Lunch will be served." , "1400 hrs to 1500 hrs : Leisure", "1500 hrs to 1700 hrs : Introduction to Marine ecology program " , "1700 hrs to 1800 hrs : Return to Resort Freshen Up." , " 1800 hrs to 2000 hrs : Truth or Dare, this game is an icebreaker to get to know each other. Enjoy the Perfect bonfire " ,  "2000 hrs to 2100 hrs : Dine together " , "2100 hrs : Lights off " ]
+    let day_6_Arr = ["04:30 : Rise Early","05:00 - 06:30 : Practice yoga at the sunrise on Beach" , "06:30 - 07:30 : Fresh Up " , "07:30 - 08:30 : Breakfast & get ready for Adventurous activities. " , "09:00 - 13:00 : Scuba Diving, Swimming" , " 13:00 - 14:00 : Lunch will be served." , "14:00 - 15:00 hrs : Leisure", "15:00 - 17:00 : Introduction to Marine ecology program " , "17:00 - 18:00 : Return to Resort Freshen Up." , " 18:00 - 20:00 : Truth or Dare, this game is an icebreaker to get to know each other. Enjoy the Perfect bonfire " ,  "20:00 - 21:00 hrs : Dine together " , "21:00 : Lights off " ]
     
-    let day_7_Arr = ["0430 hrs : Rise Early" , "0500 hrs to 0630 hrs : Practice yoga at the sunrise on Beach", "0630 hrs to 0730 hrs: Fresh Up", "0730 hrs to 0830 hrs : Breakfast will be served" , "0830 hrs to 1130 hrs : Transfer to Tiny Island – Neil Island" , "1130 hrs to 1300 hrs : Transfer to Resort & Leisure." , "1300 hrs to 1400 hrs : Lunch will be served.." , "1430 hrs to 1530 hrs : Visit Laxmanpur beach.", "1530 hrs to 1700 hrs  : Beach Volleyball" , "1700 hrs to 1800 hrs : Transfer to Resort & Freshen Up" , "1800 hrs to 1930 hrs : Question Answer Round Around Bonfire", "1930 hrs to 2100 hrs : Cook(Grill) and Dine together", "2100 hrs : Lights off"]
-  let day_8_Arr = ["0430 hrs : Rise Early" , "0500 hrs to 0630 hrs : Practice yoga at the sunrise on Beach", "0630 hrs to 0730 hrs : Fresh Up","0730 hrs to 0830 hrs : Breakfast will be served.","0830 hrs to 1130 hrs : Bharatpur Beach ","1130 hrs to 1300 hrs : Cycling." , "1300 hrs to 1400 hrs : Lunch will be served." , "1400 hrs to 1500 hrs : Leisure", " 1500 hrs to 1700 hrs : Visit to Natural Rock" , "1700 hrs to 1800 hrs : Return to Resort Freshen Up", "1800 hrs to 1900 hrs : Share experience about their cycling & 2 Islands Trip", "1900 hrs to 2100 hrs : Cook and Dine together","2100 hrs : Lights off" ]
+    let day_7_Arr = ["04:30 : Rise Early" , "05:00 - 06:30 : Practice yoga at the sunrise on Beach", "06:30 - 07:30 hrs: Fresh Up", "07:30 - 08:30 : Breakfast will be served" , "08:30 - 11:30 : Transfer to Tiny Island – Neil Island" , "11:30 - 13:00 : Transfer to Resort & Leisure." , "13:00 - 14:00 : Lunch will be served.." , "14:30 - 15:30 : Visit Laxmanpur beach.", "15:30 - 17:00 : Beach Volleyball" , "17:00 - 18:00 : Transfer to Resort & Freshen Up" , "18:00 - 19:30 : Question Answer Round Around Bonfire", "19:30 - 21:00 hrs : Cook(Grill) and Dine together", "21:00 : Lights off"]
     
-    let day_9_Arr = ["0430 hrs : Rise Early" , "0500 hrs to 0630 hrs : Practice yoga at the sunrise on Beach", "0630 hrs to 0730 hrs : Fresh Up" , "0730 hrs to 0830 hrs  : Breakfast will be served.", "0930 hrs to 1300 hrs : Transfer to Port Blair", "1300 hrs to 1400 hrs : Lunch will be served.", "1400 hrs to 1500 hrs : Return to Camp Resort", "1500 hrs to 1630 hrs : Leisure", "1630 hrs to 1830 hrs : Tug of War activity", "1830 hrs to 2030 hrs : Cook and dine together", "2100 hrs : Lights off" ]
+ 
+    let day_8_Arr = ["04:30 : Rise Early" , "05:00 - 0630 : Practice yoga at the sunrise on Beach", "06:30 - 07:30 : Fresh Up","07:30 - 08:30 : Breakfast will be served.","08:30 - 11:30 : Bharatpur Beach ","11:30 - 13:00 : Cycling." , "13:00 - 14:00 : Lunch will be served." , "14:00 - 15:00 : Leisure", " 15:00 - 17:00 : Visit to Natural Rock" , "17:00 - 18:00 : Return to Resort Freshen Up", "18:00 - 19:00 : Share experience about their cycling & 2 Islands Trip", "19:00 - 21:00 : Cook and Dine together","21:00 : Lights off" ]
     
-    let day_10_Arr = ["0430 hrs : Rise Early ", "0500 hrs to 0730 hrs : Bird Watching (25campers)y", "0730 hrs to 0815 hrs : Fresh Up", "0815 hrs to 0900 hrs : Breakfast will be served.", "0900 hrs to 1300 hrs :Port Blair Local sightseeing ", "1300 hrs to 1400 hrs : Lunch will be served." , "1400 hrs to 1700 hrs : Return to Camp Resort & Leisure", "1700 hrs to 2000 hrs : Cook and share your own dishes ", "2000 hrs to 2100 hrs : Dinner", "2100 hrs :  Lights Off"]
+    let day_9_Arr = ["04:30 : Rise Early" , "05:00 - 06:30 : Practice yoga at the sunrise on Beach", "06:30 - 07:30 hrs : Fresh Up" , "07:30 - 08:30: Breakfast will be served.", "09:30 - 13:00 : Transfer to Port Blair", "13:00 - 14:00 : Lunch will be served.", "14:00 - 15:00 : Return to Camp Resort", "15:00 - 16:30 : Leisure", "16:30 - 18:30 : Tug of War activity", "18:30 - 20:30 : Cook and dine together", "21:00 : Lights off" ]
     
-    let day_11_Arr = ["0430 hrs : Rise Early ", "0500 hrs to 0630 hrs : Practice yoga at the sunrise on Beach" , "0630 hrs to 0730 hrs : Fresh Up" , "0730 hrs to 0830 hrs : Breakfast will be served." , "0830 hrs to 1300 hrs : Trek to Mount Harriet Peak" , "1300 hrs to 1400 hrs : Lunch" , "1400 hrs to 1430 hrs : Leisure" , "1430 hrs to 1730 hrs : Chidiyatapu Beach – Best for Sunset – Capture Best moments","1830 hrs to 1930 hrs : Love & Share " , "1930 hrs to 2030 hrs : Testimony & experience " , "2030 hrs to 2100 hrs : Dinner" , "2100 hrs : Lights Off "]
-    let day_12_Arr = ["Group Photo  - Bid a bye to fellow campers with good memories"]
+    let day_10_Arr = ["04:30 : Rise Early ", "05:00 - 07:30 : Bird Watching (25campers)y", "07:30 - 08:15 : Fresh Up", "08:15 - 09:00 : Breakfast will be served.", "09:00  13:00 : Port Blair Local sightseeing ", "13:00 - 14:00 : Lunch will be served." , "14:00 - 17:00 : Return to Camp Resort & Leisure", "17:00 - 20:00 : Cook and share your own dishes ", "20:00 - 21:00 : Dinner", "21:00 :  Lights Off"]
+    
+    let day_11_Arr = ["04:30 : Rise Early ", "05:00 - 06:30 : Practice yoga at the sunrise on Beach" , "0630 - 07:30 : Fresh Up" , "07:30 - 08:30 : Breakfast will be served." , "08:30 - 13:00 : Trek to Mount Harriet Peak" , "13:00 - 14:00  : Lunch" , "14:00 - 14:30 : Leisure" , "14:30 - 17:30 : Chidiyatapu Beach – Best for Sunset – Capture Best moments","18:30 - 19:30 : Love & Share " , "19:30 - 20:30 : Testimony & experience " , "20:30 - 21:00 : Dinner" , "21:00 : Lights Off "]
+
+  let day_12_Arr = ["Group Photo  - Bid a bye to fellow campers with good memories"]
     var selected_Index = 0
-//    var pkg_Id:[String] = []
-//    var iti_Arr:[String] = []
-//    var morning_Arr:[String] = []
-//    var noon_Arr:[String] = []
-//    var eve_Arr:[String] = []
-//    var night_Arr:[String] = []
-//    var isAdult:Bool = false
-//    var season_name = ""
-//    var age_group = ""
-//    var pkg_Date = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,19 +57,20 @@ class ActitvityViewController: UIViewController {
     
 
     func viewChanges() {
+        title_Lbl.text = title_Arr[0]
+
         IMG_View.layer.cornerRadius = 10
-        dataCV.isHidden = true
         CVChanges()
         dataTV.delegate =  self
         dataTV.dataSource = self
         title_Lbl.layer.cornerRadius = 10
+        title_Lbl.layer.masksToBounds = true
         dataTV.reloadWithAnimation()
         dataCV.selectItem(at: IndexPath(item: 0, section: 0), animated: true, scrollPosition: .centeredHorizontally)
     }
     
     func CVChanges() {
     
-        dataCV.isHidden = true
             
         let cellSize = CGSize(width:80 , height:70)
         let layout = UICollectionViewFlowLayout()
@@ -131,19 +124,17 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! ActivitiesCVCell
         
         cell.title_Lbl.text = days_Arr[indexPath.row]
+        cell.data_View.layer.cornerRadius = 10
         
-
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentCell = collectionView.cellForItem(at: indexPath) as! ActivitiesCVCell
         
         selected_Index = indexPath.item
-      
-        showActivities()
-        print("title = \(currentCell.title_Lbl.text!)")
+        title_Lbl.text = title_Arr[selected_Index]
+        dataTV.reloadWithAnimation()
     }
     
 //    Activities Tableview
@@ -154,29 +145,29 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
         case 1:
             return day_2_Arr.count
         case 2:
-            return   day_3_Arr.count
+            return day_3_Arr.count
         case 3:
-            return  day_4_Arr.count
+            return day_4_Arr.count
         case 4:
-            return  day_5_Arr.count
+            return day_5_Arr.count
         case 5:
-            return  day_6_Arr.count
+            return day_6_Arr.count
         case 6:
-            return  day_7_Arr.count
+            return day_7_Arr.count
         case 7:
-            return   day_8_Arr.count
+            return day_8_Arr.count
         case 8:
-            return   day_9_Arr.count
+            return day_9_Arr.count
         case 9:
-            return   day_10_Arr.count
+            return day_10_Arr.count
         case 10:
-            return   day_10_Arr.count
+            return day_10_Arr.count
         case 11:
-            return    day_12_Arr.count
+            return day_12_Arr.count
        
             
         default:
-            return   day_1_Arr.count
+            return day_1_Arr.count
         }
     }
     
@@ -185,33 +176,33 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
         
         switch selected_Index {
         case 0:
-            cell.textLabel?.text = " ➢ \(day_1_Arr[indexPath.row])"
+            cell.textLabel?.text = "➢ \(day_1_Arr[indexPath.row])"
         case 1:
-            cell.textLabel?.text = day_2_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_2_Arr[indexPath.row])"
         case 2:
-            cell.textLabel?.text = day_3_Arr[indexPath.row]
+            cell.textLabel?.text = "☞ \(day_3_Arr[indexPath.row])"
         case 3:
-            cell.textLabel?.text = day_4_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_4_Arr[indexPath.row])"
         case 4:
-            cell.textLabel?.text = day_5_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_5_Arr[indexPath.row])"
         case 5:
-            cell.textLabel?.text = day_6_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_6_Arr[indexPath.row])"
         case 6:
-            cell.textLabel?.text = day_7_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_7_Arr[indexPath.row])"
         case 7:
-            cell.textLabel?.text = day_8_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_8_Arr[indexPath.row])"
         case 8:
-            cell.textLabel?.text = day_8_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_9_Arr[indexPath.row])"
         case 9:
-            cell.textLabel?.text = day_8_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_10_Arr[indexPath.row])"
         case 10:
-            cell.textLabel?.text = day_8_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_11_Arr[indexPath.row])"
         case 11:
-            cell.textLabel?.text = day_8_Arr[indexPath.row]
-      
+            cell.textLabel?.text = "➢ \(day_12_Arr[indexPath.row])"
+
             
         default:
-            cell.textLabel?.text = day_1_Arr[indexPath.row]
+            cell.textLabel?.text = "➢ \(day_1_Arr[indexPath.row])"
         }
         
         return cell
@@ -219,52 +210,7 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
     
     
     
-    func showActivities() {
-        
-        switch selected_Index {
-        case 0:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        case 1:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        case 2:
-            title_Lbl.text = title_Arr[selected_Index]
-          
-        case 3:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        case 4:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        case 5:
-            title_Lbl.text = title_Arr[selected_Index]
-          
-        case 6:
-            title_Lbl.text = title_Arr[selected_Index]
-          
-        case 7:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        case 8:
-            title_Lbl.text = title_Arr[selected_Index]
-          
-        case 9:
-            title_Lbl.text = title_Arr[selected_Index]
-          
-        case 10:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        case 11:
-            title_Lbl.text = title_Arr[selected_Index]
-           
-        default:
-            break
-        }
-        
-        
-        
-    }
+
     
     
     

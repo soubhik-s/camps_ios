@@ -29,7 +29,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     var menuList = ["My Dashborad", "Profile","Blog","Benefits" , "Why Choose us..?", "Health Guidelines","Customer Support", "About Us", "FAQ's","Policy","Logout"]
     var IMGList = ["Dashboard","profile","blog","fire2","why", "icons8-virus-free-30", "support_1","About","FAQ's","insurance", "Logout"]
     
-    
+    let covid_Url = "https://camps.goexploreandaman.com/camp_covid19"
     
     
     
@@ -119,15 +119,21 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             }
             
             case 5:
-                    
-                let VC = self.storyboard?.instantiateViewController(withIdentifier: "CovidVC") as! CovidVC
-                       
-                
-                VC.modalPresentationStyle = .fullScreen
-
-                self.present(VC, animated: true) {
-                                      
-                       }
+                guard let url = URL(string: covid_Url) else {
+                     return
+                 }
+             
+                if UIApplication.shared.canOpenURL(url) {
+                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                 }
+//                let VC = self.storyboard?.instantiateViewController(withIdentifier: "CovidVC") as! CovidVC
+//
+//
+//                VC.modalPresentationStyle = .fullScreen
+//
+//                self.present(VC, animated: true) {
+//
+//                       }
         case 6:
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "SupportVC") as! SupportVC
             

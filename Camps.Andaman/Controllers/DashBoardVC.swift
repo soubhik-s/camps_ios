@@ -10,6 +10,7 @@ import UIKit
 import Razorpay
 import PDFKit
 import WebKit
+import MobileCoreServices
 class DashBoardVC: UIViewController {
 
     var dataArr:GetBookingResponse = []
@@ -23,8 +24,13 @@ class DashBoardVC: UIViewController {
     var verified_Arr:[String] = []
     var ID_Arr:[String] = []
     var pkgID_Arr:[String] = []
+    var downloadSign_Arr:[String] = []
+    var signStatus_Arr:[String] = []
+    var uploadSign_Arr:[String] = []
+    var pdfData = Data()
     var paymentId = ""
     var price = "1"
+    var selected_Book_Id = "0"
     @IBOutlet weak var dataTV: UITableView!
     var razorpay: RazorpayCheckout!
       let testKey = "rzp_test_h2qJyuZhWaSEyQ"
@@ -45,7 +51,7 @@ class DashBoardVC: UIViewController {
     func viewChanges() {
         refreshSettings()
         razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
-        dataTV.rowHeight = 380
+        dataTV.rowHeight = 420
         dataTV.isHidden = true
         pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
         let tap = UITapGestureRecognizer(target: self, action: #selector(onTapped))
@@ -81,6 +87,18 @@ class DashBoardVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    func uploadDocuSign() {
+        
+        if reach.isConnectedToNetwork() == true {
+        showActivityIndicator()
+        let detials = ["booking_id":selected_Book_Id]
+            ApiService.uploadPDFwithParam(parameters: detials, imageKey: ["verfied_docusign_file"], dataArr: [pdfData], methodType: "POST", url: ClientInterface.uploadDocuSignUrl, tag: "Upload", finish: finishPost)
+        print("detials = \(detials)")
+        } else {
+         popUpAlert(title: "Alert", message: "Check Internet Connection", action: .actionSheet)
+        }
+        
+    }
     func postStatusData() {
         
         if reach.isConnectedToNetwork() == true {
@@ -153,9 +171,12 @@ class DashBoardVC: UIViewController {
             status_Arr.append(bookingData.camp_status!)
             ID_Arr.append(bookingData.id!)
             verified_Arr.append(bookingData.verify_doc_sign_status!)
-                        
-                       
-            for month in month_Arr {
+                    
+            downloadSign_Arr.append(bookingData.docusign_file ?? "")
+            signStatus_Arr.append(bookingData.docusign_status ?? "0")
+            uploadSign_Arr.append(bookingData.verfied_docusign_file ?? "")
+            
+                        for month in month_Arr {
                 if bookingData.season_camp!.contains(month) {
                     print("month = \(month)")
                 } else {
@@ -196,6 +217,9 @@ class DashBoardVC: UIViewController {
 
                     if tag == "Status" {
                     popUpAlert(title: "Alert", message: "Payment status Updated", action: .alert)
+                    } else if tag == "Upload" {
+                        popUpAlert(title: "Success", message: "Pdf Uploaded", action: .alert)
+
                     } else {
                         getData()
 
@@ -256,13 +280,17 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         cell.pkgDetals_Btn.layer.cornerRadius = 5
         cell.invoice_Btn.layer.cornerRadius = 5
 
+        cell.download_Btn.addTarget(self, action: #selector(downloadAxn(sender:)), for: .touchUpInside)
        
-        
+        cell.upload_Btn.addTarget(self, action: #selector(uploadAxn(sender:)), for: .touchUpInside)
+
         cell.activityBtn.tag = indexPath.row
         cell.payNow_Btn.tag = indexPath.row
         cell.pkgDetals_Btn.tag = indexPath.row
         cell.invoice_Btn.tag = indexPath.row
-        
+        cell.download_Btn.tag = indexPath.row
+        cell.upload_Btn.tag = indexPath.row
+
         cell.pkgDetals_Btn.addTarget(self, action: #selector(pkgAxn(sender:)), for: .touchUpInside)
         cell.activityBtn.addTarget(self, action: #selector(activityAxn(sender:)), for: .touchUpInside)
         cell.invoice_Btn.addTarget(self, action: #selector(invoiceAxn(sender:)), for: .touchUpInside)
@@ -275,8 +303,44 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
+    @objc func downloadAxn(sender: UIButton){
+        let btnPosition = sender.convert(CGPoint(), to: dataTV)
+        let index = dataTV.indexPathForRow(at: btnPosition)
+        let currentCell = dataTV.cellForRow(at: index!) as! BoardTVC
+        if downloadSign_Arr[sender.tag].isEmpty == false {
+        let downloadUrl = "https://camps.goexploreandaman.com/assets/docusign/\(downloadSign_Arr[sender.tag])"
+        guard let url = URL(string: downloadUrl) else {
+                        return
+               }
+               
+        print("url = \(url)")
+               if UIApplication.shared.canOpenURL(url) {
+               UIApplication.shared.open(url, options: [:], completionHandler: nil)
+               }
+        } else {
+            popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
+        }
+    }
     
-    
+    @objc func uploadAxn(sender: UIButton){
+       
+        selected_Book_Id = ID_Arr[sender.tag]
+        print("Selected Booking ID = \(selected_Book_Id)")
+        if downloadSign_Arr[sender.tag].isEmpty == false {
+
+        clickFunction()
+        } else {
+            popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
+
+        }
+    }
+    func clickFunction(){
+
+    let importMenu = UIDocumentMenuViewController(documentTypes: [String(kUTTypePDF)], in: .import)
+        importMenu.delegate = self
+        importMenu.modalPresentationStyle = .formSheet
+        self.present(importMenu, animated: true, completion: nil)
+    }
     
     @objc func pkgAxn(sender: UIButton){
         
@@ -434,7 +498,8 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
     
     
 }
-extension DashBoardVC: RazorpayPaymentCompletionProtocol {
+extension DashBoardVC: RazorpayPaymentCompletionProtocol, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate
+ {
 
     
     func onPaymentError(_ code: Int32, description str: String) {
@@ -453,7 +518,34 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocol {
 
     }
     
-    
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let myURL = urls.first else {
+            return
+        }
+        print("import result : \(myURL)")
+        
+       pdfData = try! Data(contentsOf: myURL)
+       print("pdfData = \(pdfData)")
+        if pdfData.isEmpty == false {
+            uploadDocuSign()
+        } else {
+            popUpAlert(title: "Alert", message: "Pdf Data is Empty", action: .alert)
+        }
+        
+    }
+
+
+    public func documentMenu(_ documentMenu:UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+        documentPicker.delegate = self
+        present(documentPicker, animated: true, completion: nil)
+    }
+
+
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        print("view was cancelled")
+        dismiss(animated: true, completion: nil)
+       
+    }
    
     
 }

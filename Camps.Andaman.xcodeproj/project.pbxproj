@@ -173,6 +173,7 @@
 		D6075D15246192820075E90F /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		D6075D16246192820075E90F /* Elevation+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Elevation+Ext.swift"; sourceTree = "<group>"; };
 		D608A05B24822E5A0089FC1B /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
+		D60B5312257224B4009423C0 /* AndamanCampsDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AndamanCampsDebug.entitlements; sourceTree = "<group>"; };
 		D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		D61EB52E2563A47300F5821A /* BenefitsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsVC.swift; sourceTree = "<group>"; };
 		D61EB5302563A49800F5821A /* WhyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyVC.swift; sourceTree = "<group>"; };
@@ -327,6 +328,7 @@
 		D6075CCE24616CB30075E90F /* Camps.Andaman */ = {
 			isa = PBXGroup;
 			children = (
+				D60B5312257224B4009423C0 /* AndamanCampsDebug.entitlements */,
 				D6075CCF24616CB30075E90F /* AppDelegate.swift */,
 				D6075CD124616CB30075E90F /* SceneDelegate.swift */,
 				D6524AA92488C560008FF580 /* Header.h */,
@@ -987,6 +989,7 @@
 			baseConfigurationReference = C0FB5CC5524A900CAEF03F60 /* Pods-Camps.Andaman.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Camps.Andaman/AndamanCampsDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dev Kumar (5QT37QX5M3)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;

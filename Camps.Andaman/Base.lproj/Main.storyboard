@@ -337,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11863.76811594203" y="-2363.1696428571427"/>
+            <point key="canvasLocation" x="11861" y="-2346"/>
         </scene>
         <!--VerificationVC-->
         <scene sceneID="5fI-WI-ssc">
@@ -529,17 +529,17 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDs-K1-vyX">
-                                                <rect key="frame" x="10" y="420" width="394" height="30"/>
+                                                <rect key="frame" x="10" y="440" width="394" height="35"/>
                                                 <color key="backgroundColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="s1V-UM-nfZ"/>
+                                                    <constraint firstAttribute="height" constant="35" id="s1V-UM-nfZ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="usQ-yz-g5K">
-                                                <rect key="frame" x="10" y="460" width="394" height="80"/>
+                                                <rect key="frame" x="10" y="485" width="394" height="80"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y5E-ST-C9y">
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="80"/>
@@ -650,18 +650,18 @@
                                                 </subviews>
                                             </stackView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbw-JZ-5Kg">
-                                                <rect key="frame" x="10" y="590" width="394" height="500"/>
+                                                <rect key="frame" x="0.0" y="615" width="414" height="475"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="cCD-V8-TAU" style="IBUITableViewCellStyleDefault" id="DNw-2O-CGn">
-                                                        <rect key="frame" x="0.0" y="28" width="394" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNw-2O-CGn" id="faF-as-0qR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cCD-V8-TAU">
-                                                                    <rect key="frame" x="20" y="0.0" width="354" height="43.5"/>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cCD-V8-TAU">
+                                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -673,8 +673,8 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiny Tribe 🤪" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2E-RA-ewK">
-                                                <rect key="frame" x="10" y="550" width="394" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiny Tribe " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2E-RA-ewK">
+                                                <rect key="frame" x="10" y="575" width="394" height="30"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="kB1-3G-XZH"/>
@@ -695,14 +695,14 @@
                                             <constraint firstItem="usQ-yz-g5K" firstAttribute="top" secondItem="PDs-K1-vyX" secondAttribute="bottom" constant="10" id="DTB-Ot-qda"/>
                                             <constraint firstAttribute="bottom" secondItem="vbw-JZ-5Kg" secondAttribute="bottom" constant="10" id="Mqb-KG-oBx"/>
                                             <constraint firstItem="t2E-RA-ewK" firstAttribute="top" secondItem="usQ-yz-g5K" secondAttribute="bottom" constant="10" id="NFK-5e-jAt"/>
-                                            <constraint firstItem="PDs-K1-vyX" firstAttribute="top" secondItem="Vdy-OU-G3f" secondAttribute="bottom" constant="10" id="OlX-5F-j8I"/>
+                                            <constraint firstItem="PDs-K1-vyX" firstAttribute="top" secondItem="Vdy-OU-G3f" secondAttribute="bottom" constant="30" id="OlX-5F-j8I"/>
                                             <constraint firstAttribute="trailing" secondItem="Vdy-OU-G3f" secondAttribute="trailing" constant="20" id="Sv9-jJ-KQt"/>
                                             <constraint firstItem="PDs-K1-vyX" firstAttribute="leading" secondItem="r3Z-PN-o3Q" secondAttribute="leading" constant="10" id="TqZ-dK-e4Z"/>
                                             <constraint firstAttribute="trailing" secondItem="t2E-RA-ewK" secondAttribute="trailing" constant="10" id="V79-yZ-jEl"/>
                                             <constraint firstItem="Vdy-OU-G3f" firstAttribute="leading" secondItem="r3Z-PN-o3Q" secondAttribute="leading" constant="20" id="Xcm-m2-bqO"/>
                                             <constraint firstItem="Vdy-OU-G3f" firstAttribute="top" secondItem="r3Z-PN-o3Q" secondAttribute="top" constant="10" id="aGf-57-Qje"/>
-                                            <constraint firstAttribute="trailing" secondItem="vbw-JZ-5Kg" secondAttribute="trailing" constant="10" id="vBP-Ub-NYr"/>
-                                            <constraint firstItem="vbw-JZ-5Kg" firstAttribute="leading" secondItem="r3Z-PN-o3Q" secondAttribute="leading" constant="10" id="wmB-mY-8ox"/>
+                                            <constraint firstAttribute="trailing" secondItem="vbw-JZ-5Kg" secondAttribute="trailing" id="vBP-Ub-NYr"/>
+                                            <constraint firstItem="vbw-JZ-5Kg" firstAttribute="leading" secondItem="r3Z-PN-o3Q" secondAttribute="leading" id="wmB-mY-8ox"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -762,7 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMI-PO-4Fz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9015.9420289855079" y="-3508.2589285714284"/>
+            <point key="canvasLocation" x="12149" y="-3085"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qZV-gR-rUY">
@@ -843,37 +843,37 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BoardTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="380" id="D4p-2L-h4g" customClass="BoardTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="380"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BoardTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="435" id="D4p-2L-h4g" customClass="BoardTVC" customModule="AndamanCamps" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="435"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D4p-2L-h4g" id="NSw-Jm-15e">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="435"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bn1-1v-BRz">
-                                                    <rect key="frame" x="5" y="5" width="404" height="370"/>
+                                                    <rect key="frame" x="5" y="5" width="404" height="425"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jdy-j4-3kU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="370"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="404" height="425"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-mP-NH6">
-                                                                <rect key="frame" x="5" y="5" width="394" height="360"/>
+                                                                <rect key="frame" x="5" y="5" width="394" height="415"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dxu-8C-YiV">
                                                                         <rect key="frame" x="10" y="10" width="374" height="235"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1pP-7H-oNN">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="142" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="131" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking ID :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qm-mn-z5R">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="82" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQr-De-NHT">
-                                                                                        <rect key="frame" x="92" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="81" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
@@ -883,17 +883,17 @@
                                                                                 </constraints>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fu5-0n-5Tc">
-                                                                                <rect key="frame" x="0.0" y="35" width="107" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="35" width="100.5" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-Sy-1o1">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-qZ-wCe">
-                                                                                        <rect key="frame" x="57" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="50.5" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
@@ -903,85 +903,85 @@
                                                                                 </constraints>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-SF-nHm">
-                                                                                <rect key="frame" x="0.0" y="70" width="108" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="70" width="101.5" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-7E-TYv">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxo-8y-57x">
-                                                                                        <rect key="frame" x="58" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="51.5" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jBd-pf-2DB">
-                                                                                <rect key="frame" x="0.0" y="105" width="120.5" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="105" width="112.5" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MJ-QM-7yh">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlz-ZB-erJ">
-                                                                                        <rect key="frame" x="70.5" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="62.5" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A31-42-qIp">
-                                                                                <rect key="frame" x="0.0" y="140" width="157" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="140" width="144" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Price (₹) :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goY-Xo-wvQ">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="97" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-T1-Weo">
-                                                                                        <rect key="frame" x="107" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="94" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Gn-OVQ">
-                                                                                <rect key="frame" x="0.0" y="175" width="143" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="175" width="132" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGE-cF-u74">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="83" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-l1-ZAt">
-                                                                                        <rect key="frame" x="93" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="82" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tax-tD-GGP">
-                                                                                <rect key="frame" x="0.0" y="210" width="164.5" height="25"/>
+                                                                                <rect key="frame" x="0.0" y="210" width="150.5" height="25"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Status :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1c-Pe-hjT">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvq-7c-0Ab">
-                                                                                        <rect key="frame" x="114.5" y="0.0" width="50" height="25"/>
-                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                                        <rect key="frame" x="100.5" y="0.0" width="50" height="25"/>
+                                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
@@ -995,7 +995,7 @@
                                                                             <constraint firstAttribute="height" constant="25" id="5JD-1P-rfO"/>
                                                                             <constraint firstAttribute="width" constant="100" id="kef-7D-tOW"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="14"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -1101,16 +1101,62 @@
                                                                             </stackView>
                                                                         </subviews>
                                                                     </stackView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DocuSign :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-nQ-C2A">
+                                                                        <rect key="frame" x="10" y="360" width="67" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="20" id="bNL-h5-Z5E"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zpL-Pc-0H2">
+                                                                        <rect key="frame" x="97" y="350" width="140" height="50"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfb-7K-gJt">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="60" id="MgE-Cr-JIH"/>
+                                                                                    <constraint firstAttribute="height" constant="50" id="UoY-TV-wqT"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
+                                                                                <inset key="titleEdgeInsets" minX="-20" minY="25" maxX="0.0" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="20" minY="-15" maxX="0.0" maxY="0.0"/>
+                                                                                <state key="normal" title="Download" image="invoice">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVo-20-pbl">
+                                                                                <rect key="frame" x="80" y="0.0" width="60" height="50"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="50" id="Quj-1r-DYj"/>
+                                                                                    <constraint firstAttribute="width" constant="60" id="rmd-o2-sEa"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="10"/>
+                                                                                <inset key="titleEdgeInsets" minX="-20" minY="25" maxX="0.0" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="20" minY="-15" maxX="0.0" maxY="0.0"/>
+                                                                                <state key="normal" title="Upload" image="invoice">
+                                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                </state>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="lightTextColor"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="xqO-nQ-C2A" firstAttribute="top" secondItem="gh7-A0-ofd" secondAttribute="bottom" constant="10" id="2an-HO-Qge"/>
+                                                                    <constraint firstItem="zpL-Pc-0H2" firstAttribute="leading" secondItem="xqO-nQ-C2A" secondAttribute="trailing" constant="20" id="4Nz-mm-xgn"/>
                                                                     <constraint firstAttribute="trailing" secondItem="dxu-8C-YiV" secondAttribute="trailing" constant="10" id="75F-bL-JUH"/>
                                                                     <constraint firstItem="dxu-8C-YiV" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="Hul-px-2ve"/>
+                                                                    <constraint firstItem="zpL-Pc-0H2" firstAttribute="top" secondItem="gh7-A0-ofd" secondAttribute="bottom" id="K6u-kv-T8w"/>
                                                                     <constraint firstItem="7zP-jF-Eih" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="Nei-Bm-uSU"/>
                                                                     <constraint firstItem="dxu-8C-YiV" firstAttribute="top" secondItem="Qir-mP-NH6" secondAttribute="top" constant="10" id="OI5-PM-lgb"/>
                                                                     <constraint firstItem="7zP-jF-Eih" firstAttribute="top" secondItem="dxu-8C-YiV" secondAttribute="bottom" constant="10" id="PWo-Oh-Uu2"/>
                                                                     <constraint firstItem="dxu-8C-YiV" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="S2l-sV-fL8"/>
                                                                     <constraint firstItem="gh7-A0-ofd" firstAttribute="top" secondItem="7zP-jF-Eih" secondAttribute="bottom" constant="10" id="ZyH-82-uph"/>
+                                                                    <constraint firstItem="xqO-nQ-C2A" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="nQy-NG-9gJ"/>
                                                                     <constraint firstItem="gh7-A0-ofd" firstAttribute="leading" secondItem="Qir-mP-NH6" secondAttribute="leading" constant="10" id="wOW-tc-ufI"/>
                                                                 </constraints>
                                                             </view>
@@ -1144,6 +1190,7 @@
                                             <outlet property="dataView" destination="Qir-mP-NH6" id="HFd-Jy-zVH"/>
                                             <outlet property="docStatus_Lbl" destination="Ay4-dG-xJ3" id="jAi-ta-saY"/>
                                             <outlet property="doc_Lbl" destination="Aq0-l1-ZAt" id="HyY-Aw-oaQ"/>
+                                            <outlet property="download_Btn" destination="bfb-7K-gJt" id="onx-ve-rq8"/>
                                             <outlet property="id_Lbl" destination="sDG-iY-9M6" id="wf7-hE-5ua"/>
                                             <outlet property="invoice_Btn" destination="Mdc-wc-mGp" id="kC8-La-pG5"/>
                                             <outlet property="nameLbl" destination="Vxo-8y-57x" id="Mh0-Q5-FTv"/>
@@ -1153,6 +1200,7 @@
                                             <outlet property="pkgDetals_Btn" destination="wpA-FN-PFK" id="qY6-zy-xyy"/>
                                             <outlet property="pkgID_Lbl" destination="6pG-eK-uWb" id="cOF-4D-lCQ"/>
                                             <outlet property="priceLbl" destination="ViK-T1-Weo" id="Xs4-tP-Bfk"/>
+                                            <outlet property="upload_Btn" destination="MVo-20-pbl" id="84X-bp-bh5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -3194,9 +3242,9 @@ muchmore.</string>
                                                                             <rect key="frame" x="0.0" y="50" width="394" height="25"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX0-IQ-A0R">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="25"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" constant="60" id="m6O-yK-2oQ">
+                                                                                        <constraint firstAttribute="width" constant="55" id="m6O-yK-2oQ">
                                                                                             <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                                                                                         </constraint>
                                                                                     </constraints>
@@ -3207,8 +3255,9 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : Transfer to Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-he-EZf" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="60" y="0.0" width="334" height="25"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : Transfer to Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-he-EZf">
+                                                                                    <rect key="frame" x="55" y="0.0" width="339" height="25"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="0d3-lO-6ie"/>
                                                                                     </constraints>
@@ -3220,15 +3269,14 @@ muchmore.</string>
                                                                                     </variation>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fH8-zI-P15">
                                                                             <rect key="frame" x="0.0" y="85" width="394" height="25"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AfterNoon :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4Z-FI-LpG">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="25"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="25"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" constant="70" id="8hG-kw-WbU">
+                                                                                        <constraint firstAttribute="width" constant="65" id="8hG-kw-WbU">
                                                                                             <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                                                                                         </constraint>
                                                                                     </constraints>
@@ -3239,8 +3287,8 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon : Lunch &amp; Relax" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-9A-6eT" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="70" y="0.0" width="324" height="25"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon : Lunch &amp; Relax" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-9A-6eT">
+                                                                                    <rect key="frame" x="65" y="0.0" width="329" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="Alv-2h-Vkc"/>
                                                                                     </constraints>
@@ -3257,9 +3305,9 @@ muchmore.</string>
                                                                             <rect key="frame" x="0.0" y="120" width="394" height="25"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ir-2X-twI">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" constant="60" id="d0X-8o-eO5">
+                                                                                        <constraint firstAttribute="width" constant="50" id="d0X-8o-eO5">
                                                                                             <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                                                                                         </constraint>
                                                                                     </constraints>
@@ -3270,8 +3318,8 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening : Introduction session with the batchmates &amp; Instructors." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stj-cX-foQ" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="60" y="0.0" width="334" height="25"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening : Introduction session with the batchmates &amp; Instructors." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stj-cX-foQ">
+                                                                                    <rect key="frame" x="50" y="0.0" width="344" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="EYI-k9-crq"/>
                                                                                     </constraints>
@@ -3284,15 +3332,13 @@ muchmore.</string>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-0t-e8a">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-0t-e8a">
                                                                             <rect key="frame" x="0.0" y="155" width="394" height="25"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OverNight :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SV-Cg-StU">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="25"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="25"/>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="width" constant="70" id="phv-dK-VsB">
-                                                                                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                                                                                        </constraint>
+                                                                                        <constraint firstAttribute="width" constant="65" id="SQn-dW-OQx"/>
                                                                                     </constraints>
                                                                                     <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="12"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3301,8 +3347,8 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overnight: Bonfire – Quiz night - Dinner &amp; Stay at Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-nV-zk5" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                                    <rect key="frame" x="70" y="0.0" width="324" height="25"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overnight: Bonfire – Quiz night - Dinner &amp; Stay at Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-nV-zk5">
+                                                                                    <rect key="frame" x="65" y="0.0" width="329" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="3PQ-cH-5d5"/>
                                                                                     </constraints>
@@ -3368,7 +3414,7 @@ muchmore.</string>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZI-5t-2FA">
                                                                     <rect key="frame" x="0.0" y="10" width="404" height="40"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.Meet and greet service at the airport." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-xU-okx" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.Meet and greet service at the airport." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOh-xU-okx">
                                                                             <rect key="frame" x="0.0" y="0.0" width="404" height="40"/>
                                                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5650,7 +5696,7 @@ muchmore.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qac-nf-rHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5758" y="520"/>
+            <point key="canvasLocation" x="4667" y="507"/>
         </scene>
         <!--HOMEVC-->
         <scene sceneID="9wr-tC-qKf">
@@ -8483,11 +8529,11 @@ This includes maintaining privacy for people who are:
             <objects>
                 <viewController storyboardIdentifier="ApplicationFormVC2" id="Bpa-6c-7PP" customClass="ApplicationFormVC2" customModule="AndamanCamps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggw-wq-p5f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS3" translatesAutoresizingMaskIntoConstraints="NO" id="l9c-ek-6XA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYD-AU-vsY">
                                 <rect key="frame" x="143.5" y="54" width="127" height="25"/>
@@ -8517,10 +8563,10 @@ This includes maintaining privacy for people who are:
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-WW-0Y9">
-                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="1406"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWq-so-LxO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1400"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-4W-kYL">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="120"/>
@@ -8700,13 +8746,13 @@ This includes maintaining privacy for people who are:
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrl-5a-kb3">
-                                                <rect key="frame" x="157" y="689.5" width="100" height="30"/>
+                                                <rect key="frame" x="147" y="1343.5" width="120" height="35"/>
                                                 <color key="backgroundColor" red="0.019607843137254902" green="0.15686274509803921" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ZEB-49-aVX">
+                                                    <constraint firstAttribute="height" constant="35" id="ZEB-49-aVX">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="40"/>
                                                     </constraint>
-                                                    <constraint firstAttribute="width" constant="100" id="nOU-cF-eV9">
+                                                    <constraint firstAttribute="width" constant="120" id="nOU-cF-eV9">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="200"/>
                                                     </constraint>
                                                 </constraints>
@@ -8765,8 +8811,7 @@ This includes maintaining privacy for people who are:
                                                                 </segments>
                                                                 <color key="selectedSegmentTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
-                                                                    <action selector="complicationSC_Axn:" destination="Bpa-6c-7PP" eventType="valueChanged" id="UTJ-1r-YXo"/>
-                                                                    <action selector="healthSCAxn:" destination="Bpa-6c-7PP" eventType="valueChanged" id="Yam-kB-7r9"/>
+                                                                    <action selector="complicationSC_Axn:" destination="Bpa-6c-7PP" eventType="valueChanged" id="7wo-vh-Btf"/>
                                                                 </connections>
                                                             </segmentedControl>
                                                         </subviews>
@@ -8819,7 +8864,6 @@ This includes maintaining privacy for people who are:
                                                                 </segments>
                                                                 <color key="selectedSegmentTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
-                                                                    <action selector="treatementScAxn:" destination="Bpa-6c-7PP" eventType="valueChanged" id="xFK-C3-bSr"/>
                                                                     <action selector="treatmentSC_Axn:" destination="Bpa-6c-7PP" eventType="valueChanged" id="HPg-e8-snQ"/>
                                                                 </connections>
                                                             </segmentedControl>
@@ -8844,13 +8888,207 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="152-Ky-dIf">
+                                                <rect key="frame" x="20" y="659.5" width="374" height="187"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SEw-Ak-UZJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter GST Details" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqj-F6-Ehj">
+                                                                <rect key="frame" x="0.0" y="11" width="269" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=regular">
+                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                </variation>
+                                                            </label>
+                                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UPU-kl-Xk0">
+                                                                <rect key="frame" x="274" y="7.5" width="100" height="26"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="aqr-W0-GSi">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                                                    </constraint>
+                                                                    <constraint firstAttribute="height" constant="25" id="nS7-Ks-pTv">
+                                                                        <variation key="heightClass=regular-widthClass=regular" constant="35"/>
+                                                                    </constraint>
+                                                                </constraints>
+                                                                <segments>
+                                                                    <segment title="YES"/>
+                                                                    <segment title="NO"/>
+                                                                </segments>
+                                                                <color key="selectedSegmentTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="GST_SC_Axn:" destination="Bpa-6c-7PP" eventType="valueChanged" id="fk9-QK-2o2"/>
+                                                                </connections>
+                                                            </segmentedControl>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="0nA-lz-LHi"/>
+                                                        </constraints>
+                                                        <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter GST Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-vf-rAd">
+                                                        <rect key="frame" x="0.0" y="55" width="374" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="tmZ-p1-cjd">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EbO-mF-UhO">
+                                                        <rect key="frame" x="0.0" y="104" width="374" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="RWL-tV-nqy">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faI-sm-hy1">
+                                                        <rect key="frame" x="0.0" y="153" width="374" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="cyr-Id-qwT">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                        </variation>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPLOAD DOCUMENTS  [APPLICANT]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzL-f7-vkw">
+                                                <rect key="frame" x="20" y="866.5" width="374" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="V8P-bF-Wwd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                                </variation>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-Lh-QCc">
+                                                <rect key="frame" x="37" y="1095.5" width="340" height="148"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DJq-Bm-i42">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="148"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload ID (Front)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deS-cS-Age">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-Mm-ztN">
+                                                                <rect key="frame" x="0.0" y="28" width="120" height="120"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="1QX-Xj-3x9"/>
+                                                                    <constraint firstAttribute="height" constant="120" id="CcR-NA-fm0"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-PR-We3">
+                                                        <rect key="frame" x="220" y="0.0" width="120" height="148"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload ID (Back)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F11-C1-uX3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="5sh-gd-org">
+                                                                <rect key="frame" x="0.0" y="28" width="120" height="120"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="120" id="mcV-W9-E3g"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="xyw-eh-dqb"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MPR-DZ-IYG">
+                                                <rect key="frame" x="20" y="901.5" width="374" height="164"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-V2-n0n">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Passport Size Photograph" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-ud-daD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="244" height="120"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame" translatesAutoresizingMaskIntoConstraints="NO" id="8Oe-ff-6uE">
+                                                                <rect key="frame" x="254" y="0.0" width="120" height="120"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="120" id="E3z-XW-BHy"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="FLg-Ts-5K3"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ID Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pfo-CN-fQO">
+                                                        <rect key="frame" x="0.0" y="130" width="374" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="RBW-Y9-Lx2">
+                                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                                        </variation>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-z9-h6D">
+                                                <rect key="frame" x="20" y="1263.5" width="374" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="qn4-h1-PJ6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                <state key="normal" title="Upload Parent Documents">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="uploadParents_Btn:" destination="Bpa-6c-7PP" eventType="touchUpInside" id="FE3-Kv-3hu"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArr" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-DS-M7f">
+                                                <rect key="frame" x="364" y="1268.5" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Vy4-Gl-Mh7"/>
+                                                    <constraint firstAttribute="width" constant="20" id="isG-rh-cCf"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="TDf-z9-h6D" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="1qm-ga-FOo"/>
+                                            <constraint firstItem="MPR-DZ-IYG" firstAttribute="top" secondItem="pzL-f7-vkw" secondAttribute="bottom" constant="10" id="5Ku-Vt-2Wj"/>
                                             <constraint firstItem="MNe-U0-fUG" firstAttribute="top" secondItem="oc0-sp-55R" secondAttribute="bottom" constant="20" id="97y-iR-1YH"/>
                                             <constraint firstItem="5Pg-4W-kYL" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="B4e-8F-Y5G">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="EfO-DS-M7f" secondAttribute="trailing" constant="30" id="CK9-cE-1vA"/>
                                             <constraint firstItem="mrl-5a-kb3" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="DU8-vo-OIG"/>
                                             <constraint firstItem="BZO-X7-1G5" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="FIY-bv-ovd"/>
                                             <constraint firstItem="oc0-sp-55R" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="FUU-vr-qWd">
@@ -8862,28 +9100,41 @@ This includes maintaining privacy for people who are:
                                             <constraint firstItem="X4W-ig-wY8" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="Kjq-z0-bYb">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="152-Ky-dIf" secondAttribute="trailing" constant="20" id="Kw6-Cu-zcW"/>
+                                            <constraint firstItem="152-Ky-dIf" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="NW8-Hn-Y9i"/>
+                                            <constraint firstItem="mrl-5a-kb3" firstAttribute="top" secondItem="U4U-Lh-QCc" secondAttribute="bottom" constant="100" id="OwP-Z4-Wc1"/>
+                                            <constraint firstItem="152-Ky-dIf" firstAttribute="top" secondItem="MNe-U0-fUG" secondAttribute="bottom" constant="20" id="P7G-Xg-8Sc"/>
                                             <constraint firstAttribute="trailing" secondItem="X4W-ig-wY8" secondAttribute="trailing" constant="20" id="Pdu-Ai-2YL">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
+                                            <constraint firstItem="U4U-Lh-QCc" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="VEU-TA-sXY"/>
                                             <constraint firstItem="hjQ-6f-e51" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="WQu-2d-iyl"/>
+                                            <constraint firstItem="TDf-z9-h6D" firstAttribute="top" secondItem="U4U-Lh-QCc" secondAttribute="bottom" constant="20" id="YBL-n0-5mi"/>
                                             <constraint firstItem="X4W-ig-wY8" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="ZLq-32-nKT"/>
                                             <constraint firstItem="BZO-X7-1G5" firstAttribute="top" secondItem="5Pg-4W-kYL" secondAttribute="bottom" constant="20" id="bdX-FM-1d3">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                             </constraint>
+                                            <constraint firstItem="EfO-DS-M7f" firstAttribute="centerY" secondItem="TDf-z9-h6D" secondAttribute="centerY" id="bpd-5c-dF6"/>
+                                            <constraint firstItem="MPR-DZ-IYG" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="cbZ-Gm-9Up"/>
                                             <constraint firstItem="oc0-sp-55R" firstAttribute="top" secondItem="hjQ-6f-e51" secondAttribute="bottom" constant="10" id="d3L-gH-q9G"/>
                                             <constraint firstAttribute="trailing" secondItem="5Pg-4W-kYL" secondAttribute="trailing" constant="20" id="dML-Sp-1FK">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
                                             <constraint firstAttribute="trailing" secondItem="BZO-X7-1G5" secondAttribute="trailing" constant="20" id="de6-Ah-PMB"/>
+                                            <constraint firstAttribute="trailing" secondItem="TDf-z9-h6D" secondAttribute="trailing" constant="20" id="h2G-nK-o0d"/>
+                                            <constraint firstAttribute="trailing" secondItem="pzL-f7-vkw" secondAttribute="trailing" constant="20" id="jP4-T1-0eM"/>
+                                            <constraint firstItem="pzL-f7-vkw" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="lja-GB-mjv"/>
                                             <constraint firstItem="oc0-sp-55R" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="mqU-Vo-muq"/>
+                                            <constraint firstItem="U4U-Lh-QCc" firstAttribute="top" secondItem="MPR-DZ-IYG" secondAttribute="bottom" constant="30" id="mwC-Lu-gZl"/>
+                                            <constraint firstItem="pzL-f7-vkw" firstAttribute="top" secondItem="152-Ky-dIf" secondAttribute="bottom" constant="20" id="q11-Gd-vyh"/>
                                             <constraint firstAttribute="trailing" secondItem="oc0-sp-55R" secondAttribute="trailing" constant="20" id="tfQ-vE-YbT">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
-                                            <constraint firstAttribute="height" constant="802" id="ul3-lJ-8FD"/>
+                                            <constraint firstAttribute="trailing" secondItem="MPR-DZ-IYG" secondAttribute="trailing" constant="20" id="ueS-XS-Hta"/>
+                                            <constraint firstAttribute="height" constant="1400" id="ul3-lJ-8FD"/>
                                             <constraint firstItem="hjQ-6f-e51" firstAttribute="top" secondItem="X4W-ig-wY8" secondAttribute="bottom" constant="20" id="uqW-Og-AZR">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                             </constraint>
-                                            <constraint firstItem="mrl-5a-kb3" firstAttribute="top" secondItem="MNe-U0-fUG" secondAttribute="bottom" constant="50" id="wBs-bJ-YD4"/>
                                             <constraint firstItem="X4W-ig-wY8" firstAttribute="top" secondItem="BZO-X7-1G5" secondAttribute="bottom" constant="10" id="yB6-BG-bBt">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                             </constraint>
@@ -8934,17 +9185,29 @@ This includes maintaining privacy for people who are:
                             </constraint>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="GST_Number_TF" destination="S4A-vf-rAd" id="RvC-9N-xkj"/>
+                        <outlet property="ID_Card_Number" destination="Pfo-CN-fQO" id="wCh-AB-tAw"/>
+                        <outlet property="P_Back_IMGView" destination="3Bm-Ae-i5g" id="R6H-ox-YDX"/>
+                        <outlet property="P_Front_Img_View" destination="3aX-Af-Byl" id="UM6-W2-ipZ"/>
                         <outlet property="agegroup_Lbl" destination="yrC-kf-Cff" id="Huq-Ci-Lvl"/>
+                        <outlet property="back_Img_View" destination="5sh-gd-org" id="xWL-vf-EQV"/>
                         <outlet property="cityTF" destination="TmI-yl-4hD" id="WN2-BM-Gwf"/>
+                        <outlet property="companyName_TF" destination="EbO-mF-UhO" id="NzE-NE-EDT"/>
+                        <outlet property="company_Address_TF" destination="faI-sm-hy1" id="dJm-E6-nzQ"/>
                         <outlet property="countryTF" destination="CEh-Ir-lys" id="yDy-P7-urO"/>
+                        <outlet property="front_Img_View" destination="eKl-Mm-ztN" id="vCe-2k-W9a"/>
                         <outlet property="headerView" destination="5Pg-4W-kYL" id="5h1-c3-5ME"/>
                         <outlet property="healthIssueSC" destination="ubQ-WY-kVW" id="fpS-fG-wRe"/>
                         <outlet property="healthIssueTF" destination="IlO-za-hbc" id="Fa9-rg-Pyf"/>
                         <outlet property="nextBtn" destination="mrl-5a-kb3" id="Gbp-FA-g2O"/>
                         <outlet property="packageNameLbl" destination="9hX-g7-xXu" id="ffI-lX-gdy"/>
+                        <outlet property="parent_Details_view" destination="REJ-ZR-PtO" id="LVc-FU-BsW"/>
+                        <outlet property="parents_ID_TF" destination="vyg-JE-IRW" id="p8D-E5-oIx"/>
                         <outlet property="pincodeTF" destination="MCZ-1o-WZR" id="p2G-RD-wbH"/>
                         <outlet property="priceLbl" destination="5PP-tS-aMi" id="Sqc-aj-FDY"/>
+                        <outlet property="profile_ImgView" destination="8Oe-ff-6uE" id="eGV-8f-XZS"/>
                         <outlet property="stateTF" destination="Pdq-8c-N8b" id="k52-12-If8"/>
                         <outlet property="streetTF" destination="SLG-9G-O8O" id="Hwe-p2-Hkz"/>
                         <outlet property="treatementSC" destination="YY1-N1-rSR" id="uMM-Fg-7Ks"/>
@@ -8952,8 +9215,113 @@ This includes maintaining privacy for people who are:
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hcw-p6-UAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="REJ-ZR-PtO">
+                    <rect key="frame" x="0.0" y="0.0" width="434" height="307"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGu-wT-5EN">
+                            <rect key="frame" x="0.0" y="44" width="434" height="229"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ID Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyg-JE-IRW">
+                                    <rect key="frame" x="10" y="40" width="414" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="YZD-Ow-oaU">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="45"/>
+                                        </constraint>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                    </variation>
+                                </textField>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-qZ-JfP">
+                                    <rect key="frame" x="72" y="94" width="290" height="148"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U5z-mQ-CkP">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="148"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload ID (Front)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7f-3m-MHK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-Af-Byl">
+                                                    <rect key="frame" x="0.0" y="28" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="K75-04-Lip"/>
+                                                        <constraint firstAttribute="height" constant="120" id="r7c-hk-TO3"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pTr-Kf-Lpw">
+                                            <rect key="frame" x="170" y="0.0" width="120" height="148"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload ID (Back)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHo-8e-Bdg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-Ae-i5g">
+                                                    <rect key="frame" x="0.0" y="28" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="Hke-qb-BhU"/>
+                                                        <constraint firstAttribute="height" constant="120" id="j7d-AZ-Fd4"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2u-Nk-fex">
+                                    <rect key="frame" x="20" y="10" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="8me-2A-Qtc"/>
+                                        <constraint firstAttribute="height" constant="20" id="li5-At-idi"/>
+                                    </constraints>
+                                    <state key="normal" image="crossR"/>
+                                    <connections>
+                                        <action selector="closeBtn_Axn:" destination="Bpa-6c-7PP" eventType="touchUpInside" id="CkW-8i-SIe"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parents ID Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMt-gy-bQw">
+                                    <rect key="frame" x="160" y="10" width="114.5" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="MLF-tY-F5N"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="EMt-gy-bQw" firstAttribute="centerX" secondItem="vGu-wT-5EN" secondAttribute="centerX" id="0jj-mN-3lL"/>
+                                <constraint firstItem="vyg-JE-IRW" firstAttribute="top" secondItem="vGu-wT-5EN" secondAttribute="top" constant="40" id="1eT-Hg-25r"/>
+                                <constraint firstItem="EMt-gy-bQw" firstAttribute="top" secondItem="vGu-wT-5EN" secondAttribute="top" constant="10" id="7R9-vf-4RP"/>
+                                <constraint firstItem="vyg-JE-IRW" firstAttribute="leading" secondItem="vGu-wT-5EN" secondAttribute="leading" constant="10" id="CaQ-56-3tJ"/>
+                                <constraint firstItem="K2u-Nk-fex" firstAttribute="top" secondItem="vGu-wT-5EN" secondAttribute="top" constant="10" id="JXR-5A-phA"/>
+                                <constraint firstItem="hbg-qZ-JfP" firstAttribute="top" secondItem="vyg-JE-IRW" secondAttribute="bottom" constant="20" id="X74-ys-5nr"/>
+                                <constraint firstItem="K2u-Nk-fex" firstAttribute="leading" secondItem="vGu-wT-5EN" secondAttribute="leading" constant="20" id="ouP-Bt-NRk"/>
+                                <constraint firstItem="hbg-qZ-JfP" firstAttribute="centerX" secondItem="vGu-wT-5EN" secondAttribute="centerX" id="tVs-ci-iJD"/>
+                                <constraint firstAttribute="trailing" secondItem="vyg-JE-IRW" secondAttribute="trailing" constant="10" id="tvA-7e-4Pn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="xf3-iy-Tic"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="vGu-wT-5EN" firstAttribute="leading" secondItem="xf3-iy-Tic" secondAttribute="leading" id="A4S-Zj-cpd"/>
+                        <constraint firstItem="xf3-iy-Tic" firstAttribute="bottom" secondItem="vGu-wT-5EN" secondAttribute="bottom" id="NB3-xU-B2s"/>
+                        <constraint firstItem="xf3-iy-Tic" firstAttribute="trailing" secondItem="vGu-wT-5EN" secondAttribute="trailing" id="POP-9h-rSG"/>
+                        <constraint firstItem="vGu-wT-5EN" firstAttribute="top" secondItem="xf3-iy-Tic" secondAttribute="top" id="SlR-Pe-Uev"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="6493" y="486"/>
+            <point key="canvasLocation" x="5508.6956521739139" y="748.66071428571422"/>
         </scene>
         <!--Application FormVC3-->
         <scene sceneID="Uvf-2O-UTP">
@@ -9693,6 +10061,7 @@ This includes maintaining privacy for people who are:
                     </view>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="GST_Lbl" destination="D9Q-7U-vVU" id="6mh-gk-7XX"/>
                         <outlet property="P_EmailTF" destination="vZx-EC-UUp" id="he1-i5-LeB"/>
                         <outlet property="addInfo_TF" destination="g4X-hB-oK6" id="cGa-PM-ax8"/>
                         <outlet property="address_SC" destination="xc5-pV-74b" id="hLb-mm-DK1"/>
@@ -9777,14 +10146,14 @@ This includes maintaining privacy for people who are:
                                         <constraint firstAttribute="height" constant="20" id="0BZ-Nf-irU"/>
                                     </constraints>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RiZ-B6-BKs">
-                                    <rect key="frame" x="0.0" y="30" width="220" height="20"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3S4-Fp-5Y2">
+                                    <rect key="frame" x="0.0" y="30" width="162.5" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GST - 5% (₹) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Q-7U-vVU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount (₹) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-Hq-aGE">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="cM0-iO-5Mv"/>
-                                                <constraint firstAttribute="width" constant="150" id="xxo-D2-Lq1"/>
+                                                <constraint firstAttribute="width" constant="150" id="8aE-Xb-zJ2"/>
+                                                <constraint firstAttribute="height" constant="20" id="tUZ-SL-spS"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -9793,8 +10162,8 @@ This includes maintaining privacy for people who are:
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4762" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T91-IQ-aqw">
-                                            <rect key="frame" x="155" y="0.0" width="65" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbK-kl-1EK">
+                                            <rect key="frame" x="155" y="0.0" width="7.5" height="20"/>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -9803,9 +10172,6 @@ This includes maintaining privacy for people who are:
                                             </variation>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="bie-fO-Gxt"/>
-                                    </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-hg-hlX">
                                     <rect key="frame" x="0.0" y="60" width="162.5" height="20"/>
@@ -9834,14 +10200,14 @@ This includes maintaining privacy for people who are:
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3S4-Fp-5Y2">
-                                    <rect key="frame" x="0.0" y="90" width="162.5" height="20"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RiZ-B6-BKs">
+                                    <rect key="frame" x="0.0" y="90" width="220" height="20"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount (₹) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-Hq-aGE">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GST - 5% (₹) :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Q-7U-vVU">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="150" id="8aE-Xb-zJ2"/>
-                                                <constraint firstAttribute="height" constant="20" id="tUZ-SL-spS"/>
+                                                <constraint firstAttribute="height" constant="20" id="cM0-iO-5Mv"/>
+                                                <constraint firstAttribute="width" constant="150" id="xxo-D2-Lq1"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -9850,8 +10216,8 @@ This includes maintaining privacy for people who are:
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbK-kl-1EK">
-                                            <rect key="frame" x="155" y="0.0" width="7.5" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4762" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T91-IQ-aqw">
+                                            <rect key="frame" x="155" y="0.0" width="65" height="20"/>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -9860,6 +10226,9 @@ This includes maintaining privacy for people who are:
                                             </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="bie-fO-Gxt"/>
+                                    </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cyi-kJ-P7Z">
                                     <rect key="frame" x="0.0" y="120" width="191.5" height="15.5"/>
@@ -10724,23 +11093,6 @@ This includes maintaining privacy for people who are:
             <point key="canvasLocation" x="9381" y="58"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="N5g-he-EZf">
-            <size key="intrinsicContentSize" width="139" height="14.5"/>
-        </designable>
-        <designable name="XJd-nV-zk5">
-            <size key="intrinsicContentSize" width="292" height="14.5"/>
-        </designable>
-        <designable name="jOh-xU-okx">
-            <size key="intrinsicContentSize" width="199.5" height="14.5"/>
-        </designable>
-        <designable name="pXt-9A-6eT">
-            <size key="intrinsicContentSize" width="137.5" height="14.5"/>
-        </designable>
-        <designable name="stj-cX-foQ">
-            <size key="intrinsicContentSize" width="333.5" height="14.5"/>
-        </designable>
-    </designables>
     <resources>
         <image name="AATA2" width="960" height="934"/>
         <image name="BG" width="375" height="812"/>
@@ -10781,10 +11133,12 @@ This includes maintaining privacy for people who are:
         <image name="fire" width="30" height="30"/>
         <image name="fireW" width="30" height="30"/>
         <image name="formW" width="24" height="24"/>
+        <image name="frame" width="64" height="64"/>
         <image name="homepage1" width="1920" height="1280"/>
         <image name="homepage2" width="1920" height="1282"/>
         <image name="homepage3" width="1920" height="1280"/>
         <image name="hotel_2" width="700" height="367"/>
+        <image name="id" width="64" height="64"/>
         <image name="info-1" width="26" height="26"/>
         <image name="infoN" width="25" height="25"/>
         <image name="insta_2" width="32" height="32"/>

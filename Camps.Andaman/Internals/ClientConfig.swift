@@ -45,6 +45,9 @@ struct ClientInterface {
     static let blogsUrl = ClientConfig.BASE_URL + "blogs_api"
     static let blogCommentsUrl = ClientConfig.BASE_URL + "comment_api"
     static let benefitsUrl = ClientConfig.BASE_URL + "content_api"
-    
+    static let GST_Url = ClientConfig.BASE_URL + "gst_api"
+    static let docuSignUrl = ClientConfig.BASE_URL + "camps/assets/docusign"
+    static let uploadDocuSignUrl = ClientConfig.BASE_URL + "docusign_api"
+
     
 }
