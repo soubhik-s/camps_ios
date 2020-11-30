@@ -275,12 +275,12 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
 
         if indexPath.section == 1 {
             
-        cell.textLabel?.text = "# \(activity_Arr[indexPath.row])"
+        cell.textLabel?.text = "➢ \(activity_Arr[indexPath.row])"
 
             
         } else {
             if des_Arr.isEmpty == false {
-                cell.textLabel?.text = des_Arr[indexPath.row]
+                cell.textLabel?.text = "➢ \(des_Arr[indexPath.row])"
 
             }
 

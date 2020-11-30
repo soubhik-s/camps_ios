@@ -20,8 +20,8 @@ extension UIViewController {
     func openGallery() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
-            imagePicker.allowsEditing = true
+            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+//            imagePicker.allowsEditing = true
             imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
             self.present(imagePicker, animated: true, completion: nil)
         } else {

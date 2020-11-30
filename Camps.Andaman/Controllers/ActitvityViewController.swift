@@ -180,7 +180,7 @@ extension ActitvityViewController: UICollectionViewDelegate , UICollectionViewDa
         case 1:
             cell.textLabel?.text = "➢ \(day_2_Arr[indexPath.row])"
         case 2:
-            cell.textLabel?.text = "☞ \(day_3_Arr[indexPath.row])"
+            cell.textLabel?.text = "➢ \(day_3_Arr[indexPath.row])"
         case 3:
             cell.textLabel?.text = "➢ \(day_4_Arr[indexPath.row])"
         case 4:

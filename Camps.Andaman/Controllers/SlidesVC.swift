@@ -85,8 +85,8 @@ class SlidesVC: UIViewController {
         }, completion: {_ in
       
        
-        self.secondImageFadeIn()
       })
+        self.secondImageFadeIn()
 
     }
        
@@ -100,8 +100,8 @@ class SlidesVC: UIViewController {
             self.IMGView.image = UIImage(named: "SS2")
         }, completion: {_ in
         
-        self.thirdImageFadeIn()
         })
+        self.thirdImageFadeIn()
 
     }
     
@@ -114,8 +114,8 @@ class SlidesVC: UIViewController {
                self.IMGView.image = UIImage(named: "SS3")
         }, completion: {_ in
            
-        self.fourthImageFadeIn()
         })
+        self.fourthImageFadeIn()
 
     }
     
@@ -128,8 +128,8 @@ class SlidesVC: UIViewController {
         self.IMGView.image = UIImage(named: "SS4")
         }, completion: {_ in
         
-        self.firstImageFadeIn()
         })
+        self.firstImageFadeIn()
 
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ApplicationFormVC2: UIViewController {
+class ApplicationFormVC2: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
     @IBOutlet weak var agegroup_Lbl: UILabel!
     @IBOutlet weak var packageNameLbl: UILabel!
@@ -39,12 +39,13 @@ class ApplicationFormVC2: UIViewController {
     @IBOutlet weak var parents_ID_TF: UITextField!
     @IBOutlet weak var P_Front_Img_View: UIImageView!
     
+    @IBOutlet weak var upload_View: UIView!
     
     
     @IBOutlet var parent_Details_view: UIView!
     
     let P_Height:CGFloat = 300
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,12 +63,26 @@ class ApplicationFormVC2: UIViewController {
         let image_Tap_1 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         let image_Tap_2 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         let image_Tap_3 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        let image_Tap_4 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        let image_Tap_5 = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
          
         profile_ImgView.addGestureRecognizer(image_Tap_1)
         front_Img_View.addGestureRecognizer(image_Tap_2)
         back_Img_View.addGestureRecognizer(image_Tap_3)
-        if BookingDetails.age_Group == "adult" {
-            
+        P_Front_Img_View.addGestureRecognizer(image_Tap_4)
+        P_Back_IMGView.addGestureRecognizer(image_Tap_5)
+
+        profile_ImgView.layer.cornerRadius = 10
+        front_Img_View.layer.cornerRadius = 10
+        back_Img_View.layer.cornerRadius = 10
+        P_Front_Img_View.layer.cornerRadius = 10
+        P_Back_IMGView.layer.cornerRadius = 10
+
+        if BookingDetails.age_Group == "Adult" {
+            upload_View.isHidden = true
+        } else {
+            upload_View.isHidden = false
+
         }
     }
                   
@@ -81,15 +96,28 @@ class ApplicationFormVC2: UIViewController {
     // image picker functions
 
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])        {
-   let pickedImage = (info[.editedImage] as! UIImage)
+    let pickedImage = (info[.originalImage] as! UIImage)
 
     if selectedTap == 1 {
         front_Img_View.image = pickedImage
+        BookingDetails.front_id_card = "front_id_card"
+        BookingDetails.ID_Front_IMG = pickedImage
     } else if selectedTap == 2 {
         back_Img_View.image = pickedImage
-
+        BookingDetails.back_id_card = "back_id_card"
+        BookingDetails.ID_Back_IMG = pickedImage
+    } else if selectedTap == 3 {
+        P_Front_Img_View.image = pickedImage
+        BookingDetails.parent_front_id_card = "parent_front_id_card"
+        BookingDetails.P_ID_Front_IMG = pickedImage
+    } else if selectedTap == 4 {
+        P_Back_IMGView.image = pickedImage
+        BookingDetails.parent_back_id_card = "parent_back_id_card"
+        BookingDetails.P_ID_Back_IMG = pickedImage
     } else {
         profile_ImgView.image = pickedImage
+        BookingDetails.photo = "photo"
+        BookingDetails.photoImg = pickedImage
     }
    
     print("Image is picked")
@@ -123,6 +151,11 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         if streetTF.text == "" || countryTF.text == "" || stateTF.text == "" || stateTF.text == "" || cityTF.text == "" || pincodeTF.text == "" {
         popUpAlert(title: "Alert", message: "Enter All Details", action: .alert)
         } else {
+            
+            BookingDetails.parent_id_number = parents_ID_TF.text!
+            BookingDetails.gst_number = GST_Number_TF.text!
+            BookingDetails.company_name = companyName_TF.text!
+            BookingDetails.company_address = company_Address_TF.text!
         BookingDetails.street = streetTF.text!
         BookingDetails.country = countryTF.text!
         BookingDetails.state = stateTF.text!
@@ -184,3 +217,5 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     
     
 }
+
+

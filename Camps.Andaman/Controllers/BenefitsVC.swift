@@ -164,7 +164,7 @@ extension BenefitsVC: UITableViewDelegate , UITableViewDataSource {
                       
                       
             
-            inclusionCell.textLabel?.text = "# \(cellPath.title)"
+            inclusionCell.textLabel?.text = " \(cellPath.title)"
             inclusionCell.imageView?.setImage(urlStr: ClientConfig.inclussionsImgUrl + cellPath.inclusionsImageLink)
             inclusionCell.imageView?.makeRound()
             
@@ -173,14 +173,14 @@ extension BenefitsVC: UITableViewDelegate , UITableViewDataSource {
             if indexPath.section == 1 {
                 let cellPath = childBenefits_Arr[indexPath.row]
                 
-                cell.textLabel?.text = "# \(cellPath.title)"
+                cell.textLabel?.text = "➢ \(cellPath.title)"
                 cell.detailTextLabel?.text = cellPath.benefits
                 
             } else {
                 let cellPath = adultBenefits_Arr[indexPath.row]
                            
                          
-                cell.textLabel?.text = "# \(cellPath.title)"
+                cell.textLabel?.text = "➢ \(cellPath.title)"
                 cell.detailTextLabel?.text = cellPath.benefits
             }
             return cell
@@ -218,10 +218,10 @@ extension BenefitsVC: UITableViewDelegate , UITableViewDataSource {
            switch section {
            
            case 0:
-           label.text = "ADULT BENEFITS"
+           label.text = " ADULT BENEFITS"
                
            case 1:
-               label.text = "CHILD BENEFITS"
+               label.text = " CHILD BENEFITS"
                
            
            default:

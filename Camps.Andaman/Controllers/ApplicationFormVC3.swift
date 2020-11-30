@@ -94,7 +94,8 @@ class ApplicationFormVC3: UIViewController {
     var tax_Price = 0.0
     var final_Price = 0.0
     var taxPercent = 0.0
-    
+    var img_Key_Arr:[String] = []
+    var IMG_Data_Arr:[Data] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -115,7 +116,7 @@ class ApplicationFormVC3: UIViewController {
         age_Lbl.text = BookingDetails.age_Group
         picker.delegate = self
         picker.dataSource = self
-        picker.backgroundColor = .lightColor
+        picker.backgroundColor = .white
         let password_Tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
             terms_Lbl.addGestureRecognizer(password_Tap)
         let covid_Tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
@@ -123,7 +124,48 @@ class ApplicationFormVC3: UIViewController {
         
         copoun_Img.isHidden = true
         getGSTPercent()
+        calculatePrices()
+        if BookingDetails.photo.isEmpty == false {
+            img_Key_Arr.append(BookingDetails.photo)
+            IMG_Data_Arr.append(BookingDetails.photoImg.jpegData(compressionQuality: 1.0)!)
+        } else {
+            print("NO Photo")
+        }
         
+        
+        
+        
+        if BookingDetails.front_id_card.isEmpty == false {
+            img_Key_Arr.append(BookingDetails.front_id_card)
+            IMG_Data_Arr.append(BookingDetails.ID_Front_IMG.jpegData(compressionQuality: 1.0)!)
+        } else {
+            print("NO Front IMg")
+
+        }
+        if BookingDetails.back_id_card.isEmpty == false {
+            img_Key_Arr.append(BookingDetails.back_id_card)
+            IMG_Data_Arr.append(BookingDetails.ID_Back_IMG.jpegData(compressionQuality: 1.0)!)
+        } else {
+            print("NO Back IMg")
+
+        }
+        
+        if BookingDetails.parent_front_id_card.isEmpty == false {
+            img_Key_Arr.append(BookingDetails.parent_front_id_card)
+            IMG_Data_Arr.append(BookingDetails.P_ID_Front_IMG.jpegData(compressionQuality: 1.0)!)
+        } else {
+            print("NO Parent Front IMG")
+
+        }
+        if BookingDetails.parent_back_id_card.isEmpty == false {
+            img_Key_Arr.append(BookingDetails.back_id_card)
+            IMG_Data_Arr.append(BookingDetails.P_ID_Back_IMG.jpegData(compressionQuality: 1.0)!)
+        } else {
+            print("NO Parent Back IMG")
+
+        }
+        
+        print("ImgDAta = \(IMG_Data_Arr)")
     }
     
 
@@ -184,7 +226,9 @@ class ApplicationFormVC3: UIViewController {
         net_Price_Lbl.text = "\(net_Price)"
         taxPrice_Lbl.text = "\(tax_Price)"
         totalPrice_Lbl.text = "\(final_Price.rounded())"
-
+        
+        price_Lbl.text = "\(final_Price.rounded())"
+        basePrice_Lbl.text = "\(basic_Price.rounded())"
         print("basic_Price = \(basic_Price)")
         print("tax_Price = \(tax_Price)")
         print("net_Price = \(net_Price)")
@@ -278,9 +322,13 @@ class ApplicationFormVC3: UIViewController {
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
           
-            let details = ["ip_address":BookingDetails.ip_address, "user_id":BookingDetails.user_id, "package_id":BookingDetails.package_id, "package_name":BookingDetails.package_name, "price":basePrice_Lbl.text! , "offer_price":dPrice_Lbl.text! , "total_price":totalPrice_Lbl.text! , "quantity":"1", "seasonal_camp":BookingDetails.seasonal_camp, "camp_batch":BookingDetails.camp_batch, "first_name":BookingDetails.first_name, "middle_name":"", "last_name":BookingDetails.last_name, "dob":BookingDetails.DOB, "gender":BookingDetails.gender, "height":BookingDetails.height, "weight":BookingDetails.weight, "tshirt_size":BookingDetails.tshirt_size, "mother_tonque":BookingDetails.mother_tonque, "citizenship":BookingDetails.citizenship, "mobile_number":BookingDetails.mobile_number, "email":BookingDetails.email, "address":BookingDetails.street, "city":BookingDetails.city,  "country":BookingDetails.country, "pincode":BookingDetails.pincode, "medical_info":BookingDetails.medical_info, "medical_details":BookingDetails.medical_details, "treatments":BookingDetails.treatments, "treatments_details":BookingDetails.treatments_details, "p_first_name":p_FirstNameTF.text!, "p_middle_name":"", "p_last_name":p_LastNameTF.text!, "p_mobile_number":p_MobileTF.text!, "p_alt_mobile_number":alt_NumberTF.text!, "p_email":P_EmailTF.text!, "video_call":callType_TF.text!, "video_call_link":callLink_TF.text!, "weekend_call":weekendCall, "time_for_call":callTime_TF.text!, "parent_address":parent_Address, "p_address":p_street_TF.text!, "p_city":p_City_TF.text!, "p_country":p_Country_TF.text!, "p_pincode":p_pincode_TF.text!, "additional_details":addInfo_TF.text!,  "coupon_code":code_TF.text!, "siblings_info":BookingDetails.siblingsInfo ,  "siblings_first_name":BookingDetails.siblingsFName, "siblings_middle_name":"", "siblings_last_name":BookingDetails.siblingsLName, "siblings_gender":BookingDetails.siblingsGender, "siblings_mobile_number":BookingDetails.siblingsMobile, "siblings_email":BookingDetails.siblingsEmail,] as [String:Any]
+            let details = ["ip_address":BookingDetails.ip_address, "user_id":BookingDetails.user_id, "package_id":BookingDetails.package_id, "package_name":BookingDetails.package_name, "price":basePrice_Lbl.text! , "offer_price":dPrice_Lbl.text! , "total_price":totalPrice_Lbl.text! , "quantity":"1", "seasonal_camp":BookingDetails.seasonal_camp, "camp_batch":BookingDetails.camp_batch, "first_name":BookingDetails.first_name, "middle_name":"", "last_name":BookingDetails.last_name, "dob":BookingDetails.DOB, "gender":BookingDetails.gender, "height":BookingDetails.height, "weight":BookingDetails.weight, "tshirt_size":BookingDetails.tshirt_size, "mother_tonque":BookingDetails.mother_tonque, "citizenship":BookingDetails.citizenship, "mobile_number":BookingDetails.mobile_number, "email":BookingDetails.email, "address":BookingDetails.street, "city":BookingDetails.city,  "country":BookingDetails.country, "pincode":BookingDetails.pincode, "medical_info":BookingDetails.medical_info, "medical_details":BookingDetails.medical_details, "treatments":BookingDetails.treatments, "treatments_details":BookingDetails.treatments_details, "p_first_name":p_FirstNameTF.text!, "p_middle_name":"", "p_last_name":p_LastNameTF.text!, "p_mobile_number":p_MobileTF.text!, "p_alt_mobile_number":alt_NumberTF.text!, "p_email":P_EmailTF.text!, "video_call":callType_TF.text!, "video_call_link":callLink_TF.text!, "weekend_call":weekendCall, "time_for_call":callTime_TF.text!, "parent_address":parent_Address, "p_address":p_street_TF.text!, "p_city":p_City_TF.text!, "p_country":p_Country_TF.text!, "p_pincode":p_pincode_TF.text!, "additional_details":addInfo_TF.text!,  "coupon_code":code_TF.text!, "siblings_info":BookingDetails.siblingsInfo ,  "siblings_first_name":BookingDetails.siblingsFName, "siblings_middle_name":"", "siblings_last_name":BookingDetails.siblingsLName, "siblings_gender":BookingDetails.siblingsGender, "siblings_mobile_number":BookingDetails.siblingsMobile, "siblings_email":BookingDetails.siblingsEmail,
+                "parent_id_number":BookingDetails.parent_id_number , "id_number":BookingDetails.id_number , "gst_number":BookingDetails.gst_number , "company_address":BookingDetails.company_address , "company_name":BookingDetails.company_name
+            ]
             
-        ApiService.postCall(url: ClientInterface.bookingUrl, params: details, methodType: "POST", tag: "Booking", finish:finishPost)
+            ApiService.uploadMultipleIMGwithParam(parameters: details, imageKey: img_Key_Arr, imgArr: IMG_Data_Arr, methodType: "POST", url: ClientInterface.bookingUrl, tag: "Booking", finish: finishPost)
+            
+//        ApiService.postCall(url: ClientInterface.bookingUrl, params: details, methodType: "POST", tag: "Booking", finish:finishPost)
          print("details = \(details)")
             
         } else {
@@ -292,7 +340,7 @@ class ApplicationFormVC3: UIViewController {
         showActivityIndicator()
           
           
-        ApiService.callPost(url: ClientInterface.bookingUrl, params: "", methodType: "GET", tag: "GST", finish:finishPost)
+        ApiService.callPost(url: ClientInterface.GST_Url, params: "", methodType: "GET", tag: "GST", finish:finishPost)
             
         } else {
         popUpAlert(title: "Alert", message: "Check Internet Connection.", action: .alert)
@@ -330,19 +378,25 @@ class ApplicationFormVC3: UIViewController {
                 } else {
                 }
                 } catch {
-                popUpAlert(title: "Alert", message: "Error in Applying Copoun.Try Again. ", action: .alert)
+                    copoun_Img.image = UIImage(named: "cross2")
+
+                popUpAlert(title: "Alert", message: "Copoun is not Valid", action: .alert)
+                    discount_Price = 0
+                    calculatePrices()
                 print("Parse Error: \(error)")
                 }
             
         } else if tag == "GST" {
             do {
                 if let jsonData = data {
-                let parsedData = try JSONDecoder().decode(GSTResponse.self, from: jsonData)
+                let parsedData = try JSONDecoder().decode([GSTResponse].self, from: jsonData)
                 print(parsedData)
-                
-                    GST_Lbl.text = " GST - \(parsedData.gst_percentage) % (₹)"
-                    taxPercent = Double(parsedData.gst_percentage)!
-                    print("taxPercent = \(taxPercent)")
+                    for GST_Data in parsedData {
+                        GST_Lbl.text = " GST - \(GST_Data.gst_percentage) % (₹)"
+                        taxPercent = Double(GST_Data.gst_percentage)!
+                        print("taxPercent = \(taxPercent)")
+                    }
+                   
                     calculatePrices()
 
                
@@ -385,8 +439,6 @@ class ApplicationFormVC3: UIViewController {
         popUpAlert(title: "Alert", message: "Error_Cheeck all  Details", action: .alert)
             
         }
-        } else {
-        postData()
         }
         } catch {
         popUpAlert(title: "Alert", message: "Booking Failed Check Details and Try Again. ", action: .alert)
@@ -483,7 +535,7 @@ extension ApplicationFormVC3: UIPickerViewDelegate, UIPickerViewDataSource {
         } else  {
         pickerLabel?.text = ""
         }
-        pickerLabel?.textColor = .white
+        pickerLabel?.textColor = .black
         pickerLabel?.backgroundColor = .clear
 
         return pickerLabel!

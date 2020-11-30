@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I41-Hd-ffb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1279,11 +1278,11 @@
             <objects>
                 <viewController storyboardIdentifier="BookingInfoVC" id="arq-Hz-c1b" customClass="BookingInfoVC" customModule="AndamanCamps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ueh-cl-QfD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="uco-El-WCg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZ2-u1-dfV">
                                 <rect key="frame" x="20" y="59" width="20" height="20"/>
@@ -1313,10 +1312,10 @@
                                 </variation>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zI-uF-YJv">
-                                <rect key="frame" x="0.0" y="92" width="414" height="1408"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="1908"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-3p-Ndp">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="1300"/>
+                                        <rect key="frame" x="0.0" y="8" width="414" height="1900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bz-3B-GLD">
                                                 <rect key="frame" x="20" y="0.0" width="374" height="25"/>
@@ -1483,7 +1482,7 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EWJ-LN-MLk">
-                                                <rect key="frame" x="20" y="245" width="374" height="305"/>
+                                                <rect key="frame" x="20" y="245" width="374" height="235"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSz-gq-lhh">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -1508,88 +1507,143 @@
                                                             <constraint firstAttribute="height" constant="25" id="01J-Xv-qCU"/>
                                                         </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JY9-85-quG">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jfS-Xa-F5P">
                                                         <rect key="frame" x="0.0" y="35" width="374" height="25"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Of Birth :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBu-ru-Vjv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="yPB-aQ-U7k"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-nn-cJ1">
-                                                                <rect key="frame" x="100" y="0.0" width="274" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JY9-85-quG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Of Birth :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBu-ru-Vjv">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="100" id="yPB-aQ-U7k"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-nn-cJ1">
+                                                                        <rect key="frame" x="100" y="0.0" width="84.5" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-2h-GrQ">
+                                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5Z-03-T3a">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="60" id="N7Q-15-bhF"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdV-xN-viE">
+                                                                        <rect key="frame" x="65" y="0.0" width="119.5" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-2h-GrQ">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6T1-Fl-p2h">
                                                         <rect key="frame" x="0.0" y="70" width="374" height="25"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5Z-03-T3a">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="60" id="N7Q-15-bhF"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdV-xN-viE">
-                                                                <rect key="frame" x="65" y="0.0" width="309" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-Yv-m14">
+                                                                <rect key="frame" x="0.0" y="0.0" width="182" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height (cms) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obT-lB-cWJ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="100" id="hlX-0f-s1f"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-tn-CXg">
+                                                                        <rect key="frame" x="100" y="0.0" width="82" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNg-Bs-hgh">
+                                                                <rect key="frame" x="192" y="0.0" width="182" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight (kgs) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-nU-Qtj">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="100" id="hHz-Qr-28d"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIe-Ce-gqh">
+                                                                        <rect key="frame" x="100" y="0.0" width="82" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw8-Yv-m14">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Fx-3T-ZWj">
                                                         <rect key="frame" x="0.0" y="105" width="374" height="25"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height (cms) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obT-lB-cWJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="hlX-0f-s1f"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyF-tn-CXg">
-                                                                <rect key="frame" x="100" y="0.0" width="274" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNg-Bs-hgh">
-                                                        <rect key="frame" x="0.0" y="140" width="374" height="25"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight (kgs) :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9K-nU-Qtj">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="hHz-Qr-28d"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIe-Ce-gqh">
-                                                                <rect key="frame" x="100" y="0.0" width="274" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-c1-v0J">
+                                                                <rect key="frame" x="0.0" y="0.0" width="182" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2f-Dz-GME">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="80" id="oBd-Kn-a2W"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPP-Mm-vHB">
+                                                                        <rect key="frame" x="90" y="0.0" width="92" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IKX-9d-eEL">
+                                                                <rect key="frame" x="192" y="0.0" width="182" height="25"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citizenship :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9B-xt-6df">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="100" id="mbr-Fe-nu3"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV6-a5-Ea1">
+                                                                        <rect key="frame" x="110" y="0.0" width="72" height="25"/>
+                                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6Y-mP-Xgs">
-                                                        <rect key="frame" x="0.0" y="175" width="374" height="25"/>
+                                                        <rect key="frame" x="0.0" y="140" width="374" height="25"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Shirt Size :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dq-gQ-y5z">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="25"/>
@@ -1608,48 +1662,8 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GGh-c1-v0J">
-                                                        <rect key="frame" x="0.0" y="210" width="374" height="25"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2f-Dz-GME">
-                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="80" id="oBd-Kn-a2W"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPP-Mm-vHB">
-                                                                <rect key="frame" x="90" y="0.0" width="284" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IKX-9d-eEL">
-                                                        <rect key="frame" x="0.0" y="245" width="374" height="25"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Citizenship :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9B-xt-6df">
-                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="mbr-Fe-nu3"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV6-a5-Ea1">
-                                                                <rect key="frame" x="110" y="0.0" width="264" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBt-mR-NS1">
-                                                        <rect key="frame" x="0.0" y="280" width="374" height="25"/>
+                                                        <rect key="frame" x="0.0" y="175" width="374" height="25"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83s-Pr-DXB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="25"/>
@@ -1668,10 +1682,89 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8v3-yg-sHk">
+                                                        <rect key="frame" x="0.0" y="210" width="374" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identity[ ID ]:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDn-Dh-eiN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="GqA-mr-v7N"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sh-An-BEg">
+                                                                <rect key="frame" x="90" y="0.0" width="284" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OLd-rm-62n">
+                                                <rect key="frame" x="10" y="490" width="394" height="128"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o8w-Il-sGU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dn-6V-wqI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="f9y-bH-SY9">
+                                                                <rect key="frame" x="0.0" y="28" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="04h-My-2rP"/>
+                                                                    <constraint firstAttribute="height" constant="100" id="4rL-2U-Pkn"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Abk-QF-OwM">
+                                                        <rect key="frame" x="147" y="0.0" width="100" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Front" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZx-G1-2jQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="kRY-OP-XEi">
+                                                                <rect key="frame" x="0.0" y="28" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="1Jn-ee-PKt"/>
+                                                                    <constraint firstAttribute="height" constant="100" id="r23-tq-N2A"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oMs-en-dLa">
+                                                        <rect key="frame" x="294" y="0.0" width="100" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAO-20-uID">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="kdk-b4-sk5">
+                                                                <rect key="frame" x="0.0" y="28" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="DO5-yA-0xH"/>
+                                                                    <constraint firstAttribute="height" constant="100" id="c5y-hX-49l"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOM-qU-c7i">
-                                                <rect key="frame" x="169" y="560" width="76" height="25"/>
+                                                <rect key="frame" x="169" y="638" width="76" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="l15-jL-3rD"/>
                                                 </constraints>
@@ -1698,7 +1791,7 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qso-8a-fbq">
-                                                <rect key="frame" x="20" y="595" width="374" height="130"/>
+                                                <rect key="frame" x="20" y="673" width="374" height="165"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uk7-zc-fj9">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -1783,10 +1876,100 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXJ-fM-lbO">
+                                                        <rect key="frame" x="0.0" y="140" width="374" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identity[ ID ]:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTs-gb-dsD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="sI4-tm-Cys"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCu-TD-AUK">
+                                                                <rect key="frame" x="90" y="0.0" width="284" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="S4j-lx-sef">
+                                                <rect key="frame" x="72" y="848" width="270" height="128"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XdL-JE-6ii">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Front" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiB-hj-Qgu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="Hyg-Js-7Gh">
+                                                                <rect key="frame" x="0.0" y="28" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="h4Z-cC-Alu"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="vJC-rC-crJ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-pN-Bge">
+                                                        <rect key="frame" x="170" y="0.0" width="100" height="128"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-LK-jhY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="uKg-ES-zEO">
+                                                                <rect key="frame" x="0.0" y="28" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="IAQ-ES-awM"/>
+                                                                    <constraint firstAttribute="width" constant="100" id="cuz-yM-dSi"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgN-7R-FX4">
+                                                <rect key="frame" x="165.5" y="996" width="83.5" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="AMU-lf-gmq"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Medical Info">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="15" name="Optima-Bold"/>
+                                                            <font key="NSOriginalFont" size="14" name="Optima-Bold"/>
+                                                            <integer key="NSUnderline" value="1"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Medical Info">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="17" name="Optima-Bold"/>
+                                                                <font key="NSOriginalFont" size="14" name="Optima-Bold"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </variation>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="m24-9N-MpY">
-                                                <rect key="frame" x="20" y="770" width="374" height="115"/>
+                                                <rect key="frame" x="20" y="1031" width="374" height="115"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-OH-i9E">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -1873,37 +2056,8 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgN-7R-FX4">
-                                                <rect key="frame" x="165.5" y="735" width="83.5" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="AMU-lf-gmq"/>
-                                                </constraints>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Medical Info">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="15" name="Optima-Bold"/>
-                                                            <font key="NSOriginalFont" size="14" name="Optima-Bold"/>
-                                                            <integer key="NSUnderline" value="1"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Medical Info">
-                                                            <attributes>
-                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="17" name="Optima-Bold"/>
-                                                                <font key="NSOriginalFont" size="14" name="Optima-Bold"/>
-                                                                <integer key="NSUnderline" value="1"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                </variation>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iA-dI-qcZ">
-                                                <rect key="frame" x="176.5" y="895" width="61" height="18"/>
+                                                <rect key="frame" x="176.5" y="1156" width="61" height="18"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Call Info ">
                                                         <attributes>
@@ -1927,7 +2081,7 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ehl-tb-d4K">
-                                                <rect key="frame" x="20" y="923" width="374" height="130"/>
+                                                <rect key="frame" x="20" y="1184" width="374" height="130"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-h6-6YI">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -2015,7 +2169,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eiA-Te-Tm5">
-                                                <rect key="frame" x="20" y="1073" width="374" height="165"/>
+                                                <rect key="frame" x="20" y="1334" width="374" height="165"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woo-Ap-PRv">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -2127,30 +2281,130 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="csz-11-ob8">
+                                                <rect key="frame" x="10" y="1509" width="394" height="130"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAw-JX-IY0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="25"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="GST Details">
+                                                                <attributes>
+                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <font key="NSFont" size="15" name="Optima-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <integer key="NSUnderline" value="1"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Call Info ">
+                                                                    <attributes>
+                                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <font key="NSFont" size="17" name="Optima-Bold"/>
+                                                                        <integer key="NSUnderline" value="1"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </variation>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Asg-VG-7eK">
+                                                        <rect key="frame" x="0.0" y="35" width="394" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GST Number :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5D-MK-bUZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="KRE-lJ-bqf"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4w7-co-qJQ">
+                                                                <rect key="frame" x="105" y="0.0" width="289" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="uug-Jx-cmn"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MWI-NV-vQ2">
+                                                        <rect key="frame" x="0.0" y="70" width="394" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-y7-8fz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="KUF-iL-S2i"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCt-EJ-any">
+                                                                <rect key="frame" x="125" y="0.0" width="269" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="m2H-CP-2PV">
+                                                        <rect key="frame" x="0.0" y="105" width="394" height="25"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campany Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-UN-3cF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="Jlo-5V-cV4"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZF-Kr-rsE">
+                                                                <rect key="frame" x="125" y="0.0" width="269" height="25"/>
+                                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="FOM-qU-c7i" firstAttribute="top" secondItem="EWJ-LN-MLk" secondAttribute="bottom" constant="10" id="0jw-2P-oSX"/>
                                             <constraint firstItem="m24-9N-MpY" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="1yp-8K-BJl"/>
-                                            <constraint firstAttribute="height" constant="1300" id="8Fx-NN-YgH"/>
-                                            <constraint firstItem="mgN-7R-FX4" firstAttribute="top" secondItem="qso-8a-fbq" secondAttribute="bottom" constant="10" id="9lr-dS-8sA"/>
+                                            <constraint firstAttribute="height" constant="1900" id="8Fx-NN-YgH"/>
                                             <constraint firstAttribute="trailing" secondItem="m24-9N-MpY" secondAttribute="trailing" constant="20" id="AMQ-s5-j3O"/>
+                                            <constraint firstItem="csz-11-ob8" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="10" id="D22-Nv-Zx6"/>
                                             <constraint firstItem="Ehl-tb-d4K" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="DSf-Gr-MVH"/>
                                             <constraint firstItem="9bz-3B-GLD" firstAttribute="top" secondItem="GoL-3p-Ndp" secondAttribute="top" id="EF7-f7-YRQ">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                             </constraint>
                                             <constraint firstAttribute="trailing" secondItem="Ehl-tb-d4K" secondAttribute="trailing" constant="20" id="Edw-7C-rxt"/>
+                                            <constraint firstItem="S4j-lx-sef" firstAttribute="top" secondItem="qso-8a-fbq" secondAttribute="bottom" constant="10" id="FWm-mL-rLZ"/>
                                             <constraint firstItem="EWJ-LN-MLk" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="FeH-L3-baG"/>
+                                            <constraint firstItem="FOM-qU-c7i" firstAttribute="top" secondItem="OLd-rm-62n" secondAttribute="bottom" constant="20" id="GgW-PU-777"/>
+                                            <constraint firstItem="OLd-rm-62n" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="10" id="GuO-7v-Pwp"/>
                                             <constraint firstItem="Lw9-BM-sAP" firstAttribute="centerX" secondItem="GoL-3p-Ndp" secondAttribute="centerX" id="HIj-Le-dnK"/>
                                             <constraint firstItem="eiA-Te-Tm5" firstAttribute="top" secondItem="Ehl-tb-d4K" secondAttribute="bottom" constant="20" id="HLk-4i-RfO"/>
                                             <constraint firstAttribute="trailing" secondItem="p38-lf-nBL" secondAttribute="trailing" constant="20" id="KAn-AQ-xO0"/>
                                             <constraint firstAttribute="trailing" secondItem="qso-8a-fbq" secondAttribute="trailing" constant="20" id="MfJ-rd-osf"/>
+                                            <constraint firstItem="csz-11-ob8" firstAttribute="top" secondItem="eiA-Te-Tm5" secondAttribute="bottom" constant="10" id="Nj8-iT-3gA"/>
+                                            <constraint firstItem="S4j-lx-sef" firstAttribute="centerX" secondItem="GoL-3p-Ndp" secondAttribute="centerX" id="Raw-ZZ-gz0"/>
+                                            <constraint firstAttribute="trailing" secondItem="OLd-rm-62n" secondAttribute="trailing" constant="10" id="Tqw-AM-8o5"/>
                                             <constraint firstItem="9bz-3B-GLD" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="UMD-7A-Ydz"/>
                                             <constraint firstAttribute="trailing" secondItem="eiA-Te-Tm5" secondAttribute="trailing" constant="20" id="VHc-Ax-IDs"/>
                                             <constraint firstAttribute="trailing" secondItem="EWJ-LN-MLk" secondAttribute="trailing" constant="20" id="Vzc-Ic-9W7"/>
+                                            <constraint firstItem="OLd-rm-62n" firstAttribute="top" secondItem="EWJ-LN-MLk" secondAttribute="bottom" constant="10" id="WEx-wG-X9b"/>
                                             <constraint firstItem="p38-lf-nBL" firstAttribute="top" secondItem="9bz-3B-GLD" secondAttribute="bottom" constant="10" id="XBO-DU-9cE"/>
                                             <constraint firstItem="qso-8a-fbq" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="YaX-CL-lk9"/>
                                             <constraint firstItem="1iA-dI-qcZ" firstAttribute="top" secondItem="m24-9N-MpY" secondAttribute="bottom" constant="10" id="cK9-u4-aDP"/>
+                                            <constraint firstAttribute="trailing" secondItem="csz-11-ob8" secondAttribute="trailing" constant="10" id="ekU-wb-sZs"/>
                                             <constraint firstAttribute="trailing" secondItem="9bz-3B-GLD" secondAttribute="trailing" constant="20" id="euW-5U-NFz"/>
                                             <constraint firstItem="EWJ-LN-MLk" firstAttribute="top" secondItem="Lw9-BM-sAP" secondAttribute="bottom" constant="10" id="ipq-LP-MFr"/>
                                             <constraint firstItem="p38-lf-nBL" firstAttribute="leading" secondItem="GoL-3p-Ndp" secondAttribute="leading" constant="20" id="kSl-p3-Sjn"/>
@@ -2162,6 +2416,7 @@
                                             <constraint firstItem="Ehl-tb-d4K" firstAttribute="top" secondItem="1iA-dI-qcZ" secondAttribute="bottom" constant="10" id="pOj-ZW-Y47"/>
                                             <constraint firstItem="Lw9-BM-sAP" firstAttribute="top" secondItem="p38-lf-nBL" secondAttribute="bottom" constant="10" id="qf3-c5-xnT"/>
                                             <constraint firstItem="qso-8a-fbq" firstAttribute="top" secondItem="FOM-qU-c7i" secondAttribute="bottom" constant="10" id="vdb-la-hac"/>
+                                            <constraint firstItem="mgN-7R-FX4" firstAttribute="top" secondItem="S4j-lx-sef" secondAttribute="bottom" constant="20" id="ynF-Vr-fx9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2198,23 +2453,31 @@
                             <constraint firstItem="uco-El-WCg" firstAttribute="top" secondItem="Ueh-cl-QfD" secondAttribute="top" id="w6n-6n-SRt"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="2000"/>
                     <connections>
                         <outlet property="DOBLbl" destination="6UL-nn-cJ1" id="6c1-cd-Nym"/>
+                        <outlet property="GST_Lbl" destination="4w7-co-qJQ" id="lDa-Jx-Iob"/>
                         <outlet property="M_DetailsLbl" destination="hVE-kE-I8b" id="KlW-af-kjm"/>
                         <outlet property="M_InfoLbl" destination="o5M-y4-VwT" id="KfH-2c-56F"/>
+                        <outlet property="P_Back_IMGView" destination="uKg-ES-zEO" id="zHQ-T0-zET"/>
                         <outlet property="P_ContactLbl" destination="nk6-s0-rdY" id="8Ly-85-IgL"/>
+                        <outlet property="P_Front_IMGView" destination="Hyg-Js-7Gh" id="UMo-wg-MuG"/>
                         <outlet property="TShirtLbl" destination="4Zt-N7-bp8" id="1SR-3v-E1Z"/>
                         <outlet property="T_DetailsLbl" destination="D1I-LG-GL4" id="dDI-eq-mMl"/>
                         <outlet property="T_InfoLbl" destination="8fa-uK-nis" id="l8v-gM-AYw"/>
                         <outlet property="W_CallLbl" destination="gyo-4c-gj6" id="0EN-fp-7wJ"/>
                         <outlet property="addressLbl" destination="F5K-Yp-eWj" id="ec0-Qa-kzw"/>
+                        <outlet property="applicant_Id_Lbl" destination="5sh-An-BEg" id="n5u-5w-07f"/>
+                        <outlet property="back_IMGView" destination="kdk-b4-sk5" id="C8O-jW-vuf"/>
                         <outlet property="batchLbl" destination="Wzt-Zy-iYU" id="7Z8-bh-46d"/>
                         <outlet property="callTimeLbl" destination="f3e-BY-aVk" id="d1a-fi-ojC"/>
                         <outlet property="callTypeLbl" destination="Suz-6L-QDl" id="ZdL-vU-wFD"/>
                         <outlet property="campLbl" destination="jJs-yu-qGl" id="t7u-K3-y7e"/>
                         <outlet property="citizenLbl" destination="fV6-a5-Ea1" id="jG7-Xo-Trk"/>
+                        <outlet property="company_Address" destination="tZF-Kr-rsE" id="40P-Gz-WZX"/>
+                        <outlet property="company_Name_Lbl" destination="lCt-EJ-any" id="spt-q0-HxS"/>
                         <outlet property="contactNoLbl" destination="EtD-eH-3UJ" id="uK2-qQ-va5"/>
+                        <outlet property="front_IMGView" destination="kRY-OP-XEi" id="Mzf-Ek-ii9"/>
                         <outlet property="genderLbl" destination="mdV-xN-viE" id="sbH-Di-QHl"/>
                         <outlet property="heightLbl" destination="yyF-tn-CXg" id="b1n-E3-JPo"/>
                         <outlet property="langLbl" destination="pPP-Mm-vHB" id="lIE-zi-gGS"/>
@@ -2223,6 +2486,8 @@
                         <outlet property="p_EmailLbl" destination="pNR-jq-zII" id="Ghf-Je-QKi"/>
                         <outlet property="p_NameLbl" destination="TOJ-Zk-fZG" id="E0F-v5-6FE"/>
                         <outlet property="packageNameLbl" destination="OUI-ED-mw1" id="EpF-GB-WD4"/>
+                        <outlet property="parent_Id_Lbl" destination="tCu-TD-AUK" id="2Wo-sQ-PY3"/>
+                        <outlet property="photo_IMGView" destination="f9y-bH-SY9" id="Ugz-ta-alY"/>
                         <outlet property="priceLbl" destination="xc8-nq-ZK4" id="v4T-WK-auW"/>
                         <outlet property="sib_Gender_Lbl" destination="E5F-rh-wZ6" id="WE1-tX-JGO"/>
                         <outlet property="sib_Mobile_No" destination="S4v-Oz-opt" id="f6n-Gt-Os8"/>
@@ -2236,7 +2501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oJ-oW-qpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14128.985507246378" y="-3191.5178571428569"/>
+            <point key="canvasLocation" x="14081" y="-3499"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="SPO-OR-bwY">
@@ -4271,7 +4536,7 @@ muchmore.</string>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="CLZ-6z-pBm" firstAttribute="centerX" secondItem="qhf-J5-i95" secondAttribute="centerX" id="OIo-W2-hQQ"/>
                                                 </constraints>
@@ -5289,6 +5554,7 @@ muchmore.</string>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Season" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAP-Ag-SEb">
                                                 <rect key="frame" x="20" y="170" width="374" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="fQI-Uk-ffe">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -5303,8 +5569,9 @@ muchmore.</string>
                                                     <action selector="seasonTF_Axn:" destination="AA9-lV-yla" eventType="editingDidBegin" id="2wU-nq-TOf"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Batch" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-lf-97Z">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Batch" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-lf-97Z">
                                                 <rect key="frame" x="20" y="215" width="374" height="35"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="iRM-CG-zun">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -5336,6 +5603,7 @@ muchmore.</string>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-bx-Ey5">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="J4N-A2-dKH">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -5349,6 +5617,7 @@ muchmore.</string>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSs-du-OPI">
                                                         <rect key="frame" x="0.0" y="44" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -5390,6 +5659,7 @@ muchmore.</string>
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byo-lL-a8i">
                                                         <rect key="frame" x="0.0" y="132" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -5398,11 +5668,13 @@ muchmore.</string>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeo-QX-N1B">
                                                         <rect key="frame" x="0.0" y="176" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6P-cI-cPb">
                                                         <rect key="frame" x="0.0" y="220" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -5411,21 +5683,25 @@ muchmore.</string>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight: in kgs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0F-y0-gGy">
                                                         <rect key="frame" x="0.0" y="264" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height: in cms" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7D-MJ-ZTt">
                                                         <rect key="frame" x="0.0" y="308" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Citizenship" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vo-a0-bWE">
                                                         <rect key="frame" x="0.0" y="352" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select T-Shirt Size" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDI-H2-M58">
                                                         <rect key="frame" x="0.0" y="396" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -5434,6 +5710,7 @@ muchmore.</string>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mother Tongue" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0SA-HI-ULI">
                                                         <rect key="frame" x="0.0" y="440" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -5486,6 +5763,7 @@ muchmore.</string>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wl9-3K-uI5">
                                                                 <rect key="frame" x="0.0" y="44" width="374" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="sL7-xk-xfF">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -5499,6 +5777,7 @@ muchmore.</string>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-Ur-0eS">
                                                                 <rect key="frame" x="0.0" y="88" width="374" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -5540,6 +5819,7 @@ muchmore.</string>
                                                             </stackView>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-ag-ul5">
                                                                 <rect key="frame" x="0.0" y="176" width="374" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -5548,6 +5828,7 @@ muchmore.</string>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sibling's Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KO-c3-Dzp">
                                                                 <rect key="frame" x="0.0" y="220" width="374" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                             </textField>
@@ -5881,8 +6162,8 @@ muchmore.</string>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="15" id="g3S-FE-bE2"/>
                                                                             </constraints>
-                                                                            <color key="pageIndicatorTintColor" systemColor="lightTextColor"/>
-                                                                            <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="currentPageIndicatorTintColor" red="0.72941176470000002" green="0.098039215690000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </pageControl>
                                                                     </subviews>
                                                                     <constraints>
@@ -7998,16 +8279,16 @@ This includes maintaining privacy for people who are:
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1120"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LWn-zO-5TM">
-                                                <rect key="frame" x="10" y="10" width="394" height="42.5"/>
+                                                <rect key="frame" x="10" y="10" width="394" height="60"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhW-OO-Oak">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="18"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhW-OO-Oak">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by author " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX0-xS-iNB">
-                                                        <rect key="frame" x="0.0" y="28" width="394" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX0-xS-iNB">
+                                                        <rect key="frame" x="0.0" y="10" width="394" height="50"/>
                                                         <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -8015,7 +8296,7 @@ This includes maintaining privacy for people who are:
                                                 </subviews>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-0c-Tmp">
-                                                <rect key="frame" x="10" y="72.5" width="394" height="200"/>
+                                                <rect key="frame" x="10" y="90" width="394" height="200"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="ksp-DT-XuX"/>
@@ -8064,7 +8345,7 @@ This includes maintaining privacy for people who are:
                                                 </cells>
                                             </collectionView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ghg-yK-uD8">
-                                                <rect key="frame" x="0.0" y="282.5" width="414" height="487.5"/>
+                                                <rect key="frame" x="0.0" y="300" width="414" height="470"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BlogCell" textLabel="fX0-1s-i62" style="IBUITableViewCellStyleDefault" id="hzJ-Qe-IQ9">
@@ -8700,6 +8981,7 @@ This includes maintaining privacy for people who are:
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-9G-O8O">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="AMp-dZ-2kQ">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8713,6 +8995,7 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEh-Ir-lys">
                                                         <rect key="frame" x="0.0" y="45" width="374" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -8721,6 +9004,7 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pdq-8c-N8b">
                                                         <rect key="frame" x="0.0" y="90" width="374" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -8729,6 +9013,7 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-yl-4hD">
                                                         <rect key="frame" x="0.0" y="135" width="374" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -8737,6 +9022,7 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pincode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MCZ-1o-WZR">
                                                         <rect key="frame" x="0.0" y="180" width="374" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
@@ -8819,6 +9105,7 @@ This includes maintaining privacy for people who are:
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provide completed Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlO-za-hbc">
                                                         <rect key="frame" x="0.0" y="56.5" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="7sf-jV-uHp">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8875,6 +9162,7 @@ This includes maintaining privacy for people who are:
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provide completed Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-CO-ZbU">
                                                         <rect key="frame" x="0.0" y="50" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="fDe-Gv-pOy">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8930,6 +9218,7 @@ This includes maintaining privacy for people who are:
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter GST Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-vf-rAd">
                                                         <rect key="frame" x="0.0" y="55" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="tmZ-p1-cjd">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8944,6 +9233,7 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EbO-mF-UhO">
                                                         <rect key="frame" x="0.0" y="104" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="RWL-tV-nqy">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8957,6 +9247,7 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Company Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faI-sm-hy1">
                                                         <rect key="frame" x="0.0" y="153" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="cyr-Id-qwT">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -8994,7 +9285,7 @@ This includes maintaining privacy for people who are:
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-Mm-ztN">
+                                                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="eKl-Mm-ztN">
                                                                 <rect key="frame" x="0.0" y="28" width="120" height="120"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="120" id="1QX-Xj-3x9"/>
@@ -9012,7 +9303,7 @@ This includes maintaining privacy for people who are:
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="5sh-gd-org">
+                                                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="5sh-gd-org">
                                                                 <rect key="frame" x="0.0" y="28" width="120" height="120"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="120" id="mcV-W9-E3g"/>
@@ -9035,7 +9326,7 @@ This includes maintaining privacy for people who are:
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame" translatesAutoresizingMaskIntoConstraints="NO" id="8Oe-ff-6uE">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame" translatesAutoresizingMaskIntoConstraints="NO" id="8Oe-ff-6uE">
                                                                 <rect key="frame" x="254" y="0.0" width="120" height="120"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="120" id="E3z-XW-BHy"/>
@@ -9046,6 +9337,7 @@ This includes maintaining privacy for people who are:
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ID Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pfo-CN-fQO">
                                                         <rect key="frame" x="0.0" y="130" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="RBW-Y9-Lx2">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -9059,36 +9351,47 @@ This includes maintaining privacy for people who are:
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-z9-h6D">
-                                                <rect key="frame" x="20" y="1263.5" width="374" height="30"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-w4-m4k">
+                                                <rect key="frame" x="10" y="1253.5" width="394" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-z9-h6D">
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <state key="normal" title="Upload Parent Documents">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="uploadParents_Btn:" destination="Bpa-6c-7PP" eventType="touchUpInside" id="FE3-Kv-3hu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArr" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-DS-M7f">
+                                                        <rect key="frame" x="354" y="5" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="Vy4-Gl-Mh7"/>
+                                                            <constraint firstAttribute="width" constant="20" id="isG-rh-cCf"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="qn4-h1-PJ6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TDf-z9-h6D" secondAttribute="bottom" id="A1i-Gy-5PK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EfO-DS-M7f" secondAttribute="trailing" constant="20" id="Ec5-dC-q9g"/>
+                                                    <constraint firstItem="TDf-z9-h6D" firstAttribute="leading" secondItem="qaq-w4-m4k" secondAttribute="leading" id="KBG-2j-FAd"/>
+                                                    <constraint firstItem="EfO-DS-M7f" firstAttribute="centerY" secondItem="qaq-w4-m4k" secondAttribute="centerY" id="aBQ-cp-KwQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EfO-DS-M7f" secondAttribute="trailing" constant="20" id="iqg-V5-2aB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TDf-z9-h6D" secondAttribute="trailing" id="jUJ-Yt-XTe"/>
+                                                    <constraint firstAttribute="height" constant="30" id="nCz-kh-sP7"/>
+                                                    <constraint firstItem="TDf-z9-h6D" firstAttribute="top" secondItem="qaq-w4-m4k" secondAttribute="top" id="xrq-T2-TTU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                <state key="normal" title="Upload Parent Documents">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="uploadParents_Btn:" destination="Bpa-6c-7PP" eventType="touchUpInside" id="FE3-Kv-3hu"/>
-                                                </connections>
-                                            </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArr" translatesAutoresizingMaskIntoConstraints="NO" id="EfO-DS-M7f">
-                                                <rect key="frame" x="364" y="1268.5" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="Vy4-Gl-Mh7"/>
-                                                    <constraint firstAttribute="width" constant="20" id="isG-rh-cCf"/>
-                                                </constraints>
-                                            </imageView>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="TDf-z9-h6D" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="1qm-ga-FOo"/>
+                                            <constraint firstItem="qaq-w4-m4k" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="10" id="3Wi-8I-yDL"/>
                                             <constraint firstItem="MPR-DZ-IYG" firstAttribute="top" secondItem="pzL-f7-vkw" secondAttribute="bottom" constant="10" id="5Ku-Vt-2Wj"/>
                                             <constraint firstItem="MNe-U0-fUG" firstAttribute="top" secondItem="oc0-sp-55R" secondAttribute="bottom" constant="20" id="97y-iR-1YH"/>
                                             <constraint firstItem="5Pg-4W-kYL" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="B4e-8F-Y5G">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
-                                            <constraint firstAttribute="trailing" secondItem="EfO-DS-M7f" secondAttribute="trailing" constant="30" id="CK9-cE-1vA"/>
                                             <constraint firstItem="mrl-5a-kb3" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="DU8-vo-OIG"/>
                                             <constraint firstItem="BZO-X7-1G5" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="FIY-bv-ovd"/>
                                             <constraint firstItem="oc0-sp-55R" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="FUU-vr-qWd">
@@ -9109,27 +9412,26 @@ This includes maintaining privacy for people who are:
                                             </constraint>
                                             <constraint firstItem="U4U-Lh-QCc" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="VEU-TA-sXY"/>
                                             <constraint firstItem="hjQ-6f-e51" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="WQu-2d-iyl"/>
-                                            <constraint firstItem="TDf-z9-h6D" firstAttribute="top" secondItem="U4U-Lh-QCc" secondAttribute="bottom" constant="20" id="YBL-n0-5mi"/>
                                             <constraint firstItem="X4W-ig-wY8" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="ZLq-32-nKT"/>
                                             <constraint firstItem="BZO-X7-1G5" firstAttribute="top" secondItem="5Pg-4W-kYL" secondAttribute="bottom" constant="20" id="bdX-FM-1d3">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                                             </constraint>
-                                            <constraint firstItem="EfO-DS-M7f" firstAttribute="centerY" secondItem="TDf-z9-h6D" secondAttribute="centerY" id="bpd-5c-dF6"/>
                                             <constraint firstItem="MPR-DZ-IYG" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="cbZ-Gm-9Up"/>
                                             <constraint firstItem="oc0-sp-55R" firstAttribute="top" secondItem="hjQ-6f-e51" secondAttribute="bottom" constant="10" id="d3L-gH-q9G"/>
                                             <constraint firstAttribute="trailing" secondItem="5Pg-4W-kYL" secondAttribute="trailing" constant="20" id="dML-Sp-1FK">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
                                             <constraint firstAttribute="trailing" secondItem="BZO-X7-1G5" secondAttribute="trailing" constant="20" id="de6-Ah-PMB"/>
-                                            <constraint firstAttribute="trailing" secondItem="TDf-z9-h6D" secondAttribute="trailing" constant="20" id="h2G-nK-o0d"/>
                                             <constraint firstAttribute="trailing" secondItem="pzL-f7-vkw" secondAttribute="trailing" constant="20" id="jP4-T1-0eM"/>
                                             <constraint firstItem="pzL-f7-vkw" firstAttribute="leading" secondItem="gWq-so-LxO" secondAttribute="leading" constant="20" id="lja-GB-mjv"/>
                                             <constraint firstItem="oc0-sp-55R" firstAttribute="centerX" secondItem="gWq-so-LxO" secondAttribute="centerX" id="mqU-Vo-muq"/>
                                             <constraint firstItem="U4U-Lh-QCc" firstAttribute="top" secondItem="MPR-DZ-IYG" secondAttribute="bottom" constant="30" id="mwC-Lu-gZl"/>
                                             <constraint firstItem="pzL-f7-vkw" firstAttribute="top" secondItem="152-Ky-dIf" secondAttribute="bottom" constant="20" id="q11-Gd-vyh"/>
+                                            <constraint firstAttribute="trailing" secondItem="qaq-w4-m4k" secondAttribute="trailing" constant="10" id="r56-MP-B4u"/>
                                             <constraint firstAttribute="trailing" secondItem="oc0-sp-55R" secondAttribute="trailing" constant="20" id="tfQ-vE-YbT">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                                             </constraint>
+                                            <constraint firstItem="qaq-w4-m4k" firstAttribute="top" secondItem="U4U-Lh-QCc" secondAttribute="bottom" constant="10" id="uZa-Ui-mYN"/>
                                             <constraint firstAttribute="trailing" secondItem="MPR-DZ-IYG" secondAttribute="trailing" constant="20" id="ueS-XS-Hta"/>
                                             <constraint firstAttribute="height" constant="1400" id="ul3-lJ-8FD"/>
                                             <constraint firstItem="hjQ-6f-e51" firstAttribute="top" secondItem="X4W-ig-wY8" secondAttribute="bottom" constant="20" id="uqW-Og-AZR">
@@ -9212,6 +9514,7 @@ This includes maintaining privacy for people who are:
                         <outlet property="streetTF" destination="SLG-9G-O8O" id="Hwe-p2-Hkz"/>
                         <outlet property="treatementSC" destination="YY1-N1-rSR" id="uMM-Fg-7Ks"/>
                         <outlet property="treatementTF" destination="g6z-CO-ZbU" id="Xxb-1q-glr"/>
+                        <outlet property="upload_View" destination="qaq-w4-m4k" id="jfr-tX-Ztn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hcw-p6-UAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -9247,7 +9550,7 @@ This includes maintaining privacy for people who are:
                                                     <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-Af-Byl">
+                                                <imageView clipsSubviews="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-Af-Byl">
                                                     <rect key="frame" x="0.0" y="28" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="K75-04-Lip"/>
@@ -9265,7 +9568,7 @@ This includes maintaining privacy for people who are:
                                                     <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-Ae-i5g">
+                                                <imageView clipsSubviews="YES" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="id" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-Ae-i5g">
                                                     <rect key="frame" x="0.0" y="28" width="120" height="120"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="Hke-qb-BhU"/>
@@ -9511,6 +9814,7 @@ This includes maintaining privacy for people who are:
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E9b-yZ-KMm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="1Qm-pv-Nqz">
                                                                         <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -9524,6 +9828,7 @@ This includes maintaining privacy for people who are:
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0B-wC-xVF">
                                                                 <rect key="frame" x="0.0" y="45" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -9532,6 +9837,7 @@ This includes maintaining privacy for people who are:
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSX-tE-58e">
                                                                 <rect key="frame" x="0.0" y="90" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -9540,6 +9846,7 @@ This includes maintaining privacy for people who are:
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alternate Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-bH-Ic6">
                                                                 <rect key="frame" x="0.0" y="135" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -9548,6 +9855,7 @@ This includes maintaining privacy for people who are:
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-EC-UUp">
                                                                 <rect key="frame" x="0.0" y="180" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -9556,6 +9864,7 @@ This includes maintaining privacy for people who are:
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Video Call Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYF-ET-zNO">
                                                                 <rect key="frame" x="0.0" y="225" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -9567,6 +9876,7 @@ This includes maintaining privacy for people who are:
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Video Call Link or Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZF-8K-fP1">
                                                                 <rect key="frame" x="0.0" y="270" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -9586,6 +9896,7 @@ This includes maintaining privacy for people who are:
                                                             </segmentedControl>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Time for Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxT-nK-7m9">
                                                                 <rect key="frame" x="0.0" y="360" width="374" height="35"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -9841,6 +10152,7 @@ This includes maintaining privacy for people who are:
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9b-6r-nQX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="WUL-BC-L21">
                                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -9851,21 +10163,25 @@ This includes maintaining privacy for people who are:
                                                                     </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uKc-qg-TuV">
                                                                         <rect key="frame" x="0.0" y="45" width="374" height="35"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NxW-XB-2ju">
                                                                         <rect key="frame" x="0.0" y="90" width="374" height="35"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSw-GM-svk">
                                                                         <rect key="frame" x="0.0" y="135" width="374" height="35"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pincode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hEA-qA-vMc">
                                                                         <rect key="frame" x="0.0" y="180" width="374" height="35"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -9875,6 +10191,7 @@ This includes maintaining privacy for people who are:
                                                     </stackView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Infomation " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-hB-oK6">
                                                         <rect key="frame" x="20" y="885" width="374" height="34"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="ogz-6U-l6T">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="45"/>
@@ -9919,6 +10236,7 @@ This includes maintaining privacy for people who are:
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Offer Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MY6-7E-zMn">
                                                                         <rect key="frame" x="20" y="0.0" width="319" height="34"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
@@ -10105,7 +10423,7 @@ This includes maintaining privacy for people who are:
                     <rect key="frame" x="0.0" y="0.0" width="370" height="248"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cld-WQ-6X2">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE DETAILS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cld-WQ-6X2">
                             <rect key="frame" x="55" y="15" width="295" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="15" id="xUd-Oi-vy2"/>
@@ -10132,7 +10450,7 @@ This includes maintaining privacy for people who are:
                                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5x-wb-l38">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5x-wb-l38">
                                             <rect key="frame" x="155" y="0.0" width="150" height="20"/>
                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -11171,9 +11489,6 @@ This includes maintaining privacy for people who are:
         <image name="why" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="lightTextColor">
-            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="lightTextColor">
             <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

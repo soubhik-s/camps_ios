@@ -24,25 +24,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 //        MARK: set Root Navigation Controller
         guard let winScene = (scene as? UIWindowScene) else { return }
-//        window = UIWindow(windowScene: winScene)
-//        if Preferrences.getInstalled() == true {
-//            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-//            let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-//            let navigationController = UINavigationController.init(rootViewController: viewController)
-//            navigationController.navigationBar.isHidden = true
-//            window?.rootViewController = navigationController
-//            
-//            
-//        } else {
-//            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-//            let viewController = storyboard.instantiateViewController(withIdentifier: "SlidesVC") as! SlidesVC
-//            let navigationController = UINavigationController.init(rootViewController: viewController)
-//            navigationController.navigationBar.isHidden = true
-//
-//            window?.rootViewController = navigationController
-//
-//        }
-//        window?.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+           
+            if Preferrences.getInstalled() == true {
+                let Home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController") as! ViewController
+                let navigation = UINavigationController(rootViewController: Home)
+                navigation.navigationBar.isHidden = true
+                window.rootViewController = navigation
+
+            } else {
+                let Home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SlidesVC") as! SlidesVC
+                let navigation = UINavigationController(rootViewController: Home)
+                navigation.navigationBar.isHidden = true
+                window.rootViewController = navigation
+
+            }
+           
+            self.window = window
+            window.makeKeyAndVisible()
+        
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

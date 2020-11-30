@@ -77,8 +77,8 @@ class ApplicatonFormVC1: UIViewController {
         packageLbl.text = BookingDetails.package_name
         priceLbl.text = BookingDetails.price
         ageGroupLbl.text = BookingDetails.age_Group
-        picker.backgroundColor = .lightColor
-        picker.tintColor = .baseColor
+        picker.backgroundColor = .white
+        picker.tintColor = .black
         picker.delegate = self
         picker.dataSource = self
         firstNameTF.text = UserDetails.firstName
@@ -87,7 +87,12 @@ class ApplicatonFormVC1: UIViewController {
         emailTF.text = UserDetails.email
         sibling_SV.isHidden = true
         seasonActivity()
-        
+        if BookingDetails.age_Group == "Adult" {
+            batchTF.text = "Batch-II [15th - 26th day] "
+        } else  {
+            batchTF.text = "Batch-I [1st - 15th day]  "
+
+        }
     }
     
     func seasonActivity() {
@@ -445,7 +450,7 @@ extension ApplicatonFormVC1: UIPickerViewDelegate, UIPickerViewDataSource {
         pickerLabel?.font = UIFont(name: "Optima-Bold", size: 15)
         pickerLabel?.textAlignment = .center
         }
-        pickerLabel?.textColor = .white
+        pickerLabel?.textColor = .baseColor
 
         if seasonTF.isFirstResponder == true {
         

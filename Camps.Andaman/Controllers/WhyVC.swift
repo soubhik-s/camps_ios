@@ -115,7 +115,7 @@ extension WhyVC: UITableViewDelegate , UITableViewDataSource {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell =  dataTV.dequeueReusableCell(withIdentifier: "BenefitCell", for: indexPath)
             if indexPath.section == 1 {
-                cell.textLabel?.text = "# \(points_Arr[indexPath.row])"
+                cell.textLabel?.text = "➢ \(points_Arr[indexPath.row])"
                 cell.detailTextLabel?.text = ""
 
                 
@@ -123,7 +123,7 @@ extension WhyVC: UITableViewDelegate , UITableViewDataSource {
                     
                          
                 let cellPath = content_Arr[indexPath.row]
-                cell.textLabel?.text = "# \(cellPath.title)"
+                cell.textLabel?.text = "☞ \(cellPath.title)"
                 cell.detailTextLabel?.text = cellPath.pointsDescription
                
             }

@@ -58,6 +58,29 @@ class BookingInfoVC: UIViewController {
     
     @IBOutlet weak var sibling_SV: UIStackView!
     
+    @IBOutlet weak var GST_Lbl: UILabel!
+   
+    @IBOutlet weak var company_Name_Lbl: UILabel!
+    
+    
+    @IBOutlet weak var company_Address: UILabel!
+    
+    @IBOutlet weak var photo_IMGView: UIImageView!
+    
+    @IBOutlet weak var front_IMGView: UIImageView!
+    
+    @IBOutlet weak var back_IMGView: UIImageView!
+    
+    
+    @IBOutlet weak var P_Front_IMGView: UIImageView!
+    
+    @IBOutlet weak var P_Back_IMGView: UIImageView!
+    
+    @IBOutlet weak var applicant_Id_Lbl: UILabel!
+    
+    @IBOutlet weak var parent_Id_Lbl: UILabel!
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -136,6 +159,10 @@ class BookingInfoVC: UIViewController {
                             sibling_SV.isHidden = false
                         }
                         
+                        GST_Lbl.text = bookingData.gst_number
+                        company_Name_Lbl.text = bookingData.company_name
+                        company_Address.text = bookingData.company_address
+                        applicant_Id_Lbl.text = bookingData.id_number
                         
                     } else {
                         print("Other_ID")

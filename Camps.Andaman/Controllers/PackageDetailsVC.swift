@@ -38,19 +38,19 @@ class PackageDetailsVC: UIViewController {
 
     
     var timer = Timer()
-       var counter = 0
+    var counter = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
         viewChanges()
-        CVChanges()
 
     }
     
     func viewChanges() {
-        
+        CVChanges()
+
         ititneraryView.makeRound()
 
         hotel_Lbl.makeRound()
@@ -95,34 +95,30 @@ class PackageDetailsVC: UIViewController {
         }
     
     
-    DispatchQueue.main.async {
-                 
-        self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
-        
-        }
-    
+//        DispatchQueue.main.async {
+//            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+//
+//        }
+               
     }
-    
-    
-   
            
        
-       
-      
     @objc func changeImage() {
-       
-       if counter < hotelTitleArr.count {
-           let index = IndexPath.init(item: counter, section: 0)
-           self.hotelsCV.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-           counter += 1
-       } else {
-           counter = 0
-           let index = IndexPath.init(item: counter, section: 0)
-           self.hotelsCV.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-           counter = 1
-       }
            
-       }
+        if counter < hotelImgArr.count {
+               let index = IndexPath.init(item: counter, section: 0)
+               self.hotelsCV.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+               counter += 1
+        
+        } else {
+               counter = 0
+               let index = IndexPath.init(item: counter, section: 0)
+               self.hotelsCV.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+               counter = 1
+           }
+               
+         
+    }
     
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {

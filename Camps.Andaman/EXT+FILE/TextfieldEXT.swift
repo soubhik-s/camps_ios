@@ -20,8 +20,9 @@ extension UITextField {
     datePickerView.datePickerMode = .date
     datePickerView.maximumDate = Date()
     self.inputView = datePickerView
-    datePickerView.backgroundColor = UIColor.lightColor
-    datePickerView.tintColor = .lightColor
+    datePickerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300)
+    datePickerView.backgroundColor = UIColor.white
+    datePickerView.tintColor = .white
     datePickerView.setValue(UIColor.white, forKey: "textColor")
     datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
     }
@@ -31,19 +32,21 @@ extension UITextField {
     datePickerView.datePickerMode = .date
     datePickerView.minimumDate = Date()
     self.inputView = datePickerView
-    datePickerView.backgroundColor = UIColor.lightColor
-    datePickerView.tintColor = .lightColor
+        datePickerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300)
 
-    datePickerView.setValue(UIColor.white, forKey: "textColor")
+    datePickerView.backgroundColor = UIColor.white
+    datePickerView.tintColor = .white
+
+    datePickerView.setValue(UIColor.baseColor, forKey: "textColor")
     datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
     }
     func timePicker() {
     let datePickerView = UIDatePicker()
     datePickerView.datePickerMode = .time
-    datePickerView.backgroundColor = UIColor.lightColor
-    datePickerView.tintColor = .lightColor
+    datePickerView.backgroundColor = UIColor.white
+    datePickerView.tintColor = .white
 
-    datePickerView.setValue(UIColor.white, forKey: "textColor")
+    datePickerView.setValue(UIColor.baseColor, forKey: "textColor")
     datePickerView.addTarget(self, action: #selector(handleTimePicker(sender:)), for: .valueChanged)
 
     }

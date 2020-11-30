@@ -206,7 +206,7 @@ class ApiService: NSObject {
            }
        }
     
-    static func uploadMultipleIMGwithParam(parameters : [String : String]?,imageKey:[String] , imgArr:[UIImage],  methodType : String , url :String, tag : String  ,finish: @escaping ((message:String, data:Data?, tag : String)) -> Void){
+    static func uploadMultipleIMGwithParam(parameters : [String : String]?,imageKey:[String] , imgArr:[Data],  methodType : String , url :String, tag : String  ,finish: @escaping ((message:String, data:Data?, tag : String)) -> Void){
 
               guard let url = URL(string: url) else { return }
               var request = URLRequest(url: url)
@@ -232,16 +232,19 @@ class ApiService: NSObject {
                       }
 
                   }
+                
+                
+                
 
                   for (index,Img) in imgArr.enumerated() {
-                      let imageData = Img.jpegData(compressionQuality: 1.0)!
-                    let filename = "\(timeStamp)image.jpg"
+//                      let imageData = Img.jpegData(compressionQuality: 1.0)!
+                    let filename = "\(timeStamp!)\(index)image.jpg"
                     let mimetype = "image/jpg"
                     
                       body.appendString(string: "--\(boundary)\r\n")
                       body.appendString(string: "Content-Disposition: form-data; name=\"\(imageKey[index])\"; filename=\"\(filename)\"\r\n")
                       body.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
-                      body.append(imageData as Data)
+                      body.append(Img as Data)
                       body.appendString(string: "\r\n")
                    
                     print("filename = \(filename)")

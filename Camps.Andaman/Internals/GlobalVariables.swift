@@ -116,8 +116,24 @@ struct BookingDetails {
     static var treatments_details = "NA"
     
     static var seasonIndex = 0
-    static var IMG_Arr = [UIImage]()
-    
+    static var gst_number = "NA"
+    static var company_address = "NA"
+    static var company_name = "NA"
+
+    static var id_number = ""
+    static var front_id_card = ""
+    static var back_id_card = ""
+    static var photo = ""
+    static var parent_id_number = ""
+
+    static var parent_front_id_card = ""
+    static var parent_back_id_card = ""
+    static var photoImg = UIImage()
+    static var ID_Front_IMG = UIImage()
+    static var ID_Back_IMG = UIImage()
+    static var P_ID_Front_IMG = UIImage()
+    static var P_ID_Back_IMG = UIImage()
+
 
 
 

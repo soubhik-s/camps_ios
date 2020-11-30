@@ -320,7 +320,7 @@ extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource, UICollect
         let cell = comment_TV.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
         
         if tableView == blog_TV {
-            blogCell.textLabel?.text = des_Arr[indexPath.row]
+            blogCell.textLabel?.text = "➣ \(des_Arr[indexPath.row].removeSpecialCharsFromString())"
             
             
            

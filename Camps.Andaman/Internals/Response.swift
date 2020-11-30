@@ -493,8 +493,12 @@ let parent_id_number:String?
 let verfied_docusign_file:String?
 let docusign_file:String?
 let docusign_status:String?
+let gst_number:String
+let company_address:String
+let company_name:String
+let id_number:String
 
-enum CodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
 
     case id = "id"
     case ip_address = "ip_address"
@@ -566,6 +570,13 @@ enum CodingKeys: String, CodingKey {
     case verfied_docusign_file = "verfied_docusign_file"
     case docusign_status = "docusign_status"
     case parent_id_number = "parent_id_number"
+    case id_number = "id_number"
+
+    case gst_number = "gst_number"
+    case company_name = "company_name"
+    case company_address = "company_address"
+
+        
 
 }
 

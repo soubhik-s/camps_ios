@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
 
 
+        setupKeyboardManager()
 //      MARK:Network Monitor
 //        ReachabilityManager.shared.startMonitoring()
         UILabel.appearance(whenContainedInInstancesOf:[UISegmentedControl.self]).numberOfLines = 0
@@ -31,15 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isInstalled =  Preferrences.getInstalled()
                print("isInstalled = \(isInstalled)")
               
-        if isInstalled{
-              
-        self.NextViewController(storybord_Id: "ViewController")
         
-        } else {
-        self.NextViewController(storybord_Id: "SlidesVC")
-
-        
-        }
         return true
     }
 
@@ -106,6 +99,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     
+    private func setupKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+        IQKeyboardManager.shared.previousNextDisplayMode = .default
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+
+    }
     
      func NextViewController(storybord_Id:String) {
 
