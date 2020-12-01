@@ -238,13 +238,13 @@ class ApiService: NSObject {
 
                   for (index,Img) in imgArr.enumerated() {
 //                      let imageData = Img.jpegData(compressionQuality: 1.0)!
-                    let filename = "\(timeStamp!)\(index)image.jpg"
-                    let mimetype = "image/jpg"
+                    let filename = "\(timeStamp!)\(index)image.jpeg"
+                    let mimetype = "image/jpeg"
                     
                       body.appendString(string: "--\(boundary)\r\n")
                       body.appendString(string: "Content-Disposition: form-data; name=\"\(imageKey[index])\"; filename=\"\(filename)\"\r\n")
                       body.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
-                      body.append(Img as Data)
+                      body.append(Img )
                       body.appendString(string: "\r\n")
                    
                     print("filename = \(filename)")
@@ -284,7 +284,7 @@ class ApiService: NSObject {
                                  print(json)
                           
                       } catch {
-                          print(error)
+                          print("url error \(error)")
                           
                       }
                       
@@ -417,6 +417,102 @@ class ApiService: NSObject {
 
           
     }
+    
+    
+    static func uploadSingleIMGwithParam(parameters : [String : String]?,imageKey:String , imageData:Data,  methodType : String ,url :String, tag : String  ,finish: @escaping ((message:String, data:Data?, tag : String)) -> Void){
+
+        guard let url = URL(string: url) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = methodType
+
+        let boundary = generateBoundary()
+
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+       request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Accept")
+
+
+
+       if methodType == "POST"  || methodType == "PUT" {
+
+
+        
+        request.httpBody = createBodyWithParametersForImage(parameters: parameters,  fileKey:imageKey , imgData: imageData, boundary: boundary)
+
+    }
+
+       DispatchQueue.global(qos: .background).async {
+        var result:(message:String, data:Data? , tag : String) = (message: "Fail", data: nil , tag: tag)
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response {
+
+                print(response)
+            }
+
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    print(json)
+                } catch {
+                    print("Url Error \(error)")
+                }
+            }
+
+            DispatchQueue.main.async {
+
+                if(error != nil)
+                {
+                    result.message = "Fail Error not null : \(error.debugDescription)"
+                }
+                else
+                {
+                    let httpResponse = response as? HTTPURLResponse
+                    result.message = String(describing:httpResponse!.statusCode)
+                    result.data = data
+                    result.tag = tag
+
+                }
+
+                finish(result)
+
+            }
+
+
+            }.resume()
+        }
+
+    }
+
+
+    static func createBodyWithParametersForImage(parameters: [String: String]?, fileKey: String, imgData: Data, boundary: String) -> Data {
+          
+        let body = NSMutableData()
+        let timeStamp = currentTimeInMilliSeconds()
+           if parameters != nil {
+               for (key, value) in parameters! {
+                   body.appendString(string: "--\(boundary)\r\n")
+                   body.appendString(string: "Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                   body.appendString(string: "\(value)\r\n")
+               }
+           }
+           
+           let filename = "\(timeStamp)image.jpg"
+           let mimetype = "image/jpg"
+           
+           body.appendString(string: "--\(boundary)\r\n")
+           body.appendString(string: "Content-Disposition: form-data; name=\"\(fileKey)\"; filename=\"\(filename)\"\r\n")
+           body.appendString(string: "Content-Type: \(mimetype)\r\n\r\n")
+           body.append(imgData as Data)
+           body.appendString(string: "\r\n")
+           
+           
+           
+           body.appendString(string: "--\(boundary)--\r\n")
+
+        print("body = \(body)")
+           
+        return body as Data
+       }
    
     static func generateBoundary() -> String {
           return "Boundary-\(NSUUID().uuidString)"
@@ -433,6 +529,10 @@ class ApiService: NSObject {
     }
     
 }
+
+
+
+
 extension NSMutableData {
     
     func appendString(string: String) {

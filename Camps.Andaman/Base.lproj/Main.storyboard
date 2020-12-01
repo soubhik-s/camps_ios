@@ -3470,7 +3470,7 @@ muchmore.</string>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpt-9R-c2f">
                                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Day 1 - Arrival Port Blair Airport – Meeting &amp; Greetings – Transfer to Hotel" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-fh-NMv">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Day 1 - Arrival Port Blair Airport – Meeting &amp; Greetings – Transfer to Hotel" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-fh-NMv" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="10" y="0.0" width="349" height="40"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
@@ -3520,7 +3520,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : Transfer to Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-he-EZf">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : Transfer to Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-he-EZf" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="55" y="0.0" width="339" height="25"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
@@ -3552,7 +3552,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon : Lunch &amp; Relax" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-9A-6eT">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon : Lunch &amp; Relax" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-9A-6eT" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="65" y="0.0" width="329" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="Alv-2h-Vkc"/>
@@ -3583,7 +3583,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening : Introduction session with the batchmates &amp; Instructors." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stj-cX-foQ">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening : Introduction session with the batchmates &amp; Instructors." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stj-cX-foQ" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="50" y="0.0" width="344" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="EYI-k9-crq"/>
@@ -3612,7 +3612,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overnight: Bonfire – Quiz night - Dinner &amp; Stay at Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-nV-zk5">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overnight: Bonfire – Quiz night - Dinner &amp; Stay at Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-nV-zk5" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                                     <rect key="frame" x="65" y="0.0" width="329" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="3PQ-cH-5d5"/>
@@ -11411,6 +11411,23 @@ This includes maintaining privacy for people who are:
             <point key="canvasLocation" x="9381" y="58"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="N5g-he-EZf">
+            <size key="intrinsicContentSize" width="139" height="14.5"/>
+        </designable>
+        <designable name="XJd-nV-zk5">
+            <size key="intrinsicContentSize" width="292" height="14.5"/>
+        </designable>
+        <designable name="pXt-9A-6eT">
+            <size key="intrinsicContentSize" width="137.5" height="14.5"/>
+        </designable>
+        <designable name="stj-cX-foQ">
+            <size key="intrinsicContentSize" width="333.5" height="14.5"/>
+        </designable>
+        <designable name="vgn-fh-NMv">
+            <size key="intrinsicContentSize" width="392" height="14.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="AATA2" width="960" height="934"/>
         <image name="BG" width="375" height="812"/>

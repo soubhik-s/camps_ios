@@ -128,12 +128,17 @@ struct BookingDetails {
 
     static var parent_front_id_card = ""
     static var parent_back_id_card = ""
-    static var photoImg = UIImage()
-    static var ID_Front_IMG = UIImage()
-    static var ID_Back_IMG = UIImage()
-    static var P_ID_Front_IMG = UIImage()
-    static var P_ID_Back_IMG = UIImage()
-
+    static var photoImg = Data()
+   
+    static var ID_Front_IMG = Data()
+    static var ID_Back_IMG = Data()
+    static var P_ID_Front_IMG = Data()
+    static var P_ID_Back_IMG = Data()
+    static var photoImgType = ""
+    static var ID_Front_IMGtype = ""
+    static var ID_Back_IMGType = ""
+    static var P_ID_Front_IMGType = ""
+    static var P_ID_Back_IMGType = ""
 
 
 

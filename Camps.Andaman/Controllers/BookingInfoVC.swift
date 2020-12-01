@@ -80,7 +80,7 @@ class BookingInfoVC: UIViewController {
     
     @IBOutlet weak var parent_Id_Lbl: UILabel!
    
-    
+    let image_Path = "http://camps.goexploreandaman.com/assets/uploads/"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -163,6 +163,22 @@ class BookingInfoVC: UIViewController {
                         company_Name_Lbl.text = bookingData.company_name
                         company_Address.text = bookingData.company_address
                         applicant_Id_Lbl.text = bookingData.id_number
+                        if bookingData.photo.isEmpty == false {
+                            photo_IMGView.setImage(urlStr: image_Path + bookingData.photo)
+                        }
+                        
+                        if bookingData.front_id_card.isEmpty == false {
+                            front_IMGView.setImage(urlStr: image_Path + bookingData.front_id_card)
+                        }
+                        if bookingData.back_id_card.isEmpty == false {
+                            back_IMGView.setImage(urlStr: image_Path + bookingData.back_id_card)
+                        }
+                        if bookingData.parent_front_id_card.isEmpty == false {
+                            P_Front_IMGView.setImage(urlStr: image_Path + bookingData.parent_front_id_card)
+                        }
+                        if bookingData.parent_back_id_card.isEmpty == false {
+                            P_Back_IMGView.setImage(urlStr: image_Path + bookingData.parent_back_id_card)
+                        }
                         
                     } else {
                         print("Other_ID")

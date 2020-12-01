@@ -127,7 +127,7 @@ class ApplicationFormVC3: UIViewController {
         calculatePrices()
         if BookingDetails.photo.isEmpty == false {
             img_Key_Arr.append(BookingDetails.photo)
-            IMG_Data_Arr.append(BookingDetails.photoImg.jpegData(compressionQuality: 1.0)!)
+            IMG_Data_Arr.append(BookingDetails.photoImg)
         } else {
             print("NO Photo")
         }
@@ -137,14 +137,14 @@ class ApplicationFormVC3: UIViewController {
         
         if BookingDetails.front_id_card.isEmpty == false {
             img_Key_Arr.append(BookingDetails.front_id_card)
-            IMG_Data_Arr.append(BookingDetails.ID_Front_IMG.jpegData(compressionQuality: 1.0)!)
+            IMG_Data_Arr.append(BookingDetails.ID_Front_IMG)
         } else {
             print("NO Front IMg")
 
         }
         if BookingDetails.back_id_card.isEmpty == false {
             img_Key_Arr.append(BookingDetails.back_id_card)
-            IMG_Data_Arr.append(BookingDetails.ID_Back_IMG.jpegData(compressionQuality: 1.0)!)
+            IMG_Data_Arr.append(BookingDetails.ID_Back_IMG)
         } else {
             print("NO Back IMg")
 
@@ -152,14 +152,14 @@ class ApplicationFormVC3: UIViewController {
         
         if BookingDetails.parent_front_id_card.isEmpty == false {
             img_Key_Arr.append(BookingDetails.parent_front_id_card)
-            IMG_Data_Arr.append(BookingDetails.P_ID_Front_IMG.jpegData(compressionQuality: 1.0)!)
+            IMG_Data_Arr.append(BookingDetails.P_ID_Front_IMG)
         } else {
             print("NO Parent Front IMG")
 
         }
         if BookingDetails.parent_back_id_card.isEmpty == false {
             img_Key_Arr.append(BookingDetails.back_id_card)
-            IMG_Data_Arr.append(BookingDetails.P_ID_Back_IMG.jpegData(compressionQuality: 1.0)!)
+            IMG_Data_Arr.append(BookingDetails.P_ID_Back_IMG)
         } else {
             print("NO Parent Back IMG")
 
@@ -209,8 +209,9 @@ class ApplicationFormVC3: UIViewController {
     func calculatePrices() {
         basic_Price = Double(BookingDetails.price.fiterPrice()) ?? 0.0
         
-        tax_Price = basic_Price * (0.01 * taxPercent )
         net_Price = basic_Price - discount_Price
+        tax_Price = net_Price * (0.01 * taxPercent )
+
         final_Price = net_Price + tax_Price
         
 //        net_Price = basic_Price + tax_Price
@@ -328,7 +329,8 @@ class ApplicationFormVC3: UIViewController {
             
             ApiService.uploadMultipleIMGwithParam(parameters: details, imageKey: img_Key_Arr, imgArr: IMG_Data_Arr, methodType: "POST", url: ClientInterface.bookingUrl, tag: "Booking", finish: finishPost)
             
-//        ApiService.postCall(url: ClientInterface.bookingUrl, params: details, methodType: "POST", tag: "Booking", finish:finishPost)
+
+//            ApiService.uploadSingleIMGwithParam(parameters: details, imageKey: img_Key_Arr[0], imageData: IMG_Data_Arr[0], methodType: "POST", url: ClientInterface.bookingUrl, tag: "Booking", finish: finishPost)
          print("details = \(details)")
             
         } else {
@@ -392,7 +394,7 @@ class ApplicationFormVC3: UIViewController {
                 let parsedData = try JSONDecoder().decode([GSTResponse].self, from: jsonData)
                 print(parsedData)
                     for GST_Data in parsedData {
-                        GST_Lbl.text = " GST - \(GST_Data.gst_percentage) % (₹)"
+                        GST_Lbl.text = " GST - \(GST_Data.gst_percentage) % :(₹)"
                         taxPercent = Double(GST_Data.gst_percentage)!
                         print("taxPercent = \(taxPercent)")
                     }

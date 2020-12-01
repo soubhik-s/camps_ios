@@ -54,6 +54,7 @@ class PackageDetailsVC: UIViewController {
         ititneraryView.makeRound()
 
         hotel_Lbl.makeRound()
+        
         hotel_Lbl.layer.masksToBounds = true
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
@@ -95,10 +96,10 @@ class PackageDetailsVC: UIViewController {
         }
     
     
-//        DispatchQueue.main.async {
-//            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
-//
-//        }
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+
+        }
                
     }
            
@@ -155,7 +156,7 @@ class PackageDetailsVC: UIViewController {
     
     
     func CVChanges() {
-        let cellSize = CGSize(width:hotelsCV.frame.width , height:hotelsCV.frame.height)
+        let cellSize = CGSize(width:hotelsCV.frame.width - 20 , height:hotelsCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize

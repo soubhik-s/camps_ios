@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-
-
-
-
 extension UITextField {
     
    func pastDatePicker() {
@@ -22,10 +18,11 @@ extension UITextField {
     self.inputView = datePickerView
     datePickerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300)
     datePickerView.backgroundColor = UIColor.white
-    datePickerView.tintColor = .white
-    datePickerView.setValue(UIColor.white, forKey: "textColor")
+    datePickerView.tintColor = .baseColor
+    datePickerView.setValue(UIColor.black, forKey: "textColor")
     datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
-    }
+   
+   }
     
     func futureDatePicker() {
     let datePickerView = UIDatePicker()
@@ -35,11 +32,15 @@ extension UITextField {
         datePickerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300)
 
     datePickerView.backgroundColor = UIColor.white
-    datePickerView.tintColor = .white
+    datePickerView.tintColor = .baseColor
 
     datePickerView.setValue(UIColor.baseColor, forKey: "textColor")
     datePickerView.addTarget(self, action: #selector(handleDatePicker(sender:)), for: .valueChanged)
+  
     }
+    
+    
+    
     func timePicker() {
     let datePickerView = UIDatePicker()
     datePickerView.datePickerMode = .time
@@ -164,6 +165,7 @@ extension UITextField {
     func placeHolderColor(text:String,color:UIColor) {
     self.attributedPlaceholder = NSAttributedString(string: text,
     attributes: [NSAttributedString.Key.foregroundColor: color])
+   
     }
 }
 

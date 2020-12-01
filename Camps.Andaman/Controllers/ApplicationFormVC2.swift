@@ -96,36 +96,50 @@ class ApplicationFormVC2: UIViewController , UIImagePickerControllerDelegate , U
     // image picker functions
 
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])        {
-    let pickedImage = (info[.originalImage] as! UIImage)
-
-    if selectedTap == 1 {
-        front_Img_View.image = pickedImage
-        BookingDetails.front_id_card = "front_id_card"
-        BookingDetails.ID_Front_IMG = pickedImage
-    } else if selectedTap == 2 {
-        back_Img_View.image = pickedImage
-        BookingDetails.back_id_card = "back_id_card"
-        BookingDetails.ID_Back_IMG = pickedImage
-    } else if selectedTap == 3 {
-        P_Front_Img_View.image = pickedImage
-        BookingDetails.parent_front_id_card = "parent_front_id_card"
-        BookingDetails.P_ID_Front_IMG = pickedImage
-    } else if selectedTap == 4 {
-        P_Back_IMGView.image = pickedImage
-        BookingDetails.parent_back_id_card = "parent_back_id_card"
-        BookingDetails.P_ID_Back_IMG = pickedImage
-    } else {
-        profile_ImgView.image = pickedImage
-        BookingDetails.photo = "photo"
-        BookingDetails.photoImg = pickedImage
-    }
-   
-    print("Image is picked")
+     pickedImg = (info[.originalImage] as! UIImage)
+    if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+          let  fileName = url.lastPathComponent
+           let fileType = url.pathExtension
+        print(fileName , (fileType))
         
+        }
     picker.dismiss(animated: true) {
         print("Image Saved")
      
     }
+    let imgData = pickedImg.jpegData(compressionQuality: 1.0)!
+    let imageSize = Double(imgData.count) / 1024.0/1024.0
+           print("size of image in MB: %f ", (imageSize) )
+    if imageSize < 6.0 {
+        if selectedTap == 1 {
+            front_Img_View.image = pickedImg
+            BookingDetails.front_id_card = "front_id_card"
+            BookingDetails.ID_Front_IMG = imgData
+        } else if selectedTap == 2 {
+            back_Img_View.image = pickedImg
+            BookingDetails.back_id_card = "back_id_card"
+            BookingDetails.ID_Back_IMG = imgData
+        } else if selectedTap == 3 {
+            P_Front_Img_View.image = pickedImg
+            BookingDetails.parent_front_id_card = "parent_front_id_card"
+            BookingDetails.P_ID_Front_IMG = imgData
+        } else if selectedTap == 4 {
+            P_Back_IMGView.image = pickedImg
+            BookingDetails.parent_back_id_card = "parent_back_id_card"
+            BookingDetails.P_ID_Back_IMG = imgData
+        } else {
+            profile_ImgView.image = pickedImg
+            BookingDetails.photo = "photo"
+            BookingDetails.photoImg = imgData
+        }
+        print("Image is picked")
+            
+       
+    } else {
+        popUpAlert(title: "Alert", message: "Select Image lessthan 5.0 MB ", action: .alert)
+    }
+    
+   
         
 }
     

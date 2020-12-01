@@ -497,6 +497,12 @@ let gst_number:String
 let company_address:String
 let company_name:String
 let id_number:String
+let photo:String
+let front_id_card:String
+let back_id_card:String
+let parent_front_id_card:String
+let parent_back_id_card:String
+
 
     enum CodingKeys: String, CodingKey {
 
@@ -576,7 +582,12 @@ let id_number:String
     case company_name = "company_name"
     case company_address = "company_address"
 
-        
+    case photo = "photo"
+    case front_id_card = "front_id_card"
+    case back_id_card = "back_id_card"
+    case parent_front_id_card = "parent_front_id_card"
+    case parent_back_id_card = "parent_back_id_card"
+
 
 }
 
