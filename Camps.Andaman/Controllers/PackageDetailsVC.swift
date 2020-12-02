@@ -12,17 +12,13 @@ class PackageDetailsVC: UIViewController {
 
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var priceLbl: UILabel!
-    
     @IBOutlet weak var bookBtn: UIButton!
     @IBOutlet weak var notesLbl: UILabel!
     @IBOutlet weak var durationLbl: UILabel!
     @IBOutlet weak var campTitleLbl: UILabel!
     @IBOutlet weak var IMGView: UIImageView!
-    
     @IBOutlet weak var hotel_Lbl: UILabel!
     @IBOutlet weak var hotelsCV: UICollectionView!
-    
-    
     @IBOutlet weak var ititneraryView: UIView!
     
     let hotelImgArr = ["SP5","symphony_7","hotel_4"]
@@ -96,10 +92,10 @@ class PackageDetailsVC: UIViewController {
         }
     
     
-        DispatchQueue.main.async {
-            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
-
-        }
+//        DispatchQueue.main.async {
+//            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+//
+//        }
                
     }
            
@@ -156,7 +152,7 @@ class PackageDetailsVC: UIViewController {
     
     
     func CVChanges() {
-        let cellSize = CGSize(width:hotelsCV.frame.width - 20 , height:hotelsCV.frame.height)
+        let cellSize = CGSize(width:hotelsCV.frame.width  , height:hotelsCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
@@ -210,45 +206,7 @@ extension PackageDetailsVC:  UICollectionViewDelegate, UICollectionViewDataSourc
         self.navigationController?.pushViewController(VC, animated: true)
     }
     
-//
-//    func firstImageFadeIn() {
-//      UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-//        self.IMGView.alpha = 0.8
-//      }, completion: {_ in
-//    self.IMGView.alpha = 1
-//
-//      self.IMGView.image = UIImage(named: "homepage2")
-//      self.secondImageFadeIn()
-//      })
-//
-//    }
-//
-//
-//    func secondImageFadeIn() {
-//
-//        UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-//            self.IMGView.alpha = 0.8
-//
-//        }, completion: {_ in
-//        self.IMGView.alpha = 1
-//        self.IMGView.image = UIImage(named: "homepage3")
-//        self.thirdImageFadeIn()
-//        })
-//
-//    }
-//    func thirdImageFadeIn() {
-//
-//      UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-//        self.IMGView.alpha = 0.8
-//
-//        }, completion: {_ in
-//        self.IMGView.alpha = 1
-//
-//        self.IMGView.image = UIImage(named: "homepage1")
-//        self.firstImageFadeIn()
-//        })
-//
-//    }
+
 
    
 

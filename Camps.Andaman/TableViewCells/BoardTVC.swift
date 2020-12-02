@@ -55,20 +55,7 @@ class BoardTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
-    @IBAction func activites_Btn_Axn(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func payNow_Btn_Axn(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func invoice_Btn_Axn(_ sender: UIButton) {
-    }
-    
-    @IBAction func userInfo_Btn_Axn(_ sender: UIButton) {
-    }
+  
     
 
     @IBAction func oofers_Btn_Axn(_ sender: UIButton) {

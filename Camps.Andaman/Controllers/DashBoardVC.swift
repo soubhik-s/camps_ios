@@ -11,7 +11,9 @@ import Razorpay
 import PDFKit
 import WebKit
 import MobileCoreServices
-class DashBoardVC: UIViewController {
+class DashBoardVC: UIViewController  {
+    
+    
 
     var dataArr:GetBookingResponse = []
     var camp_Arr:[String] = []
@@ -29,7 +31,7 @@ class DashBoardVC: UIViewController {
     var uploadSign_Arr:[String] = []
     var pdfData = Data()
     var paymentId = ""
-    var price = "1"
+    var price = "0"
     var selected_Book_Id = "0"
     @IBOutlet weak var dataTV: UITableView!
     var razorpay: RazorpayCheckout!
@@ -50,7 +52,8 @@ class DashBoardVC: UIViewController {
     
     func viewChanges() {
         refreshSettings()
-        razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegate: self)
+        razorpay = RazorpayCheckout.initWithKey(testKey, andDelegateWithData: self)
+//        razorpay = RazorpayCheckout.initWithKey(testKey, andDelegate: self)
         dataTV.rowHeight = 420
         dataTV.isHidden = true
         pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
@@ -330,7 +333,8 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
 
         clickFunction()
         } else {
-            popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
+//            popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
+            clickFunction()
 
         }
     }
@@ -450,21 +454,29 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let currentCell = dataTV.cellForRow(at: index!) as! BoardTVC
         DashboardVariables.bookingID = currentCell.bookingID_Lbl.text!
         print("bookingID = \(DashboardVariables.bookingID)")
-         price = currentCell.priceLbl.text!.fiterPrice()
+        price = currentCell.priceLbl.text!.fiterPrice()
         print("price = \(price)")
-     
+//       self.showPaymentForm()
+
+        showPaymentAlert()
         
+//        if currentCell.doc_Lbl.text == "pending" {
+//        popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
+//
+//        } else {
         
-        if currentCell.doc_Lbl.text == "pending" {
-        popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
-            
-        } else {
+//        }
+    }
+    
+    func showPaymentAlert() {
+        
         let alert = UIAlertController(title: "Initiatinng Payment", message: "₹ - \(price)", preferredStyle: .alert)
         alert.setBackgroundColor(color: .white)
         alert.setTint(color: .baseColor)
-        alert.setTitlet(font: UIFont(name: "Baskerville-SemiBold", size: 15), color: .systemRed)
-        alert.setMessage(font: UIFont(name: "Baskerville-SemiBold", size: 15.0), color: .black)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        alert.setTitlet(font: .systemFont(ofSize: 15), color: .red)
+        alert.setTitlet(font: .systemFont(ofSize: 15), color: .black)
+
+       alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
             self.showPaymentForm()
 
         }))
@@ -474,14 +486,14 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         present(alert, animated: true) {
             
         }
-        }
+        
     }
     
     func showPaymentForm(){
         let options: [String:Any] = [
-        "amount": "\(price)00", //This is in currency subunits. 100 = 100 paise= INR 1.
+        "amount": "\(price)", //This is in currency subunits. 100 = 100 paise= INR 1.
         "currency": "INR",//We support more that 92 international currencies.
-        "description": "Camp Package",
+        "description": "Camp Booking",
         "image": "https://camps.goexploreandaman.com/assets/images/photo/autumn.jpg",
         "name": "AndamanCamps",
         "prefill": [
@@ -498,15 +510,14 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
     
     
 }
-extension DashBoardVC: RazorpayPaymentCompletionProtocol, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate
+extension DashBoardVC: RazorpayPaymentCompletionProtocolWithData, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate
  {
-
-    
-    func onPaymentError(_ code: Int32, description str: String) {
+    func onPaymentError(_ code: Int32, description str: String, andData response: [AnyHashable : Any]?) {
         popUpAlert(title: "Failed", message: str, action: .alert)
+
     }
     
-    func onPaymentSuccess(_ payment_id: String) {
+    func onPaymentSuccess(_ payment_id: String, andData response: [AnyHashable : Any]?) {
         paymentId = payment_id
         print("PaymentId = \(paymentId)")
 
@@ -514,9 +525,9 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocol, UIDocumentMenuDelegate
         self.navigationController?.popViewController(animated: true)
    
         alert(message: "Payment done.", title: "Success")
-
-
     }
+    
+  
     
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         guard let myURL = urls.first else {

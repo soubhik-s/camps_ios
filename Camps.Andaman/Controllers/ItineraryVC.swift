@@ -56,10 +56,8 @@ class ItineraryVC: UIViewController {
     @IBAction func backBtn_Axn(_ sender: UIButton) {
 
 
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "PackageDetailsVC") as! PackageDetailsVC
         self.navigationController?.popViewController(animated: true)
 
-//        self.navigationController?.pushViewController(VC, animated: true)
         
        
     }
@@ -228,7 +226,7 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
           case 0:
               let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PackageDetailsTVC
 
-              cell.titleLbl.text = " # \(iti_Arr[indexPath.row]) "
+              cell.titleLbl.text = " ☞ \(iti_Arr[indexPath.row]) "
               cell.morningLbl.text = morning_Arr[indexPath.row]
               cell.afterNoonLbl.text = noon_Arr[indexPath.row]
               cell.eveningLbl.text = eve_Arr[indexPath.row]
@@ -250,12 +248,12 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
     
     case 1:
        
-        cell2.titleLbl.text = " # \(inc_Arr[indexPath.row]) "
+        cell2.titleLbl.text = " ➢ \(inc_Arr[indexPath.row]) "
         return cell2
           
     case 2:
         
-        cell2.titleLbl.text = " # \(exc_Arr[indexPath.row]) "
+        cell2.titleLbl.text = " ➢ \(exc_Arr[indexPath.row]) "
         return cell2
               
         
@@ -363,17 +361,4 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
-extension UIViewController {
-    /// The visible view controller from a given view controller
-//    var visibleViewController: UIViewController? {
-//        if let navigationController = self as? UINavigationController {
-//            return navigationController.topViewController?.visibleViewController
-//        } else if let tabBarController = self as? UITabBarController {
-//            return tabBarController.selectedViewController?.visibleViewController
-//        } else if let presentedViewController = presentedViewController {
-//            return presentedViewController.visibleViewController
-//        } else {
-//            return self
-//        }
-//    }
-}
+

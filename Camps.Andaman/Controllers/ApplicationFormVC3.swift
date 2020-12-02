@@ -92,7 +92,7 @@ class ApplicationFormVC3: UIViewController {
     var discount_Price = 0.0
     var net_Price = 0.0
     var tax_Price = 0.0
-    var final_Price = 0.0
+    var final_Price = 0
     var taxPercent = 0.0
     var img_Key_Arr:[String] = []
     var IMG_Data_Arr:[Data] = []
@@ -176,18 +176,13 @@ class ApplicationFormVC3: UIViewController {
         
         if sender.view?.tag == 1 {
             
-            let VC = self.storyboard?.instantiateViewController(withIdentifier: "") as! CovidVC
-            VC.modalPresentationStyle = .fullScreen
-            VC.modalTransitionStyle = .flipHorizontal
-            present(VC, animated: true) {
-                
-            }
-//            guard let url = URL(string: covidUrl) else {
-//                                         return
-//                 }
-//                 if UIApplication.shared.canOpenURL(url) {
-//                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//                    }
+           
+            guard let url = URL(string: covidUrl) else {
+                                         return
+                 }
+                 if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
 
 
         } else {
@@ -212,7 +207,7 @@ class ApplicationFormVC3: UIViewController {
         net_Price = basic_Price - discount_Price
         tax_Price = net_Price * (0.01 * taxPercent )
 
-        final_Price = net_Price + tax_Price
+        final_Price = Int(net_Price + tax_Price)
         
 //        net_Price = basic_Price + tax_Price
 //        final_Price = net_Price - discount_Price
@@ -226,9 +221,9 @@ class ApplicationFormVC3: UIViewController {
         dPrice_Lbl.text = "\(discount_Price.rounded())"
         net_Price_Lbl.text = "\(net_Price)"
         taxPrice_Lbl.text = "\(tax_Price)"
-        totalPrice_Lbl.text = "\(final_Price.rounded())"
+        totalPrice_Lbl.text = "\(final_Price)"
         
-        price_Lbl.text = "\(final_Price.rounded())"
+        price_Lbl.text = "\(final_Price)"
         basePrice_Lbl.text = "\(basic_Price.rounded())"
         print("basic_Price = \(basic_Price)")
         print("tax_Price = \(tax_Price)")

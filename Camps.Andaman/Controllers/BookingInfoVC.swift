@@ -11,7 +11,6 @@ import UIKit
 class BookingInfoVC: UIViewController {
 
     @IBOutlet weak var sib_Mobile_No: UILabel!
-    
     @IBOutlet weak var sib_Gender_Lbl: UILabel!
     @IBOutlet weak var sib_email_Lbl: UILabel!
     @IBOutlet weak var sib_Name_Lbl: UILabel!
@@ -21,7 +20,6 @@ class BookingInfoVC: UIViewController {
     @IBOutlet weak var TShirtLbl: UILabel!
     @IBOutlet weak var campLbl: UILabel!
     @IBOutlet weak var DOBLbl: UILabel!
-    
     @IBOutlet weak var weightLbl: UILabel!
     @IBOutlet weak var heightLbl: UILabel!
     @IBOutlet weak var genderLbl: UILabel!

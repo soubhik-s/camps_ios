@@ -38,6 +38,7 @@
 		D62C206F24B2F1310093F2F8 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C206E24B2F1310093F2F8 /* VerificationVC.swift */; };
 		D62C207124B2F9360093F2F8 /* VerifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62C207024B2F9360093F2F8 /* VerifyService.swift */; };
 		D62C207324B2FA720093F2F8 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62C207224B2FA720093F2F8 /* Config.plist */; };
+		D639A2962577741600B92456 /* SlidersCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D639A2952577741600B92456 /* SlidersCVCell.swift */; };
 		D64056562488FA5600133DE2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64056552488FA5600133DE2 /* DetailsViewController.swift */; };
 		D64056582488FA7800133DE2 /* ItineraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64056572488FA7800133DE2 /* ItineraryVC.swift */; };
 		D642B391247517C100012180 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D642B390247517C100012180 /* APIService.swift */; };
@@ -103,7 +104,6 @@
 		D6F5AF2B252AE88900F4C48B /* BlogCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */; };
 		D6F5AF2D252AE8A000F4C48B /* BlogTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */; };
 		D6F5AF33252B36C800F4C48B /* BlogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF32252B36C800F4C48B /* BlogVC.swift */; };
-		D6F5AF3525357FC900F4C48B /* CovidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F5AF3425357FC900F4C48B /* CovidVC.swift */; };
 		F51556EDA400FCE79F320C61 /* Pods_Camps_Andaman_Camps_AndamanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +180,7 @@
 		D62C206E24B2F1310093F2F8 /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
 		D62C207024B2F9360093F2F8 /* VerifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyService.swift; sourceTree = "<group>"; };
 		D62C207224B2FA720093F2F8 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		D639A2952577741600B92456 /* SlidersCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidersCVCell.swift; sourceTree = "<group>"; };
 		D64056552488FA5600133DE2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D64056572488FA7800133DE2 /* ItineraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryVC.swift; sourceTree = "<group>"; };
 		D642B390247517C100012180 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -246,7 +247,6 @@
 		D6F5AF2A252AE88900F4C48B /* BlogCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCVCell.swift; sourceTree = "<group>"; };
 		D6F5AF2C252AE8A000F4C48B /* BlogTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTVCell.swift; sourceTree = "<group>"; };
 		D6F5AF32252B36C800F4C48B /* BlogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogVC.swift; sourceTree = "<group>"; };
-		D6F5AF3425357FC900F4C48B /* CovidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidVC.swift; sourceTree = "<group>"; };
 		DC31C69CD4F2CF3D572BB3AD /* Pods_Camps_Andaman_Camps_AndamanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_Andaman_Camps_AndamanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FD3792B8C9DC78BECAB76A /* Pods-Camps.AndamanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camps.AndamanTests.release.xcconfig"; path = "Target Support Files/Pods-Camps.AndamanTests/Pods-Camps.AndamanTests.release.xcconfig"; sourceTree = "<group>"; };
 		E7614A52449C53685F129E15 /* Pods_Camps_AndamanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camps_AndamanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,9 +372,9 @@
 				D6075CD324616CB30075E90F /* ViewController.swift */,
 				D62C206E24B2F1310093F2F8 /* VerificationVC.swift */,
 				D61EB52E2563A47300F5821A /* BenefitsVC.swift */,
+				D639A2952577741600B92456 /* SlidersCVCell.swift */,
 				D61EB5302563A49800F5821A /* WhyVC.swift */,
 				D6548D58254BE84B0058BF3B /* OffersVC.swift */,
-				D6F5AF3425357FC900F4C48B /* CovidVC.swift */,
 				D657CF9624A4C352009B2C85 /* PDFViewController.swift */,
 				D6F5AF32252B36C800F4C48B /* BlogVC.swift */,
 				D652340024AEF3510076E05D /* SelfDetailsVC.swift */,
@@ -555,7 +555,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = ArSquareDevlopment;
 				TargetAttributes = {
 					D6075CCB24616CB30075E90F = {
@@ -752,6 +752,7 @@
 				D664593125247F7500FB6178 /* AppUpdate.swift in Sources */,
 				D6554595246EAF8500E974C3 /* HotelDetailsVC.swift in Sources */,
 				D6075CD024616CB30075E90F /* AppDelegate.swift in Sources */,
+				D639A2962577741600B92456 /* SlidersCVCell.swift in Sources */,
 				D6F5AF2D252AE8A000F4C48B /* BlogTVCell.swift in Sources */,
 				D644BB652497841C00AAFC18 /* BookingInfoTVC.swift in Sources */,
 				D644BB5A24976D7900AAFC18 /* DashBoardVC.swift in Sources */,
@@ -809,7 +810,6 @@
 				D65E85D5248E614B003BD530 /* HotelDetailsTVC.swift in Sources */,
 				D6548D4225443CFE0058BF3B /* GetureDetailsCVC.swift in Sources */,
 				D64F19C124696C5100C169FC /* ApplicationFormVC2.swift in Sources */,
-				D6F5AF3525357FC900F4C48B /* CovidVC.swift in Sources */,
 				D68944F9248677D500409079 /* ForgotVC.swift in Sources */,
 				D6DC7FC0247F84C600DC770A /* MenuTVC.swift in Sources */,
 				D6A50EDE24753C8400C858F7 /* CampingTVC.swift in Sources */,
@@ -896,6 +896,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -920,7 +921,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -956,6 +957,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -974,7 +976,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -990,8 +992,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Camps.Andaman/AndamanCampsDebug.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dev Kumar (5QT37QX5M3)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QT37QX5M3;
 				INFOPLIST_FILE = Camps.Andaman/Info.plist;
@@ -1002,7 +1004,7 @@
 				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
 				PRODUCT_NAME = AndamanCamps;
-				PROVISIONING_PROFILE_SPECIFIER = Camps;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -44,7 +44,7 @@ extension String {
     }
 
     func fiterPrice() -> String {
-        let okayChars = Set("1234567890,.")
+        let okayChars = Set("1234567890")
         return self.filter {okayChars.contains($0) }
     }
     func remove(word:String) -> String {

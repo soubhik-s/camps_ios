@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1017,9 +1018,6 @@
                                                                                         <state key="normal" title="User Info" image="infoN">
                                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
-                                                                                        <connections>
-                                                                                            <action selector="userInfo_Btn_Axn:" destination="D4p-2L-h4g" eventType="touchUpInside" id="k81-4T-Uj5"/>
-                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-wc-mGp">
                                                                                         <rect key="frame" x="70" y="0.0" width="60" height="50"/>
@@ -1030,9 +1028,6 @@
                                                                                         <state key="normal" title="Invoice" image="invoice">
                                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
-                                                                                        <connections>
-                                                                                            <action selector="invoice_Btn_Axn:" destination="D4p-2L-h4g" eventType="touchUpInside" id="tMC-gt-Zey"/>
-                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyt-gd-HUM">
                                                                                         <rect key="frame" x="140" y="0.0" width="60" height="50"/>
@@ -1043,9 +1038,6 @@
                                                                                         <state key="normal" title="Activities" image="activity_2">
                                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
-                                                                                        <connections>
-                                                                                            <action selector="activites_Btn_Axn:" destination="D4p-2L-h4g" eventType="touchUpInside" id="OV6-az-RWG"/>
-                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-Bt-2F0">
                                                                                         <rect key="frame" x="210" y="0.0" width="60" height="50"/>
@@ -1056,9 +1048,6 @@
                                                                                         <state key="normal" title="Pay-Now" image="payNow">
                                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         </state>
-                                                                                        <connections>
-                                                                                            <action selector="payNow_Btn_Axn:" destination="D4p-2L-h4g" eventType="touchUpInside" id="nC5-k7-dg4"/>
-                                                                                        </connections>
                                                                                     </button>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTV-ae-zmu">
                                                                                         <rect key="frame" x="280" y="0.0" width="60" height="50"/>
@@ -3146,7 +3135,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C69-ef-eTf">
                                                     <rect key="frame" x="0.0" y="0.0" width="394" height="175"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_2" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-sW-Mnf">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camps2" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-sW-Mnf">
                                                             <rect key="frame" x="5" y="5" width="384" height="165"/>
                                                         </imageView>
                                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8F-V1-1Xd">
@@ -3294,11 +3283,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS1" translatesAutoresizingMaskIntoConstraints="NO" id="xqQ-Sj-jlG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SS1" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-zA-cPJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BYU-b9-4Z5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t5D-Aa-mXS">
+                                    <size key="itemSize" width="405" height="844"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SlidersCVCell" reuseIdentifier="Cell" id="G6j-CO-yeJ" customClass="SlidersCVCell" customModule="AndamanCamps" customModuleProvider="target">
+                                        <rect key="frame" x="4.5" y="0.0" width="405" height="844"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xsd-cD-ahl">
+                                            <rect key="frame" x="0.0" y="0.0" width="405" height="844"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS1" translatesAutoresizingMaskIntoConstraints="NO" id="xqQ-Sj-jlG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="405" height="844"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camp with us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-kU-6nm">
+                                                    <rect key="frame" x="20" y="397" width="365" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Qkb-lP-aUt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="25"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-a6-XXO">
+                                                    <rect key="frame" x="10" y="497" width="385" height="125"/>
+                                                    <string key="text">Andaman is the place that reflects the history of Indian independence that was studied in primary classes,know about the origin of some of the mankind and some of the tribal generations, play under the crystal clearsky and pristine beaches, reconnect with local culture and tourism, handicraft products and 
+muchmore.</string>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                                    </variation>
+                                                </label>
+                                                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-FF-VRV">
+                                                    <rect key="frame" x="141" y="776" width="123" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="sj1-Jr-OXZ"/>
+                                                    </constraints>
+                                                    <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="currentPageIndicatorTintColor" red="0.72941176470000002" green="0.098039215690000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </pageControl>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="NUm-a6-XXO" firstAttribute="top" secondItem="FPf-kU-6nm" secondAttribute="bottom" constant="50" id="5kS-J9-tJN"/>
+                                                <constraint firstItem="HWR-FF-VRV" firstAttribute="centerX" secondItem="xsd-cD-ahl" secondAttribute="centerX" id="H5e-5D-25a"/>
+                                                <constraint firstItem="FPf-kU-6nm" firstAttribute="centerY" secondItem="xsd-cD-ahl" secondAttribute="centerY" id="PIT-ch-wur"/>
+                                                <constraint firstAttribute="trailing" secondItem="FPf-kU-6nm" secondAttribute="trailing" constant="20" id="PJE-Le-HNR"/>
+                                                <constraint firstItem="FPf-kU-6nm" firstAttribute="leading" secondItem="xsd-cD-ahl" secondAttribute="leading" constant="20" id="bca-nz-fC0"/>
+                                                <constraint firstItem="xqQ-Sj-jlG" firstAttribute="leading" secondItem="xsd-cD-ahl" secondAttribute="leading" id="emQ-hL-796"/>
+                                                <constraint firstItem="xqQ-Sj-jlG" firstAttribute="top" secondItem="xsd-cD-ahl" secondAttribute="top" id="fHP-Hg-JYs"/>
+                                                <constraint firstItem="NUm-a6-XXO" firstAttribute="leading" secondItem="xsd-cD-ahl" secondAttribute="leading" constant="10" id="jqg-Xv-t1R"/>
+                                                <constraint firstAttribute="trailing" secondItem="xqQ-Sj-jlG" secondAttribute="trailing" id="l9b-7b-Dfk"/>
+                                                <constraint firstAttribute="bottom" secondItem="xqQ-Sj-jlG" secondAttribute="bottom" id="wqq-4r-fJL"/>
+                                                <constraint firstAttribute="trailing" secondItem="NUm-a6-XXO" secondAttribute="trailing" constant="10" id="yRG-C6-LxZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="HWR-FF-VRV" secondAttribute="bottom" constant="40" id="zcn-m9-Wzu"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="405" height="844"/>
+                                        <connections>
+                                            <outlet property="BG_IMG_View" destination="xqQ-Sj-jlG" id="j1E-M8-1yG"/>
+                                            <outlet property="Title_Lbl" destination="FPf-kU-6nm" id="VJn-u5-fcQ"/>
+                                            <outlet property="myPageCntrl" destination="HWR-FF-VRV" id="tVE-9d-r8q"/>
+                                            <outlet property="notes_Lbl" destination="NUm-a6-XXO" id="ltg-ky-8gm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camps" translatesAutoresizingMaskIntoConstraints="NO" id="asv-yR-PS0">
-                                <rect key="frame" x="107" y="173" width="200" height="200"/>
+                                <rect key="frame" x="107" y="94" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Hrg-YY-LPf">
                                         <variation key="heightClass=regular-widthClass=regular" constant="300"/>
@@ -3308,42 +3377,8 @@
                                     </constraint>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAMP WITH US" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-kU-6nm">
-                                <rect key="frame" x="145.5" y="423" width="123" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Qkb-lP-aUt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="25"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-a6-XXO">
-                                <rect key="frame" x="20" y="493" width="374" height="125"/>
-                                <string key="text">Andaman is the place that reflects the history of Indian independence that was studied in primary classes,know about the origin of some of the mankind and some of the tribal generations, play under the crystal clearsky and pristine beaches, reconnect with local culture and tourism, handicraft products and 
-muchmore.</string>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
-                                </variation>
-                            </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ksy-Sp-AEP">
-                                <rect key="frame" x="157" y="797" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UEY-cY-Ich">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="50"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="100" id="p0B-g7-3Kf"/>
-                                </constraints>
-                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" red="0.72941176470000002" green="0.098039215690000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxA-9z-Wsb">
-                                <rect key="frame" x="319" y="772" width="50" height="50"/>
+                                <rect key="frame" x="314" y="782" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7mD-Ry-Hg4">
                                         <variation key="heightClass=regular-widthClass=regular" constant="70"/>
@@ -3362,34 +3397,21 @@ muchmore.</string>
                         <viewLayoutGuide key="safeArea" id="XsB-hd-6yf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NUm-a6-XXO" firstAttribute="leading" secondItem="XsB-hd-6yf" secondAttribute="leading" constant="20" id="1ck-ED-jur"/>
-                            <constraint firstItem="FPf-kU-6nm" firstAttribute="centerY" secondItem="tuq-ie-c00" secondAttribute="centerY" id="8p0-Dr-5tk"/>
-                            <constraint firstItem="NUm-a6-XXO" firstAttribute="centerX" secondItem="tuq-ie-c00" secondAttribute="centerX" id="I9T-Id-cPh"/>
-                            <constraint firstItem="xqQ-Sj-jlG" firstAttribute="top" secondItem="tuq-ie-c00" secondAttribute="top" id="JvP-mJ-qEm"/>
-                            <constraint firstAttribute="bottom" secondItem="xqQ-Sj-jlG" secondAttribute="bottom" id="Nhl-e7-e31"/>
-                            <constraint firstItem="NUm-a6-XXO" firstAttribute="top" secondItem="FPf-kU-6nm" secondAttribute="bottom" constant="20" id="Ufb-Q8-y2h"/>
-                            <constraint firstItem="FPf-kU-6nm" firstAttribute="top" secondItem="asv-yR-PS0" secondAttribute="bottom" constant="50" id="UgX-jz-cj0">
-                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                            </constraint>
-                            <constraint firstItem="XsB-hd-6yf" firstAttribute="trailing" secondItem="KxA-9z-Wsb" secondAttribute="trailing" constant="45" id="c4h-Ih-A5e"/>
-                            <constraint firstItem="Ksy-Sp-AEP" firstAttribute="centerX" secondItem="tuq-ie-c00" secondAttribute="centerX" id="hae-Oi-tV2"/>
-                            <constraint firstItem="FPf-kU-6nm" firstAttribute="centerX" secondItem="tuq-ie-c00" secondAttribute="centerX" id="lkB-eK-UvJ"/>
-                            <constraint firstItem="XsB-hd-6yf" firstAttribute="bottom" secondItem="Ksy-Sp-AEP" secondAttribute="bottom" constant="35" id="pQX-8g-TIn"/>
-                            <constraint firstItem="XsB-hd-6yf" firstAttribute="trailing" secondItem="NUm-a6-XXO" secondAttribute="trailing" constant="20" id="qll-cA-HxJ"/>
-                            <constraint firstItem="asv-yR-PS0" firstAttribute="centerX" secondItem="tuq-ie-c00" secondAttribute="centerX" id="r5J-5a-XM2"/>
-                            <constraint firstItem="XsB-hd-6yf" firstAttribute="bottom" secondItem="KxA-9z-Wsb" secondAttribute="bottom" constant="40" id="s1j-fU-GR4"/>
-                            <constraint firstAttribute="trailing" secondItem="xqQ-Sj-jlG" secondAttribute="trailing" id="sLy-Cu-MEG"/>
-                            <constraint firstItem="xqQ-Sj-jlG" firstAttribute="leading" secondItem="tuq-ie-c00" secondAttribute="leading" id="yMU-TV-KMW"/>
+                            <constraint firstAttribute="bottom" secondItem="BYU-b9-4Z5" secondAttribute="bottom" id="1Bw-4o-700"/>
+                            <constraint firstItem="asv-yR-PS0" firstAttribute="centerX" secondItem="tuq-ie-c00" secondAttribute="centerX" id="1Fa-Xp-Ipc"/>
+                            <constraint firstItem="BYU-b9-4Z5" firstAttribute="trailing" secondItem="XsB-hd-6yf" secondAttribute="trailing" id="EZ6-zu-mAN"/>
+                            <constraint firstItem="BYU-b9-4Z5" firstAttribute="top" secondItem="tuq-ie-c00" secondAttribute="top" id="IBA-4Z-q1D"/>
+                            <constraint firstItem="XsB-hd-6yf" firstAttribute="bottom" secondItem="KxA-9z-Wsb" secondAttribute="bottom" constant="30" id="JqU-UU-AIy"/>
+                            <constraint firstItem="asv-yR-PS0" firstAttribute="top" secondItem="XsB-hd-6yf" secondAttribute="top" constant="50" id="Na7-69-SBf"/>
+                            <constraint firstItem="XsB-hd-6yf" firstAttribute="trailing" secondItem="KxA-9z-Wsb" secondAttribute="trailing" constant="50" id="Stg-MP-AAa"/>
+                            <constraint firstItem="BYU-b9-4Z5" firstAttribute="leading" secondItem="XsB-hd-6yf" secondAttribute="leading" id="nG7-Zs-pBt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IBD-hZ-yK4"/>
                     <connections>
-                        <outlet property="IMGView" destination="xqQ-Sj-jlG" id="Hjd-oP-dQJ"/>
+                        <outlet property="dataCV" destination="BYU-b9-4Z5" id="F3s-XJ-v5t"/>
                         <outlet property="logo_ImgView" destination="asv-yR-PS0" id="cVe-MU-Viy"/>
-                        <outlet property="myPageCntrl" destination="Ksy-Sp-AEP" id="nAE-hU-VAJ"/>
                         <outlet property="nextBtn" destination="KxA-9z-Wsb" id="vJr-TZ-03R"/>
-                        <outlet property="notesLbl" destination="NUm-a6-XXO" id="w9N-bc-71F"/>
-                        <outlet property="titleLbl" destination="FPf-kU-6nm" id="4br-9M-ucH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWs-g6-VQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3440,7 +3462,7 @@ muchmore.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkQ-x6-gg4">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="802"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage2" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-0b-acU">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Benefits" translatesAutoresizingMaskIntoConstraints="NO" id="fn3-0b-acU">
                                                 <rect key="frame" x="10" y="10" width="394" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="r17-vZ-RAl"/>
@@ -3470,7 +3492,7 @@ muchmore.</string>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpt-9R-c2f">
                                                                             <rect key="frame" x="0.0" y="0.0" width="394" height="40"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Day 1 - Arrival Port Blair Airport – Meeting &amp; Greetings – Transfer to Hotel" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-fh-NMv" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# Day 1 - Arrival Port Blair Airport – Meeting &amp; Greetings – Transfer to Hotel" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-fh-NMv">
                                                                                     <rect key="frame" x="10" y="0.0" width="349" height="40"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
@@ -3520,7 +3542,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : Transfer to Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-he-EZf" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning : Transfer to Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5g-he-EZf">
                                                                                     <rect key="frame" x="55" y="0.0" width="339" height="25"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <constraints>
@@ -3552,7 +3574,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon : Lunch &amp; Relax" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-9A-6eT" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon : Lunch &amp; Relax" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-9A-6eT">
                                                                                     <rect key="frame" x="65" y="0.0" width="329" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="Alv-2h-Vkc"/>
@@ -3583,7 +3605,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening : Introduction session with the batchmates &amp; Instructors." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stj-cX-foQ" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening : Introduction session with the batchmates &amp; Instructors." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stj-cX-foQ">
                                                                                     <rect key="frame" x="50" y="0.0" width="344" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="EYI-k9-crq"/>
@@ -3612,7 +3634,7 @@ muchmore.</string>
                                                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                                                                     </variation>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overnight: Bonfire – Quiz night - Dinner &amp; Stay at Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-nV-zk5" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overnight: Bonfire – Quiz night - Dinner &amp; Stay at Hotel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJd-nV-zk5">
                                                                                     <rect key="frame" x="65" y="0.0" width="329" height="25"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="25" id="3PQ-cH-5d5"/>
@@ -5032,7 +5054,7 @@ muchmore.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXb-W3-rxE">
                                 <rect key="frame" x="0.0" y="84" width="414" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage1" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-Ol-aL1">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sand" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-Ol-aL1">
                                         <rect key="frame" x="20" y="30" width="374" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="UJx-LV-YB1"/>
@@ -6058,7 +6080,7 @@ muchmore.</string>
                                             <view verifyAmbiguity="off" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gm8-Mc-8EX">
                                                 <rect key="frame" x="0.0" y="8" width="406" height="801"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage1" translatesAutoresizingMaskIntoConstraints="NO" id="wv4-r6-m3O">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Benefits" translatesAutoresizingMaskIntoConstraints="NO" id="wv4-r6-m3O">
                                                         <rect key="frame" x="10" y="10" width="386" height="200"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="GQq-3k-Qoi">
@@ -6663,7 +6685,7 @@ muchmore.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="391" height="194"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage3" translatesAutoresizingMaskIntoConstraints="NO" id="7pz-gi-N8g">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sand" translatesAutoresizingMaskIntoConstraints="NO" id="7pz-gi-N8g">
                                                     <rect key="frame" x="0.0" y="0.0" width="391" height="194"/>
                                                 </imageView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-tT-BnM">
@@ -6672,7 +6694,7 @@ muchmore.</string>
                                                         <constraint firstAttribute="height" constant="25" id="RMP-kI-LR0"/>
                                                     </constraints>
                                                     <color key="pageIndicatorTintColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="currentPageIndicatorTintColor" red="0.0" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="currentPageIndicatorTintColor" red="0.72941176470000002" green="0.098039215690000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </pageControl>
                                             </subviews>
                                             <constraints>
@@ -7146,7 +7168,7 @@ muchmore.</string>
                                                                                 <rect key="frame" x="0.0" y="0.0" width="143" height="164"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="autumn" translatesAutoresizingMaskIntoConstraints="NO" id="zJV-cS-Wjt">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sand" translatesAutoresizingMaskIntoConstraints="NO" id="zJV-cS-Wjt">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="143" height="164"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs 99999/-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89F-DZ-ds1">
@@ -7252,7 +7274,7 @@ muchmore.</string>
                                                                                 <rect key="frame" x="0.0" y="0.0" width="131" height="160"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="autumn_children" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-h7-ApS">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sand" translatesAutoresizingMaskIntoConstraints="NO" id="ynj-h7-ApS">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="131" height="160"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Days / 11 Nights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cE-mD-Jaa">
@@ -7358,7 +7380,7 @@ muchmore.</string>
                                                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="160"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QA" translatesAutoresizingMaskIntoConstraints="NO" id="goE-XM-MtE">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camps2" translatesAutoresizingMaskIntoConstraints="NO" id="goE-XM-MtE">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="250" height="125"/>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mahatma Gandhi Marine National Park" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wG-ve-OYx">
@@ -7432,7 +7454,7 @@ muchmore.</string>
                                                                                 <rect key="frame" x="0.0" y="0.0" width="156" height="160"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JAIL" translatesAutoresizingMaskIntoConstraints="NO" id="OeW-lz-mcq">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camps4" translatesAutoresizingMaskIntoConstraints="NO" id="OeW-lz-mcq">
                                                                                         <rect key="frame" x="15.5" y="0.0" width="125" height="125"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="125" id="X64-hW-agZ"/>
@@ -7506,7 +7528,7 @@ muchmore.</string>
                                                                                 <rect key="frame" x="0.0" y="0.0" width="159" height="161"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BarrenIsland" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-AV-jAW">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camps2" translatesAutoresizingMaskIntoConstraints="NO" id="fd6-AV-jAW">
                                                                                         <rect key="frame" x="17" y="0.0" width="125" height="125"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="125" id="KZq-1k-lko"/>
@@ -7721,7 +7743,7 @@ muchmore.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOY-TT-kD3">
-                                <rect key="frame" x="0.0" y="74" width="414" height="926"/>
+                                <rect key="frame" x="0.0" y="69" width="414" height="931"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0B-gQ-MXN">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
@@ -7755,7 +7777,7 @@ muchmore.</string>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbL-u6-EVL">
                                                                     <rect key="frame" x="0.0" y="10" width="374" height="332"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage2" translatesAutoresizingMaskIntoConstraints="NO" id="w2G-2h-bx2">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camps2" translatesAutoresizingMaskIntoConstraints="NO" id="w2G-2h-bx2">
                                                                             <rect key="frame" x="5" y="5" width="364" height="200"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="200" id="XMJ-gI-ZOg"/>
@@ -7895,12 +7917,12 @@ muchmore.</string>
                                 <viewLayoutGuide key="frameLayoutGuide" id="9p3-RR-eLn"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSM-3U-AcO">
-                                <rect key="frame" x="10" y="49" width="25" height="25"/>
+                                <rect key="frame" x="20" y="49" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="1kW-X6-WTw"/>
-                                    <constraint firstAttribute="height" constant="25" id="OvY-fB-kG7"/>
+                                    <constraint firstAttribute="width" constant="20" id="1kW-X6-WTw"/>
+                                    <constraint firstAttribute="height" constant="20" id="OvY-fB-kG7"/>
                                 </constraints>
-                                <state key="normal" image="cross"/>
+                                <state key="normal" image="leftArrow"/>
                                 <connections>
                                     <action selector="menu_Axn:" destination="0wK-nc-X94" eventType="touchUpInside" id="luy-ou-UsP"/>
                                 </connections>
@@ -7929,7 +7951,7 @@ muchmore.</string>
                             <constraint firstItem="HOY-TT-kD3" firstAttribute="trailing" secondItem="ycF-Je-9G6" secondAttribute="trailing" id="YUw-k0-q8U"/>
                             <constraint firstAttribute="bottom" secondItem="DQc-N4-4wr" secondAttribute="bottom" id="cY2-FI-coK"/>
                             <constraint firstItem="HOY-TT-kD3" firstAttribute="top" secondItem="NSM-3U-AcO" secondAttribute="bottom" id="ezW-gQ-aKe"/>
-                            <constraint firstItem="NSM-3U-AcO" firstAttribute="leading" secondItem="ycF-Je-9G6" secondAttribute="leading" constant="10" id="lOW-Y2-In8"/>
+                            <constraint firstItem="NSM-3U-AcO" firstAttribute="leading" secondItem="ycF-Je-9G6" secondAttribute="leading" constant="20" id="lOW-Y2-In8"/>
                             <constraint firstItem="DQc-N4-4wr" firstAttribute="top" secondItem="itP-kK-HrM" secondAttribute="top" id="tu2-si-ihy"/>
                             <constraint firstItem="ycF-Je-9G6" firstAttribute="trailing" secondItem="DQc-N4-4wr" secondAttribute="trailing" id="vOj-dU-EwT"/>
                         </constraints>
@@ -7942,324 +7964,6 @@ muchmore.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bm3-XE-WQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6768" y="-1307"/>
-        </scene>
-        <!--CovidVC-->
-        <scene sceneID="BPJ-5V-NA5">
-            <objects>
-                <viewController storyboardIdentifier="CovidVC" id="W75-af-XhB" customClass="CovidVC" customModule="AndamanCamps" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Yy-4I-XSg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS4" translatesAutoresizingMaskIntoConstraints="NO" id="U39-sc-ksO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-cl-8nd">
-                                <rect key="frame" x="0.0" y="82" width="414" height="814"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-hY-FOr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
-                                        <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IFz-RE-mse">
-                                                <rect key="frame" x="10" y="10" width="394" height="200"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="Q6h-Eh-FdS"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LEJ-Os-VyO">
-                                                    <size key="itemSize" width="394" height="194"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BlogDetailsCVC" reuseIdentifier="BlogCVCell" id="HQM-u6-6uS" customClass="BlogDetailsCVC" customModule="AndamanCamps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="194"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fKO-l1-uoe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="194"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Policy" translatesAutoresizingMaskIntoConstraints="NO" id="PkK-yD-Pn7">
-                                                                    <rect key="frame" x="5" y="5" width="384" height="184"/>
-                                                                </imageView>
-                                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="c37-N0-dye">
-                                                                    <rect key="frame" x="136" y="159" width="122.5" height="25"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="25" id="c9F-5w-sgP"/>
-                                                                    </constraints>
-                                                                    <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor"/>
-                                                                </pageControl>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="PkK-yD-Pn7" firstAttribute="leading" secondItem="fKO-l1-uoe" secondAttribute="leading" constant="5" id="NuV-Ha-x8l"/>
-                                                                <constraint firstAttribute="bottom" secondItem="c37-N0-dye" secondAttribute="bottom" constant="10" id="U2J-CE-BST"/>
-                                                                <constraint firstAttribute="trailing" secondItem="PkK-yD-Pn7" secondAttribute="trailing" constant="5" id="Xkg-U0-bpa"/>
-                                                                <constraint firstItem="c37-N0-dye" firstAttribute="centerX" secondItem="fKO-l1-uoe" secondAttribute="centerX" id="fYq-bc-7pa"/>
-                                                                <constraint firstItem="PkK-yD-Pn7" firstAttribute="top" secondItem="fKO-l1-uoe" secondAttribute="top" constant="5" id="fqu-kp-9NH"/>
-                                                                <constraint firstAttribute="bottom" secondItem="PkK-yD-Pn7" secondAttribute="bottom" constant="5" id="tse-Yw-GUn"/>
-                                                            </constraints>
-                                                        </collectionViewCellContentView>
-                                                        <size key="customSize" width="394" height="194"/>
-                                                        <connections>
-                                                            <outlet property="IMG_View" destination="PkK-yD-Pn7" id="aBS-yn-BQf"/>
-                                                            <outlet property="myPageCntrl" destination="c37-N0-dye" id="yAc-C8-lN9"/>
-                                                        </connections>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-ZZ-WaW">
-                                                <rect key="frame" x="0.0" y="210" width="414" height="602"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="hH0-nj-whB" style="IBUITableViewCellStyleDefault" id="jf3-rS-jT6">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="6321.5"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jf3-rS-jT6" id="wOV-bm-uTU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="6321.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hH0-nj-whB">
-                                                                    <rect key="frame" x="20" y="0.0" width="374" height="6321.5"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <string key="text">COVID-19 is a coronavirus that was first identified in December 2019. Since then, it has quickly spread and infected more than half of the population globally. Now it is analysed that COVID-19 mainly spread from person-to-person. This happens when an infected person produces respiratory droplets when they sneeze or cough, passing the droplets and the virus onto those in close contact (less than 2 metres or 6 feet).
-People infected with COVID-19 may have flu-like symptoms that can be mild, moderate or severe. The symptoms may appear from 2 to 14 days after exposure to the virus. 
- Adults who are older, anyone with underlying medical conditions (such as diabetes, lung disease or heart disease) or those who are immunocompromised (transplant recipients, people receiving chemotherapy) are at a higher risk of becoming very sick if they are infected with COVID-19.
-In GoExploreAndaman Camp, several precautionary measures have been implemented to initiate the camp bookings and avoid the presence of deadly virus in or from the camp. The precautionary measures are as follows,
-Complete information about participants to the staff and camp residents
-We request candidates to provide complete information about their location, health history, and staff and camp residents access to the most up-to-date and accurate. It is ensured that all staff and camp residents are educated/informed of the infection prevention and control measures that are being implemented in the camp to help reduce and minimize the risk of potential disease transmission in the camp. Inform the staff and camp residents of procedures to follow should they become sick. It's advised that employees do not work when they are sick.
-It is also ensured that the GoExploreAndaman camp provide remuneration to employees who are on isolation precautions. This should be provided throughout their duration of self-isolation as this will help to ensure those who are sick will report their symptoms and to ensure the employee will adhere to isolation protocols – both are essential in helping to control the transmission of COVID-19. Employers should not require the worker to provide a doctor’s note for sick leave if they are sick or are required to self-isolate.
-
-How or team will manage people with suspected COVID-19
-People who are experiencing symptoms will be immediately attended and suggested to the nearby COVID facility center. The on-site doctor will provide primary medicals and directed to the nearby testing centres. 
-If a staff member or camp resident have symptoms of COVID-19 while in the camp, the measures and course of action during that time are as follows:
-•	Ensured that all the person wear a surgical mask (if available) or tissues to cover their mouth and nose;
-•	Allowing the person to an safe area separate from others, preferably with a closed door;
-•	directing the person to the online self-assessment tool or the on-site medical clinic, if available, these will advise on the next steps;
-•	the person can also be directed to 811;
-•	Supporting the person to self-isolate in the camp, unless they are within driving distance of their home and are able to travel home in personal, un-shared transportation. More important information is provided below in regards to self-isolation; and
-•	Any rooms the person has been in while symptomatic should be cleaned and disinfected.
-•	In case of urgent medicare, the medical superintendent of the camp will be alongside with the camp and help him throughout the endeavour.
-
-Travel Restrictions
-More than 160 countries globally and provinces and territories have been affected by COVID-19. Travel restrictions have been enacted to help slow the introduction and spread of the virus in India.
-Anyone arriving from India
-Anyone arriving from India does not need to self-isolate, unless and until it is recommended by the camp doctor.
-Anyone arriving from other jurisdictions
-Anyone arriving from provinces, countries, other than India or from international destinations) is required to self-isolate for 14 days and monitor themselves for any development of symptoms.
-In case of self-isolation, the participants will be in quarantine either in mainland India or Andaman as per the Govt. notice and policies. 
-The support and Advice for camp residents who are self-isolating
-•	Catering complete requirements to the room and ensuring of not leaving isolation quarters unless absolutely necessary, such as seeking medical care.
-•	Ensuring minimal work, visiting public areas or use public transportation, and guiding social distancing measures.
-•	If the person must be in contact with others, they should keep at least 2 metres (6 feet) away, keep the interaction brief and wear a mask according to advice of health staff.
-•	If a person is self-isolating at home they should stay in a separate room and, if possible, arranging separate bathroom from others in their home. Do not share cutlery, glasses, plates or personal items.
-•	For people self-isolating in a facility: workers should be offered a single occupancy room and should remain in the facility, unless a higher level of care is needed.
-•	Please do not turn away from the camp people who are suspected or confirmed cases without a plan in place of where they can be safely isolated
-Hand hygiene and respiratory etiquette
-These measures help to prevent or reduce the spread of COVID-19 and other illnesses. Good hand and respiratory hygiene is important for all workers, whether or not they are self-isolating. This can save lives. Operators of work camps should ensure that workers have easy access to hand hygiene facilities throughout the camps. Hands should be cleaned frequently with soap and water or with a hand sanitizer (containing a minimum of 60% alcohol).
-Hand sanitizer is not effective if a worker’s hands are soiled with dirt, food, etc., therefore the employees are instructed to use soap and water periodically.
-If soap and water are not available or accessible, employees are instructed to use hand wipes to remove debris, followed by hand sanitizer.
-If using soap and water, hands should be washed for at least 20 seconds.
-Hand Hygiene Tips
-It is advised to wash your hands thoroughly during,
-•	Before eating or preparing food
-•	After sneezing, coughing or blowing your nose
-•	Before and after contact with a sick or infected person (confirmed or suspected)
-•	After touching dirty surfaces such as taps, doorknobs, phones, remotes
-•	After using the bathroom
-Respiratory etiquette is also essential in the prevention of disease spread
-The key elements of respiratory etiquette and must practices activities in the camp site are:
-•	cover your mouth and nose with a sleeve or tissue when coughing or sneezing;
-•	dispose used tissues in the garbage immediately; and
-•	Clean your hands after coughing or sneezing.
-Work camp operators can support good respiratory hygiene by:
-•	educating workers on its importance; and
-•	Making sure everyone have access to tissues.
-Avoid contaminating common surfaces and items
-At least once daily but preferably more often, clean surfaces that are touched or used often (toilets, phones, door handles, remotes, etc.) with an appropriate disinfectant. (See “Infection control supplies" below for additional cleaning information). Workers should be instructed not to share personal items with others, such as:
-Electronic devices;
-Linens;
-Towels; and
-Utensils, etc.
-Caring for yourself
-Everyone will be instructed to self-monitor for symptoms.  A “call list” is provided to the worker indicating who to call if:
-•	symptoms develop;
-•	an emergency situation occurs; or
-•	There are any other urgent needs.
-Confidentiality is critical to help workers feel safe to reach out immediately should mild symptoms develop. If symptoms worsen, each work camp should have a protocol established in order to access higher level medical care if needed. Encourage workers to:
-•	rest;
-•	eat a balanced diet; and
-•	stay in contact with friends and family via phone, social media or other long-distance means.
-Social distancing: physical distance with social connection
-Everyone, including those who are not self-isolated, is encouraged to perform physical distancing. It is one of the most effective means of reducing the spread of COVID-19. It also involves making changes in your everyday routines to minimize contact with others. Practising physical distancing means:
-
-•	Keep a distance of at least 2 metres (6 feet) from others – including at work.
-•	Avoid crowded places and large gatherings.
-•	In Camping, social gatherings of more than 50 people outdoors are not permitted.
-•	Greet people with a wave or nod – do not shake hands or hug.
-Limit contact with people who are at a higher risk of developing complications from COVID-19 such as:
-•	The elderly;
-•	The immune compromised;
-•	People in poor health; or
-•	People with underlying medical conditions
-•	Stagger meal times to decrease the number of workers in a cafeteria.
-•	If necessary, shop during off-peak hours to maintain the safe distancing of 2 metres.
-Having sufficient infection control supplies
-GoExploreAndaman Camp stepped in with a stock of infection control supplies on site. The supplies must be adequate enough to support any confirmed or suspected cases, but to also support diligent daily hygiene practices of all workers.
-Supplies should include:
-•	hand-washing supplies (soap, water) and hand sanitizers (minimum 60% alcohol content);
-•	appropriate cleaning supplies (more information below);
-•	surgical masks, if possible, for those who are in self-isolation or those with symptoms being transported to another facility;
-•	tissues; and
-•	disposable gloves.
-GoExploreAndaman camp has an on-site medical facility that provides a higher level of care (for example, physicians, nurse practitioners).
-•	Personal protective equipment (PPE) for contact and droplet precautions, this includes eye protection (preferably with side shields), surgical/procedural masks, disposable gowns and gloves.
-•	N-95 respirators on-site, if possible, for medical responders in the rare event that they are needed for aerosol-generating medical procedures (for example, administering CPR, intubation).
-•	Airborne precautions are recommended only for aerosol-generating procedures, such as open suctioning of respiratory tract, intubation, bronchoscopy, cardiopulmonary resuscitation.
-•	PPE for airborne precautions includes: N-95 respirators, eye protection (either a face shield or googles with side shields), gloves and gown.
-These supplies are procured from private suppliers. It is ordered only on demand basis or we will conduct with the available stock limit.
-Regular Clean and disinfection 
-High-touch areas in the camp, such as toilets, bedside tables and door handles are disinfected at least once a day, preferably twice a day, with an agent effective against coronavirus.
-Coronavirus is an enveloped virus, meaning it is one of the easiest types of viruses to kill with appropriate disinfectants. Types of disinfectants that can be used include:
-•	diluted bleach solution: 1 part bleach to 9 parts water;
-•	accelerated hydrogen peroxide (0.5%);
-•	quaternary ammonium compounds (QUATs)
-Surfaces that have become soiled with respiratory secretions or bodily fluids are cleaned twice:
-•	once to remove the secretions; and
-•	Second time with an effective disinfectant to disinfect the area.
-Use disposable gloves and protective clothing (for example, plastic aprons, if available) when cleaning or handling surfaces, clothing or linen that has been soiled with bodily fluids.
-Ensuring safe handling of food
-Germs from infected people or contaminated surfaces can be easily transferred to food. During an outbreak, facilities are reinforced routine food safety and sanitation practices. Where possible, measures are implemented to minimize the handling of shared food and items that may touch another person’s food.
-•	Discontinuation of self-serve buffet lines – opt to have designated staff dispense food.
-•	Minimize the handling of multiple sets of cutlery.
-•	Remove shared food containers from dining areas:
-o	shared pitchers of water/juice;
-o	shared coffee cream dispensers;
-o	salt and pepper shakers, etc.
-•	Dispense snacks directly to staff or clients and use only pre-packaged snacks.
-•	Ensure that food handling staff practice good hand hygiene and do not work in food handling areas if they are ill.
-•	Ensure that all surfaces of the tables and chairs (including underneath the edges of the chair) are cleaned and disinfected after each meal.
-People in self-isolation can place dishes outside their rooms for pick-up. Disposable gloves can be used by the staff who are picking up and handling these dishes. Ordinary cleaning and sanitation procedures for dishes are sufficient for killing the virus. Please note that the use of disposable cutlery and plates by ill workers is not permitted in the camping site.
-Ensuring laundry is handled safely
-Using precautions when doing laundry.
-•	Contaminated laundry should be placed into a laundry bag or basket with a plastic liner and should not be shaken.
-•	Gloves and a surgical mask should be worn when in direct contact with contaminated laundry.
-•	Linens and clothing belonging to an ill person can be washed together with other laundry, using regular laundry soap and hot water (60 – 90° C).
-•	Laundry should be thoroughly dried.
-•	Hand hygiene should be performed after handling contaminated laundry and after removing gloves.
-•	If the laundry container comes in contact with contaminated laundry, it can be disinfected using a diluted bleach solution.
-Prepare a summary of project information for reference in event of a camp outbreak
-The camp documents the initiatives and procedures that the company has implemented to prevent and manage COVID-19. The plan can be tailored to unique circumstances and scaled to the size of the camp. At minimum, the camp’s plan includes the following information:
-
-•	Project location
-•	Contact information for all camp personnel: name, telephone number and email addresses of each person
-•	Medical service provider(s) details
-•	Number of residents
-•	Number of staff (both those working at the camp and housed at the camp)
-•	Demographics and health care status of the workers (if known)
-•	Workers’ origin: local, regional, provincial or international – if international, include from which countries
-•	Turnover patterns and work shifts:
-•	Fly in or fly out?
-•	How long are the shifts or rotations?
-•	From which travel hubs are they flying or driving?
-•	Overview of the camp set-up.
-Description of camp facilities including:
-•	number of rooms
-•	room occupancy
-•	number of showers
-•	number of washrooms
-•	dining and community areas
-•	Recreational facilities (gyms, pool tables, television rooms, etc.)
-Ensure confidentiality
-It is important that any targeted communicable disease interventions:
-•	are non-stigmatizing; and
-•	Respect the confidentiality of all persons involved.
-This includes maintaining privacy for people who are:
-•	Seeking health care
-•	in self-isolation; or
-•	Involved in contact tracing or outbreak investigation.</string>
-                                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </tableViewCellContentView>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                            </tableView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="IFz-RE-mse" firstAttribute="top" secondItem="I5G-hY-FOr" secondAttribute="top" constant="10" id="1h1-WD-2Bb"/>
-                                            <constraint firstAttribute="trailing" secondItem="W9h-ZZ-WaW" secondAttribute="trailing" id="9Ml-Gc-l3v"/>
-                                            <constraint firstAttribute="bottom" secondItem="W9h-ZZ-WaW" secondAttribute="bottom" id="AGv-j5-PT2"/>
-                                            <constraint firstAttribute="height" constant="812" id="Joc-6j-uuZ"/>
-                                            <constraint firstItem="W9h-ZZ-WaW" firstAttribute="top" secondItem="IFz-RE-mse" secondAttribute="bottom" id="UMj-Rl-TGf"/>
-                                            <constraint firstItem="W9h-ZZ-WaW" firstAttribute="leading" secondItem="I5G-hY-FOr" secondAttribute="leading" id="h38-Af-X1M"/>
-                                            <constraint firstAttribute="trailing" secondItem="IFz-RE-mse" secondAttribute="trailing" constant="10" id="jvL-I3-JaC"/>
-                                            <constraint firstItem="IFz-RE-mse" firstAttribute="leading" secondItem="I5G-hY-FOr" secondAttribute="leading" constant="10" id="xrb-Ni-vtX"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="I5G-hY-FOr" firstAttribute="leading" secondItem="0g0-cl-8nd" secondAttribute="leading" id="Hdx-Q1-k4U"/>
-                                    <constraint firstAttribute="bottom" secondItem="I5G-hY-FOr" secondAttribute="bottom" id="c1l-UB-xCH"/>
-                                    <constraint firstAttribute="trailing" secondItem="I5G-hY-FOr" secondAttribute="trailing" id="u2R-yJ-DMH"/>
-                                    <constraint firstItem="I5G-hY-FOr" firstAttribute="top" secondItem="0g0-cl-8nd" secondAttribute="top" id="ufR-V2-eOx"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="VgY-KA-K2m"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="be3-7d-rgz"/>
-                            </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Guidelines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRS-jJ-STU">
-                                <rect key="frame" x="128.5" y="49" width="157" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="DGp-sq-Ex4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXr-Pe-aQX">
-                                <rect key="frame" x="10" y="51.5" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="mfw-G6-KIx"/>
-                                    <constraint firstAttribute="height" constant="20" id="tHe-Kb-Nkg"/>
-                                </constraints>
-                                <state key="normal" image="cross"/>
-                                <connections>
-                                    <action selector="back_Axn:" destination="W75-af-XhB" eventType="touchUpInside" id="OGh-Z7-qPN"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="UNf-Gc-poz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0g0-cl-8nd" firstAttribute="leading" secondItem="UNf-Gc-poz" secondAttribute="leading" id="9Xf-CS-ACh"/>
-                            <constraint firstItem="xXr-Pe-aQX" firstAttribute="leading" secondItem="UNf-Gc-poz" secondAttribute="leading" constant="10" id="BdE-od-7ud"/>
-                            <constraint firstItem="jRS-jJ-STU" firstAttribute="centerX" secondItem="7Yy-4I-XSg" secondAttribute="centerX" id="ERa-zJ-YJc"/>
-                            <constraint firstAttribute="bottom" secondItem="U39-sc-ksO" secondAttribute="bottom" id="F7Z-lq-Rtg"/>
-                            <constraint firstItem="0g0-cl-8nd" firstAttribute="trailing" secondItem="UNf-Gc-poz" secondAttribute="trailing" id="HBS-10-HLp"/>
-                            <constraint firstAttribute="bottom" secondItem="0g0-cl-8nd" secondAttribute="bottom" id="VFA-Lx-eaR"/>
-                            <constraint firstItem="I5G-hY-FOr" firstAttribute="width" secondItem="7Yy-4I-XSg" secondAttribute="width" id="dWQ-55-7bq"/>
-                            <constraint firstItem="xXr-Pe-aQX" firstAttribute="centerY" secondItem="jRS-jJ-STU" secondAttribute="centerY" id="e7E-8Q-D0b"/>
-                            <constraint firstItem="UNf-Gc-poz" firstAttribute="trailing" secondItem="U39-sc-ksO" secondAttribute="trailing" id="e7U-Tu-gKi"/>
-                            <constraint firstItem="U39-sc-ksO" firstAttribute="top" secondItem="7Yy-4I-XSg" secondAttribute="top" id="fIy-rB-K0u"/>
-                            <constraint firstItem="U39-sc-ksO" firstAttribute="leading" secondItem="UNf-Gc-poz" secondAttribute="leading" id="gVS-cu-nN1"/>
-                            <constraint firstItem="0g0-cl-8nd" firstAttribute="width" secondItem="7Yy-4I-XSg" secondAttribute="width" id="jXO-al-4j2"/>
-                            <constraint firstItem="jRS-jJ-STU" firstAttribute="top" secondItem="UNf-Gc-poz" secondAttribute="top" constant="5" id="xul-qK-ek4"/>
-                            <constraint firstItem="0g0-cl-8nd" firstAttribute="top" secondItem="jRS-jJ-STU" secondAttribute="bottom" constant="8" id="y2Y-cy-TM7"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="IMG_CV" destination="IFz-RE-mse" id="aY2-cG-ytc"/>
-                        <outlet property="dataTV" destination="W9h-ZZ-WaW" id="mdU-oe-iIf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WYB-9b-AC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5132" y="-1665"/>
         </scene>
         <!--Blog DetailsVC-->
         <scene sceneID="Bca-7H-cgY">
@@ -9747,7 +9451,7 @@ This includes maintaining privacy for people who are:
                                                                                     <constraint firstAttribute="height" constant="15" id="2rt-Eq-wgt"/>
                                                                                     <constraint firstAttribute="width" constant="15" id="MmV-d2-nDV"/>
                                                                                 </constraints>
-                                                                                <state key="normal" image="info-1"/>
+                                                                                <state key="normal" image="infoN"/>
                                                                                 <connections>
                                                                                     <action selector="priceInfo_Axn:" destination="ypT-JH-TXH" eventType="touchUpInside" id="j7P-Kw-Cua"/>
                                                                                 </connections>
@@ -11411,35 +11115,15 @@ This includes maintaining privacy for people who are:
             <point key="canvasLocation" x="9381" y="58"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="N5g-he-EZf">
-            <size key="intrinsicContentSize" width="139" height="14.5"/>
-        </designable>
-        <designable name="XJd-nV-zk5">
-            <size key="intrinsicContentSize" width="292" height="14.5"/>
-        </designable>
-        <designable name="pXt-9A-6eT">
-            <size key="intrinsicContentSize" width="137.5" height="14.5"/>
-        </designable>
-        <designable name="stj-cX-foQ">
-            <size key="intrinsicContentSize" width="333.5" height="14.5"/>
-        </designable>
-        <designable name="vgn-fh-NMv">
-            <size key="intrinsicContentSize" width="392" height="14.5"/>
-        </designable>
-    </designables>
     <resources>
         <image name="AATA2" width="960" height="934"/>
         <image name="BG" width="375" height="812"/>
-        <image name="BarrenIsland" width="400" height="268"/>
         <image name="Benefits" width="900" height="599"/>
         <image name="Camps" width="592" height="497"/>
         <image name="Check_W" width="24" height="24"/>
         <image name="Infographics_blue" width="2480" height="2681"/>
-        <image name="JAIL" width="870" height="485"/>
         <image name="Menu" width="15" height="14"/>
         <image name="Policy" width="1540" height="800"/>
-        <image name="QA" width="400" height="267"/>
         <image name="SS1" width="375" height="812"/>
         <image name="SS2" width="375" height="812"/>
         <image name="SS3" width="375" height="812"/>
@@ -11447,10 +11131,9 @@ This includes maintaining privacy for people who are:
         <image name="WhyUs" width="318" height="159"/>
         <image name="activity_2" width="25" height="25"/>
         <image name="agreement" width="24" height="24"/>
-        <image name="autumn" width="200" height="200"/>
-        <image name="autumn_children" width="200" height="200"/>
-        <image name="banner_2" width="1000" height="500"/>
         <image name="call" width="24" height="24"/>
+        <image name="camps2" width="700" height="400"/>
+        <image name="camps4" width="1280" height="1836"/>
         <image name="cardW" width="24" height="24"/>
         <image name="close" width="24" height="24"/>
         <image name="contact_2" width="3936" height="2028"/>
@@ -11469,12 +11152,8 @@ This includes maintaining privacy for people who are:
         <image name="fireW" width="30" height="30"/>
         <image name="formW" width="24" height="24"/>
         <image name="frame" width="64" height="64"/>
-        <image name="homepage1" width="1920" height="1280"/>
-        <image name="homepage2" width="1920" height="1282"/>
-        <image name="homepage3" width="1920" height="1280"/>
         <image name="hotel_2" width="700" height="367"/>
         <image name="id" width="64" height="64"/>
-        <image name="info-1" width="26" height="26"/>
         <image name="infoN" width="25" height="25"/>
         <image name="insta_2" width="32" height="32"/>
         <image name="invoice" width="25" height="25"/>
