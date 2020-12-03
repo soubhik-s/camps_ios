@@ -197,7 +197,7 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     
     
     @IBAction func GST_SC_Axn(_ sender: UISegmentedControl) {
-        if sender.tag == 1{
+        if sender.selectedSegmentIndex == 1{
             GST_Number_TF.isHidden = true
             companyName_TF.isHidden =  true
             company_Address_TF.isHidden = true

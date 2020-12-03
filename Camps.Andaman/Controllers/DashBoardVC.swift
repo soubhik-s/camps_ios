@@ -52,15 +52,13 @@ class DashBoardVC: UIViewController  {
     
     func viewChanges() {
         refreshSettings()
-        razorpay = RazorpayCheckout.initWithKey(testKey, andDelegateWithData: self)
-//        razorpay = RazorpayCheckout.initWithKey(testKey, andDelegate: self)
+        razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegateWithData: self)
         dataTV.rowHeight = 420
         dataTV.isHidden = true
-        pdfView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapped))
-        self.view.addGestureRecognizer(tap)
         getData()
+
     }
+    
     
     
     func refreshSettings() {
@@ -76,7 +74,7 @@ class DashBoardVC: UIViewController  {
         self.dataTV.refreshControl?.beginRefreshing()
         isRefreshing = true
         getData()
-
+        
     }
         
         
@@ -188,12 +186,12 @@ class DashBoardVC: UIViewController  {
             }
                         
             pkgID_Arr.append(bookingData.product_id!)
-            dataTV.isHidden = false
-            dataTV.reloadData()
             
             }
             }
-                
+                    dataTV.isHidden = false
+                    dataTV.reloadData()
+                    
             } else {
                 popUpAlert(title: "Alert", message: "No Bookings", action: .alert)
             }
@@ -218,16 +216,15 @@ class DashBoardVC: UIViewController  {
                     
                 if parsedData.status == true {
 
-                    if tag == "Status" {
-                    popUpAlert(title: "Alert", message: "Payment status Updated", action: .alert)
-                    } else if tag == "Upload" {
+                   if tag == "Upload" {
                         popUpAlert(title: "Success", message: "Pdf Uploaded", action: .alert)
 
                     } else {
                         getData()
-
                         self.view.makeToast("Payment Details Updated..")
-
+                        
+                        self.navigationController?.popViewController(animated: true)
+                        alert(message: "Payment Done", title: "Success")
                     }
                 
                 }
@@ -333,8 +330,7 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
 
         clickFunction()
         } else {
-//            popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
-            clickFunction()
+            popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
 
         }
     }
@@ -454,18 +450,17 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let currentCell = dataTV.cellForRow(at: index!) as! BoardTVC
         DashboardVariables.bookingID = currentCell.bookingID_Lbl.text!
         print("bookingID = \(DashboardVariables.bookingID)")
-        price = currentCell.priceLbl.text!.fiterPrice()
+        price = Double(currentCell.priceLbl.text!)?.forTrailingZero() ?? "0"
         print("price = \(price)")
-//       self.showPaymentForm()
 
+        
+        if currentCell.doc_Lbl.text == "pending" {
+        popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
+
+        } else {
         showPaymentAlert()
-        
-//        if currentCell.doc_Lbl.text == "pending" {
-//        popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
-//
-//        } else {
-        
-//        }
+
+        }
     }
     
     func showPaymentAlert() {
@@ -473,9 +468,7 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let alert = UIAlertController(title: "Initiatinng Payment", message: "₹ - \(price)", preferredStyle: .alert)
         alert.setBackgroundColor(color: .white)
         alert.setTint(color: .baseColor)
-        alert.setTitlet(font: .systemFont(ofSize: 15), color: .red)
-        alert.setTitlet(font: .systemFont(ofSize: 15), color: .black)
-
+       
        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
             self.showPaymentForm()
 
@@ -491,7 +484,7 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
     
     func showPaymentForm(){
         let options: [String:Any] = [
-        "amount": "\(price)", //This is in currency subunits. 100 = 100 paise= INR 1.
+        "amount": "\(price)00", //This is in currency subunits. 100 = 100 paise= INR 1.
         "currency": "INR",//We support more that 92 international currencies.
         "description": "Camp Booking",
         "image": "https://camps.goexploreandaman.com/assets/images/photo/autumn.jpg",
@@ -522,9 +515,7 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocolWithData, UIDocumentMenu
         print("PaymentId = \(paymentId)")
 
         postRazorData()
-        self.navigationController?.popViewController(animated: true)
-   
-        alert(message: "Payment done.", title: "Success")
+
     }
     
   
@@ -559,4 +550,15 @@ extension DashBoardVC: RazorpayPaymentCompletionProtocolWithData, UIDocumentMenu
     }
    
     
+}
+
+
+extension Double {
+    
+    
+    
+    func forTrailingZero() -> String {
+        let roundDouble = String(format: "%g", self)
+        return roundDouble
+    }
 }

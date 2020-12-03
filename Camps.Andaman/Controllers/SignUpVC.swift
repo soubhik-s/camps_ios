@@ -127,6 +127,8 @@ class SignUpVC: UIViewController {
             location_TF.text = ""
         
             popUpAlert(title: "Success", message: "Registration Completed", action: .alert)
+            let VC = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+            self.navigationController?.pushViewController(VC, animated: true)
         } else {
         popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
         }
