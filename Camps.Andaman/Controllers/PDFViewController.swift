@@ -44,7 +44,7 @@ class PDFViewController: UIViewController   {
     
     @IBAction func pdf_Btn(_ sender: UIButton) {
         
-        savePdf(urlString: pdfUrlStr + DashboardVariables.bookingID, fileName: UserDetails.firstName + DashboardVariables.bookingID)
+        savePdf(urlString: pdfUrlStr + DashboardVariables.bookingID, fileName: Preferrences.getFirstName() + DashboardVariables.bookingID)
     }
     
     

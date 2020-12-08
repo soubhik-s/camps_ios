@@ -283,7 +283,7 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
       
       func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
                
-          let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: dataTV.frame.width , height: 25))
+          let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: dataTV.frame.width , height: 30))
                
           returnedView.backgroundColor = .clear
               
@@ -291,8 +291,8 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
 
           let label = UILabel(frame: CGRect(x: 0, y: 0, width: returnedView.frame.width, height: returnedView.frame.height))
           label.textColor = .white
-          label.backgroundColor = .clear
-          label.textAlignment = .left
+          label.backgroundColor = .baseColor
+          label.textAlignment = .center
           label.font = UIFont(name: "Optima", size: 15)
           label.layer.cornerRadius = 5
           returnedView.layer.cornerRadius = 5
@@ -301,17 +301,17 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
           switch section {
           
           case 0:
-          label.text = "Itinerary :"
-          label.underlineMyText(text: label.text!, color: .white)
+          label.text = "Itinerary"
+//          label.underlineMyText(text: label.text!, color: .white)
               
           case 1:
-              label.text = "Inclussions :"
-            label.underlineMyText(text: label.text!, color: .white)
+              label.text = "Inclussions"
+//            label.underlineMyText(text: label.text!, color: .white)
 
               
           case 2:
-              label.text = "Exclussions :"
-              label.underlineMyText(text: label.text!, color: .white)
+              label.text = "Exclussions"
+//              label.underlineMyText(text: label.text!, color: .white)
 
           
           default:

@@ -1001,11 +1001,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QT37QX5M3;
 				INFOPLIST_FILE = Camps.Andaman/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
 				PRODUCT_NAME = AndamanCamps;
 				PROVISIONING_PROFILE_SPECIFIER = AndamanCampsNew;
@@ -1025,11 +1026,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5QT37QX5M3;
 				INFOPLIST_FILE = Camps.Andaman/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.5.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
 				PRODUCT_NAME = AndamanCamps;
 				PROVISIONING_PROFILE_SPECIFIER = Camps;

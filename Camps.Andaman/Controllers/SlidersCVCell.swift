@@ -12,7 +12,6 @@ class SlidersCVCell: UICollectionViewCell {
     
     
     @IBOutlet weak var BG_IMG_View: UIImageView!
-    @IBOutlet weak var myPageCntrl: UIPageControl!
     
     @IBOutlet weak var notes_Lbl: UILabel!
     

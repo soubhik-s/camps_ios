@@ -39,15 +39,7 @@ struct PrivacyVariables {
     
 }
 
-struct UserDetails {
-    static var id = "1"
-    static var name = ""
-    static var email = ""
-    static var mobileNumber = ""
-    static var firstName = ""
-    static var lastName = ""
-    static var password = ""
-}
+
 
 struct PersonDetails {
     static var name = ""

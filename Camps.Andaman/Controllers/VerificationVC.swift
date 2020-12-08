@@ -68,10 +68,10 @@ class VerificationVC: UIViewController {
 //            verifyOTP()
            
             if let code = codeTF.text {
-            VerifyAPI.validateVerificationCode(self.countryCode, self.mobile_TF.text!, code) { checked in
+                VerifyAPI.validateVerificationCode(self.countryCode, self.mobile_TF.text!, code) { [self] checked in
                 self.hideActivityIndicator()
                     if (checked.success) {
-                         UserDetails.mobileNumber = self.mobile_TF.text!
+                        Preferrences.setUserMobile(type: mobile_TF.text!)
                         let VC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpVC
                         
                         self.navigationController?.pushViewController(VC, animated: true)

@@ -13,6 +13,7 @@ class SlidesVC: UIViewController {
    
     @IBOutlet weak var dataCV: UICollectionView!
     
+    @IBOutlet weak var pageCntrl: UIPageControl!
     @IBOutlet weak var logo_ImgView: UIImageView!
     @IBOutlet weak var nextBtn: UIButton!
     var titleArr = ["Camp with us","Expert Guide","Monitor","Schedule"]
@@ -81,7 +82,7 @@ class SlidesVC: UIViewController {
     
     @IBAction func nextBtnAxn(_ sender: UIButton) {
         if reach.isConnectedToNetwork() == true {
-           let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+           let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
 
             self.navigationController?.pushViewController(VC, animated: true)
         
@@ -111,9 +112,9 @@ extension SlidesVC : UICollectionViewDelegate , UICollectionViewDataSource {
         cell.Title_Lbl.text = titleArr[indexPath.item]
         cell.notes_Lbl.text = notesArr[indexPath.item]
         cell.BG_IMG_View.image = UIImage(named: imagesArr[indexPath.item])
-        cell.myPageCntrl.numberOfPages = titleArr.count
+        pageCntrl.numberOfPages = titleArr.count
         
-        cell.myPageCntrl.currentPage = indexPath.item
+        pageCntrl.currentPage = indexPath.item
         
         
         return cell

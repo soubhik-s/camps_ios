@@ -92,10 +92,10 @@ class PackageDetailsVC: UIViewController {
         }
     
     
-//        DispatchQueue.main.async {
-//            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
-//
-//        }
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
+
+        }
                
     }
            
@@ -128,7 +128,7 @@ class PackageDetailsVC: UIViewController {
     }
     
     @IBAction func bookbBtnAxn(_ sender: UIButton) {
-        if UserDetails.id == "" {
+        if Preferrences.getUserLogin() == false {
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
             self.navigationController?.pushViewController(VC, animated: true)
         } else {
@@ -152,7 +152,7 @@ class PackageDetailsVC: UIViewController {
     
     
     func CVChanges() {
-        let cellSize = CGSize(width:hotelsCV.frame.width  , height:hotelsCV.frame.height)
+        let cellSize = CGSize(width:hotelsCV.frame.width - 10 , height:hotelsCV.frame.height)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
@@ -186,6 +186,7 @@ extension PackageDetailsVC:  UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HotelsCVC
         cell.IMGView.layer.cornerRadius = 10
+        cell.IMGView.layer.masksToBounds = true
         cell.IMGView.image = UIImage(named: "\(hotelImgArr[indexPath.row])")
         cell.titleLbl.text = hotelTitleArr[indexPath.row]
         cell.place_Lbl.text = place_Arr[indexPath.row]

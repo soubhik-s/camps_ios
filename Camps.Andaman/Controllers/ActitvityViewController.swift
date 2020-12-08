@@ -47,6 +47,7 @@ class ActitvityViewController: UIViewController {
     let day_11_Arr = ["04:30 : Rise Early ", "05:00 - 06:30 : Practice yoga at the sunrise on Beach" , "0630 - 07:30 : Fresh Up" , "07:30 - 08:30 : Breakfast will be served." , "08:30 - 13:00 : Trek to Mount Harriet Peak" , "13:00 - 14:00  : Lunch" , "14:00 - 14:30 : Leisure" , "14:30 - 17:30 : Chidiyatapu Beach – Best for Sunset – Capture Best moments","18:30 - 19:30 : Love & Share " , "19:30 - 20:30 : Testimony & experience " , "20:30 - 21:00 : Dinner" , "21:00 : Lights Off "]
 
   let day_12_Arr = ["Group Photo  - Bid a bye to fellow campers with good memories"]
+    let campPdf = "https://camps.goexploreandaman.com/assets/camp/camp_activities.pdf"
     var selected_Index = 0
 
     override func viewDidLoad() {
@@ -99,7 +100,7 @@ class ActitvityViewController: UIViewController {
            if let error = error {
                print("ERROR: \(error)")
            } else {
-            popUpAlert(title: "Success", message: "Photo Saved ", action: .alert)
+            popUpAlert(title: "Success", message: "Image Saved ", action: .alert)
         }
        }
     
@@ -108,7 +109,17 @@ class ActitvityViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func pdf_Btn_Axn(_ sender: UIButton) {
+        guard let url = URL(string: campPdf) else {
+                 return
+        }
+        
+        if UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
+    
     
     
     

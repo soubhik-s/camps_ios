@@ -104,7 +104,7 @@ class DashBoardVC: UIViewController  {
         
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-        let detials = ["id":DashboardVariables.bookingID, "user_id":UserDetails.id, "camp_status":"approved"] as [String:Any]
+        let detials = ["id":DashboardVariables.bookingID, "user_id":Preferrences.getUserID(), "camp_status":"approved"] as [String:Any]
         
         ApiService.postCall(url: ClientInterface.bookingUrl, params: detials, methodType: "PUT", tag: "Status", finish:finishPost)
         print("detials = \(detials)")
@@ -118,7 +118,7 @@ class DashBoardVC: UIViewController  {
         
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-        let razorDetails = ["user_id":UserDetails.id,   "booking_id":DashboardVariables.bookingID, "id":paymentId, "status":"success", "method":"RazorPay_method",  "description":"oredr_ID", "card_id":"Card@1234",   "card_details":"card_details", "email":UserDetails.email,  "contact":UserDetails.mobileNumber,   "currency":"INR", "amount":price, "fee":"transaction_Fee", "payment_for":"Camps", "payment_via":"IOS", "created_at":"\(Date.self)"] as [String:Any]
+            let razorDetails = ["user_id":Preferrences.getUserID(),   "booking_id":DashboardVariables.bookingID, "id":paymentId, "status":"success", "method":"RazorPay_method",  "description":"oredr_ID", "card_id":"Card@1234",   "card_details":"card_details", "email":Preferrences.getUserEmail() ,  "contact":Preferrences.getUserMobile(),   "currency":"INR", "amount":price, "fee":"transaction_Fee", "payment_for":"Camps", "payment_via":"IOS", "created_at":"\(Date.self)"] as [String:Any]
         ApiService.postCall(url: ClientInterface.razorPayUrl, params: razorDetails, methodType: "POST", tag: "RazorPay", finish:finishPost)
         print("RazorDetails = \(razorDetails)")
         } else {
@@ -159,7 +159,7 @@ class DashBoardVC: UIViewController  {
           
            
             for bookingData in dataArr {
-                    if bookingData.user_id == UserDetails.id {
+                if bookingData.user_id == Preferrences.getUserID() {
             
             camp_Arr.append(bookingData.camp_batch!)
             print("camp_Arr = \(camp_Arr)")
@@ -323,12 +323,13 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     @objc func uploadAxn(sender: UIButton){
-       
+
         selected_Book_Id = ID_Arr[sender.tag]
         print("Selected Booking ID = \(selected_Book_Id)")
-        if downloadSign_Arr[sender.tag].isEmpty == false {
 
-        clickFunction()
+        if downloadSign_Arr[sender.tag].isEmpty == false {
+            clickFunction()
+
         } else {
             popUpAlert(title: "Alert", message: "DocuSign Not Updated", action: .alert)
 
@@ -453,34 +454,18 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         price = Double(currentCell.priceLbl.text!)?.forTrailingZero() ?? "0"
         print("price = \(price)")
 
-        
+
         if currentCell.doc_Lbl.text == "pending" {
         popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
 
         } else {
-        showPaymentAlert()
 
+
+            showPaymentForm()
         }
     }
     
-    func showPaymentAlert() {
-        
-        let alert = UIAlertController(title: "Initiatinng Payment", message: "₹ - \(price)", preferredStyle: .alert)
-        alert.setBackgroundColor(color: .white)
-        alert.setTint(color: .baseColor)
-       
-       alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
-            self.showPaymentForm()
-
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
-            print("User cancelled Payment")
-        }))
-        present(alert, animated: true) {
-            
-        }
-        
-    }
+  
     
     func showPaymentForm(){
         let options: [String:Any] = [
@@ -490,8 +475,8 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         "image": "https://camps.goexploreandaman.com/assets/images/photo/autumn.jpg",
         "name": "AndamanCamps",
         "prefill": [
-                "contact": UserDetails.mobileNumber,
-                "email": UserDetails.email,
+                "contact": Preferrences.getUserMobile(),
+            "email": Preferrences.getUserEmail(),
         ],
         "theme": [
                 "color": "#165096"

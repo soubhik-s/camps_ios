@@ -85,7 +85,7 @@ class BlogDetailsVC: UIViewController {
     }
     
     func CVChanges() {
-        let cellSize = CGSize(width:blog_IMG_CV.frame.width , height:blog_IMG_CV.frame.height)
+        let cellSize = CGSize(width:self.view.frame.width - 20 , height:200)
            let layout = UICollectionViewFlowLayout()
            layout.scrollDirection = .horizontal //.horizontal
            layout.itemSize = cellSize
@@ -116,7 +116,12 @@ class BlogDetailsVC: UIViewController {
     
     @IBAction func comments_SC_Axn(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 1 {
-            showViewFromTop(View: comment_View, height: cmt_View_Height)
+            if Preferrences.getUserLogin() == true {
+                showViewFromTop(View: comment_View, height: cmt_View_Height)
+
+            } else {
+                popUpAlert(title: "Alert", message: "Login to Comment", action: .alert)
+            }
         } else {
             comment_TV.reloadData()
         }
@@ -156,7 +161,7 @@ class BlogDetailsVC: UIViewController {
     func postCommentData() {
         if reach.isConnectedToNetwork() == true {
             self.view.showActivityIndicator()
-            let details = ["user_id":UserDetails.id, "blog_id":BlogVariables.Selected_Id, "name":UserDetails.firstName, "email":UserDetails.email, "message":cmnt_Txt.text! ] as [String:Any]
+            let details = ["user_id":Preferrences.getUserID(), "blog_id":BlogVariables.Selected_Id, "name":Preferrences.getFirstName(), "email":Preferrences.getUserEmail(), "message":cmnt_Txt.text! ] as [String:Any]
                 
             ApiService.postCall(url: ClientInterface.blogCommentsUrl, params: details, methodType: "POST", tag: "Post_Comment", finish:finishPost)
             print("details = \(details)")
@@ -254,16 +259,18 @@ class BlogDetailsVC: UIViewController {
                 let parsedData = try JSONDecoder().decode(CommentResponse.self, from: jsonData)
                 print(parsedData)
                        
-                comment_Arr = parsedData
-                   
-                if comment_Arr.isEmpty == false {
-                    comment_TV.isHidden = false
-                    comment_TV.reloadWithAnimation()
-                } else {
-                        
-                comment_TV.isHidden = true
+                    if parsedData.isEmpty == false {
+                        for commentData in parsedData {
+                            if commentData.status == "1" {
+                                comment_Arr.append(commentData)
 
-                }
+                            }
+                        }
+                        comment_TV.isHidden = false
+                        comment_TV.reloadWithAnimation()
+                    }
+                   
+               
 
                
                 }
@@ -292,7 +299,7 @@ extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource, UICollect
         
         cell.IMG_View.setImage(urlStr: blogImg_Url + IMG_Arr[indexPath.row])
         cell.IMG_View.layer.cornerRadius = 10
-        cell.IMG_View.clipsToBounds = true
+        cell.IMG_View.layer.masksToBounds = true
         cell.myPageCntrl.numberOfPages = IMG_Arr.count
         cell.myPageCntrl.currentPage = indexPath.row
 
@@ -328,9 +335,11 @@ extension BlogDetailsVC : UITableViewDelegate , UITableViewDataSource, UICollect
         } else {
         
         let cellPath = comment_Arr[indexPath.row]
-        cell.textLabel?.text = cellPath.message
-        cell.detailTextLabel?.text = cellPath.name
+                cell.textLabel?.text = cellPath.message
+                cell.detailTextLabel?.text = cellPath.name
 
+            
+       
         
         return cell
         }

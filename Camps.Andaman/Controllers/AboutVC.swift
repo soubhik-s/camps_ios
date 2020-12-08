@@ -49,7 +49,7 @@ class AboutVC: UIViewController {
 extension AboutVC: UITableViewDelegate, UITableViewDataSource, DetailsDelegate {
     
     func onIndexTapped() {
-        let VC = self.storyboard?.instantiateViewController(identifier: "SelfDetailsVC") as! SelfDetailsVC
+        let VC = self.storyboard?.instantiateViewController(withIdentifier: "SelfDetailsVC") as! SelfDetailsVC
     
         VC.modalPresentationStyle = .fullScreen
         present(VC, animated: true) {

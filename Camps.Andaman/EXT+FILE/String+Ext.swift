@@ -64,7 +64,11 @@ extension String {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         return NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: self)
     }
-
+    
+    func isOnlyAlphabets() -> Bool {
+        let regex = "[a-zA-Z\\s]+"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: self)
+    }
     func toImage() -> UIImage? {
         if let data = Data(base64Encoded: self, options: .ignoreUnknownCharacters){
             return UIImage(data: data)

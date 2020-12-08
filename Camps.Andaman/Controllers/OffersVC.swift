@@ -126,12 +126,8 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     
     let cellPath = dataArr[indexPath.row]
    
-   
-    cell.myPage.isHidden = true
         cell.Img_View.setImage(urlStr: ClientConfig.offerIMGUrl + cellPath.offersImageName)
-        cell.myPage.numberOfPages = dataArr.count
-        cell.myPage.currentPage = indexPath.row
-        cell.offerCode_Lbl.text = "Code : \(cellPath.couponCode)"
+       cell.offerCode_Lbl.text = "Code : \(cellPath.couponCode)"
         cell.titleLbl.text = cellPath.couponName
         cell.expiryLbl.text = "Expires  : \(cellPath.validTo)"
         cell.discount_Lbl.text = "Discount : \(cellPath.discountOffers) %"

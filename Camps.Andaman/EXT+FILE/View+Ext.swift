@@ -47,8 +47,9 @@ extension UIView {
     }
         
     func makeRound() {
-            self.layer.cornerRadius = self.frame.height/2
-        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.cornerRadius = self.frame.height/2
+        self.layer.masksToBounds = true
+//        self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 0.1
 
     }

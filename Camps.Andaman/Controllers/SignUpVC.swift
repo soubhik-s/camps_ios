@@ -21,8 +21,10 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var mobileTF: UITextField!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var mobileView: UIView!
+    @IBOutlet weak var DOB_View: UIView!
     
     @IBOutlet weak var DOB_TF: UITextField!
+    @IBOutlet weak var location_View: UIView!
     @IBOutlet weak var location_TF: UITextField!
     var user_Gender = "Male"
     override func viewDidLoad() {
@@ -33,13 +35,15 @@ class SignUpVC: UIViewController {
     }
     
     func viewChanges() {
-        mobileTF.text = UserDetails.mobileNumber
+        mobileTF.text = Preferrences.getUserMobile()
         passwordView.makeRound()
         first_View.makeRound()
         last_View.makeRound()
         emailView.makeRound()
         mobileView.makeRound()
         signUpBtn.makeRound()
+        DOB_View.makeRound()
+        location_View.makeRound()
     }
     
 
@@ -69,10 +73,14 @@ class SignUpVC: UIViewController {
         if emailTF.text == "" || passwordTF.text == "" || mobileTF.text == "" || firstName_Tf.text == "" || lastName_TF.text == "" || DOB_TF.text == "" {
         signUpBtn.shake()
         popUpAlert(title: "Alert", message: "Enter all Details", action: .alert)
-        
+      
+        } else if firstName_Tf.text!.isOnlyAlphabets() == false || lastName_TF.text!.isOnlyAlphabets() == false {
+            popUpAlert(title: "Alert", message: "Name - Enter only Alphabets", action: .alert)
+
         } else if emailTF.text?.isValidEmail() == false {
         signUpBtn.shake()
         popUpAlert(title: "Alert", message: "Enter a Valid Email", action: .alert)
+        
         } else {
         postData()
         }
@@ -125,10 +133,10 @@ class SignUpVC: UIViewController {
              mobileTF.text = ""
             DOB_TF.text = ""
             location_TF.text = ""
-        
-            popUpAlert(title: "Success", message: "Registration Completed", action: .alert)
             let VC = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
             self.navigationController?.pushViewController(VC, animated: true)
+            popUpAlert(title: "Success", message: "Registration Completed", action: .alert)
+          
         } else {
         popUpAlert(title: "Alert", message: "Error_Cheeck Details", action: .alert)
         }

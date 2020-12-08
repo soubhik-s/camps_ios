@@ -240,7 +240,7 @@ struct LoginData:Decodable {
     let user_email:String
     let mobile_number:String
     let status:String
-    
+    let dob:String
 
     
 }

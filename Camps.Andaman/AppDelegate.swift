@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import IQKeyboardManagerSwift
-import SideMenu
+//import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
 
 
+        
         setupKeyboardManager()
 //      MARK:Network Monitor
 //        ReachabilityManager.shared.startMonitoring()

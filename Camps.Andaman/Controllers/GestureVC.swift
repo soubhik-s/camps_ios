@@ -79,7 +79,7 @@ class GestureVC: UIViewController {
     
     
     func CVChanges() {
-        let cellSize = CGSize(width:gestureCV.frame.width , height:gestureCV.frame.height)
+        let cellSize = CGSize(width:self.view.frame.width - 20 , height:190)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
@@ -344,14 +344,9 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! GetureDetailsCVC
-        if img_Arr.count > 1 {
-            cell.myPageCntrl.isHidden = false
             cell.myPageCntrl.numberOfPages = img_Arr.count
-
-        } else {
-            cell.myPageCntrl.isHidden = true
-
-        }
+            cell.myPageCntrl.currentPage = indexPath.item
+       
         
         if GestureVariables.isGesture == true {
             cell.IMG_View.setImage(urlStr: gestureIMGUrl + img_Arr[indexPath.row])
@@ -362,6 +357,7 @@ extension GestureVC : UITableViewDelegate , UITableViewDataSource ,  UICollectio
         }
         
         cell.IMG_View.layer.cornerRadius = 10
+        cell.IMG_View.clipsToBounds = true
         
         return cell
     }

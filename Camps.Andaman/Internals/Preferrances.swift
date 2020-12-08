@@ -40,6 +40,81 @@ class Preferrences {
     
     }
     
+    class func setUserDOB(type: String) {
+        UserDefaults.standard.set(type, forKey: "DOB")
+    }
+    
+    class func getUserDOB() -> String {
+      
+    if let type: String = UserDefaults.standard.string(forKey: "DOB") {
+    return type
+    
+    } else {
+    return ""
+    }
+    
+    }
+    class func setIPAddress(type: String) {
+        UserDefaults.standard.set(type, forKey: "IP_Address")
+    }
+    
+    class func getIPAddress() -> String {
+      
+    if let type: String = UserDefaults.standard.string(forKey: "IP_Address") {
+    return type
+    
+    } else {
+    return ""
+    }
+    
+    }
+    
+    
+    
+    class func setFirstName(type: String) {
+        UserDefaults.standard.set(type, forKey: "firstName")
+    }
+    
+    class func getFirstName() -> String {
+      
+    if let type: String = UserDefaults.standard.string(forKey: "firstName") {
+    return type
+    
+    } else {
+    return ""
+    }
+    
+    }
+    
+    class func setUserMobile(type: String) {
+        UserDefaults.standard.set(type, forKey: "userMobile")
+    }
+    
+    class func getUserMobile() -> String {
+      
+    if let type: String = UserDefaults.standard.string(forKey: "userMobile") {
+    return type
+    
+    } else {
+    return ""
+    }
+    
+    }
+    
+    class func setLastName(type: String) {
+        UserDefaults.standard.set(type, forKey: "lastName")
+    }
+    
+    class func getLastName() -> String {
+      
+    if let type: String = UserDefaults.standard.string(forKey: "lastName") {
+    return type
+    
+    } else {
+    return ""
+    }
+    
+    }
     class func setUserIMG(type: String) {
    
     UserDefaults.standard.set(type, forKey: "user_Img")
@@ -99,6 +174,17 @@ class Preferrences {
     
     class func getInstalled() -> Bool {
         let status: Bool = UserDefaults.standard.bool(forKey: "is_installed")
+        return status
+    }
+    
+    class func setUserLogin(status: Bool) {
+        UserDefaults.standard.set(status, forKey: "is_LoggedIn")
+    }
+    
+
+    
+    class func getUserLogin() -> Bool {
+        let status: Bool = UserDefaults.standard.bool(forKey: "is_LoggedIn")
         return status
     }
         

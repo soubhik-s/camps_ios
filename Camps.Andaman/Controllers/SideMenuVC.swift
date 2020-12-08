@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SideMenu
+//import SideMenu
 class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     
-    @IBOutlet weak var userIMGView: UIImageView!
     
+    @IBOutlet weak var login_Btn: UIButton!
     
     @IBOutlet weak var dataTV: UITableView!
     
@@ -26,8 +26,8 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var insta_Btn: UIButton!
     @IBOutlet weak var fb_Btn: UIButton!
     
-    var menuList = ["My Dashborad", "Profile","Blog","Benefits" , "Why Choose us..?", "Health Guidelines","Customer Support", "About Us", "FAQ's","Policy","Logout"]
-    var IMGList = ["Dashboard","profile","blog","fire2","why", "icons8-virus-free-30", "support_1","About","FAQ's","insurance", "Logout"]
+    var menuList = ["My Dashborad", "Profile","Blog","Benefits" , "Why Choose us..?", "Health Guidelines","Customer Support", "About Us", "FAQ's","Policy"]
+    var IMGList = ["Dashboard","profile","blog","fire2","why", "icons8-virus-free-30", "support_1","About","FAQ's","insurance"]
     
     let covid_Url = "https://camps.goexploreandaman.com/camp_covid19"
     
@@ -44,6 +44,16 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     func viewChanges() {
         
+        if Preferrences.getUserLogin() == true {
+            login_Btn.setTitle("Logout", for: .normal)
+            login_Btn.tag = 1
+            
+        } else {
+            login_Btn.tag = 0
+
+            login_Btn.setTitle("Login", for: .normal)
+
+        }
 //        let gifImage = UIImage.gifImageWithName(name: "Camps2")
 //        userIMGView.image = gifImage
         dataTV.rowHeight = 50
@@ -52,6 +62,19 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
    
+    @IBAction func loginBtn_Axn(_ sender: UIButton) {
+        if sender.tag == 1 {
+            login_Btn.tag = 0
+
+            login_Btn.setTitle("Login", for: .normal)
+            Preferrences.setUserLogin(status: false)
+            popUpAlert(title: "Alert", message: "Looged Out", action: .alert)
+        } else {
+        let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(VC, animated: true)
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -73,16 +96,26 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
      
         switch indexPath.row {
         case 0:
-            let VC = self.storyboard?.instantiateViewController(withIdentifier: "DashBoardVC") as! DashBoardVC
-            self.navigationController?.pushViewController(VC, animated: true)
+            
+            if Preferrences.getUserLogin() == true {
+                let VC = self.storyboard?.instantiateViewController(withIdentifier: "DashBoardVC") as! DashBoardVC
+                self.navigationController?.pushViewController(VC, animated: true)
+            } else {
+                popUpAlert(title: "Alert", message: "Login to Check the Dashboard Details", action: .alert)
+            }
+          
             
             
         case 1 :
             
+            if Preferrences.getUserLogin() == true {
             let VC = self.storyboard?.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsVC
             VC.modalPresentationStyle = .fullScreen
             present(VC, animated: true) {
                 
+            }
+            } else {
+                popUpAlert(title: "Alert", message: "Login to View Profile Details", action: .alert)
             }
         case 2 :
         
@@ -171,11 +204,7 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                        
         }
             
-        case 10 :
-            
-            let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            
-            self.navigationController?.pushViewController(VC, animated: true)
+        
         default:
             break
         }

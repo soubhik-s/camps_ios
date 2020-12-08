@@ -60,22 +60,13 @@ class SettingsVC: UIViewController {
         newPass_View.makeRound()
         doneBtn.makeBtnRound()
         
-        if UserDetails.email != "" {
-        email_TF.text = UserDetails.email
-        mobile_TF.text = UserDetails.mobileNumber
-        firstName_TF.text = UserDetails.firstName
-        lastName_TF.text = UserDetails.lastName
+        if Preferrences.getUserLogin() == true {
+            email_TF.text = Preferrences.getUserEmail()
+            mobile_TF.text = Preferrences.getUserMobile()
+            firstName_TF.text = Preferrences.getFirstName()
+            lastName_TF.text = Preferrences.getLastName()
         }
         
-        if Preferrences.getUserID() == UserDetails.id {
-            if Preferrences.getUserIMG() != "" {
-                
-            } else {
-                print("Imgae is nill")
-            }
-        } else {
-            print("ID Doesnt Match")
-        }
         
        
         oldPass_View.isHidden = true
@@ -209,7 +200,7 @@ class SettingsVC: UIViewController {
     func updateProfile() {
        if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-        let details = ["user_id":UserDetails.id, "first_name":firstName_TF.text!, "last_name":lastName_TF.text!, "email":email_TF.text! , "mobile_number":mobile_TF.text! ] as [String:Any]
+        let details = ["user_id":Preferrences.getUserID(), "first_name":firstName_TF.text!, "last_name":lastName_TF.text!, "email":email_TF.text! , "mobile_number":mobile_TF.text! ] as [String:Any]
         ApiService.postCall(url: ClientInterface.registrationUrl, params: details, methodType: "PUT", tag: "Profile", finish:finishPost)
         print("details = \(details)")
    
@@ -225,7 +216,7 @@ class SettingsVC: UIViewController {
                                
        if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-        let details = ["user_id":UserDetails.id, "old_password":oldPassTF.text!, "new_password":newPassTF.text!] as [String:Any]
+        let details = ["user_id":Preferrences.getUserID(), "old_password":oldPassTF.text!, "new_password":newPassTF.text!] as [String:Any]
         ApiService.postCall(url: ClientInterface.changePasswordUrl, params: details, methodType: "POST", tag: "Change", finish:finishPost)
         print("details = \(details)")
         } else {
@@ -247,10 +238,11 @@ class SettingsVC: UIViewController {
             if tag == "Profile" {
             popUpAlert(title: "Success", message: "Profile Updated ", action: .alert)
 
-                UserDetails.firstName = firstName_TF.text!
-                UserDetails.lastName = lastName_TF.text!
-                UserDetails.email = email_TF.text!
-                UserDetails.mobileNumber = mobile_TF.text!
+                Preferrences.setFirstName(type: firstName_TF.text!)
+                Preferrences.setLastName(type: lastName_TF.text!)
+                Preferrences.setUserMobile(type: mobile_TF.text!)
+                Preferrences.setUserEmail(type: email_TF.text!)
+             
             } else {
                 oldPass_View.isHidden = true
                 newPass_View.isHidden = true

@@ -164,9 +164,27 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         
         if streetTF.text == "" || countryTF.text == "" || stateTF.text == "" || stateTF.text == "" || cityTF.text == "" || pincodeTF.text == "" {
         popUpAlert(title: "Alert", message: "Enter All Details", action: .alert)
+       
+        } else if cityTF.text!.isOnlyAlphabets() == false {
+            
+            popUpAlert(title: "Alert", message: "Enter valid City ", action: .alert)
+
+        } else if stateTF.text!.isOnlyAlphabets() == false {
+            
+            popUpAlert(title: "Alert", message: "Enter valid State  ", action: .alert)
+
+        } else if countryTF.text!.isOnlyAlphabets() == false {
+            
+            popUpAlert(title: "Alert", message: "Enter valid Country  ", action: .alert)
+
+        } else if pincodeTF.text!.count != 6 {
+            popUpAlert(title: "Alert", message: "Enter valid PIN Code ", action: .alert)
+
+        
         } else {
             
             BookingDetails.parent_id_number = parents_ID_TF.text!
+            BookingDetails.id_number = ID_Card_Number.text!
             BookingDetails.gst_number = GST_Number_TF.text!
             BookingDetails.company_name = companyName_TF.text!
             BookingDetails.company_address = company_Address_TF.text!

@@ -86,7 +86,7 @@ class ApplicationFormVC3: UIViewController {
 
     let priceViewHeight: CGFloat = 240
     
-    
+    var copoun_Code = ""
     
     var basic_Price = 0.0
     var discount_Price = 0.0
@@ -158,7 +158,7 @@ class ApplicationFormVC3: UIViewController {
 
         }
         if BookingDetails.parent_back_id_card.isEmpty == false {
-            img_Key_Arr.append(BookingDetails.back_id_card)
+            img_Key_Arr.append(BookingDetails.parent_back_id_card)
             IMG_Data_Arr.append(BookingDetails.P_ID_Back_IMG)
         } else {
             print("NO Parent Back IMG")
@@ -209,15 +209,7 @@ class ApplicationFormVC3: UIViewController {
 
         final_Price = Int(net_Price + tax_Price)
         
-//        net_Price = basic_Price + tax_Price
-//        final_Price = net_Price - discount_Price
-//        basePrice_Lbl.text = "\(basic_Price.rounded()) "
-//        dPrice_Lbl.text = "\(discount_Price.rounded()) "
-//        net_Price_Lbl.text = "\(net_Price.rounded()) "
-//        taxPrice_Lbl.text = "\(tax_Price.rounded()) "
-//        totalPrice_Lbl.text = "\(final_Price.rounded()) "
-//        price_Lbl.text = "\(final_Price.rounded()) "
-//
+
         dPrice_Lbl.text = "\(discount_Price.rounded())"
         net_Price_Lbl.text = "\(net_Price)"
         taxPrice_Lbl.text = "\(tax_Price)"
@@ -305,7 +297,35 @@ class ApplicationFormVC3: UIViewController {
     @IBAction func submitBtn_Axn(_ sender: UIButton) {
        if p_FirstNameTF.text == "" || p_LastNameTF.text == "" || p_MobileTF.text == "" || alt_NumberTF.text == "" || P_EmailTF.text == "" || callType_TF.text == "" || callLink_TF.text == "" || callTime_TF.text == "" || p_street_TF.text == "" || p_Country_TF.text == "" || p_State_TF.text == "" || p_City_TF.text == "" || p_pincode_TF.text == "" {
         popUpAlert(title: "Alert", message: "Enter All Detials", action: .alert)
-        } else if isChecked == false  {
+       
+       } else if p_FirstNameTF.text!.isOnlyAlphabets() == false || p_LastNameTF.text!.isOnlyAlphabets() == false {
+        popUpAlert(title: "Alert", message: "Names must be Alphabets", action: .alert)
+       
+       } else if p_MobileTF.text!.isValidContact() == false {
+        popUpAlert(title: "Alert", message: "Enter a valid Mobile Number", action: .alert)
+
+       } else if alt_NumberTF.text!.isValidContact() == false {
+        popUpAlert(title: "Alert", message: "Enter a valid Alt-Mobile Number", action: .alert)
+
+       } else if P_EmailTF.text!.isValidEmail() == false {
+        
+        popUpAlert(title: "Alert", message: "Enter a valid Email ", action: .alert)
+      
+       } else if p_Country_TF.text!.isOnlyAlphabets() == false {
+        
+        popUpAlert(title: "Alert", message: "Enter a valid Countrye ", action: .alert)
+
+       } else if p_State_TF.text!.isOnlyAlphabets() == false {
+        
+        popUpAlert(title: "Alert", message: "Enter a valid State ", action: .alert)
+
+       } else if p_pincode_TF.text!.count  != 6 {
+        
+        popUpAlert(title: "Alert", message: "Enter a vlaid Pincode ", action: .alert)
+
+       
+        
+       } else if isChecked == false  {
         popUpAlert(title: "Alert", message: "Select Terms & Conditions", action: .alert)
 
        } else {
@@ -317,16 +337,15 @@ class ApplicationFormVC3: UIViewController {
     func postData()  {
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-          
-            let details = ["ip_address":BookingDetails.ip_address, "user_id":BookingDetails.user_id, "package_id":BookingDetails.package_id, "package_name":BookingDetails.package_name, "price":basePrice_Lbl.text! , "offer_price":dPrice_Lbl.text! , "total_price":totalPrice_Lbl.text! , "quantity":"1", "seasonal_camp":BookingDetails.seasonal_camp, "camp_batch":BookingDetails.camp_batch, "first_name":BookingDetails.first_name, "middle_name":"", "last_name":BookingDetails.last_name, "dob":BookingDetails.DOB, "gender":BookingDetails.gender, "height":BookingDetails.height, "weight":BookingDetails.weight, "tshirt_size":BookingDetails.tshirt_size, "mother_tonque":BookingDetails.mother_tonque, "citizenship":BookingDetails.citizenship, "mobile_number":BookingDetails.mobile_number, "email":BookingDetails.email, "address":BookingDetails.street, "city":BookingDetails.city,  "country":BookingDetails.country, "pincode":BookingDetails.pincode, "medical_info":BookingDetails.medical_info, "medical_details":BookingDetails.medical_details, "treatments":BookingDetails.treatments, "treatments_details":BookingDetails.treatments_details, "p_first_name":p_FirstNameTF.text!, "p_middle_name":"", "p_last_name":p_LastNameTF.text!, "p_mobile_number":p_MobileTF.text!, "p_alt_mobile_number":alt_NumberTF.text!, "p_email":P_EmailTF.text!, "video_call":callType_TF.text!, "video_call_link":callLink_TF.text!, "weekend_call":weekendCall, "time_for_call":callTime_TF.text!, "parent_address":parent_Address, "p_address":p_street_TF.text!, "p_city":p_City_TF.text!, "p_country":p_Country_TF.text!, "p_pincode":p_pincode_TF.text!, "additional_details":addInfo_TF.text!,  "coupon_code":code_TF.text!, "siblings_info":BookingDetails.siblingsInfo ,  "siblings_first_name":BookingDetails.siblingsFName, "siblings_middle_name":"", "siblings_last_name":BookingDetails.siblingsLName, "siblings_gender":BookingDetails.siblingsGender, "siblings_mobile_number":BookingDetails.siblingsMobile, "siblings_email":BookingDetails.siblingsEmail,
+           
+            let details = ["ip_address":BookingDetails.ip_address, "user_id":BookingDetails.user_id, "package_id":BookingDetails.package_id, "package_name":BookingDetails.package_name, "price":basePrice_Lbl.text! , "offer_price":dPrice_Lbl.text! , "total_price":totalPrice_Lbl.text! , "quantity":"1", "seasonal_camp":BookingDetails.seasonal_camp, "camp_batch":BookingDetails.camp_batch, "first_name":BookingDetails.first_name, "middle_name":"", "last_name":BookingDetails.last_name, "dob":BookingDetails.DOB, "gender":BookingDetails.gender, "height":BookingDetails.height, "weight":BookingDetails.weight, "tshirt_size":BookingDetails.tshirt_size, "mother_tonque":BookingDetails.mother_tonque, "citizenship":BookingDetails.citizenship, "mobile_number":BookingDetails.mobile_number, "email":BookingDetails.email, "address":BookingDetails.street, "city":BookingDetails.city,  "country":BookingDetails.country, "pincode":BookingDetails.pincode, "medical_info":BookingDetails.medical_info, "medical_details":BookingDetails.medical_details, "treatments":BookingDetails.treatments, "treatments_details":BookingDetails.treatments_details, "p_first_name":p_FirstNameTF.text!, "p_middle_name":"", "p_last_name":p_LastNameTF.text!, "p_mobile_number":p_MobileTF.text!, "p_alt_mobile_number":alt_NumberTF.text!, "p_email":P_EmailTF.text!, "video_call":callType_TF.text!, "video_call_link":callLink_TF.text!, "weekend_call":weekendCall, "time_for_call":callTime_TF.text!, "parent_address":parent_Address, "p_address":p_street_TF.text!, "p_city":p_City_TF.text!, "p_country":p_Country_TF.text!, "p_pincode":p_pincode_TF.text!, "additional_details":addInfo_TF.text!,  "coupon_code":copoun_Code, "siblings_info":BookingDetails.siblingsInfo ,  "siblings_first_name":BookingDetails.siblingsFName, "siblings_middle_name":"", "siblings_last_name":BookingDetails.siblingsLName, "siblings_gender":BookingDetails.siblingsGender, "siblings_mobile_number":BookingDetails.siblingsMobile, "siblings_email":BookingDetails.siblingsEmail,
                 "parent_id_number":BookingDetails.parent_id_number , "id_number":BookingDetails.id_number , "gst_number":BookingDetails.gst_number , "company_address":BookingDetails.company_address , "company_name":BookingDetails.company_name
             ]
             
             ApiService.uploadMultipleIMGwithParam(parameters: details, imageKey: img_Key_Arr, imgArr: IMG_Data_Arr, methodType: "POST", url: ClientInterface.bookingUrl, tag: "Booking", finish: finishPost)
             
 
-//            ApiService.uploadSingleIMGwithParam(parameters: details, imageKey: img_Key_Arr[0], imageData: IMG_Data_Arr[0], methodType: "POST", url: ClientInterface.bookingUrl, tag: "Booking", finish: finishPost)
-         print("details = \(details)")
+      print("details = \(details)")
             
         } else {
         popUpAlert(title: "Alert", message: "Check Internet Connection.", action: .alert)
@@ -361,11 +380,14 @@ class ApplicationFormVC3: UIViewController {
                     discount_Price = basic_Price * 0.01 * discount
                     print("discount_Price = \(discount_Price)")
                     calculatePrices()
-
+                    copoun_Code = code_TF.text!
                     popUpAlert(title: parsedData.message, message: "", action: .alert)
               
                 
                 } else {
+                    copoun_Code = ""
+                    discount_Price = 0.0
+                    calculatePrices()
                     code_TF.shake()
                     copoun_Img.isHidden =  false
                     copoun_Img.image = UIImage(named: "cross2")

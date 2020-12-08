@@ -23,21 +23,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let winScene = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-           
-            if Preferrences.getInstalled() == true {
-                let Home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController") as! ViewController
-                let navigation = UINavigationController(rootViewController: Home)
-                navigation.navigationBar.isHidden = true
-                window.rootViewController = navigation
+            if reach.isConnectedToNetwork() == true {
+                if Preferrences.getInstalled() == true {
+                    let Home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+                    let navigation = UINavigationController(rootViewController: Home)
+                    navigation.navigationBar.isHidden = true
+                    window.rootViewController = navigation
 
+                } else {
+                    let Home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SlidesVC") as! SlidesVC
+                    let navigation = UINavigationController(rootViewController: Home)
+                    navigation.navigationBar.isHidden = true
+                    window.rootViewController = navigation
+
+                }
             } else {
-                let Home = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SlidesVC") as! SlidesVC
-                let navigation = UINavigationController(rootViewController: Home)
-                navigation.navigationBar.isHidden = true
-                window.rootViewController = navigation
-
+                
+                let alert = UIAlertController(title: "Alert", message: "Check Internet Connection", preferredStyle: .alert)
+                let okBtn = UIAlertAction(title: "OK", style: .default) { (UIAlertAction) in
+                }
+                alert.addAction(okBtn)
+                window.rootViewController?.present(alert, animated: true, completion: {
+                    
+                })
             }
-           
             self.window = window
             window.makeKeyAndVisible()
         

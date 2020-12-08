@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         emailView.makeRound()
         passwordView.makeRound()
         loginBtn.makeRound()
-        AppUpdater.shared.showUpdate(withConfirmation: true)
+//        AppUpdater.shared.showUpdate(withConfirmation: true)
 
     }
     
@@ -145,14 +145,25 @@ class ViewController: UIViewController {
                 
                 if parsedData.status == true {
    
+                    Preferrences.setUserLogin(status: true)
                 userInfo()
-                UserDetails.email = emailTF.text!
-                UserDetails.firstName = parsedData.data.first_name
-                UserDetails.lastName = parsedData.data.last_name
-                UserDetails.password = passwordTF.text!
-                UserDetails.mobileNumber = parsedData.data.mobile_number
-                UserDetails.id = parsedData.data.id
-                
+               
+//                    UserDetails.email = emailTF.text!
+//                UserDetails.firstName = parsedData.data.first_name
+//                UserDetails.lastName = parsedData.data.last_name
+//                UserDetails.password = passwordTF.text!
+//                UserDetails.mobileNumber = parsedData.data.mobile_number
+//                UserDetails.id = parsedData.data.id
+//                  
+                    
+                    Preferrences.setFirstName(type: parsedData.data.first_name)
+                    Preferrences.setLastName(type: parsedData.data.last_name)
+                    Preferrences.setUserPass(type: passwordTF.text!)
+                    Preferrences.setUserEmail(type: emailTF.text!)
+                    Preferrences.setUserMobile(type: parsedData.data.mobile_number)
+                    Preferrences.setUserID(type: parsedData.data.id)
+                    Preferrences.setUserDOB(type: parsedData.data.dob)
+
        
                 let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 self.navigationController?.pushViewController(VC, animated: true)

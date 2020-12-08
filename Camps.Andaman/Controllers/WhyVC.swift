@@ -145,24 +145,26 @@ extension WhyVC: UITableViewDelegate , UITableViewDataSource {
 
         let title_label = UILabel(frame: CGRect(x: 0, y: 0, width: returnedView.frame.width , height: 25))
         
-        let subtitle_label = UILabel(frame: CGRect(x: 0, y: 30, width: returnedView.frame.width , height: 25))
+        let subtitle_label = UILabel(frame: CGRect(x: 0, y: 25, width: returnedView.frame.width , height: 25))
         
         title_label.textColor = .white
-        title_label.backgroundColor = .clear
+        title_label.backgroundColor = .baseColor
         title_label.textAlignment = .center
                
-        title_label.font = UIFont(name: "Optima", size: 17)
+        title_label.font = UIFont(name: "Optima", size: 14)
             
         subtitle_label.textColor = .white
                     
-        subtitle_label.backgroundColor = .clear
+        subtitle_label.backgroundColor = .baseColor
         subtitle_label.textAlignment = .center
                           
-        subtitle_label.font = UIFont(name: "Optima-Italic", size: 14)
+        subtitle_label.font = UIFont(name: "Optima-Italic", size: 12)
                     
         subtitle_label.layer.cornerRadius = 5
         subtitle_label.clipsToBounds = true
-               
+        title_label.layer.cornerRadius = 5
+        title_label.clipsToBounds = true
+
 
                
         

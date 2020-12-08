@@ -81,10 +81,10 @@ class ApplicatonFormVC1: UIViewController {
         picker.tintColor = .black
         picker.delegate = self
         picker.dataSource = self
-        firstNameTF.text = UserDetails.firstName
-        lastNameTF.text = UserDetails.lastName
-        mobileTF.text = UserDetails.mobileNumber
-        emailTF.text = UserDetails.email
+        firstNameTF.text = Preferrences.getFirstName()
+        lastNameTF.text = Preferrences.getLastName()
+        mobileTF.text = Preferrences.getUserMobile()
+        emailTF.text = Preferrences.getUserEmail()
         sibling_SV.isHidden = true
         seasonActivity()
         if BookingDetails.age_Group == "Adult" {
@@ -207,7 +207,9 @@ class ApplicatonFormVC1: UIViewController {
     @IBAction func nextBtnAxn(_ sender: UIButton) {
         if seasonTF.text == "" || batchTF.text == "" || firstNameTF.text == "" || lastNameTF.text == "" || mobileTF.text == "" || emailTF.text == "" || DOBTF.text == "" || weightTF.text == "" || heightTF.text == "" || citizenShipTF.text == "" || TshirtTF.text == "" || motherTongueTF.text == "" {
         popUpAlert(title: "Alert", message: "Enter All Details", action: .alert)
-        
+        } else if firstNameTF.text!.isOnlyAlphabets() == false || lastNameTF.text!.isOnlyAlphabets() == false  {
+            popUpAlert(title: "Alert", message: "Names must be Alphabets", action: .alert)
+
         } else if mobileTF.text!.isValidContact() == false {
         sender.shake()
         popUpAlert(title: "Alert", message: "Enter a Valid Mobile Number", action: .alert)
@@ -221,19 +223,34 @@ class ApplicatonFormVC1: UIViewController {
         } else if weightTF.text!.count > 3 || heightTF.text!.count > 3 {
             sender.shake()
             popUpAlert(title: "Weight/Height", message: "Not morethan 3 digits", action: .alert)
+        } else if citizenShipTF.text!.isOnlyAlphabets() == false {
+            popUpAlert(title: "Alert", message: "CitizenShip must be Alphabets", action: .alert)
+        } else if motherTongueTF.text!.isOnlyAlphabets() == false {
+            popUpAlert(title: "Alert", message: "Mother Tongue must be Alphabets", action: .alert)
+
+        
         } else if isSibling == true {
       
              if sibling_FName_TF.text == "" {
                 popUpAlert(title: "Alert", message: "Enter Sibling's FirstName", action: .alert)
+             } else if sibling_FName_TF.text!.isOnlyAlphabets() == false   {
+                popUpAlert(title: "Sibling Firstname", message: "Should be Alphabets", action: .alert)
 
-            } else if sibling_LName_TF.text == "" {
+             
+            } else if sibling_LName_TF.text! == "" {
                 popUpAlert(title: "Alert", message: "Enter Sibling's LastName", action: .alert)
+             } else if sibling_LName_TF.text!.isOnlyAlphabets() == false {
+                popUpAlert(title: "Sibling lastName", message: "Should be Alphabets", action: .alert)
 
-            } else if sibling_MobileTF.text == "" {
-                popUpAlert(title: "Alert", message: "Enter Sibling's Mobile", action: .alert)
+            } else if sibling_MobileTF.text! == "" {
+                popUpAlert(title: "Alert", message: "Enter Sibling's Mobile Number ", action: .alert)
+            } else if sibling_MobileTF.text!.isValidContact() == false {
+                popUpAlert(title: "Alert", message: "Enter valid Sibling's Mobile Number", action: .alert)
 
             } else if sibling_EmailTF.text == "" {
                 popUpAlert(title: "Alert", message: "Enter Sibling's Email", action: .alert)
+            } else if sibling_EmailTF.text!.isValidEmail() == false {
+                popUpAlert(title: "Alert", message: "Enter valid  Sibling's Email", action: .alert)
 
             } else  {
                 
@@ -281,7 +298,7 @@ class ApplicatonFormVC1: UIViewController {
     func postDetails() {
        
              
-        BookingDetails.user_id = UserDetails.id
+        BookingDetails.user_id = Preferrences.getUserID()
         BookingDetails.seasonal_camp = seasonTF.text!
         BookingDetails.camp_batch = batchTF.text!
         BookingDetails.first_name = firstNameTF.text!

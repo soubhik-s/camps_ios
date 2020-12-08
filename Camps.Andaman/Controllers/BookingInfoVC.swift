@@ -92,7 +92,12 @@ class BookingInfoVC: UIViewController {
     }
     
     func getData()  {
-                                
+                   
+        photo_IMGView.layer.cornerRadius = 10
+        front_IMGView.layer.cornerRadius = 10
+        back_IMGView.layer.cornerRadius = 10
+        P_Front_IMGView.layer.cornerRadius = 10
+        P_Back_IMGView.layer.cornerRadius = 10
          if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
             
@@ -189,12 +194,9 @@ class BookingInfoVC: UIViewController {
                 self.subView.transform = CGAffineTransform(scaleX: 1, y: 1)
                 }, completion: nil)
                     
-                  
-                
                 }
-                } else {
-                getData()
             }
+                
             } catch {
             popUpAlert(title: "Alert", message: "Failed to send Password. Try Again. ", action: .alert)
             print("Parse Error: \(error)")
