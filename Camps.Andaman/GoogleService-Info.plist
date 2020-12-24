@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>796695878368-glalc363a5gvp835me3kt624irga77uo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.796695878368-glalc363a5gvp835me3kt624irga77uo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA2-Pl-JrQygQjUzr2ypNvPzH3hfZaJvzI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>796695878368</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.AndamanCamps</string>
+	<key>PROJECT_ID</key>
+	<string>camps-c6eae</string>
+	<key>STORAGE_BUCKET</key>
+	<string>camps-c6eae.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:796695878368:ios:b79e29a3a0dd0b59d70e85</string>
+</dict>
+</plist>

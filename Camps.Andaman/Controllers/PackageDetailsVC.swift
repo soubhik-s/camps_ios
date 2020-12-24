@@ -46,6 +46,7 @@ class PackageDetailsVC: UIViewController {
     
     func viewChanges() {
         CVChanges()
+        checkInternet()
 
         ititneraryView.makeRound()
 

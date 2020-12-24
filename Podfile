@@ -21,4 +21,6 @@ pod 'MarqueeLabel'
 pod 'ReachabilitySwift'
 pod 'SideMenu', '~> 6.0'
 pod 'razorpay-pod', '~> 1.1.1'
+pod 'Firebase/Analytics'
+
 end

@@ -17,18 +17,103 @@ var iconClick:Bool = false
 extension UIViewController {
     // open Gallery
     
+//    func openGallery() {
+//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
+//            let imagePicker = UIImagePickerController()
+//            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+////            imagePicker.allowsEditing = true
+//            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+//            self.present(imagePicker, animated: true, completion: nil)
+//        } else {
+//
+//            popUpAlert(title: "Alert", message: "You don't have Access", action: .alert)
+//        }
+//    }
+    
     func openGallery() {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-//            imagePicker.allowsEditing = true
-            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-            self.present(imagePicker, animated: true, completion: nil)
-        } else {
-            
-            popUpAlert(title: "Alert", message: "You don't have Access", action: .alert)
-        }
+           
+           let alertController : UIAlertController = UIAlertController(title: "Upload Image", message: "Select Camera or Photo Library", preferredStyle: .actionSheet)
+           
+          alertController.setTitlet(font: UIFont(name: "Raleway", size: 14), color: .red)
+                
+           alertController.setMessage(font: UIFont(name: "Raleway", size: 12), color: .black)
+
+           alertController.setBackgroundColor(color: .white)
+        alertController.setTint(color: .baseColor)
+           
+           let cameraAction : UIAlertAction = UIAlertAction(title: "Camera", style: .default, handler: {(cameraAction) in
+                   print("camera Selected...")
+
+           if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) == true {
+               self.selectImageFrom(.camera)
+
+           } else{
+               self.popUpAlert(title: "Alert", message: "Camera is not available or access denied", action: .alert)
+
+           }
+
+           })
+
+           let libraryAction : UIAlertAction = UIAlertAction(title: "Photo Library", style: .default, handler: {(libraryAction) in
+               print("Photo library selected....")
+
+           if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) == true {
+               self.selectImageFrom(.photoLibrary)
+
+           } else{
+               self.popUpAlert(title: "Alert", message: "Libary is not available or access denied", action: .alert)
+
+           }
+           })
+           
+           let cancelAction : UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel , handler: {(cancelActn) in
+               print("Cancel action was pressed")
+           
+           })
+
+           alertController.addAction(cameraAction)
+           alertController.addAction(libraryAction)
+           alertController.addAction(cancelAction)
+           alertController.popoverPresentationController?.sourceView = view
+           alertController.popoverPresentationController?.sourceRect = view.frame
+
+           self.present(alertController, animated: true, completion: nil)
+
+
+           //        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+           //            selectImageFrom(.photoLibrary)
+           //            return
+           //        }
+           //        selectImageFrom(.camera)
+               
+        
     }
+    
+    
+    func selectImageFrom(_ source: UIImagePickerController.SourceType){
+    
+        let imagePicker =  UIImagePickerController()
+               imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        
+        switch source {
+               case .camera:
+                   imagePicker.sourceType = .camera
+               case .photoLibrary:
+                   imagePicker.sourceType = .photoLibrary
+               case .savedPhotosAlbum:
+                   imagePicker.sourceType = .savedPhotosAlbum
+                default:
+                   break
+               }
+               present(imagePicker, animated: true, completion: nil)
+        
+    }
+
+    
+    
+    
+    
+    
     // hide keyboard
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -93,7 +178,6 @@ extension UIViewController {
 
         }
             
-//            alert.addAction(OKAction)
             self.present(alert, animated: true, completion: nil)
     }
     
@@ -173,7 +257,18 @@ extension UIViewController {
         
     
     
-    
+    func checkInternet() {
+        let network = NetworkManager.sharedInstance
+        network.reachability.whenUnreachable = { reachability in
+            let VC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InternetVC") as! InternetVC
+                VC.modalPresentationStyle = .fullScreen
+                VC.modalTransitionStyle = .coverVertical
+                self.present(VC, animated: true) {
+                    
+                }
+                
+        }
+    }
 
     
 
@@ -293,7 +388,9 @@ func showViewFromTop(View:UIView, height:CGFloat) {
          
     }
     
+    
 }
+
 //MARK: CALayer
 
 extension CALayer {

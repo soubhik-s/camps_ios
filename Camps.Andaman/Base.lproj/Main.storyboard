@@ -9,6 +9,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MartianBThai-SemiBold.otf">
+            <string>MartianBThai-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -8691,7 +8696,7 @@ muchmore.</string>
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X4W-ig-wY8">
-                                                <rect key="frame" x="20" y="175" width="374" height="215"/>
+                                                <rect key="frame" x="20" y="175" width="374" height="260"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLG-9G-O8O">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -8743,10 +8748,21 @@ muchmore.</string>
                                                             <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                                         </variation>
                                                     </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Job-zv-n4q">
+                                                        <rect key="frame" x="0.0" y="225" width="374" height="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="   Use My Current Location" image="mappin.circle.fill" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="currentLocation_Btn:" destination="Bpa-6c-7PP" eventType="touchUpInside" id="BPh-8y-6zi"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrl-5a-kb3">
-                                                <rect key="frame" x="147" y="1343.5" width="120" height="35"/>
+                                                <rect key="frame" x="147" y="1388.5" width="120" height="35"/>
                                                 <color key="backgroundColor" red="0.019607843137254902" green="0.15686274509803921" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="ZEB-49-aVX">
@@ -8768,7 +8784,7 @@ muchmore.</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" MEDICAL INFORMATION :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjQ-6f-e51">
-                                                <rect key="frame" x="20" y="410" width="374" height="25"/>
+                                                <rect key="frame" x="20" y="455" width="374" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="XRQ-oo-jJu"/>
                                                 </constraints>
@@ -8780,7 +8796,7 @@ muchmore.</string>
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-sp-55R">
-                                                <rect key="frame" x="20" y="445" width="374" height="90.5"/>
+                                                <rect key="frame" x="20" y="490" width="374" height="90.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XKH-I8-2GH">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
@@ -8835,7 +8851,7 @@ muchmore.</string>
                                                 <variation key="heightClass=regular-widthClass=regular" spacing="10"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNe-U0-fUG">
-                                                <rect key="frame" x="20" y="555.5" width="374" height="84"/>
+                                                <rect key="frame" x="20" y="600.5" width="374" height="84"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-t8-3fM">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -8891,7 +8907,7 @@ muchmore.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="152-Ky-dIf">
-                                                <rect key="frame" x="20" y="659.5" width="374" height="187"/>
+                                                <rect key="frame" x="20" y="704.5" width="374" height="187"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SEw-Ak-UZJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -8976,7 +8992,7 @@ muchmore.</string>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPLOAD DOCUMENTS  [APPLICANT]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzL-f7-vkw">
-                                                <rect key="frame" x="20" y="866.5" width="374" height="25"/>
+                                                <rect key="frame" x="20" y="911.5" width="374" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="V8P-bF-Wwd"/>
                                                 </constraints>
@@ -8988,7 +9004,7 @@ muchmore.</string>
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-Lh-QCc">
-                                                <rect key="frame" x="37" y="1095.5" width="340" height="148"/>
+                                                <rect key="frame" x="37" y="1140.5" width="340" height="148"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DJq-Bm-i42">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="148"/>
@@ -9029,7 +9045,7 @@ muchmore.</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MPR-DZ-IYG">
-                                                <rect key="frame" x="20" y="901.5" width="374" height="164"/>
+                                                <rect key="frame" x="20" y="946.5" width="374" height="164"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-V2-n0n">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
@@ -9066,7 +9082,7 @@ muchmore.</string>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaq-w4-m4k">
-                                                <rect key="frame" x="10" y="1253.5" width="394" height="30"/>
+                                                <rect key="frame" x="10" y="1298.5" width="394" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-z9-h6D">
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -11125,6 +11141,47 @@ muchmore.</string>
             </objects>
             <point key="canvasLocation" x="10107.246376811596" y="-2363.1696428571427"/>
         </scene>
+        <!--InternetVC-->
+        <scene sceneID="kwO-OB-Ht7">
+            <objects>
+                <viewController storyboardIdentifier="InternetVC" id="WQe-eo-ZXI" customClass="InternetVC" customModule="AndamanCamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pX0-bC-noH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bsz-4Z-Rdh">
+                                <rect key="frame" x="20" y="712" width="374" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi.exclamationmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="StD-7h-PoD">
+                                        <rect key="frame" x="0.0" y="1" width="50" height="47"/>
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UqP-Qz-mP2"/>
+                                            <constraint firstAttribute="width" constant="50" id="qBJ-pI-1W7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Internet Connection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNd-DA-GnR">
+                                        <rect key="frame" x="70" y="0.0" width="304" height="50"/>
+                                        <fontDescription key="fontDescription" name="MartianBThai-SemiBold" family="Martian B Thai" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P5x-9E-by2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P5x-9E-by2" firstAttribute="trailing" secondItem="bsz-4Z-Rdh" secondAttribute="trailing" constant="20" id="Afu-RI-ee4"/>
+                            <constraint firstItem="P5x-9E-by2" firstAttribute="bottom" secondItem="bsz-4Z-Rdh" secondAttribute="bottom" constant="100" id="Kjt-Ah-XkU"/>
+                            <constraint firstItem="bsz-4Z-Rdh" firstAttribute="leading" secondItem="P5x-9E-by2" secondAttribute="leading" constant="20" id="gua-IE-76A"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9p-4p-44G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="1633"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="N5g-he-EZf">
@@ -11193,6 +11250,7 @@ muchmore.</string>
         <image name="loc_Clr" width="24" height="24"/>
         <image name="lock" width="24" height="24"/>
         <image name="log_in" width="580" height="648"/>
+        <image name="mappin.circle.fill" catalog="system" width="128" height="121"/>
         <image name="nextW" width="24" height="24"/>
         <image name="offer" width="25" height="25"/>
         <image name="open2" width="24" height="24"/>
@@ -11217,6 +11275,7 @@ muchmore.</string>
         <image name="us4" width="600" height="256"/>
         <image name="user" width="64" height="64"/>
         <image name="why" width="32" height="32"/>
+        <image name="wifi.exclamationmark" catalog="system" width="128" height="96"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -11237,6 +11296,9 @@ muchmore.</string>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

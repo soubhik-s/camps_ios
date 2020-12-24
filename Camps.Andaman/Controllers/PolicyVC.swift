@@ -29,6 +29,8 @@ class PolicyVC: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         img_View.layer.cornerRadius = 10
         agreement_View.makeRound()
         terms_View.makeRound()

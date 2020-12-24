@@ -28,11 +28,14 @@ class BenefitsVC: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         dataTV.dataSource = self
         dataTV.delegate = self
         img_View.layer.cornerRadius = 10
         getBenfitsData()
-        
+        checkInternet()
+
     }
    
     

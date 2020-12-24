@@ -58,6 +58,8 @@ class ActitvityViewController: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         title_Lbl.text = title_Arr[0]
 
         IMG_View.layer.cornerRadius = 10

@@ -40,6 +40,8 @@ class HotelDetailsVC: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         headerIMGView.layer.cornerRadius = 10
         headerIMGView.layer.masksToBounds = true
         dataTV.reloadWithAnimation()

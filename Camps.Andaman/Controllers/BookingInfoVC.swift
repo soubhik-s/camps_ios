@@ -92,7 +92,8 @@ class BookingInfoVC: UIViewController {
     }
     
     func getData()  {
-                   
+        checkInternet()
+
         photo_IMGView.layer.cornerRadius = 10
         front_IMGView.layer.cornerRadius = 10
         back_IMGView.layer.cornerRadius = 10

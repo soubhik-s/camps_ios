@@ -48,6 +48,8 @@ class BlogDetailsVC: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         CVChanges()
         blog_TV.isHidden = true
         cmnt_Txt.layer.cornerRadius = 3

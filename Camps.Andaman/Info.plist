@@ -27,6 +27,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Please Allow App to view Gallery for pictures</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow app to fetch location details</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Please allow app to save photos to your Mobile</string>
 	<key>UIApplicationSceneManifest</key>

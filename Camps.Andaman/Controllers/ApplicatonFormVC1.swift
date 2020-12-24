@@ -71,7 +71,8 @@ class ApplicatonFormVC1: UIViewController {
     }
     
     func viewChanges() {
-        
+        checkInternet()
+
         headerView.layer.cornerRadius = 10
         nextBtn.makeRound()
         packageLbl.text = BookingDetails.package_name

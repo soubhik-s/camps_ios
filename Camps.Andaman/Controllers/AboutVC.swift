@@ -32,6 +32,8 @@ class AboutVC: UIViewController {
     }
     
     func viewChanges() {
+        checkInternet()
+
         IMG_View.layer.cornerRadius = 10
         dataTV.reloadData()
         dataTV.reloadWithAnimation()

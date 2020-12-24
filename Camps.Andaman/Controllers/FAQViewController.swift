@@ -31,6 +31,8 @@ class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func viewChanges() {
+        checkInternet()
+
         IMG_View.layer.cornerRadius = 10
         dataTV.reloadWithAnimation()
         print("TitleCount = \(title_List.count)")

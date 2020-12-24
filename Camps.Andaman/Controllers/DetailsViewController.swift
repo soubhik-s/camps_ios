@@ -12,6 +12,7 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkInternet()
 
         // Do any additional setup after loading the view.
     }

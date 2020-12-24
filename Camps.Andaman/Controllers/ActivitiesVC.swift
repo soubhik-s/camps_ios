@@ -28,6 +28,8 @@ class ActivitiesVC: UIViewController {
     }
     
     func viewChanges() {
+        checkInternet()
+
         dataTV.isHidden = true
         getData()
     }

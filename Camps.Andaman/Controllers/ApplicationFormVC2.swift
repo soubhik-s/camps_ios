@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 class ApplicationFormVC2: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
     
     @IBOutlet weak var agegroup_Lbl: UILabel!
@@ -45,7 +45,8 @@ class ApplicationFormVC2: UIViewController , UIImagePickerControllerDelegate , U
     @IBOutlet var parent_Details_view: UIView!
     
     let P_Height:CGFloat = 300
-   
+    var locationManager:CLLocationManager!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,6 +54,8 @@ class ApplicationFormVC2: UIViewController , UIImagePickerControllerDelegate , U
     }
     
     func viewChanges() {
+        checkInternet()
+
         headerView.layer.cornerRadius = 10
         nextBtn.makeRound()
        
@@ -86,24 +89,43 @@ class ApplicationFormVC2: UIViewController , UIImagePickerControllerDelegate , U
         }
     }
                   
-    
    
-       
+   
+    
+    @IBAction func currentLocation_Btn(_ sender: UIButton) {
+        
+        fetchCurrentLocation()
+    }
+    
+    func fetchCurrentLocation() {
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         selectedTap = sender.view?.tag ?? 0
         openGallery()
     }
     // image picker functions
 
-func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])        {
-     pickedImg = (info[.originalImage] as! UIImage)
-    if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])        {
+   
+        pickedImg = (info[.originalImage] as! UIImage)
+   
+        if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL {
           let  fileName = url.lastPathComponent
            let fileType = url.pathExtension
         print(fileName , (fileType))
         
         }
-    picker.dismiss(animated: true) {
+   
+        picker.dismiss(animated: true) {
         print("Image Saved")
      
     }
@@ -183,11 +205,11 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         
         } else {
             
-            BookingDetails.parent_id_number = parents_ID_TF.text!
-            BookingDetails.id_number = ID_Card_Number.text!
-            BookingDetails.gst_number = GST_Number_TF.text!
-            BookingDetails.company_name = companyName_TF.text!
-            BookingDetails.company_address = company_Address_TF.text!
+        BookingDetails.parent_id_number = parents_ID_TF.text!
+        BookingDetails.id_number = ID_Card_Number.text!
+        BookingDetails.gst_number = GST_Number_TF.text!
+        BookingDetails.company_name = companyName_TF.text!
+        BookingDetails.company_address = company_Address_TF.text!
         BookingDetails.street = streetTF.text!
         BookingDetails.country = countryTF.text!
         BookingDetails.state = stateTF.text!
@@ -251,3 +273,46 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
 }
 
 
+extension ApplicationFormVC2 : CLLocationManagerDelegate {
+   
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation :CLLocation = locations[0] as CLLocation
+
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+
+
+
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
+        if (error != nil){
+            self.view.makeToast("Unable to Fetch Current Location")
+        print("error in reverseGeocode")
+        } else {
+        let placemark = placemarks! as [CLPlacemark]
+        
+            if placemark.count > 0 {
+       
+                let placemark = placemarks![0]
+        
+                print( placemark.name ?? "" , placemark.subThoroughfare ?? "" , placemark.thoroughfare ?? "" , placemark.subLocality ?? "" , placemark.locality ?? "", placemark.subAdministrativeArea ?? "" ,  placemark.country ?? "", placemark.postalCode ?? "")
+    
+            self.cityTF.text = placemark.locality ?? ""
+            self.stateTF.text = placemark.administrativeArea ?? ""
+            self.pincodeTF.text = placemark.postalCode ?? ""
+            self.countryTF.text = placemark.country ?? ""
+                self.streetTF.text = "\(placemark.name ?? "" ) \(placemark.subThoroughfare ?? "") \(placemark.thoroughfare ?? "") \(String(describing: placemark.subLocality))"
+               
+                self.locationManager.stopUpdatingLocation()
+
+        
+        }
+        }
+        }
+
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+       
+        print("Error \(error)")
+    }
+}

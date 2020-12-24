@@ -32,6 +32,8 @@ class VerificationVC: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         mobile_View.makeRound()
         send_Btn.makeRound()
         verifySV.isHidden = true

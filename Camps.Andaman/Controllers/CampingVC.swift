@@ -31,6 +31,8 @@ class CampingVC: UIViewController {
     }
     
     func viewChanges() {
+        checkInternet()
+
         headerIMGView.layer.cornerRadius = 10
        
         headerIMGView.setImage(urlStr: ClientConfig.Activity_ImgUrl + ActivityVariables.locIMG)

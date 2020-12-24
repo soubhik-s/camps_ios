@@ -43,7 +43,8 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
     func viewChanges() {
-        
+        checkInternet()
+
         if Preferrences.getUserLogin() == true {
             login_Btn.setTitle("Logout", for: .normal)
             login_Btn.tag = 1

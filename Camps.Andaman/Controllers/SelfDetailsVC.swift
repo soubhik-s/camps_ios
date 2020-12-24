@@ -27,6 +27,7 @@ class SelfDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        checkInternet()
 
         ViewChanges()
         

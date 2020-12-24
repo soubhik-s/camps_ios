@@ -25,6 +25,8 @@ class WhyVC: UIViewController {
 
     
     func viewChanges() {
+        checkInternet()
+
         img_View.layer.cornerRadius = 10
         dataTV.dataSource = self
         dataTV.delegate = self

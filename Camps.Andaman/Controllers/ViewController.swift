@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     
     func viewChanges() {
+        checkInternet()
+
         BookingDetails.ip_address = getIPAddress()!
         print("IP = \(BookingDetails.ip_address)")
         getMe()

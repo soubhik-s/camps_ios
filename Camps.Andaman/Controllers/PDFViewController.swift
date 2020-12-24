@@ -26,6 +26,7 @@ class PDFViewController: UIViewController   {
         super.viewDidLoad()
             showActivityIndicator()
 
+        checkInternet()
 
         let url = URL(string: pdfUrlStr)!
         myWebView.load(URLRequest(url: url))

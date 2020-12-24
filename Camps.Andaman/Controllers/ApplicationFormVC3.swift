@@ -105,6 +105,8 @@ class ApplicationFormVC3: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         copoun_View.layer.cornerRadius = 5
         apply_Btn.layer.cornerRadius = 5
         apply_Btn.layer.borderColor = UIColor.white.cgColor

@@ -1,6 +1,9 @@
 ${PODS_ROOT}/Target Support Files/Pods-Camps.Andaman-Camps.AndamanUITests/Pods-Camps.Andaman-Camps.AndamanUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework
 ${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
+${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
 ${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
+${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework
 ${PODS_ROOT}/razorpay-pod/Pod/Razorpay.framework

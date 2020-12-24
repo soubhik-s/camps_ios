@@ -40,6 +40,8 @@ class ItineraryVC: UIViewController {
     }
     
     func viewChanges() {
+        checkInternet()
+
         img_View.layer.cornerRadius = 10
         description_Lbl.isHidden = true
         campTitle_Lbl.isHidden =  true

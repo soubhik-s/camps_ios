@@ -23,6 +23,7 @@ class WebVC: UIViewController, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkInternet()
 
         // Do any additional setup after loading the view.
     }

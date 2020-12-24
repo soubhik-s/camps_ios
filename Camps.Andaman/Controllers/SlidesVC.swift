@@ -24,7 +24,7 @@ class SlidesVC: UIViewController {
     var timer = Timer()
     var counter = 0
      
-
+   
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 
   
@@ -36,6 +36,7 @@ class SlidesVC: UIViewController {
         let gifImage = UIImage.gifImageWithName(name: "Camps2")
         logo_ImgView.image = gifImage
          
+        checkInternet()
 
         CVChanges()
 
@@ -53,7 +54,7 @@ class SlidesVC: UIViewController {
         dataCV.delegate = self
         dataCV.dataSource = self
         dataCV.reloadData()
-        
+        checkInternet()
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         }

@@ -51,6 +51,8 @@ class DashBoardVC: UIViewController  {
     }
     
     func viewChanges() {
+        checkInternet()
+
         refreshSettings()
         razorpay = RazorpayCheckout.initWithKey(liveKey, andDelegateWithData: self)
         dataTV.rowHeight = 420

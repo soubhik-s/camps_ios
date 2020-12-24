@@ -49,7 +49,8 @@ class SettingsVC: UIViewController {
         
     }
     func viewChanges() {
-        
+        checkInternet()
+
         FName_View.makeRound()
         LName_View.makeRound()
         update_Btn.makeRound()
@@ -134,22 +135,7 @@ class SettingsVC: UIViewController {
         }
     }
     
-//    // image picker
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
-//    {
-//
-//        pickedImage = info[.editedImage] as? UIImage
-//        userIMGView.image = pickedImage
-//        print("Image is picked")
-//        picker.dismiss(animated: true) {
-//            Preferrences.setUserID(type: UserDetails.id)
-//            Preferrences.setUserIMG(type: (self.userIMGView.image?.toString())!)
-//            print("Image Saved")
-//        }
-//        
-//        
-//        
-//    }
+
     
     @IBAction func back_Axn(_ sender: UIButton) {
         

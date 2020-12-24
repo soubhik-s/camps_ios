@@ -45,9 +45,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var geture_Title_Lbl: UILabel!
     @IBOutlet weak var activity_Title_Lbl: UILabel!
     @IBOutlet weak var adultTitle_Lbl: UILabel!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        checkInternet()
+
         CVChanges()
         
     }

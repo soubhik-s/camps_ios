@@ -22,6 +22,7 @@ class BlogVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        checkInternet()
 
         viewChanges()
         

@@ -35,6 +35,8 @@ class SignUpVC: UIViewController {
     }
     
     func viewChanges() {
+        checkInternet()
+
         mobileTF.text = Preferrences.getUserMobile()
         passwordView.makeRound()
         first_View.makeRound()

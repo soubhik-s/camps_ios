@@ -25,9 +25,12 @@ class ForgotVC: UIViewController {
     }
     
     func viewChanges(){
+        checkInternet()
+
         email_View.makeRound()
         sendBtn.makeBtnRound()
-        
+        checkInternet()
+
     }
 
     @IBAction func backBtn(_ sender: UIButton) {

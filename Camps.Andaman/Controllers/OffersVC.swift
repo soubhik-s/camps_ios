@@ -18,6 +18,7 @@ class OffersVC: UIViewController , UICollectionViewDelegate , UICollectionViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkInternet()
 
         CVChanges()
         getData()

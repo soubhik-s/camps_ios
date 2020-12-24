@@ -33,6 +33,8 @@ class GestureVC: UIViewController {
     
 
     func viewChanges() {
+        checkInternet()
+
         gestureCV.isHidden = true
         gestureTV.isHidden = true
         gestureTV.sectionHeaderHeight = 30

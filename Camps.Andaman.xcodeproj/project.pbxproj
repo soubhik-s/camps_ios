@@ -82,6 +82,9 @@
 		D66429082578BFA0003FD0DD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66429072578BFA0003FD0DD /* CloudKit.framework */; };
 		D664593125247F7500FB6178 /* AppUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D664593025247F7500FB6178 /* AppUpdate.swift */; };
 		D66E857824AC58CF00B7127C /* OffersCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E857724AC58CF00B7127C /* OffersCVCell.swift */; };
+		D66F256B2594612700CBE44A /* InternetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F256A2594612700CBE44A /* InternetVC.swift */; };
+		D66F256F2594620900CBE44A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F256E2594620900CBE44A /* NetworkManager.swift */; };
+		D66F25E92594B1E100CBE44A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D66F25E82594B1E100CBE44A /* GoogleService-Info.plist */; };
 		D672536D2473AD8100B3B190 /* PackageDetailsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */; };
 		D672536F2474027F00B3B190 /* AboutTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D672536E2474027F00B3B190 /* AboutTVC.swift */; };
 		D673BCEC249DE590005ADAA2 /* Camps2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D673BCEB249DE58F005ADAA2 /* Camps2.gif */; };
@@ -226,6 +229,9 @@
 		D66429072578BFA0003FD0DD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D664593025247F7500FB6178 /* AppUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdate.swift; sourceTree = "<group>"; };
 		D66E857724AC58CF00B7127C /* OffersCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCVCell.swift; sourceTree = "<group>"; };
+		D66F256A2594612700CBE44A /* InternetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetVC.swift; sourceTree = "<group>"; };
+		D66F256E2594620900CBE44A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D66F25E82594B1E100CBE44A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D672536C2473AD8100B3B190 /* PackageDetailsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageDetailsTVC.swift; sourceTree = "<group>"; };
 		D672536E2474027F00B3B190 /* AboutTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTVC.swift; sourceTree = "<group>"; };
 		D673BCEB249DE58F005ADAA2 /* Camps2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Camps2.gif; sourceTree = "<group>"; };
@@ -346,6 +352,7 @@
 				D6075CDD24616CB50075E90F /* LaunchScreen.storyboard */,
 				D673BCEB249DE58F005ADAA2 /* Camps2.gif */,
 				D62C207224B2FA720093F2F8 /* Config.plist */,
+				D66F25E82594B1E100CBE44A /* GoogleService-Info.plist */,
 				D6075CE024616CB50075E90F /* Info.plist */,
 				D6075CD824616CB30075E90F /* Camps_Andaman.xcdatamodeld */,
 			);
@@ -376,7 +383,7 @@
 				D6075CD324616CB30075E90F /* ViewController.swift */,
 				D62C206E24B2F1310093F2F8 /* VerificationVC.swift */,
 				D61EB52E2563A47300F5821A /* BenefitsVC.swift */,
-				D639A2952577741600B92456 /* SlidersCVCell.swift */,
+				D66F256A2594612700CBE44A /* InternetVC.swift */,
 				D61EB5302563A49800F5821A /* WhyVC.swift */,
 				D6548D58254BE84B0058BF3B /* OffersVC.swift */,
 				D657CF9624A4C352009B2C85 /* PDFViewController.swift */,
@@ -445,6 +452,7 @@
 				D64FC86E247E30D900923CA8 /* FAQCell.swift */,
 				D68E04CE247D264400985F09 /* ChildTVC.swift */,
 				D68E04D0247D265800985F09 /* ActivitiesTVC.swift */,
+				D639A2952577741600B92456 /* SlidersCVCell.swift */,
 				D68E04D2247D266900985F09 /* GesturesTVC.swift */,
 				D6A50EDD24753C8400C858F7 /* CampingTVC.swift */,
 				D68E04CA247CECBA00985F09 /* Inc_ExcTVC.swift */,
@@ -480,6 +488,7 @@
 				D6116A1F2494B9040089B995 /* CustomSegmentedControl.swift */,
 				D655459D246EBBB100E974C3 /* Protocols.swift */,
 				D6DC7FC1247FC10200DC770A /* Preferrances.swift */,
+				D66F256E2594620900CBE44A /* NetworkManager.swift */,
 				D664593025247F7500FB6178 /* AppUpdate.swift */,
 				D62C207024B2F9360093F2F8 /* VerifyService.swift */,
 				D642B390247517C100012180 /* APIService.swift */,
@@ -605,6 +614,7 @@
 				D6075CDC24616CB50075E90F /* Assets.xcassets in Resources */,
 				D62C207324B2FA720093F2F8 /* Config.plist in Resources */,
 				D6075CD724616CB30075E90F /* Main.storyboard in Resources */,
+				D66F25E92594B1E100CBE44A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +793,7 @@
 				D61EB5312563A49800F5821A /* WhyVC.swift in Sources */,
 				D6075D0524618A3C0075E90F /* MainViewController.swift in Sources */,
 				D6075D1A246192820075E90F /* String+Ext.swift in Sources */,
+				D66F256B2594612700CBE44A /* InternetVC.swift in Sources */,
 				D6554597246EAFB800E974C3 /* InfoVC.swift in Sources */,
 				D642B391247517C100012180 /* APIService.swift in Sources */,
 				D644499E248CCC6E00EBA299 /* PartnersCVC.swift in Sources */,
@@ -803,6 +814,7 @@
 				D64F19BB246936F700C169FC /* AboutVC.swift in Sources */,
 				D655459A246EB49500E974C3 /* GlobalVariables.swift in Sources */,
 				D6DC7FC2247FC10200DC770A /* Preferrances.swift in Sources */,
+				D66F256F2594620900CBE44A /* NetworkManager.swift in Sources */,
 				D6A50EE0247556A800C858F7 /* Reach.swift in Sources */,
 				D6075CD224616CB30075E90F /* SceneDelegate.swift in Sources */,
 				D6075D1C246192820075E90F /* Image+Ext.swift in Sources */,
@@ -1006,7 +1018,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
 				PRODUCT_NAME = AndamanCamps;
 				PROVISIONING_PROFILE_SPECIFIER = AndamanCampsNew;
@@ -1031,7 +1043,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.3;
+				MARKETING_VERSION = 1.5.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndamanCamps;
 				PRODUCT_NAME = AndamanCamps;
 				PROVISIONING_PROFILE_SPECIFIER = Camps;

@@ -34,6 +34,8 @@ class SupportVC: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     func viewChanges() {
+        checkInternet()
+
         
         IMG_View.layer.cornerRadius = 10
         call_View1.makeRound()
