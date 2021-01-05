@@ -31,7 +31,7 @@ class DashBoardVC: UIViewController  {
     var uploadSign_Arr:[String] = []
     var pdfData = Data()
     var paymentId = ""
-    var price = "0"
+    var total_Price = 1
     var selected_Book_Id = "0"
     @IBOutlet weak var dataTV: UITableView!
     var razorpay: RazorpayCheckout!
@@ -40,10 +40,11 @@ class DashBoardVC: UIViewController  {
 //    var pdfUrlStr = "https://camps.goexploreandaman.com/invoice_api/"
     let month_Arr = ["January","Febraury","March","April","May","June","July","August","September","October", "November","December"]
     var pdfView = PDFView()
-     var refreshContrl = UIRefreshControl()
+    var refreshContrl = UIRefreshControl()
     var webView = WKWebView()
     var pdfURL: URL!
     var isRefreshing:Bool = false
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -78,13 +79,12 @@ class DashBoardVC: UIViewController  {
         getData()
         
     }
-        
-        
-    
+
     @objc func onTapped(){
         print("Tapped")
         self.pdfView.removeFromSuperview()
     }
+    
     @IBAction func back_Axn(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
@@ -120,7 +120,7 @@ class DashBoardVC: UIViewController  {
         
         if reach.isConnectedToNetwork() == true {
         showActivityIndicator()
-            let razorDetails = ["user_id":Preferrences.getUserID(),   "booking_id":DashboardVariables.bookingID, "id":paymentId, "status":"success", "method":"RazorPay_method",  "description":"oredr_ID", "card_id":"Card@1234",   "card_details":"card_details", "email":Preferrences.getUserEmail() ,  "contact":Preferrences.getUserMobile(),   "currency":"INR", "amount":price, "fee":"transaction_Fee", "payment_for":"Camps", "payment_via":"IOS", "created_at":"\(Date.self)"] as [String:Any]
+            let razorDetails = ["user_id":Preferrences.getUserID(),   "booking_id":DashboardVariables.bookingID, "id":paymentId, "status":"success", "method":"RazorPay_method",  "description":"oredr_ID", "card_id":"Card@1234",   "card_details":"card_details", "email":Preferrences.getUserEmail() ,  "contact":Preferrences.getUserMobile(),   "currency":"INR", "amount":total_Price, "fee":"transaction_Fee", "payment_for":"Camps", "payment_via":"IOS", "created_at":"\(Date.self)"] as [String:Any]
         ApiService.postCall(url: ClientInterface.razorPayUrl, params: razorDetails, methodType: "POST", tag: "RazorPay", finish:finishPost)
         print("RazorDetails = \(razorDetails)")
         } else {
@@ -167,8 +167,8 @@ class DashBoardVC: UIViewController  {
             print("camp_Arr = \(camp_Arr)")
             print("bookingData = \(bookingData)")
             package_Arr.append(bookingData.package_name!)
-                        price_Arr.append(bookingData.total_price!)
-                        name_Arr.append(bookingData.first_name! + " " + bookingData.middle_name! + "" + bookingData.last_name!)
+            price_Arr.append(bookingData.total_price!)
+            name_Arr.append(bookingData.first_name! + " " + bookingData.middle_name! + "" + bookingData.last_name!)
             voucher_Arr.append(bookingData.voucher_name!)
             invoice_Arr.append(bookingData.invoice_name!)
             status_Arr.append(bookingData.camp_status!)
@@ -453,9 +453,10 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         let currentCell = dataTV.cellForRow(at: index!) as! BoardTVC
         DashboardVariables.bookingID = currentCell.bookingID_Lbl.text!
         print("bookingID = \(DashboardVariables.bookingID)")
-        price = Double(currentCell.priceLbl.text!)?.forTrailingZero() ?? "0"
-        print("price = \(price)")
+        total_Price = Int(Double(currentCell.priceLbl.text!)!)
 
+
+        print("total_Price = \(total_Price)")
 
         if currentCell.doc_Lbl.text == "pending" {
         popUpAlert(title: "Alert", message: " Verificaton not Completed ", action: .alert)
@@ -463,21 +464,22 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
         } else {
 
 
+            print(Preferrences.getUserMobile() , Preferrences.getUserEmail())
             showPaymentForm()
         }
     }
     
-  
+
     
     func showPaymentForm(){
         let options: [String:Any] = [
-        "amount": "\(price)00", //This is in currency subunits. 100 = 100 paise= INR 1.
+        "amount": "\(total_Price)", //This is in currency subunits. 100 = 100 paise= INR 1.
         "currency": "INR",//We support more that 92 international currencies.
         "description": "Camp Booking",
         "image": "https://camps.goexploreandaman.com/assets/images/photo/autumn.jpg",
         "name": "AndamanCamps",
         "prefill": [
-                "contact": Preferrences.getUserMobile(),
+            "contact": Preferrences.getUserMobile(),
             "email": Preferrences.getUserEmail(),
         ],
         "theme": [
@@ -490,8 +492,8 @@ extension DashBoardVC : UITableViewDelegate , UITableViewDataSource {
     
     
 }
-extension DashBoardVC: RazorpayPaymentCompletionProtocolWithData, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate
- {
+extension DashBoardVC: RazorpayPaymentCompletionProtocolWithData, UIDocumentMenuDelegate,UIDocumentPickerDelegate,UINavigationControllerDelegate {
+   
     func onPaymentError(_ code: Int32, description str: String, andData response: [AnyHashable : Any]?) {
         popUpAlert(title: "Failed", message: str, action: .alert)
 

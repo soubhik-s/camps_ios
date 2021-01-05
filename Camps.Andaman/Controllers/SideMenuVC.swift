@@ -70,9 +70,11 @@ class SideMenuVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
             login_Btn.setTitle("Login", for: .normal)
             Preferrences.setUserLogin(status: false)
             popUpAlert(title: "Alert", message: "Looged Out", action: .alert)
+    
         } else {
-        let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.navigationController?.pushViewController(VC, animated: true)
+            let VC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.navigationController?.pushViewController(VC, animated: true)
+        
         }
         
     }
