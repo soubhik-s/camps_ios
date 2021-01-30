@@ -125,8 +125,9 @@ class ViewController: UIViewController {
           showActivityIndicator()
             
         let details = ["email":emailTF.text!,"password":passwordTF.text!] as [String:Any]
-        ApiService.postCall(url: ClientInterface.loginUrl, params: details, methodType: "POST", tag: "Login", finish:finishPost)
-         print("details = \(details)")
+       
+            ApiService.postCall(url: ClientInterface.loginUrl, params: details, methodType: "POST", tag: "Login", finish:finishPost)
+             print("details = \(details)")
         } else {
         popUpAlert(title: "Alert", message: "Enter all details", action: .actionSheet)
             
