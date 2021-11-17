@@ -68,7 +68,8 @@ class ItineraryVC: UIViewController {
     
         if reach.isConnectedToNetwork() == true {
             showActivityIndicator()
-        ApiService.callPostToken(url: ClientInterface.itineraryUrl, params: "", methodType: "GET", tag: "ItineraryList", finish:finishPost)
+       
+            ApiService.callPostToken(url: ClientInterface.itineraryUrl, params: "", methodType: "GET", tag: "ItineraryList", finish:finishPost)
     
         } else {
         self.view.makeToast("Check Internet Connection")
@@ -332,17 +333,17 @@ extension ItineraryVC: UITableViewDataSource, UITableViewDelegate {
       }
           
       
-      @objc func onTappedBtn(_ sender: UIButton) {
-
-          let section = sender.tag
-          sectionStats[section] = !sectionStats[section]
-          dataTV.beginUpdates()
-          dataTV.reloadSections([section], with: .automatic)
-          dataTV.endUpdates()
-          
-          let img = sender.imageView?.image?.rotate(radians: .pi/4)
-          sender.setImage(img, for: .normal)
-      }
+//      @objc func onTappedBtn(_ sender: UIButton) {
+//
+//          let section = sender.tag
+//          sectionStats[section] = !sectionStats[section]
+//          dataTV.beginUpdates()
+//          dataTV.reloadSections([section], with: .automatic)
+//          dataTV.endUpdates()
+//
+//          let img = sender.imageView?.image?.rotate(radians: .pi/4)
+//          sender.setImage(img, for: .normal)
+//      }
       
 
 

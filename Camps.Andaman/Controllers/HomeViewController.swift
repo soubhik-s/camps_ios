@@ -80,7 +80,8 @@ class HomeViewController: UIViewController {
         camping_Title_Lbl.makeRound()
         geture_Title_Lbl.makeRound()
 
-        
+        AppUpdater.shared.showUpdate(withConfirmation: true)
+
        
         
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wqy-2S-Akr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wqy-2S-Akr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -660,7 +660,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="cCD-V8-TAU" style="IBUITableViewCellStyleDefault" id="DNw-2O-CGn">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNw-2O-CGn" id="faF-as-0qR">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -861,7 +861,7 @@
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BoardTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="435" id="D4p-2L-h4g" customClass="BoardTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="435"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="435"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D4p-2L-h4g" id="NSw-Jm-15e">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="435"/>
@@ -3375,7 +3375,7 @@ muchmore.</string>
                                 </constraints>
                             </imageView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HWR-FF-VRV">
-                                <rect key="frame" x="145.5" y="784" width="123" height="28"/>
+                                <rect key="frame" x="146.5" y="784" width="121.5" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="sj1-Jr-OXZ"/>
                                 </constraints>
@@ -3488,7 +3488,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PackageDetailsTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="1D4-jH-KRo" customClass="PackageDetailsTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="404" height="200"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="404" height="200"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1D4-jH-KRo" id="v0m-hU-t8j">
                                                             <rect key="frame" x="0.0" y="0.0" width="404" height="200"/>
@@ -3700,7 +3700,7 @@ muchmore.</string>
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Inc_ExcTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="60" id="3o8-aF-t5s" customClass="Inc_ExcTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="228" width="404" height="60"/>
+                                                        <rect key="frame" x="0.0" y="224.5" width="404" height="60"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3o8-aF-t5s" id="ZoC-Dv-JAn">
                                                             <rect key="frame" x="0.0" y="0.0" width="404" height="60"/>
@@ -4062,7 +4062,7 @@ muchmore.</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MenuTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="UCQ-7K-xLW" customClass="MenuTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UCQ-7K-xLW" id="iif-az-3Zm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -5206,7 +5206,7 @@ muchmore.</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="eEO-98-mek" rowHeight="50" style="IBUITableViewCellStyleDefault" id="nfH-K5-lI3">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="414" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nfH-K5-lI3" id="2l1-uc-13F">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -5228,7 +5228,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AboutTVC" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AboutCell" rowHeight="220" id="yP6-Ka-8LM" customClass="AboutTVC" customModule="AndamanCamps" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="78" width="414" height="220"/>
+                                                <rect key="frame" x="0.0" y="74.5" width="414" height="220"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yP6-Ka-8LM" id="FK1-eo-L7P">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
@@ -6187,7 +6187,7 @@ muchmore.</string>
                                                                             </subviews>
                                                                         </stackView>
                                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0ml-gS-h9Q">
-                                                                            <rect key="frame" x="128" y="171" width="122.5" height="15"/>
+                                                                            <rect key="frame" x="128.5" y="171" width="121.5" height="15"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="15" id="g3S-FE-bE2"/>
                                                                             </constraints>
@@ -6492,7 +6492,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="u6u-If-nxr" imageView="7Sj-d2-zmU" style="IBUITableViewCellStyleDefault" id="mc2-F3-4GY">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="87"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="87"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mc2-F3-4GY" id="YQk-aY-aC5">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
@@ -6518,7 +6518,7 @@ muchmore.</string>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell2" textLabel="3Vz-UK-oDP" imageView="a5v-3W-hFJ" style="IBUITableViewCellStyleDefault" id="sx1-Vc-ZNp">
-                                                        <rect key="frame" x="0.0" y="115" width="414" height="44"/>
+                                                        <rect key="frame" x="0.0" y="111.5" width="414" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sx1-Vc-ZNp" id="SUY-z9-eN3">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -6648,7 +6648,7 @@ muchmore.</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="a8y-zr-EdT" rowHeight="200" style="IBUITableViewCellStyleDefault" id="VRb-uL-Cgg">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VRb-uL-Cgg" id="Vx8-GB-hI0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -6696,7 +6696,7 @@ muchmore.</string>
                                                     <rect key="frame" x="0.0" y="0.0" width="391" height="194"/>
                                                 </imageView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mTr-tT-BnM">
-                                                    <rect key="frame" x="134.5" y="159" width="122.5" height="25"/>
+                                                    <rect key="frame" x="135" y="159" width="121.5" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="RMP-kI-LR0"/>
                                                     </constraints>
@@ -6882,7 +6882,7 @@ muchmore.</string>
                                                                             </constraints>
                                                                         </view>
                                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="auG-Ql-eQA">
-                                                                            <rect key="frame" x="117" y="155" width="160" height="15"/>
+                                                                            <rect key="frame" x="118" y="155" width="158" height="15"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="15" id="mcF-H5-Pei"/>
                                                                             </constraints>
@@ -7783,7 +7783,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BlogTVCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BlogCell" rowHeight="352" id="uC6-Jk-QAc" customClass="BlogTVCell" customModule="AndamanCamps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="374" height="352"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="374" height="352"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uC6-Jk-QAc" id="fZy-cW-ttt">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="352"/>
@@ -7874,7 +7874,7 @@ muchmore.</string>
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="wtn-JV-asH" detailTextLabel="uTS-qm-Tt5" imageView="VsG-jM-yaO" style="IBUITableViewCellStyleSubtitle" id="r5w-zp-COV">
-                                                        <rect key="frame" x="0.0" y="380" width="374" height="81"/>
+                                                        <rect key="frame" x="0.0" y="376.5" width="374" height="81"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r5w-zp-COV" id="cEC-Y1-9CN">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="81"/>
@@ -8038,7 +8038,7 @@ muchmore.</string>
                                                                     <rect key="frame" x="5" y="5" width="381" height="183"/>
                                                                 </imageView>
                                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="u2U-ft-4OM">
-                                                                    <rect key="frame" x="136" y="159" width="122.5" height="25"/>
+                                                                    <rect key="frame" x="136.5" y="159" width="121.5" height="25"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="OHf-lc-YSK"/>
                                                                     </constraints>
@@ -8068,7 +8068,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BlogCell" textLabel="fX0-1s-i62" style="IBUITableViewCellStyleDefault" id="hzJ-Qe-IQ9">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hzJ-Qe-IQ9" id="Mxa-Py-HJk">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -8114,7 +8114,7 @@ muchmore.</string>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommentCell" textLabel="F2I-Jr-DjI" detailTextLabel="562-tj-EIl" imageView="4g8-5j-eLp" style="IBUITableViewCellStyleSubtitle" id="byK-Mb-DXb">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="51"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="byK-Mb-DXb" id="Evx-Gp-khJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
@@ -8375,7 +8375,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FAQCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="N1w-8y-Qfu" customClass="FAQCell" customModule="AndamanCamps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="150"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N1w-8y-Qfu" id="kZu-xF-5ep">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -10859,7 +10859,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BenefitCell" textLabel="JPr-3l-LYz" detailTextLabel="7SK-Ud-Le4" rowHeight="95" style="IBUITableViewCellStyleSubtitle" id="eAH-Q0-gyd">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="95"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="95"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAH-Q0-gyd" id="DwL-vE-YdS">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
@@ -10885,7 +10885,7 @@ muchmore.</string>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="eIZ-gh-zz5" imageView="2GR-5n-TD9" style="IBUITableViewCellStyleDefault" id="jfH-rs-Drt">
-                                                        <rect key="frame" x="0.0" y="123" width="414" height="83"/>
+                                                        <rect key="frame" x="0.0" y="119.5" width="414" height="83"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jfH-rs-Drt" id="mXq-lW-VEZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
@@ -11040,7 +11040,7 @@ muchmore.</string>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BenefitCell" textLabel="Q7q-Dp-cgT" detailTextLabel="lYV-m2-OxM" rowHeight="95" style="IBUITableViewCellStyleSubtitle" id="R2A-Lv-O1K">
-                                                        <rect key="frame" x="0.0" y="28" width="414" height="95"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="414" height="95"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R2A-Lv-O1K" id="Wvw-9g-4Gg">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
@@ -11183,6 +11183,26 @@ muchmore.</string>
             <point key="canvasLocation" x="110" y="1633"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="N5g-he-EZf">
+            <size key="intrinsicContentSize" width="139" height="14.5"/>
+        </designable>
+        <designable name="XJd-nV-zk5">
+            <size key="intrinsicContentSize" width="292" height="14.5"/>
+        </designable>
+        <designable name="jOh-xU-okx">
+            <size key="intrinsicContentSize" width="199.5" height="14.5"/>
+        </designable>
+        <designable name="pXt-9A-6eT">
+            <size key="intrinsicContentSize" width="137.5" height="14.5"/>
+        </designable>
+        <designable name="stj-cX-foQ">
+            <size key="intrinsicContentSize" width="333.5" height="14.5"/>
+        </designable>
+        <designable name="vgn-fh-NMv">
+            <size key="intrinsicContentSize" width="392" height="14.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="AATA2" width="960" height="934"/>
         <image name="BG" width="375" height="812"/>
