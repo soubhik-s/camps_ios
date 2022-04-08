@@ -97,7 +97,7 @@ struct ItineraryResponseElement: Codable {
     let itineraryID, seasonName: String
     let ageGroup: String
     let itineraryDescription: String
-    let campInclusions, campExclusions, itienaryName, morningActivity: [String]
+    let campInclusions, campExclusions, itienaryName, morningActivity: [String]?
     let afterNoonActivity, eveningActivity: [String]
     let overNightActivity: [String]
 

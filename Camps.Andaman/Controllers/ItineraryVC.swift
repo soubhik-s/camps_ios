@@ -98,9 +98,9 @@ class ItineraryVC: UIViewController {
 //                if itinerary_Data.itineraryID == ItineraryDetails.itinerary_ID {
                     description_Lbl.text = itinerary_Data.itineraryDescription
                     
-                    iti_Arr = itinerary_Data.itienaryName
+                    iti_Arr = itinerary_Data.itienaryName ?? []
                 print("iti_Arr = \(iti_Arr)")
-                    morning_Arr = itinerary_Data.morningActivity
+                    morning_Arr = itinerary_Data.morningActivity ?? []
                 print("morning_Arr = \(morning_Arr)")
 
                     noon_Arr = itinerary_Data.afterNoonActivity
@@ -112,10 +112,10 @@ class ItineraryVC: UIViewController {
                     night_Arr = itinerary_Data.overNightActivity
                 print("night_Arr = \(night_Arr)")
 
-                    inc_Arr = itinerary_Data.campInclusions 
+                    inc_Arr = itinerary_Data.campInclusions ?? []
                 print("inc_Arr = \(inc_Arr)")
 
-                    exc_Arr = itinerary_Data.campExclusions 
+                    exc_Arr = itinerary_Data.campExclusions ?? []
                 print("exc_Arr = \(exc_Arr)")
                 } else {
                     print("Other ID")
@@ -171,6 +171,7 @@ class ItineraryVC: UIViewController {
             }
             
         } catch {
+            popUpAlert(title: "Alert", message: "Error in Connecting Server", action: .alert)
             print("Parse Error: \(error)")
             
         }

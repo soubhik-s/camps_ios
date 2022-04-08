@@ -91,8 +91,8 @@ extension ActivitiesVC: UITableViewDelegate, UITableViewDataSource {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PackageDetailsTVC
         
         let cellPath = dataArray[indexPath.row]
-        cell.titleLbl.text = cellPath.itienaryName[indexPath.row]
-        cell.morningLbl.text = cellPath.morningActivity[indexPath.row]
+        cell.titleLbl.text = cellPath.itienaryName?[indexPath.row]
+        cell.morningLbl.text = cellPath.morningActivity?[indexPath.row]
         cell.afterNoonLbl.text = cellPath.afterNoonActivity[indexPath.row]
         cell.eveningLbl.text = cellPath.eveningActivity[indexPath.row]
         cell.nightLbl.text = cellPath.overNightActivity[indexPath.row]
