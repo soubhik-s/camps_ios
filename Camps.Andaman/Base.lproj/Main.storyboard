@@ -342,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12771.014492753624" y="-2346.4285714285711"/>
+            <point key="canvasLocation" x="12694" y="-2290"/>
         </scene>
         <!--VerificationVC-->
         <scene sceneID="5fI-WI-ssc">
@@ -488,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xc2-vd-GtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13784.057971014494" y="-2363.1696428571427"/>
+            <point key="canvasLocation" x="13642" y="-2290"/>
         </scene>
         <!--Actitvity View Controller-->
         <scene sceneID="ekm-nP-wmv">
@@ -3112,7 +3112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvD-qJ-NfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14695.652173913044" y="-2346.4285714285711"/>
+            <point key="canvasLocation" x="14623" y="-2290"/>
         </scene>
         <!--OffersVC-->
         <scene sceneID="dV1-ol-qhj">
@@ -3830,7 +3830,7 @@ muchmore.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS4" translatesAutoresizingMaskIntoConstraints="NO" id="OPt-EJ-jmM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS1" translatesAutoresizingMaskIntoConstraints="NO" id="OPt-EJ-jmM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-gd-YCI">
@@ -7978,7 +7978,7 @@ muchmore.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bm3-XE-WQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6768" y="-1307"/>
+            <point key="canvasLocation" x="6787" y="-1248"/>
         </scene>
         <!--Blog DetailsVC-->
         <scene sceneID="Bca-7H-cgY">
@@ -8532,7 +8532,7 @@ muchmore.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS3" translatesAutoresizingMaskIntoConstraints="NO" id="l9c-ek-6XA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SS1" translatesAutoresizingMaskIntoConstraints="NO" id="l9c-ek-6XA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYD-AU-vsY">
